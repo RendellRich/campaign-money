@@ -3,20 +3,20 @@
  "set": "test",
  "pairs": 297,
  "all": {
-  "correct": 69.7,
+  "correct": 71.7,
   "correct_ci95": [
-   64.6,
-   74.7
+   66.8,
+   76.5
   ],
   "wrong": 6.3,
   "wrong_ci95": [
    3.6,
    9.1
   ],
-  "left": 24.0,
+  "left": 22.0,
   "left_ci95": [
-   19.3,
-   28.7
+   17.5,
+   26.5
   ],
   "stratum_weights": {
    "list": 0.334,
@@ -26,22 +26,22 @@
  "by_stratum": {
   "list": {
    "draws": 100,
-   "correct": 85.0,
+   "correct": 91.0,
    "correct_ci95": [
-    76.7,
-    90.7
+    83.8,
+    95.2
    ],
    "wrong": 4.0,
    "wrong_ci95": [
     1.6,
     9.8
    ],
-   "left": 11.0,
+   "left": 5.0,
    "left_ci95": [
-    6.3,
-    18.6
+    2.2,
+    11.2
    ],
-   "correct_when_placed": 95.5
+   "correct_when_placed": 95.8
   },
   "tail": {
    "draws": 200,
@@ -66,20 +66,20 @@
  "high_confidence_labels": {
   "list": {
    "draws": 79,
-   "correct": 91.1,
+   "correct": 97.5,
    "correct_ci95": [
-    82.8,
-    95.6
+    91.2,
+    99.3
    ],
    "wrong": 0.0,
    "wrong_ci95": [
     0.0,
     4.6
    ],
-   "left": 8.9,
+   "left": 2.5,
    "left_ci95": [
-    4.4,
-    17.2
+    0.7,
+    8.8
    ],
    "correct_when_placed": 100.0
   },

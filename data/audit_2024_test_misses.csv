@@ -1,15 +1,9 @@
 id,stratum,employer,occupation,label,confidence,predicted,how,outcome,draws
-B013,list,SELF-EMPLOYED,FUNDRAISER,nonprofit,low,unknown,none,left,1
 B025,list,SELF-EMPLOYED,MFT,health,high,unknown,none,left,1
-B038,list,SELF EMPLOYED,COMPOSER,media,high,unknown,none,left,1
-B040,list,SELF-EMPLOYED,PROPERTY MANAGER,real_estate,high,unknown,none,left,1
-B043,list,SELF EMPLOYED,CHOCOLATIER,consumer,high,unknown,none,left,1
 B069,list,SELF EMPLOYED,FIRE SPRINKLER DESIGN ENGINEER,real_estate,low,unknown,none,left,1
 B080,list,SELF EMPLOYED,COMMUNICATION CONSULTANT,business_services,low,unknown,none,left,1
 B126,list,ROCKY RESEARCH,ENERGY RESEARCH,energy,low,unknown,list,left,1
-B159,list,SELF-EMPLOYED,POET,media,high,unknown,none,left,1
 B227,list,SELF-EMPLOYED,BROADCAST NARRATOR-PRODUCER,media,high,unknown,none,left,1
-B259,list,SELF-EMPLOYED,TUTOR,education,high,unknown,none,left,1
 B029,list,HONOR NYC,DESIGNER,unknown,low,consumer,list,wrong,1
 B077,list,SAULSBURY INDUSTRIES,BOARD MEMBER,real_estate,low,manufacturing,list,wrong,1
 B100,list,STRATEGIC MARKETING INNOVATIONS INC,VICE PRESIDENT,lobbying,low,business_services,list,wrong,1

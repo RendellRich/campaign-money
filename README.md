@@ -142,6 +142,43 @@ a person on a random 50 would show how much that matters. The "list" stratum inc
 that string is on the list. Every misread pair is in `data/audit_2024_misses.csv` (dev) and `data/audit_2024_test_misses.csv` (test). The labeler saw
 the test pairs while labeling them, so fixes were limited to words found in dev misses.
 
+
+### Round 4: a reviewed occupation list, for donors whose employer says nothing
+
+Self-employed donors, donors who left the employer blank, and donors who wrote only a title ("CEO", "OWNER") are
+placed by their occupation, and the occupation rules missed many clear jobs: tutor, poet, optometrist, landman,
+property manager. `data/occupation_industry.csv` holds the 800 occupations with the most still-unclear 2024 dollars,
+reviewed by Claude. An occupation names an industry only when the job alone implies it; 387 do, and the rest (CEO,
+engineer, consultant, designer) stay unknown. The list is a last resort, used only when the employer list and the rules
+leave a donor unclear.
+
+Two versions were tried, and the choice was made on the dev sample:
+
+| Share right | Dev | Test |
+|---|---|---|
+| Round 3 | 86.0% | 69.7% |
+| Occupation list for every unclear donor | 85.7% (2 new wrong) | 74.3% |
+| Occupation list only when the employer says nothing (kept) | 86.0% | 71.7% (95% CI 66.8 to 76.5) |
+
+The broader version scored higher on test, but on dev it placed nothing new and added two wrong answers, both for
+named employers ("PROPERTY MANAGER" at a bus company). Picking it because of the test score would be tuning to the
+test set, which is what round 2 warned about. On test the kept version is 6.3% wrong and 22.0% left
+unknown, and 91.9% right when it gives an industry. On the site, the share of 2024 individual money placed in
+an industry rises from 24.3% to 25.1%.
+
+Caveat: the test misses from round 3 (which include self-employed poets and tutors) had been read before this list was
+reviewed. Those occupations are on it because of their dollar rank, not picked from the misses, but the test sample is
+now used up for tuning. The next score needs a fresh sample, labeled by a person.
+
+### What would move it further
+
+On test, about 20 of the unknown points sit with small named employers ("DELTA CONSTRUCTORS", "ZARO'S FAMILY BAKERY").
+Across both cycles there are 263,879 distinct unclear employer and occupation pairs ($395M); the 100,000 largest hold
+89% of those dollars. Reviewing by hand past the top 5,000 employers hits diminishing returns. A batch run of Claude
+Haiku 5.5 over every pair, keeping only confident answers, is estimated at about $6 at list price (about 7M input and
+10M output tokens, including its reasoning), before any batch discount. It needs a person-labeled test sample to score
+it, since the current labels also come from Claude.
+
 ## The site (phase 3, first page)
 
 `site/app.py` is a two-page Streamlit app. Members (the default) lets you pick a member and see where their individual money came from. It reads two small files
