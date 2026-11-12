@@ -52,8 +52,16 @@ UI = {
 }
 
 
-@st.cache_data
 def load(cycle: int = CYCLE) -> tuple[pd.DataFrame, pd.DataFrame]:
+    """The cycle's member totals and money by category. Cached, keyed on the files' modified times, so new data
+    from a data-only commit shows up without restarting the app."""
+    files = [DATA / f"members_{cycle}.csv", DATA / f"member_money_{cycle}.csv"]
+    members, money = _load(cycle, tuple(f.stat().st_mtime for f in files))
+    return members, money  # cache_data hands back a fresh copy on every call
+
+
+@st.cache_data
+def _load(cycle: int, stamp: tuple[float, ...]) -> tuple[pd.DataFrame, pd.DataFrame]:
     members = pd.read_csv(DATA / f"members_{cycle}.csv")
     money = pd.read_csv(DATA / f"member_money_{cycle}.csv")
     money = money.merge(members[["bioguide_id", "individual"]], on="bioguide_id")
