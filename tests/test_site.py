@@ -155,3 +155,19 @@ def test_industries_page_with_no_matches():
     at.run()
     assert not at.exception
     assert any("No members match these filters" in m.value for m in at.markdown)
+
+
+def test_data_cache_follows_the_files(tmp_path, monkeypatch):
+    import os
+    import sys
+    sys.path.insert(0, str(ROOT / "site"))
+    import common
+    for name in ("members_2024.csv", "member_money_2024.csv"):
+        (tmp_path / name).write_bytes((ROOT / "site" / "data" / name).read_bytes())
+    monkeypatch.setattr(common, "DATA", tmp_path)
+    first = common.load(2024)[0]
+    edited = first.assign(individual=first["individual"] + 1)
+    edited.to_csv(tmp_path / "members_2024.csv", index=False)
+    os.utime(tmp_path / "members_2024.csv", (1, 1))  # a different modified time, as a git pull gives
+    again = common.load(2024)[0]
+    assert (again["individual"] - first["individual"]).eq(1).all()
