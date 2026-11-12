@@ -3,20 +3,20 @@
  "set": "test",
  "pairs": 297,
  "all": {
-  "correct": 60.4,
+  "correct": 69.7,
   "correct_ci95": [
-   55.2,
-   65.5
+   64.6,
+   74.7
   ],
-  "wrong": 8.3,
+  "wrong": 6.3,
   "wrong_ci95": [
-   5.2,
-   11.4
+   3.6,
+   9.1
   ],
-  "left": 31.3,
+  "left": 24.0,
   "left_ci95": [
-   26.3,
-   36.3
+   19.3,
+   28.7
   ],
   "stratum_weights": {
    "list": 0.334,
@@ -45,22 +45,22 @@
   },
   "tail": {
    "draws": 200,
-   "correct": 48.0,
+   "correct": 62.0,
    "correct_ci95": [
-    41.2,
-    54.9
+    55.1,
+    68.4
    ],
-   "wrong": 10.5,
+   "wrong": 7.5,
    "wrong_ci95": [
-    7.0,
-    15.5
+    4.6,
+    12.0
    ],
-   "left": 41.5,
+   "left": 30.5,
    "left_ci95": [
-    34.9,
-    48.4
+    24.5,
+    37.2
    ],
-   "correct_when_placed": 82.1
+   "correct_when_placed": 89.2
   }
  },
  "high_confidence_labels": {
@@ -85,22 +85,22 @@
   },
   "tail": {
    "draws": 121,
-   "correct": 57.0,
+   "correct": 72.7,
    "correct_ci95": [
-    48.1,
-    65.5
+    64.2,
+    79.9
    ],
-   "wrong": 6.6,
+   "wrong": 3.3,
    "wrong_ci95": [
-    3.4,
-    12.5
+    1.3,
+    8.2
    ],
-   "left": 36.4,
+   "left": 24.0,
    "left_ci95": [
-    28.3,
-    45.2
+    17.2,
+    32.3
    ],
-   "correct_when_placed": 89.6
+   "correct_when_placed": 95.7
   }
  }
 }

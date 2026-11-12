@@ -50,7 +50,8 @@ Two changes came out of this:
 
 - **`pipeline/industry_rules.py`:** keyword rules on the employer name, then on the occupation, sorted into 20 industries
   plus "unknown". Employer rules come first, because an attorney at Microsoft works in tech.
-- **`data/employer_industry.csv`:** the 1,000 employers with the most itemized dollars to members in 2024.
+- **`data/employer_industry.csv`:** the 1,000 employers with the most itemized dollars to members in 2024 (round 3
+  extended it to 4,447, see the audit section).
   - The rules placed 750 of them. The other 250 were left unplaced.
   - Every row was then reviewed one at a time by an AI assistant (Claude). It overruled the rules on 41 of the 750 and
     placed the 250. The `source` column says which rows the review changed.
@@ -110,6 +111,29 @@ Two tail methods were tried on dev and dropped because neither helped:
 
 What would work: review more employers. 65% of the test set's unknown tail dollars sit with employers ranked in the
 top 20,000 by dollars (28% in the top 5,000).
+
+### Round 3: 4,447 reviewed employers, scored on the same held-out sample
+
+The list grew from the top 1,000 employers to ranks 1,001 to 5,000 as well. Each candidate was shown with its top
+occupation, the rule's answer, and where its donors' occupations point.
+- Claude placed the employers the rules couldn't and checked the rule answers, overruling 109 of 1,515 (92.8%
+  agreement).
+- 553 names were left off on purpose: they carry no clue to an industry (a person's name, "VARIOUS", "PILOT"), so each
+  donor's own occupation still decides.
+- The list now has 4,447 employers.
+- Three rule bugs found in the review were fixed: "HARRIS" (Fried Frank Harris, Brown Harris Stevens), "DOMINION" (Old
+  Dominion Freight Line) and "ELECTRIC" (Electric Boat).
+
+| Test sample, share of industry-signal dollars | Round 2 | Round 3 |
+|---|---|---|
+| Right industry | 60.4% | 69.7% (95% CI 64.6 to 74.7) |
+| Wrong industry | 8.3% | 6.3% |
+| Left unknown | 31.3% | 24.0% |
+| Right, when an industry is given | 87.9% | 91.7% |
+
+Caveat on the gain: 33 of the 300 test draws are placed by employers Claude reviewed in this round, after labeling the
+test sample, and all 33 agree. That is partly the same judgment twice. If those agreed only at the tail's usual 89%,
+the right share would be about 1.2 points lower.
 
 Limits: one labeler, and the same assistant wrote the rules, so the labels are not fully independent. A spot check by
 a person on a random 50 would show how much that matters. The "list" stratum includes self-employed donors, since

@@ -66,7 +66,7 @@ def test_status_comes_before_industry():
 
 def test_mapping_file_is_valid():
     m = pd.read_csv(ROOT / "data" / "employer_industry.csv")
-    assert len(m) == 1000 and m["employer"].is_unique
+    assert len(m) >= 1000 and m["employer"].is_unique
     assert set(m["industry"]) <= set(INDUSTRIES) | {"not_employed"}
     assert set(m["source"]) <= {"rule", "review"}
 
