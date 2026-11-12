@@ -116,6 +116,23 @@ a person on a random 50 would show how much that matters. The "list" stratum inc
 that string is on the list. Every misread pair is in `data/audit_2024_misses.csv` (dev) and `data/audit_2024_test_misses.csv` (test). The labeler saw
 the test pairs while labeling them, so fixes were limited to words found in dev misses.
 
+## The site (phase 3, first page)
+
+`site/app.py` is a Streamlit page: pick a member, see where their individual money came from. It reads two small files
+written by `pipeline/aggregate.py` (`site/data/`, about 300 KB), so it runs on a free host.
+
+- **Every dollar is shown.** The first chart splits each member's individual money into placed in an industry,
+  industry unclear, retired, not employed, no information given, and unitemized. The industry chart below it uses
+  the same total, so no bar reads bigger than it is.
+- **Same charts for everyone,** sorted by the data, with a tick for the median of the member's party in their chamber.
+- **Totals** come from the FEC all-candidates summary, which also covers senators not on the ballot that cycle.
+- **Links** to each committee's FEC page and to PartyCohesion for voting records. No vote appears on this site.
+
+```bash
+pip install -r site/requirements.txt
+streamlit run site/app.py
+```
+
 ## Wording rules
 
 - Say "received from people who listed employers in finance", never "funded by" or "owned by" an industry.
@@ -134,6 +151,7 @@ python feasibility.py --cycle 2024         # writes data/feasibility_2024.json
 python audit_sample.py --cycle 2024        # draws the audit sample (already drawn; rerun gives the same draws)
 python audit.py --cycle 2024               # scores the pipeline on the dev sample
 python audit.py --cycle 2024 --set test    # and on the held-out test sample
+python aggregate.py --cycle 2024           # per-member totals for the site
 cd .. && pytest -q
 ```
 
