@@ -105,3 +105,23 @@ def test_occupation_list_labels_are_valid():
     m = pd.read_csv(Path(__file__).resolve().parents[1] / "data" / "occupation_industry.csv", keep_default_na=False)
     assert set(m["industry"]) <= set(INDUSTRIES) | {"unknown"}
     assert not m["occupation"].duplicated().any()
+
+
+def test_fresh_prompt_is_blind_and_complete():
+    root = Path(__file__).resolve().parents[1] / "data"
+    prompt = (root / "audit_2024_fresh_prompt.txt").read_text()
+    sample = pd.read_csv(root / "audit_2024_fresh_sample.csv", dtype=str, keep_default_na=False)
+    assert len(sample) == 100 and all(i in prompt for i in sample["id"])
+    for leak in ("predicted", "pipeline says", "stratum", "dollars"):
+        assert leak not in prompt  # raters see only what the donor wrote
+
+
+def test_compare_rejects_labels_outside_the_list(tmp_path):
+    from audit_compare import read_labels
+    bad = tmp_path / "audit_2024_fresh_labels_x.csv"
+    bad.write_text("id,label,confidence\nC001,banking,high\n")
+    with pytest.raises(SystemExit):
+        read_labels(bad)
+    ok = tmp_path / "audit_2024_fresh_labels_y.csv"
+    ok.write_text("id,label,confidence\nC001,Real Estate,HIGH\nC002,Not Employed,low\n")
+    assert list(read_labels(ok)["label"]) == ["real_estate", "not employed"]

@@ -1,0 +1,146 @@
+I am auditing a pipeline that sorts political donors by industry, using what each donor wrote on their Federal Election Commission filing. I need your independent opinion on 100 records. Other raters are labeling the same records separately, and I will compare everyone's answers, so please label each one on your own judgment.
+
+How to label
+
+1. Label the industry of the organization the donor works for, not their job title. A lawyer at a bank is finance; a lawyer at a law firm is law.
+2. If the donor is self-employed, left the employer blank, or wrote only a title as the employer (CEO, OWNER, PRESIDENT), label the industry of their own work from the occupation (a self-employed optometrist is health).
+3. You may use what you know about a company, and look it up if you can (Jane Street is a trading firm, so finance).
+4. Use unknown when the text gives no way to tell: a vague or unrecognized company name, a person's name, or a generic title with nothing else.
+5. Confidence: high if most careful people would give the same answer; low if a reasonable person could pick a different one.
+6. Use retired, not employed or missing only if the text itself says so (for example N/A or REQUESTED in both fields).
+
+Industry codes (use these exact codes):
+- finance: Finance and investment: banks, investment and trading firms, private equity, hedge funds, venture capital, mortgage lenders, financial advisors
+- insurance: Insurers and insurance brokers, including health insurers
+- law: Law firms, lawyers, mediators and arbitrators
+- lobbying: Lobbying and public affairs: lobbying firms, government relations, political consultants, trade associations
+- tech: Technology: software, internet companies, computer hardware, semiconductors
+- health: Health care: hospitals, doctors, clinics, therapists, nursing, veterinary care
+- pharma: Pharma, biotech and medical devices
+- energy: Energy and utilities: oil, gas, coal, mining, electric and gas utilities, solar and wind
+- real_estate: Real estate and construction: brokers, developers, property managers, builders, contractors, architects, title companies, building trades
+- defense: Defense and aerospace contractors
+- education: Education: schools, colleges, universities, tutors
+- government: Government: agencies, elected officials and their staff, military, police and fire
+- media: Media, entertainment and sports: news, film, TV, music, publishing, writers, artists
+- manufacturing: Manufacturing: factories and industrial companies not covered elsewhere (steel, chemicals, machinery)
+- consumer: Retail, food and consumer goods: stores, restaurants, hotels, car dealers, food and drink makers
+- agriculture: Agriculture: farms, ranches, agribusiness, wineries, forestry, fishing
+- transportation: Transportation: airlines, railroads, trucking, shipping, logistics
+- telecom: Telecom and cable: phone, cable and internet providers
+- nonprofit: Nonprofits and advocacy: charities, foundations, advocacy groups, religious organizations
+- business_services: Consulting and business services: management consulting, accounting, staffing, marketing and PR agencies
+- unknown: The text gives no way to tell the industry
+- retired: Only if the text says retired
+- not employed: Only if the text says not employed, homemaker or student
+- missing: Only if both fields are blank, N/A or 'information requested'
+
+Reply with only a CSV block, with this header and exactly one row for each of the 100 records, in the same order:
+id,label,confidence,note
+
+- label is one code from the list above.
+- confidence is high or low.
+- note is optional: a few words when the answer rests on what you know about the company, or when it is a close call. Leave it empty otherwise. Do not use commas in the note.
+
+Records:
+id,employer,occupation
+C001,VSC,EXECUTIVE
+C002,HUNT CONSOLIDATED,CEO
+C003,CROSSROADS STRATEGIES,PARTNER
+C004,NORTHWESTERN UNIVERSITY,EDUCATOR
+C005,SENSE LABS INC.,EXECUTIVE
+C006,LKV MANAGEMENT,CHAIRMAN
+C007,"GIVE FREELY, LLC",CEO
+C008,RUFF ROOFERS,VICE PRESIDENT/OPERATIONS
+C009,PIONEER GROUP,PRESIDENT
+C010,SAGESURE,INSURANCE
+C011,RUSSELL STREET VENTURES,CEO
+C012,VCA ANIMAL HOSPITALS,FINANCE
+C013,GREEN HILLS SOFTWARE LLC,EXECUTIVE
+C014,COLDWELL BANKER RPM WLR,REAL ESTATE BROKER
+C015,GLENBROOK AUTOMOTIVE GROUP,AUTO DEALER
+C016,VDF FUTURECEUTICALS INC.,ATTORNEY
+C017,NINE ENERGY,ENGINEER
+C018,"DELTA AIR LINES, INC.",CHIEF DIGITAL OFFICER
+C019,JANE STREET ASIA LIMITED,FINANCIAL SERVICES
+C020,SELF EMPLOYED,COLLEGE COUNSELOR
+C021,THE RHOADS GROUP,GOVERNMENT RELATIONS
+C022,KONGSBERG DEFENSE AEROSPACE INC,"DIRECTOR, GOVERNMENT RELATIONS"
+C023,MASON CONSULTING,LOBBYIST
+C024,N/A,COACH
+C025,NORMANDIN CHRYSLER DODGE JEEP RAM FIAT,BUSINESS OWNER
+C026,"TAFT STETTINIUS & HOLLISTER, LLP",ATTORNEY
+C027,DAVE PERRY MILLER REAL ESTATE,REAL ESTATE BROKER
+C028,"WPI REAL ESTATE, INC.",CEO
+C029,DBA: MARY LODE,ARTIST
+C030,COLDWELL BANKER ADVANTAGE,REAL ESTATE BROKER
+C031,AGINS INTERIOR,BUSINESS OWNER
+C032,ENERCOMP INC.,ENGINEER
+C033,LEHOTSKY KELLER LLP,LAWYER
+C034,PREMIUM TITLE & ESCROW LLC,CEO
+C035,MALIBU DETOX LLC,CEO
+C036,"BELTRAME LAW FIRM, PLC",ATTORNEY
+C037,MOODY RAMBIN,REAL ESTATE
+C038,SELF,SELF EMPLOYED
+C039,THE PALLADIAN GROUP INC,PUBLIC RELATIONS
+C040,TILEBAR,CDO
+C041,RCS,CONSULTANT
+C042,LONE PINE CAPITAL,FOUNDER
+C043,INVARIANT,GOVERNMENT AFFAIRS
+C044,MURRAY FAMILY CHARITABLE FOUNDATION,PRESIDENT
+C045,FOUNDERS INVESTMENT BANKING,CONSULTANT
+C046,INSIGHT PARTNERS,VENTURE CAPITALIST
+C047,MARTA KAUFFMAN PRODUCTIONS INC.,WRITER & PRODUCER
+C048,INTERDYNAMICS,PSYCHOLOGIST
+C049,SELF EMPLOYED,BUSINESS OWNER
+C050,METRO STEEL,VP
+C051,DUNLEER STRATEGIES,PRESIDENT
+C052,TRANSDIGM GROUP,EXECUTIVE VP
+C053,PARKER MILLIKIN,LAWYER
+C054,LEXINGTON MANAGEMENT,MANAGER
+C055,MERIDIAN MEDIA,CEO
+C056,INLAND R.E.BROKERAGE & AUCTION,REAL ESTATE BROKER
+C057,THE WILLIAMS GROUP,PARTNER
+C058,LESMIR,REAL ESTATE
+C059,ACAP,CEO
+C060,,PRIVATE EQUITY
+C061,OLD DOMINION FREIGHT LINE,EXECUTIVE
+C062,"FLS, INC.",INVESTMENTS
+C063,SELF EMPLOYED,FARMER
+C064,HERZOG,DIRECTOR
+C065,ARIZONA DIGESTIVE HEALTH,PHYSICIAN
+C066,AGAA,WEALTH PLANNER
+C067,COOPER FARMS,FARMER
+C068,LINEAR SOLUTIONS,WRITER
+C069,CENTURY 21 SGR INC,REALTOR
+C070,SELF,LAWYER
+C071,PRIOR WORLD,PROJECT MANAGER
+C072,TRUXTUN RADIOLOGY MEDICAL GROUP,MD
+C073,FAMILEE PROPERTIES,EXECUTIVE
+C074,NG INVESTMENTS,INVESTMENT ADVISOR
+C075,MERRILL LYNCH,FINANCIAL ADVISOR
+C076,LAZY BEAR,RESTAURANT OWNER
+C077,MOBILE COUNTY PUBLIC SCHOOLS,PRINCIPAL
+C078,SELF EMPLOYED,HISTORIAN
+C079,BELLE'S CHICKEN DINNER HOUSE,OWNER
+C080,FLORO & ASSOCIATES,OWNER
+C081,VETERANS GUARDIAN VA CLAIM CONSULTING,EXECUTIVE
+C082,ROCKET COMPANIES,LAWYER
+C083,REDMAN GELINAS EYECARE,PHYSICIAN
+C084,GIBSON DUNN,LAWYER
+C085,SELF-EMPLOYED,OPTOMETRIST
+C086,TUFTSHEALTH PLAN,COO
+C087,"HAPPY HOUR 4 KIDS, INC.",CEO
+C088,CLEARY GOTTLIEB STEEN & HAMILTON LLP,ATTORNEY
+C089,TOPO,COMMERCIAL REAL ESTATE DEVELOPMENT
+C090,OLSON ALUMINUM CASTINGS,PRESIDENT
+C091,MODMANSIONS,BUSINESS OWNER
+C092,FTC SOLAR,SENIROR VICE PRESIDENT
+C093,SELF-EMPLOYED,PHYSICIAN
+C094,SHAY OIL CO. INC.,CONSULTANT
+C095,UW,PHYSICIAN
+C096,OMEGA STEEL CORP,PRESIDENT
+C097,INNER-CITY GROUP OF COMPANIES,CEO
+C098,SELF-EMPLOYED,BUSINESS OWNER
+C099,FOLEY HOAG,PARTNER
+C100,CLEAR PATH,FOUNDER

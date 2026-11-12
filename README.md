@@ -179,6 +179,21 @@ Haiku 5.5 over every pair, keeping only confident answers, is estimated at about
 10M output tokens, including its reasoning), before any batch discount. It needs a person-labeled test sample to score
 it, since the current labels also come from Claude.
 
+
+### Round 5 (in progress): a fresh sample, labeled by a person and another AI
+
+Every label so far came from Claude, which also wrote the rules and reviewed the lists. Round 5 takes that out of the
+answer key.
+- `data/audit_2024_fresh_sample.csv`: 100 new draws (34 list, 66 tail, by dollar weight, seed 2026), none of them a
+  pair already in the dev or test sample.
+- Three raters label the same records from the employer and occupation text alone, following the same written rules
+  (`data/audit_2024_fresh_prompt.txt`, which is also the exact prompt given to the outside AI): Ren, an outside AI,
+  and Claude. Claude's labels (`data/audit_2024_fresh_labels_claude.csv`) were committed before anyone else labeled.
+- `pipeline/audit_compare.py` scores the pipeline against each rater, reports how often each pair of raters agrees
+  (with Cohen's kappa), and scores the pipeline on the records where Ren and the outside AI agree, the least disputed
+  answer key. Records they disagree on go to `data/audit_2024_fresh_disputed.csv`.
+- Nothing will be tuned against this sample.
+
 ## The site (phase 3, first page)
 
 `site/app.py` is a two-page Streamlit app. Members (the default) lets you pick a member and see where their individual money came from. It reads two small files
@@ -237,6 +252,7 @@ python feasibility.py --cycle 2024         # writes data/feasibility_2024.json
 python audit_sample.py --cycle 2024        # draws an audit sample (the committed files are the record; later rule changes mean a rerun draws different pairs)
 python audit.py --cycle 2024               # scores the pipeline on the dev sample
 python audit.py --cycle 2024 --set test    # and on the held-out test sample
+python audit_compare.py --cycle 2024       # the fresh sample, against each rater
 python aggregate.py --cycle 2024           # per-member totals for the site (run for 2022 as well)
 cd .. && pytest -q
 ```

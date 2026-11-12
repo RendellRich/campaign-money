@@ -12,6 +12,7 @@ The sample file holds only what the donor wrote (no names, no rule output), so i
 
   python pipeline/audit_sample.py --cycle 2024                        # the first sample, now the dev set
   python pipeline/audit_sample.py --cycle 2024 --seed 2025 --set test  # the held-out test set
+  python pipeline/audit_sample.py --cycle 2024 --seed 2026 --set fresh # labeled by a person and another AI
 """
 from __future__ import annotations
 
@@ -71,7 +72,17 @@ def main() -> None:
     ap.add_argument("--set", default="", help='"" for the dev sample, "test" for the held-out one')
     a = ap.parse_args()
     cycle = a.cycle
-    sample = draw(pairs(), seed=a.seed, prefix="B" if a.set else "A")
+    g = pairs()
+    draws = DRAWS
+    if a.set == "fresh":
+        # A third sample, scored by people and other AIs rather than tuned against: 100 draws split by the strata's
+        # dollar weights, leaving out every pair already in the dev or test sample.
+        seen = pd.concat([pd.read_csv(ROOT / "data" / f"audit_{cycle}{x}_sample.csv", dtype=str, keep_default_na=False)
+                          for x in ("", "_test")])
+        g = g[~(g["employer"] + "|" + g["occupation"]).isin(set(seen["employer"] + "|" + seen["occupation"]))]
+        draws = {"list": 34, "tail": 66}
+    prefix = {"": "A", "test": "B", "fresh": "C"}.get(a.set, "X")
+    sample = draw(g, draws=draws, seed=a.seed, prefix=prefix)
     path = ROOT / "data" / f"audit_{cycle}{'_' + a.set if a.set else ''}_sample.csv"
     sample[["id", "stratum", "employer", "occupation", "draws", "dollars", "stratum_dollars"]].to_csv(path, index=False)
     print(sample.groupby("stratum").agg(pairs=("id", "size"), draws=("draws", "sum")))
