@@ -169,7 +169,9 @@ written by `pipeline/aggregate.py` (`site/data/`, about 300 KB), so it runs on a
   both cycles. Everything on the Members page follows that group: the header strip and its total, a summary of the
   group (total, median member, largest industry), each industry's share of the group's money with a tick for all
   current members, and a sortable table of every member in the group with a link to their page and a CSV download.
-  The Industries page still counts current members only.
+  The Industries page has the same filter, and the setting carries over between the two pages, so its party and
+  chamber bars, its top 15 and its member table follow the same group. Its tick for the other cycle shows the same
+  members, those who had a committee then.
 - **Industries page** (`site/views/industries.py`): pick an industry and see its share of each party's money in each
   chamber, and the 15 members for whom it made up the largest share (among members who raised at least $250K from
   individuals, so a few small gifts can't top the list). A table lists every member with a link to their profile.

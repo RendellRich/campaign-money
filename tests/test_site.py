@@ -60,7 +60,7 @@ def test_industry_page_renders_every_industry():
     for option in box.options[:3] + box.options[-2:]:
         box.select(option).run()
         assert not at.exception
-        assert any("to current members from people who listed employers in" in m.value for m in at.markdown)
+        assert any("current members from people who listed employers in" in m.value for m in at.markdown)
 
 
 def test_2022_cycle_and_change_section():
@@ -125,6 +125,31 @@ def test_filter_changes_the_numbers_not_just_the_list():
 
 def test_filter_with_no_matches_explains_itself():
     at = AppTest.from_file(APP, default_timeout=30).run()
+    at.session_state["f_party"] = ["Independent"]
+    at.session_state["f_min"] = "$10M or more"
+    at.run()
+    assert not at.exception
+    assert any("No members match these filters" in m.value for m in at.markdown)
+
+
+def test_industries_page_follows_the_filter_and_it_carries_over():
+    members = pd.read_csv(ROOT / "site" / "data" / "members_2024.csv")
+    at = AppTest.from_file(APP, default_timeout=30).run()
+    at.session_state["f_chamber"] = ["Senate"]
+    at.session_state["f_party"] = ["Democrat"]
+    at.run()
+    at.switch_page("views/industries.py").run()
+    assert not at.exception
+    n = (members["current"] & (members["chamber"] == "Senate") & (members["party"] == "Democrat")).sum()
+    assert any(f"to {n} current Democratic senators from people" in m.value for m in at.markdown)
+    at.switch_page("views/members.py").run()
+    assert not at.exception
+    assert any(f"that {n} current Democratic senators raised" in m.value for m in at.markdown)
+
+
+def test_industries_page_with_no_matches():
+    at = AppTest.from_file(APP, default_timeout=30).run()
+    at.switch_page("views/industries.py").run()
     at.session_state["f_party"] = ["Independent"]
     at.session_state["f_min"] = "$10M or more"
     at.run()
