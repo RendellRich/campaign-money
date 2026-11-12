@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       limit:
-        description: "Only the N pairs with the most dollars (blank for all 263,879)"
+        description: "How many pairs, by dollars: a number, or all for every one of the 263,879 (a blank box falls back to 500)"
         required: false
         default: "500"
       batch:
@@ -36,7 +36,7 @@ jobs:
         run: |
           cd pipeline
           ARGS=""
-          if [ -n "$LIMIT" ]; then ARGS="--limit $LIMIT"; fi
+          if [ -n "$LIMIT" ] && [ "$LIMIT" != "all" ]; then ARGS="--limit $LIMIT"; fi
           if [ -n "$BATCH" ]; then
             python llm_tail.py collect --batch "$BATCH" $ARGS
           else
@@ -45,7 +45,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: llm-tail-labels
+          name: llm-tail-labels-${{ github.run_id }}
           path: |
             data/llm/tail_labels.csv.gz
             data/llm/tail_run.json

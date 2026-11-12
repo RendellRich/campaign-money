@@ -69,3 +69,14 @@ def test_estimate_for_the_full_run_is_small():
     est = llm_tail.estimate(llm_tail.requests(llm_tail.load_pairs()))
     assert est["pairs"] == len(llm_tail.load_pairs())
     assert est["list_price_usd"] < 20
+
+
+def test_combine_keeps_only_what_both_runs_agree_on_confidently(tmp_path):
+    a, b, c = PAIRS["pair_id"]
+    base = PAIRS.copy()
+    one = base.assign(label=["real_estate", "consumer", "media"], confidence=["high", "high", "high"])
+    two = base.assign(label=["real_estate", "consumer", "nonprofit"], confidence=["high", "low", "high"])
+    one.to_csv(tmp_path / "1.csv.gz", index=False, compression="gzip")
+    two.to_csv(tmp_path / "2.csv.gz", index=False, compression="gzip")
+    keep = llm_tail.combine(tmp_path / "1.csv.gz", tmp_path / "2.csv.gz", tmp_path / "out.csv.gz")
+    assert list(keep["pair_id"]) == [a]  # b dropped for low confidence once, c for a different label

@@ -10,6 +10,11 @@ USE_LLM_TAIL is switched on, so they can be scored against a person's labels fir
   python pipeline/llm_tail.py dry-run --limit 300  # builds requests, prints one and a cost estimate, sends nothing
   python pipeline/llm_tail.py run                  # needs ANTHROPIC_API_KEY: submit, wait, collect
   python pipeline/llm_tail.py collect --batch ID   # pick up a batch that was still running when `run` stopped
+  python pipeline/llm_tail.py combine A.csv.gz B.csv.gz  # keep only what two separate runs agree on
+
+Two runs of the same pairs agree on the label far more often than on the confidence, and where both call a pair high
+confidence they have agreed on the label every time in testing. So the labels the site may use come from two full runs:
+`combine` keeps a pair only when both runs placed it in the same industry with high confidence.
 
 The run is meant for the manual GitHub Action (.github/workflows/llm-tail.yml), which holds the key as a secret.
 """
@@ -165,9 +170,26 @@ def collect(client, batch_id: str, pairs: pd.DataFrame) -> pd.DataFrame:
     return out
 
 
+def combine(first: Path, second: Path, out: Path = LABELS) -> pd.DataFrame:
+    """Keep a pair only where two runs gave the same industry, both with high confidence."""
+    a = pd.read_csv(first, dtype=str, keep_default_na=False)
+    b = pd.read_csv(second, dtype=str, keep_default_na=False)
+    m = a.merge(b[["pair_id", "label", "confidence"]], on="pair_id", suffixes=("", "_2"))
+    keep = m[(m["label"] == m["label_2"]) & (m["confidence"] == "high") & (m["confidence_2"] == "high")]
+    keep = keep[["pair_id", "employer", "occupation", "dollars", "label", "confidence"]]
+    keep.to_csv(out, index=False, compression="gzip")
+    placed = keep[~keep["label"].isin(["unknown", "retired", "not employed", "missing"])]
+    report = {"pairs_in_both": len(m), "same_label": round(float((m["label"] == m["label_2"]).mean()) * 100, 1),
+              "kept": len(keep), "kept_with_an_industry": len(placed),
+              "kept_industry_dollars": int(placed["dollars"].astype(int).sum())}
+    print(json.dumps(report, indent=1))
+    return keep
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
-    ap.add_argument("step", choices=["export", "dry-run", "run", "collect"])
+    ap.add_argument("step", choices=["export", "dry-run", "run", "collect", "combine"])
+    ap.add_argument("files", nargs="*", help="for combine: the two runs' tail_labels.csv.gz")
     ap.add_argument("--limit", type=int, default=None, help="only the N pairs with the most dollars")
     ap.add_argument("--batch", default=None, help="batch id, for collect")
     ap.add_argument("--wait-minutes", type=int, default=300)
@@ -175,6 +197,9 @@ def main() -> None:
 
     if a.step == "export":
         export()
+        return
+    if a.step == "combine":
+        combine(Path(a.files[0]), Path(a.files[1]))
         return
     pairs = load_pairs(a.limit)
     reqs = requests(pairs)
