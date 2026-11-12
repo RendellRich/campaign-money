@@ -39,3 +39,11 @@ def test_member_query_param_opens_that_member():
     assert not at.exception
     assert members["name"].iloc[5] in at.selectbox[0].value
     assert any(f"Member_Explorer?member={bio}" in m.value for m in at.markdown)
+
+
+def test_unknown_member_param_explains_itself():
+    at = AppTest.from_file(APP, default_timeout=30)
+    at.query_params["member"] = "X000000"
+    at.run()
+    assert not at.exception
+    assert at.info and "No 2024 campaign committee" in at.info[0].value

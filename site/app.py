@@ -95,7 +95,10 @@ linked = by_bioguide.get(st.query_params.get("member", ""))
 pick = st.selectbox("Member", options, index=options.index(linked) if linked else None,
                     placeholder="Search for a member of Congress")
 if pick is None:
-    if "member" in st.query_params:
+    asked = st.query_params.get("member", "")
+    if asked:
+        st.info(f"No {CYCLE} campaign committee was found for that member. New members, appointed senators and "
+                "members who did not run that cycle have no profile here yet.")
         del st.query_params["member"]
     st.caption(f"{len(members)} current members with a principal campaign committee in the {CYCLE} cycle.")
     st.stop()
