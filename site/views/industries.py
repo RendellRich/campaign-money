@@ -6,7 +6,7 @@ import altair as alt
 import pandas as pd
 import streamlit as st
 
-from common import (CYCLES, INDUSTRY_NAMES, PARTY_COLORS, PARTY_LETTER, colors, hero, inject_css, load, money_fmt,
+from common import (CYCLES, current_only, INDUSTRY_NAMES, PARTY_COLORS, PARTY_LETTER, colors, hero, inject_css, load, money_fmt,
                     pick_cycle, theme)
 
 # Members with less individual money than this are left out of the "largest share" chart, where a few small gifts
@@ -20,7 +20,7 @@ party_colors = PARTY_COLORS[theme()]
 
 top_slot = st.container()
 cycle = pick_cycle()
-members, money = load(cycle)
+members, money = current_only(*load(cycle))
 with top_slot:
     hero("Where each industry's money went",
          f"Money from people who listed employers in one industry, in the {cycle - 1} to {cycle} cycle: its share of each "
@@ -74,7 +74,7 @@ g = g.sort_values("share", ascending=False)
 # The other cycle, as a tick on each bar, for the same groups of current members.
 other = next((x for x in CYCLES if x != cycle), None)
 if other:
-    om, omoney = load(other)
+    om, omoney = current_only(*load(other))
     od = om.merge(omoney[omoney["category"] == key][["bioguide_id", "dollars"]], on="bioguide_id", how="left")
     og = od.fillna({"dollars": 0}).groupby(["chamber", "party"])[["dollars", "individual"]].sum()
     g["prev"] = [og.loc[(ch, p), "dollars"] / og.loc[(ch, p), "individual"] if (ch, p) in og.index else None

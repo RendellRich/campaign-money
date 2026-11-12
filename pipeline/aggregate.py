@@ -58,7 +58,7 @@ def build(cycle: int) -> tuple[pd.DataFrame, pd.DataFrame]:
     yy = str(cycle)[2:]
     cn = pd.read_csv(unzip(fetch(cycle, f"cn{yy}.zip"), "cn.txt"), sep="|", header=None, dtype=str)[[0, 9]]
     cn = cn.rename(columns={0: "cand_id", 9: "cmte_id"})
-    own = member_ids()[["bioguide_id", "cand_id"]].merge(cn, on="cand_id")[["bioguide_id", "cmte_id"]].drop_duplicates()
+    own = member_ids(cycle)[["bioguide_id", "cand_id"]].merge(cn, on="cand_id")[["bioguide_id", "cmte_id"]].drop_duplicates()
     shared = cm["cmte_id"].duplicated(keep=False)
     cm = pd.concat([cm[~shared], cm[shared].merge(own)]).drop_duplicates()
     money = (g.merge(cm, on="cmte_id").groupby(["bioguide_id", "category"], as_index=False)["dollars"].sum())
@@ -79,6 +79,9 @@ def build(cycle: int) -> tuple[pd.DataFrame, pd.DataFrame]:
     # Refunds and redesignations can leave the summary total a little under the itemized sum; never go negative.
     members["individual"] = members[["individual", "itemized"]].max(axis=1)
     members["unitemized"] = members["individual"] - members["itemized"]
+    # A committee that only paid refunds in the cycle (a senator not running, say) nets to zero or less: no profile.
+    members = members[members["individual"] > 0]
+    money = money[money["bioguide_id"].isin(members.index)]
 
     unit = members["unitemized"].rename("dollars").reset_index().assign(category="unitemized")
     money = pd.concat([money, unit[["bioguide_id", "category", "dollars"]]], ignore_index=True)

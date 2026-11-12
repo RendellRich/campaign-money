@@ -158,6 +158,12 @@ written by `pipeline/aggregate.py` (`site/data/`, about 300 KB), so it runs on a
 - **Color with a job.** Each kind of money has its own color (industry green, unclear blue, retired amber, not employed
   purple, unitemized clay, missing gray), checked with a palette validator for color-blind readers and always labeled in
   words. The green header panel carries the site's mark: one strip showing every dollar current members raised, by kind.
+- **Former members and a filter.** Each cycle now includes everyone who served in the Congress that sat during it
+  (from congress-legislators' historical file), not only today's members: 603 profiles for 2024 (85 former, such as
+  Jon Tester and Sherrod Brown) and 615 for 2022. A filter button above the member list narrows it by status (serving
+  now or former), chamber, party, state, money raised, and whether the member had a committee in both cycles. The
+  header strip and the Industries page still count current members only. Members whose committee only paid refunds
+  in a cycle (Mitt Romney in 2024) are left out.
 - **Industries page** (`site/views/industries.py`): pick an industry and see its share of each party's money in each
   chamber, and the 15 members for whom it made up the largest share (among members who raised at least $250K from
   individuals, so a few small gifts can't top the list). A table lists every member with a link to their profile.
@@ -183,7 +189,7 @@ python member_committees.py --cycle 2024   # members to campaign committees
 python load_fec.py --cycle 2024            # downloads the 4.2 GB contributions file, loads it in about 3 minutes
 python load_fec.py --cycle 2022            # the 2022 zip's itcont.txt is incomplete, so this reads its by_date/ files
 python feasibility.py --cycle 2024         # writes data/feasibility_2024.json
-python audit_sample.py --cycle 2024        # draws the audit sample (already drawn; rerun gives the same draws)
+python audit_sample.py --cycle 2024        # draws an audit sample (the committed files are the record; later rule changes mean a rerun draws different pairs)
 python audit.py --cycle 2024               # scores the pipeline on the dev sample
 python audit.py --cycle 2024 --set test    # and on the held-out test sample
 python aggregate.py --cycle 2024           # per-member totals for the site (run for 2022 as well)

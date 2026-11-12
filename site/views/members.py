@@ -7,7 +7,7 @@ import pandas as pd
 import streamlit as st
 
 from common import (AUDIT, CYCLES, INDUSTRY_NAMES, OTHER, PARTY_LETTER, bar_chart, cards, change_chart, colors,
-                    composition, hero, inject_css, load, money_fmt, pick_cycle)
+                    composition, current_only, hero, inject_css, load, member_filters, money_fmt, pick_cycle)
 
 inject_css()
 c = colors()
@@ -15,29 +15,36 @@ c = colors()
 top_slot = st.container()  # the hero goes first on the page, but needs the cycle chosen below it
 cycle = pick_cycle()
 members, money = load(cycle)
-comp = composition(money)
+cur_members, cur_money = current_only(members, money)
+comp = composition(cur_money)
 with top_slot:
     hero('Where Congress gets its campaign money',
          f"Money from individual donors to current members of Congress in the {cycle - 1} to {cycle} election cycle, "
          "sorted by the industry each donor listed. From the Federal Election Commission's public filings.",
-         comp, f"Every dollar of the {money_fmt(sum(comp.values()))} that {len(members)} current members raised from "
+         comp, f"Every dollar of the {money_fmt(sum(comp.values()))} that {len(cur_members)} current members raised from "
                "individuals, by where it came from.")
 
-members["option"] = [f"{n} ({PARTY_LETTER.get(p, p[:1])}-{s}, {ch})"
-                     for n, p, s, ch in zip(members["name"], members["party"], members["state"], members["chamber"])]
-# ?member=<Bioguide ID> opens a member directly, so PartyCohesion and shared links can point at one profile.
-options = list(members["option"])
-by_bioguide = dict(zip(members["bioguide_id"], options))
+members["option"] = [f"{n} ({PARTY_LETTER.get(p, p[:1])}-{s}, {ch}{'' if cur else ', former'})"
+                     for n, p, s, ch, cur in zip(members["name"], members["party"], members["state"],
+                                                 members["chamber"], members["current"])]
+other_cycle = next((x for x in CYCLES if x != cycle), None)
+in_other = set(load(other_cycle)[0]["bioguide_id"]) if other_cycle else set()
+shown = member_filters(members, in_other, other_cycle)
+# ?member=<Bioguide ID> opens a member directly, so PartyCohesion and shared links can point at one profile. A linked
+# member stays in the list even when the filters would hide them.
+by_bioguide = dict(zip(members["bioguide_id"], members["option"]))
 linked = by_bioguide.get(st.query_params.get("member", ""))
+options = list(shown["option"])
+if linked and linked not in options:
+    options.insert(0, linked)
 pick = st.selectbox("Member", options, index=options.index(linked) if linked else None,
                     placeholder="Search for a member of Congress")
 if pick is None:
     asked = st.query_params.get("member", "")
     if asked:
-        st.info(f"No {cycle} campaign committee was found for that member. New members, appointed senators and "
-                "members who did not run that cycle have no profile here for it.")
+        st.info(f"No {cycle} campaign committee was found for that member. Appointed senators and members who did "
+                "not raise money that cycle have no profile here for it.")
         del st.query_params["member"]
-    st.caption(f"{len(members)} current members with a principal campaign committee in the {cycle} cycle.")
     st.stop()
 
 m = members[members["option"] == pick].iloc[0]
@@ -56,7 +63,8 @@ industry_cats = [k for k in INDUSTRY_NAMES if k in mine.index]
 ind_dollars = mine.loc[industry_cats, "dollars"] if industry_cats else pd.Series(dtype=float)
 top = ind_dollars.idxmax() if len(ind_dollars) and ind_dollars.max() > 0 else None
 cards([
-    ("From individual donors", money_fmt(m["individual"]), f"{m['party']}, {m['state']}, {m['chamber']}"),
+    ("From individual donors", money_fmt(m["individual"]),
+     f"{m['party']}, {m['state']}, {m['chamber']}" + ("" if m["current"] else ", no longer serving")),
     ("Itemized", f"{m['itemized'] / m['individual']:.0%}" if m["individual"] else "n/a",
      f"{money_fmt(m['itemized'])} with donor details"),
     ("Largest industry", INDUSTRY_NAMES[top] if top else "None",
@@ -95,7 +103,6 @@ else:
     st.altair_chart(bar_chart(ind, c, list(ind["label"]), median=True), width="stretch")
 
 # 3. Change between cycles, when the member had a committee in both.
-other_cycle = next((x for x in CYCLES if x != cycle), None)
 if other_cycle:
     before, after = sorted((cycle, other_cycle))
     mem_b, mon_b = load(before)

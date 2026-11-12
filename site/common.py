@@ -61,6 +61,12 @@ def load(cycle: int = CYCLE) -> tuple[pd.DataFrame, pd.DataFrame]:
     return members, money
 
 
+def current_only(members: pd.DataFrame, money: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
+    """Members still serving, for the site-wide totals. Former members appear only on their own pages."""
+    keep = members[members["current"]]
+    return keep, money[money["bioguide_id"].isin(keep["bioguide_id"])]
+
+
 def theme() -> str:
     return "dark" if getattr(getattr(st.context, "theme", None), "type", "light") == "dark" else "light"
 
@@ -191,3 +197,68 @@ def change_chart(df: pd.DataFrame, c: dict, order: list[str], before: int, after
         x=alt.X("right:Q"), text=alt.Text("share_after:Q", format=".1%"))
     return (alt.layer(rule, was, now, text).properties(height=alt.Step(30))
             .configure_view(stroke=None).configure(background="transparent"))
+
+
+STATE_NAMES = {
+    "AL": "Alabama", "AK": "Alaska", "AZ": "Arizona", "AR": "Arkansas", "CA": "California", "CO": "Colorado",
+    "CT": "Connecticut", "DE": "Delaware", "FL": "Florida", "GA": "Georgia", "HI": "Hawaii", "ID": "Idaho",
+    "IL": "Illinois", "IN": "Indiana", "IA": "Iowa", "KS": "Kansas", "KY": "Kentucky", "LA": "Louisiana",
+    "ME": "Maine", "MD": "Maryland", "MA": "Massachusetts", "MI": "Michigan", "MN": "Minnesota", "MS": "Mississippi",
+    "MO": "Missouri", "MT": "Montana", "NE": "Nebraska", "NV": "Nevada", "NH": "New Hampshire", "NJ": "New Jersey",
+    "NM": "New Mexico", "NY": "New York", "NC": "North Carolina", "ND": "North Dakota", "OH": "Ohio", "OK": "Oklahoma",
+    "OR": "Oregon", "PA": "Pennsylvania", "RI": "Rhode Island", "SC": "South Carolina", "SD": "South Dakota",
+    "TN": "Tennessee", "TX": "Texas", "UT": "Utah", "VT": "Vermont", "VA": "Virginia", "WA": "Washington",
+    "WV": "West Virginia", "WI": "Wisconsin", "WY": "Wyoming", "DC": "District of Columbia", "PR": "Puerto Rico",
+    "GU": "Guam", "VI": "U.S. Virgin Islands", "AS": "American Samoa", "MP": "Northern Mariana Islands",
+}
+STATUS = {"Serving now": True, "Former member": False}
+MIN_RAISED = {"Any amount": 0, "$500K or more": 500_000, "$1M or more": 1_000_000, "$5M or more": 5_000_000,
+              "$10M or more": 10_000_000}
+FILTER_KEYS = ["f_status", "f_chamber", "f_party", "f_state", "f_min", "f_both"]
+
+
+def _clear_filters() -> None:
+    for k in FILTER_KEYS:
+        st.session_state.pop(k, None)
+
+
+def member_filters(members: pd.DataFrame, in_other_cycle: set[str], other_cycle: int | None) -> pd.DataFrame:
+    """The filter button above the member list. Returns the members that match, and says how many that is."""
+    parties = [p for p in ["Democrat", "Republican", "Independent"] if p in set(members["party"])]
+    states = sorted(members["state"].unique(), key=lambda s: STATE_NAMES.get(s, s))
+    ss = st.session_state
+    active = sum([
+        len(ss.get("f_status") or list(STATUS)) < len(STATUS),
+        len(ss.get("f_chamber") or ["House", "Senate"]) < 2,
+        len(ss.get("f_party") or parties) < len(parties),
+        bool(ss.get("f_state")),
+        ss.get("f_min", "Any amount") != "Any amount",
+        bool(ss.get("f_both")),
+    ])
+    label = ":material/filter_list: Filter members" + (f" ({active})" if active else "")
+    with st.popover(label):
+        st.pills("Status", list(STATUS), selection_mode="multi", default=list(STATUS), key="f_status")
+        st.pills("Chamber", ["House", "Senate"], selection_mode="multi", default=["House", "Senate"], key="f_chamber")
+        st.pills("Party", parties, selection_mode="multi", default=parties, key="f_party")
+        st.multiselect("State", states, key="f_state", format_func=lambda s: STATE_NAMES.get(s, s),
+                       placeholder="All states")
+        st.select_slider("Raised from individuals", list(MIN_RAISED), value="Any amount", key="f_min")
+        if other_cycle:
+            st.toggle(f"Only members with a committee in both cycles (so the change since {min(other_cycle, CYCLE)} "
+                      "shows)", key="f_both")
+        st.button("Clear filters", on_click=_clear_filters, icon=":material/restart_alt:", type="tertiary")
+
+    status = [STATUS[s] for s in (ss.get("f_status") or list(STATUS))]
+    keep = (members["current"].isin(status)
+            & members["chamber"].isin(ss.get("f_chamber") or ["House", "Senate"])
+            & members["party"].isin(ss.get("f_party") or parties)
+            & (members["individual"] >= MIN_RAISED[ss.get("f_min", "Any amount")]))
+    if ss.get("f_state"):
+        keep &= members["state"].isin(ss["f_state"])
+    if ss.get("f_both"):
+        keep &= members["bioguide_id"].isin(in_other_cycle)
+    shown = members[keep]
+    serving = int(shown["current"].sum())
+    st.caption(f"Showing {len(shown)} of {len(members)} members who raised money in this cycle: {serving} serving now, "
+               f"{len(shown) - serving} former.")
+    return shown
