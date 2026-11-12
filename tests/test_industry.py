@@ -86,3 +86,22 @@ def test_audit_files_line_up(tag):
     assert set(labels["label"]) <= allowed
     assert set(labels["confidence"]) <= {"high", "low"}
     assert {"employer", "occupation"} <= set(sample.columns) and "label" not in sample.columns
+
+
+def test_occupation_list_places_self_employed_jobs():
+    assert industry("SELF-EMPLOYED", "TUTOR") == ("education", "occupation list")
+    assert industry("SELF EMPLOYED", "POET") == ("media", "occupation list")
+    assert industry("", "OPTOMETRIST") == ("health", "occupation list")
+    assert industry("OWNER", "LANDMAN") == ("energy", "occupation list")  # a bare title as employer says nothing
+
+
+def test_occupation_list_does_not_override_a_named_employer():
+    # A property manager at a bus company works in transportation; the job alone can't say so.
+    assert industry("MN COACHES", "PROPERTY MANAGER")[0] == "unknown"
+    assert industry("SELF EMPLOYED", "CEO")[0] == "unknown"  # titles stay unknown
+
+
+def test_occupation_list_labels_are_valid():
+    m = pd.read_csv(Path(__file__).resolve().parents[1] / "data" / "occupation_industry.csv", keep_default_na=False)
+    assert set(m["industry"]) <= set(INDUSTRIES) | {"unknown"}
+    assert not m["occupation"].duplicated().any()
