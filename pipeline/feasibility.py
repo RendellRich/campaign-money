@@ -24,7 +24,7 @@ INDIVIDUAL = "entity_tp = 'IND' AND coalesce(memo_cd, '') <> 'X' AND transaction
 def report(cycle: int) -> dict:
     con = duckdb.connect(str(DB), read_only=True)
     g = con.execute(f"""SELECT cmte_id, employer, occupation, sum(amt) AS dollars, count(*) AS n
-                        FROM contrib WHERE {INDIVIDUAL} GROUP BY 1, 2, 3""").df()
+                        FROM contrib WHERE cycle = {cycle} AND {INDIVIDUAL} GROUP BY 1, 2, 3""").df()
     g["status"] = [status(e, o) for e, o in zip(g["employer"], g["occupation"])]
     out = {"cycle": cycle, "itemized_dollars": float(g["dollars"].sum()), "itemized_records": int(g["n"].sum())}
 

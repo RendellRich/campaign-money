@@ -17,33 +17,53 @@ import pandas as pd
 from load_fec import RAW, fetch, unzip
 
 LEGISLATORS = "https://unitedstates.github.io/congress-legislators/legislators-current.json"
+HISTORICAL = "https://unitedstates.github.io/congress-legislators/legislators-historical.json"
 CCL = ["cand_id", "cand_elec_yr", "fec_elec_yr", "cmte_id", "cmte_tp", "cmte_dsgn", "link_id"]
 
 
-def members() -> pd.DataFrame:
-    path = RAW / "legislators-current.json"
+def _read(url: str, name: str) -> list[dict]:
+    path = RAW / name
     if not path.exists():
         RAW.mkdir(parents=True, exist_ok=True)
-        urllib.request.urlretrieve(LEGISLATORS, path)
+        urllib.request.urlretrieve(url, path)
+    return json.loads(path.read_text())
+
+
+def members(cycle: int | None = None) -> pd.DataFrame:
+    """One row per member and FEC candidate ID. With no cycle: current members. With a cycle: everyone who served in
+    the Congress that sat during it (for 2024, the 118th, which began on 3 January 2023), plus every current member,
+    described by their last term in that Congress (or their latest term). `current` says whether they still serve."""
+    people = [(m, True) for m in _read(LEGISLATORS, "legislators-current.json")]
+    if cycle is not None:
+        people += [(m, False) for m in _read(HISTORICAL, "legislators-historical.json")]
+    start, end = f"{cycle - 1}-01-03", f"{cycle + 1}-01-03"
     rows = []
-    for m in json.loads(path.read_text()):
-        t = m["terms"][-1]
+    for m, current in people:
+        terms = m["terms"] if cycle is None else [t for t in m["terms"] if t["start"] < end and t["end"] > start]
+        if not terms and current:
+            terms = m["terms"]  # current members who first took office after the cycle still raised money in it
+        if not terms:
+            continue
+        t = terms[-1]
         for cand in m["id"].get("fec", []):
-            rows.append({"bioguide_id": m["id"]["bioguide"], "name": m["name"].get("official_full"),
+            rows.append({"bioguide_id": m["id"]["bioguide"],
+                         "name": m["name"].get("official_full") or f"{m['name']['first']} {m['name']['last']}",
                          "chamber": {"rep": "House", "sen": "Senate"}[t["type"]], "party": t["party"],
-                         "state": t["state"], "cand_id": cand})
+                         "state": t["state"], "cand_id": cand, "current": current})
     return pd.DataFrame(rows)
 
 
 def committees(cycle: int) -> pd.DataFrame:
-    """One row per member: bioguide_id, chamber, party, state and their principal committee IDs (may be empty)."""
+    """One row per member who served during the cycle: bioguide_id, chamber, party, state, whether they still serve,
+    and their principal committee IDs (may be empty)."""
     yy = str(cycle)[2:]
     ccl = pd.read_csv(unzip(fetch(cycle, f"ccl{yy}.zip"), "ccl.txt"), sep="|", header=None, names=CCL, dtype=str)
     pcc = ccl[ccl["cmte_dsgn"] == "P"][["cand_id", "cmte_id"]].drop_duplicates()
-    m = members().merge(pcc, on="cand_id", how="left")
+    m = members(cycle).merge(pcc, on="cand_id", how="left")
     return (m.groupby("bioguide_id")
             .agg(name=("name", "first"), chamber=("chamber", "first"), party=("party", "first"),
-                 state=("state", "first"), cmtes=("cmte_id", lambda s: sorted(set(s.dropna()))))
+                 state=("state", "first"), current=("current", "first"),
+                 cmtes=("cmte_id", lambda s: sorted(set(s.dropna()))))
             .reset_index())
 
 

@@ -26,16 +26,22 @@ from feasibility import INDIVIDUAL
 from industry import mapping
 from industry_rules import norm
 from load_fec import DB, ROOT
+from member_committees import committees
 
 DRAWS = {"list": 100, "tail": 200}
 SEED = 2024
 
 
 def pairs() -> pd.DataFrame:
+    # Current members' committees only: the samples were drawn before former members were loaded, and this keeps a
+    # rerun drawing the same pairs.
+    current = committees(2024)
+    cmtes = sorted({c for cs in current[current["current"]]["cmtes"] for c in cs})
     con = duckdb.connect(str(DB), read_only=True)
+    con.execute("CREATE TEMP TABLE cur AS SELECT unnest(?) AS cmte_id", [cmtes])
     g = con.execute(f"""SELECT upper(trim(coalesce(employer, ''))) AS employer,
                                upper(trim(coalesce(occupation, ''))) AS occupation, sum(amt) AS dollars
-                        FROM contrib WHERE {INDIVIDUAL} GROUP BY 1, 2 HAVING sum(amt) > 0""").df()
+                        FROM contrib JOIN cur USING (cmte_id) WHERE cycle = 2024 AND {INDIVIDUAL} GROUP BY 1, 2 HAVING sum(amt) > 0""").df()
     g = g[[status(e, o) in HAS_INDUSTRY_SIGNAL for e, o in zip(g["employer"], g["occupation"])]]
     listed = set(mapping())
     g["stratum"] = np.where(g["employer"].map(norm).isin(listed), "list", "tail")

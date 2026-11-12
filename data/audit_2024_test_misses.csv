@@ -15,31 +15,23 @@ B077,list,SAULSBURY INDUSTRIES,BOARD MEMBER,real_estate,low,manufacturing,list,w
 B100,list,STRATEGIC MARKETING INNOVATIONS INC,VICE PRESIDENT,lobbying,low,business_services,list,wrong,1
 B254,list,GIVE LIVELY LLC,CEO,tech,low,nonprofit,list,wrong,1
 B003,tail,"ASPHALT PAVING SYSTEMS, INC.",PRESIDENT,real_estate,high,unknown,none,left,1
-B016,tail,LEMUNYON GROUP,CONSULTANT,lobbying,high,unknown,none,left,1
 B018,tail,CARL SCHLEGEL INC,AGGREGATE,real_estate,low,unknown,none,left,1
-B021,tail,SCHULER BOOKS INC,OWNER,consumer,high,unknown,none,left,1
-B022,tail,BCBSRI,PRESIDENT AND CEO,health,high,unknown,none,left,1
 B024,tail,ENTERCOM COMMUNICATION CORP,CHAIRMAN,media,high,unknown,none,left,1
 B026,tail,SELF,GOVERNMENT CONSULTANT,lobbying,low,unknown,none,left,1
 B027,tail,PT PROTELINDO,VP DIRECTOR,telecom,low,unknown,none,left,1
-B032,tail,WHYNOT INITIATIVE,DIRECTOR,nonprofit,low,unknown,none,left,1
 B035,tail,ELECTRONIC ARTS,EXPERIENCE DESIGNER,media,low,unknown,none,left,1
 B039,tail,AMERICAN PROMOTIONAL,PRESIDENT,business_services,low,unknown,none,left,1
 B041,tail,MEADOW VETERINARIAN,VETERINARIAN,health,low,unknown,none,left,1
 B042,tail,"ROBERTSON, MONAGLE, & EASTAUGH PC",CONSULTANT,lobbying,low,unknown,none,left,1
 B046,tail,EAST FERRY INVESTORS INC.,INVESTMENTS,finance,high,unknown,none,left,1
-B048,tail,ISLAND DOCTORS,FOUNDER/CEO,health,high,unknown,none,left,1
-B056,tail,PIVOTAL GROUP,CEO,real_estate,low,unknown,none,left,1
 B063,tail,"MIRUM, RENEO, SPRUCE, PLEXIUM",BIOTECH BOARD CHAIR,pharma,high,unknown,none,left,1
 B064,tail,ST. PAUL'S SENIOR SERVICES,MAINTENANCE ENGINEER,health,low,unknown,none,left,1
 B065,tail,KEY PERSONNEL,EMPLOYMENT AGENT,business_services,high,unknown,none,left,1
 B070,tail,"RESEARCH FRONTIERS, INC.",CEO,tech,low,unknown,none,left,1
-B078,tail,AQUIA GROUP,PUBLIC POLICY,lobbying,high,unknown,none,left,1
 B081,tail,KANAKUK,CAMPING,consumer,low,unknown,none,left,1
 B084,tail,HIGHLAND TELE CO-OP,GENERAL MANAGER,telecom,high,unknown,none,left,1
 B087,tail,REP. PETER DEFAZIO,CHIEF OF STAFF,government,high,unknown,none,left,1
 B093,tail,CRYSTAL PLAZA GROUP,CATERER,consumer,high,unknown,none,left,1
-B094,tail,MINITAB,STATISTICIAN,tech,high,unknown,none,left,1
 B095,tail,GREENLIGHT STRATEGY,PRINCIPAL,lobbying,low,unknown,none,left,1
 B096,tail,FAKHOURY GLOBAL IMMIGRATION,MANAGING DIRECTOR,law,high,unknown,none,left,1
 B110,tail,DELTA CONSTRUCTORS,CEO,real_estate,high,unknown,none,left,1
@@ -50,12 +42,10 @@ B119,tail,STAR FURNITURE CO.,CFO,consumer,high,unknown,none,left,1
 B121,tail,"THE ENSIGN GROUP, L.C.",BUSINESSMAN,health,low,unknown,none,left,1
 B125,tail,PHONETERNET LLC,OWNER,telecom,low,unknown,none,left,1
 B133,tail,ASPEN WASTE SYSTEMS,OWNER/CEO,business_services,low,unknown,none,left,1
-B140,tail,ONEAMERICA,CEO,insurance,high,unknown,none,left,1
 B143,tail,HOFFMAN MANAGEMENT,PROPERTY MANAGEMENT,real_estate,high,unknown,none,left,1
 B154,tail,CRH/APAC,MANAGER,manufacturing,low,unknown,none,left,1
 B158,tail,GALLERY,CANNABIS RETAILER,consumer,high,unknown,none,left,1
 B161,tail,MAINE BEER COMPANY,BUSINESS OWNER,consumer,high,unknown,none,left,1
-B162,tail,ONEDIGITAL,CONSULTANT,insurance,low,unknown,none,left,1
 B168,tail,A AND B TALENT,CEO,media,low,unknown,none,left,1
 B170,tail,"AMERICAN PAINTING & RENOVATIONS, INC.",CEO,real_estate,high,unknown,none,left,1
 B175,tail,ACKERMANN'S SWIM CAMP,CO-OWNER,consumer,low,unknown,none,left,1
@@ -65,7 +55,6 @@ B184,tail,SKYRYSE,VP OF COMMUNICATIONS,tech,low,unknown,none,left,1
 B187,tail,FUTURAMIC,ENGINEER,manufacturing,low,unknown,none,left,1
 B190,tail,SEC,SECURITIES COMPLIANCE EXAMINER,government,high,unknown,none,left,1
 B193,tail,IIF,FINANCIAL POLICY,finance,low,unknown,none,left,1
-B196,tail,EASTERN RESEARCH GROUP,CONSULTANT,business_services,high,unknown,none,left,1
 B210,tail,M&M INDUSTRIES,PRESIDENT & CEO,manufacturing,low,unknown,none,left,1
 B213,tail,BRONX BRUCKNER GOODS,BUSINESSMAN,consumer,low,unknown,none,left,1
 B215,tail,KILLERSPIN,CEO,consumer,low,unknown,none,left,1
@@ -74,9 +63,6 @@ B220,tail,KORN FERRY INTL,OPERATIONS DIRECTOR,business_services,high,unknown,non
 B222,tail,SIXGEN,CEO,tech,low,unknown,none,left,1
 B224,tail,BILL LUKE DODGE CHRYSLER JEEP,AUTOMOBILE DEALER,consumer,high,unknown,none,left,1
 B226,tail,KAYRROS,ECONOMIST,tech,low,unknown,none,left,1
-B229,tail,MUHLENKAMP & CO,MANAGEMENT,finance,low,unknown,none,left,1
-B244,tail,PRN FUNDING LLC,MANAGEMENT,finance,low,unknown,none,left,1
-B246,tail,A.C. ISRAEL ENTERPRISES INC.,EXECUTIVE,finance,low,unknown,none,left,1
 B247,tail,KANSAS CHAMBER,PRESIDENT,nonprofit,low,unknown,none,left,1
 B248,tail,NEUROLOGICAL ASSOCIATES,NEUROSURGEON,health,high,unknown,none,left,1
 B252,tail,WYNDHAM GARDENS GUAM,CEO,consumer,high,unknown,none,left,1
@@ -84,37 +70,23 @@ B253,tail,COLD SPRING HARBOR LABORATORY,SCIENCE RESEARCHER,nonprofit,low,unknown
 B257,tail,ALLCABLE INC,QUALITY  APPLICATION ENGINEER,manufacturing,low,unknown,none,left,1
 B260,tail,GUARDIAN LIFE INS,GENERAL AGENT,insurance,high,unknown,none,left,1
 B262,tail,JAZZ PHARMACEUTICALS,EXECUTIVE,pharma,high,unknown,none,left,1
-B263,tail,IDEAL FASTNER CORP,CO PRESIDENT,manufacturing,high,unknown,none,left,1
 B264,tail,ZERO TO THREE,EXECUTIVE DIRECTOR,nonprofit,high,unknown,none,left,1
-B267,tail,TOM JAMES COMPANY,DIVISIONAL PRESIDENT,consumer,high,unknown,none,left,1
-B269,tail,TWO SIGMA,PARTNER,finance,high,unknown,none,left,1
 B273,tail,BUDDY DOYLE CREATIVE,OWNER,media,low,unknown,none,left,1
-B274,tail,TD COWEN,PRESIDENT,finance,high,unknown,none,left,1
-B278,tail,SLAVIC 401K,PRESIDENT AND CEO,finance,low,unknown,none,left,1
 B281,tail,MACERICH,VICE CHAIRMAN OF THE BOARD,real_estate,high,unknown,none,left,1
 B282,tail,BETCO CORPORATION,SECRETARY,manufacturing,low,unknown,none,left,1
-B286,tail,CRYSTAL WINDOW & DOOR SYSTEMS,CEO,manufacturing,high,unknown,none,left,1
-B287,tail,MICHAEL STARS,CEO,consumer,high,unknown,none,left,1
-B293,tail,FIBERSAT TELECOMMUNICATIONS CORP,PRESIDENT,telecom,high,unknown,none,left,1
 B296,tail,NADEL AND GUSSMAN MANAGEMENT LLC,EXECUTIVE,energy,low,unknown,none,left,1
 B006,tail,COLLUM'S LUMBER,PILOT,manufacturing,low,transportation,occupation:transportation,wrong,1
-B020,tail,FOLEY AND LARDNER LLC,DIRECTOR OF PUBLIC AFFAIRS,law,high,lobbying,occupation:lobbying,wrong,1
-B086,tail,V2X,VP FOR GOVERNMENT RELATIONS,defense,high,lobbying,occupation:lobbying,wrong,1
 B088,tail,AFFINITY PARTNERS,ATTORNEY,finance,low,law,occupation:law,wrong,1
 B136,tail,ALLIANCE DEFENDING FREEDOM,ATTORNEY,nonprofit,high,law,occupation:law,wrong,1
 B150,tail,ZACHRY HOLDINGS,CEO,real_estate,low,finance,employer:finance,wrong,1
-B151,tail,GOVINI,LAWYER,tech,low,law,occupation:law,wrong,1
 B164,tail,"MIDSTATE FINANCE CO. , INC.",LAWYER,finance,low,law,occupation:law,wrong,1
 B173,tail,PERFUSION RESOURCES PC,PRESIDENT,health,high,energy,employer:energy,wrong,1
 B183,tail,GRAYBACK FORESTRY,CONTRACTOR,agriculture,low,real_estate,occupation:real_estate,wrong,1
 B189,tail,CRLCONSULTING LLC,ATTORNEY/CONSULTANT,lobbying,low,law,occupation:law,wrong,1
 B200,tail,VIYU NETWORK SOLUTIONS,SALES,tech,low,media,employer:media,wrong,1
-B201,tail,CANYON PARTNERS,ATTORNEY,finance,high,law,occupation:law,wrong,1
 B208,tail,NORTHERN COMPASS GROUP,CEO,unknown,low,real_estate,employer:real_estate,wrong,1
 B218,tail,MARSH STRATEGIES,PUBLIC RELATIONS,business_services,low,lobbying,employer:lobbying,wrong,1
-B236,tail,ATHENAHEALTH,ARCHITECT,tech,low,real_estate,occupation:real_estate,wrong,1
 B251,tail,NORTHSHORE UNIVERSITY HEALTHSYSTEM,HEALRHCARE PRIVACY OFFICER,health,high,education,employer:education,wrong,1
 B255,tail,KECK GRADUATE INSTITUTE,DEAN,education,high,nonprofit,employer:nonprofit,wrong,1
-B275,tail,PEPSICO,PUBLIC POLICY AND GOVERNMENT AFFAIRS,consumer,high,lobbying,occupation:lobbying,wrong,1
 B283,tail,CTI - THOMPSON ENGINEERING,MEMBER,real_estate,low,manufacturing,employer:manufacturing,wrong,1
 B292,tail,TOWER VENTURES MANAGEMENT LLC,PRESIDENT,telecom,low,finance,employer:finance,wrong,1

@@ -50,7 +50,8 @@ Two changes came out of this:
 
 - **`pipeline/industry_rules.py`:** keyword rules on the employer name, then on the occupation, sorted into 20 industries
   plus "unknown". Employer rules come first, because an attorney at Microsoft works in tech.
-- **`data/employer_industry.csv`:** the 1,000 employers with the most itemized dollars to members in 2024.
+- **`data/employer_industry.csv`:** the 1,000 employers with the most itemized dollars to members in 2024 (round 3
+  extended it to 4,447, see the audit section).
   - The rules placed 750 of them. The other 250 were left unplaced.
   - Every row was then reviewed one at a time by an AI assistant (Claude). It overruled the rules on 41 of the 750 and
     placed the 250. The `source` column says which rows the review changed.
@@ -111,6 +112,29 @@ Two tail methods were tried on dev and dropped because neither helped:
 What would work: review more employers. 65% of the test set's unknown tail dollars sit with employers ranked in the
 top 20,000 by dollars (28% in the top 5,000).
 
+### Round 3: 4,447 reviewed employers, scored on the same held-out sample
+
+The list grew from the top 1,000 employers to ranks 1,001 to 5,000 as well. Each candidate was shown with its top
+occupation, the rule's answer, and where its donors' occupations point.
+- Claude placed the employers the rules couldn't and checked the rule answers, overruling 109 of 1,515 (92.8%
+  agreement).
+- 553 names were left off on purpose: they carry no clue to an industry (a person's name, "VARIOUS", "PILOT"), so each
+  donor's own occupation still decides.
+- The list now has 4,447 employers.
+- Three rule bugs found in the review were fixed: "HARRIS" (Fried Frank Harris, Brown Harris Stevens), "DOMINION" (Old
+  Dominion Freight Line) and "ELECTRIC" (Electric Boat).
+
+| Test sample, share of industry-signal dollars | Round 2 | Round 3 |
+|---|---|---|
+| Right industry | 60.4% | 69.7% (95% CI 64.6 to 74.7) |
+| Wrong industry | 8.3% | 6.3% |
+| Left unknown | 31.3% | 24.0% |
+| Right, when an industry is given | 87.9% | 91.7% |
+
+Caveat on the gain: 33 of the 300 test draws are placed by employers Claude reviewed in this round, after labeling the
+test sample, and all 33 agree. That is partly the same judgment twice. If those agreed only at the tail's usual 89%,
+the right share would be about 1.2 points lower.
+
 Limits: one labeler, and the same assistant wrote the rules, so the labels are not fully independent. A spot check by
 a person on a random 50 would show how much that matters. The "list" stratum includes self-employed donors, since
 that string is on the list. Every misread pair is in `data/audit_2024_misses.csv` (dev) and `data/audit_2024_test_misses.csv` (test). The labeler saw
@@ -118,7 +142,7 @@ the test pairs while labeling them, so fixes were limited to words found in dev 
 
 ## The site (phase 3, first page)
 
-`site/app.py` is a Streamlit page: pick a member, see where their individual money came from. It reads two small files
+`site/app.py` is a two-page Streamlit app. Members (the default) lets you pick a member and see where their individual money came from. It reads two small files
 written by `pipeline/aggregate.py` (`site/data/`, about 300 KB), so it runs on a free host.
 
 - **Every dollar is shown.** The first chart splits each member's individual money into placed in an industry,
@@ -127,6 +151,22 @@ written by `pipeline/aggregate.py` (`site/data/`, about 300 KB), so it runs on a
 - **Same charts for everyone,** sorted by the data, with a tick for the median of the member's party in their chamber.
 - **Totals** come from the FEC all-candidates summary, which also covers senators not on the ballot that cycle.
 - **Links** to each committee's FEC page and to PartyCohesion for voting records. No vote appears on this site.
+- **Two cycles, 2022 and 2024.** A switch at the top of both pages picks the cycle. Each member page ends with how
+  their money changed between cycles: a hollow dot for one, a filled dot for the other. On the Industries page a tick on
+  each bar shows the other cycle. The reviewed employer list was built from 2024 donors, so slightly more 2022 money is
+  "unclear" (11.9% against 10.1%).
+- **Color with a job.** Each kind of money has its own color (industry green, unclear blue, retired amber, not employed
+  purple, unitemized clay, missing gray), checked with a palette validator for color-blind readers and always labeled in
+  words. The green header panel carries the site's mark: one strip showing every dollar current members raised, by kind.
+- **Former members and a filter.** Each cycle now includes everyone who served in the Congress that sat during it
+  (from congress-legislators' historical file), not only today's members: 603 profiles for 2024 (85 former, such as
+  Jon Tester and Sherrod Brown) and 615 for 2022. A filter button above the member list narrows it by status (serving
+  now or former), chamber, party, state, money raised, and whether the member had a committee in both cycles. The
+  header strip and the Industries page still count current members only. Members whose committee only paid refunds
+  in a cycle (Mitt Romney in 2024) are left out.
+- **Industries page** (`site/views/industries.py`): pick an industry and see its share of each party's money in each
+  chamber, and the 15 members for whom it made up the largest share (among members who raised at least $250K from
+  individuals, so a few small gifts can't top the list). A table lists every member with a link to their profile.
 
 ```bash
 pip install -r site/requirements.txt
@@ -147,11 +187,12 @@ pip install -r requirements.txt
 cd pipeline
 python member_committees.py --cycle 2024   # members to campaign committees
 python load_fec.py --cycle 2024            # downloads the 4.2 GB contributions file, loads it in about 3 minutes
+python load_fec.py --cycle 2022            # the 2022 zip's itcont.txt is incomplete, so this reads its by_date/ files
 python feasibility.py --cycle 2024         # writes data/feasibility_2024.json
-python audit_sample.py --cycle 2024        # draws the audit sample (already drawn; rerun gives the same draws)
+python audit_sample.py --cycle 2024        # draws an audit sample (the committed files are the record; later rule changes mean a rerun draws different pairs)
 python audit.py --cycle 2024               # scores the pipeline on the dev sample
 python audit.py --cycle 2024 --set test    # and on the held-out test sample
-python aggregate.py --cycle 2024           # per-member totals for the site
+python aggregate.py --cycle 2024           # per-member totals for the site (run for 2022 as well)
 cd .. && pytest -q
 ```
 

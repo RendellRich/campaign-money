@@ -5,7 +5,7 @@ headingFont = "'Source Serif 4':https://fonts.googleapis.com/css2?family=Source+
 baseRadius = "medium"
 
 [theme.light]
-backgroundColor = "#F6F7F9"
+backgroundColor = "#F5F7F3"
 secondaryBackgroundColor = "#FFFFFF"
 textColor = "#1B1D21"
 primaryColor = "#2F6B5E"

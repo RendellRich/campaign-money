@@ -48,11 +48,22 @@ def load(cycle: int, cmtes: list[str]):
     zpath = fetch(cycle, f"indiv{str(cycle)[2:]}.zip")
     cols = "{" + ",".join(f"'{c}':'VARCHAR'" for c in INDIV) + "}"
     t = time.time()
-    # itcont.txt is the whole file; the by_date/ folder in the same zip repeats it split by date.
-    unz = subprocess.Popen(["unzip", "-p", str(zpath), "itcont.txt"], stdout=subprocess.PIPE)
+    # itcont.txt should be the whole file, and by_date/ the same rows split by date. They match for 2024, but in the
+    # 2022 zip itcont.txt is 4.5 GB against 12.1 GB by date, so read whichever holds more.
+    with zipfile.ZipFile(zpath) as z:
+        whole = sum(i.file_size for i in z.infolist() if i.filename == "itcont.txt")
+        parts = sum(i.file_size for i in z.infolist() if i.filename.startswith("by_date/"))
+    members = ["itcont.txt"] if whole >= parts else ["by_date/*"]
+    print(f"reading {members[0]} ({max(whole, parts) / 1e9:.1f} GB)", file=sys.stderr)
+    unz = subprocess.Popen(["unzip", "-p", str(zpath), *members], stdout=subprocess.PIPE)
     # DuckDB reads the pipe through a file descriptor rather than this process's stdin.
+    # One table holds every cycle; loading a cycle replaces only that cycle's rows.
+    con.execute("""CREATE TABLE IF NOT EXISTS contrib (cycle INTEGER, cmte_id VARCHAR, transaction_tp VARCHAR,
+                    entity_tp VARCHAR, name VARCHAR, state VARCHAR, zip5 VARCHAR, employer VARCHAR, occupation VARCHAR,
+                    amt DOUBLE, memo_cd VARCHAR, sub_id VARCHAR)""")
+    con.execute("DELETE FROM contrib WHERE cycle = ?", [cycle])
     con.execute(f"""
-        CREATE OR REPLACE TABLE contrib AS
+        INSERT INTO contrib
         SELECT {cycle} AS cycle, c.cmte_id, transaction_tp, entity_tp, name, state, left(zip_code, 5) AS zip5,
                employer, occupation, try_cast(transaction_amt AS DOUBLE) AS amt, memo_cd, sub_id
         FROM read_csv('/dev/fd/{unz.stdout.fileno()}', delim='|', header=false, quote='', escape='',
@@ -60,7 +71,7 @@ def load(cycle: int, cmtes: list[str]):
         JOIN cmtes USING (cmte_id)
     """)
     unz.wait()
-    n = con.execute("SELECT count(*) FROM contrib").fetchone()[0]
+    n = con.execute("SELECT count(*) FROM contrib WHERE cycle = ?", [cycle]).fetchone()[0]
     print(f"loaded {n:,} contributions in {time.time() - t:.0f} s -> {DB.relative_to(ROOT)}", file=sys.stderr)
     return con
 
