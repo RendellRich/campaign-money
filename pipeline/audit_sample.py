@@ -10,7 +10,8 @@ Two strata, sampled separately so the long tail gets enough draws to measure:
 
 The sample file holds only what the donor wrote (no names, no rule output), so it can be labeled blind.
 
-  python pipeline/audit_sample.py --cycle 2024
+  python pipeline/audit_sample.py --cycle 2024                        # the first sample, now the dev set
+  python pipeline/audit_sample.py --cycle 2024 --seed 2025 --set test  # the held-out test set
 """
 from __future__ import annotations
 
@@ -41,7 +42,7 @@ def pairs() -> pd.DataFrame:
     return g.reset_index(drop=True)
 
 
-def draw(g: pd.DataFrame, draws: dict[str, int] = DRAWS, seed: int = SEED) -> pd.DataFrame:
+def draw(g: pd.DataFrame, draws: dict[str, int] = DRAWS, seed: int = SEED, prefix: str = "A") -> pd.DataFrame:
     """Probability-proportional-to-dollars draws, with replacement, per stratum. One row per distinct pair."""
     rng = np.random.default_rng(seed)
     out = []
@@ -53,16 +54,19 @@ def draw(g: pd.DataFrame, draws: dict[str, int] = DRAWS, seed: int = SEED) -> pd
             draws=("dollars", "size"), dollars=("dollars", "first"))
         out.append(picked.assign(stratum=stratum, stratum_dollars=float(cum[-1])))
     sample = pd.concat(out, ignore_index=True).sample(frac=1, random_state=seed).reset_index(drop=True)
-    sample.insert(0, "id", [f"A{i:03d}" for i in range(1, len(sample) + 1)])
+    sample.insert(0, "id", [f"{prefix}{i:03d}" for i in range(1, len(sample) + 1)])
     return sample
 
 
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     ap.add_argument("--cycle", type=int, default=2024)
-    cycle = ap.parse_args().cycle
-    sample = draw(pairs())
-    path = ROOT / "data" / f"audit_{cycle}_sample.csv"
+    ap.add_argument("--seed", type=int, default=SEED)
+    ap.add_argument("--set", default="", help='"" for the dev sample, "test" for the held-out one')
+    a = ap.parse_args()
+    cycle = a.cycle
+    sample = draw(pairs(), seed=a.seed, prefix="B" if a.set else "A")
+    path = ROOT / "data" / f"audit_{cycle}{'_' + a.set if a.set else ''}_sample.csv"
     sample[["id", "stratum", "employer", "occupation", "draws", "dollars", "stratum_dollars"]].to_csv(path, index=False)
     print(sample.groupby("stratum").agg(pairs=("id", "size"), draws=("draws", "sum")))
 

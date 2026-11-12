@@ -9,7 +9,7 @@ are kept on separate sites on purpose: this one never pairs a donation with a vo
 ## Status
 
 Phase 1 (feasibility) is done, and the answer is to go ahead with two changes. Phase 2 (classifier and audit) has
-started: the 1,000 largest employers are labeled, the rules are in place, and a blind audit measures them.
+started: the 1,000 largest employers are labeled, the rules are in place, and a blind audit on a held-out sample measures them.
 
 ## Phase 1: can donors be placed in an industry?
 
@@ -66,6 +66,8 @@ A blind sample, drawn so each pick is one dollar of 2024 itemized money that car
 before seeing any pipeline output, and marked 98 of them low confidence where a reasonable person could choose
 differently (`data/audit_2024_labels.csv`). `pipeline/audit.py` scores the pipeline against those labels.
 
+### Round 1: the first sample
+
 | Share of industry-signal dollars | All | List stratum | Long tail |
 |---|---|---|---|
 | Right industry | 61.3% (95% CI 56.1 to 66.6) | 81.0% | 51.5% |
@@ -79,13 +81,57 @@ What the audit found and fixed: "SELF EMPLOYED" is on the employer list (as unkn
 so the list overrode the occupation and every self-employed donor came out unknown. The list now applies only to
 named employers. Before that fix the list stratum was 69% right and 25% unknown.
 
-Known rule errors, left unfixed so this sample stays a fair test: words matched out of context ("POWER" in a law
-firm's name, "INDUSTRIES" in a real estate developer, "CITY OF" in City of Hope, "FUND" in an art fund) and an order
-problem where "PUBLIC SCHOOLS" hits government before education. Fixes will be measured on a fresh sample.
+### Round 2: rule fixes, scored on a held-out sample
+
+The first sample became the dev set. Before any rule changed, a second sample was drawn (seed 2025, same design, 297
+pairs), labeled blind, and committed (`data/audit_2024_test_*.csv`). Rules were then fixed using dev misses only:
+words matched out of context (POWER, INDUSTRIES, FUND, AGENCY, SYSTEMS, COMMUNICATIONS), schools before government,
+insurance before finance, generic employers like "CONSULTING" falling through to the occupation, "N/A" read as
+missing, students as not employed, and common occupations (writer, construction, caregiver, accountant).
+
+| Share of industry-signal dollars | Dev before | Dev after | Test before | Test after |
+|---|---|---|---|---|
+| Right industry | 61.3% | 81.3% | 59.3% | 60.4% (95% CI 55.2 to 65.5) |
+| Wrong industry | 9.7% | 3.3% | 11.3% | 8.3% |
+| Left unknown | 29.0% | 15.3% | 29.3% | 31.3% |
+
+The dev gain was mostly fitting those 296 pairs. On fresh data the fixes cut wrong answers by about a quarter
+(11.3% to 8.3%) but placed almost nothing new: the long tail is too varied for rules learned from a few hundred
+examples. On the test set, when the pipeline gives an industry it is right 95.5% of the time for list employers and
+82.1% in the tail.
+
+Two tail methods were tried on dev and dropped because neither helped:
+- **Employer vote** (give an employer the industry its donors' occupations point to): 8 of 12 dev pairs right, and it
+  added wrong answers when staff jobs differ from the firm's business (lawyers at a real estate developer). At stricter
+  settings it changed nothing.
+- **Name model** (logistic regression on character n-grams of employer names, trained on 64,000 employers the list and
+  rules place): 1 of 31 dev pairs right. The employers left unknown are the ones whose names carry no clue
+  ("COUNTSY", "TRAILMARK"), so a model of names has nothing to learn from.
+
+What would work: review more employers. 65% of the test set's unknown tail dollars sit with employers ranked in the
+top 20,000 by dollars (28% in the top 5,000).
 
 Limits: one labeler, and the same assistant wrote the rules, so the labels are not fully independent. A spot check by
 a person on a random 50 would show how much that matters. The "list" stratum includes self-employed donors, since
-that string is on the list. Every misread pair is in `data/audit_2024_misses.csv`.
+that string is on the list. Every misread pair is in `data/audit_2024_misses.csv` (dev) and `data/audit_2024_test_misses.csv` (test). The labeler saw
+the test pairs while labeling them, so fixes were limited to words found in dev misses.
+
+## The site (phase 3, first page)
+
+`site/app.py` is a Streamlit page: pick a member, see where their individual money came from. It reads two small files
+written by `pipeline/aggregate.py` (`site/data/`, about 300 KB), so it runs on a free host.
+
+- **Every dollar is shown.** The first chart splits each member's individual money into placed in an industry,
+  industry unclear, retired, not employed, no information given, and unitemized. The industry chart below it uses
+  the same total, so no bar reads bigger than it is.
+- **Same charts for everyone,** sorted by the data, with a tick for the median of the member's party in their chamber.
+- **Totals** come from the FEC all-candidates summary, which also covers senators not on the ballot that cycle.
+- **Links** to each committee's FEC page and to PartyCohesion for voting records. No vote appears on this site.
+
+```bash
+pip install -r site/requirements.txt
+streamlit run site/app.py
+```
 
 ## Wording rules
 
@@ -103,7 +149,9 @@ python member_committees.py --cycle 2024   # members to campaign committees
 python load_fec.py --cycle 2024            # downloads the 4.2 GB contributions file, loads it in about 3 minutes
 python feasibility.py --cycle 2024         # writes data/feasibility_2024.json
 python audit_sample.py --cycle 2024        # draws the audit sample (already drawn; rerun gives the same draws)
-python audit.py --cycle 2024               # scores the pipeline, writes data/audit_2024.json and the misses
+python audit.py --cycle 2024               # scores the pipeline on the dev sample
+python audit.py --cycle 2024 --set test    # and on the held-out test sample
+python aggregate.py --cycle 2024           # per-member totals for the site
 cd .. && pytest -q
 ```
 

@@ -2,6 +2,7 @@ import sys
 from pathlib import Path
 
 import pandas as pd
+import pytest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "pipeline"))
 from employer_status import status  # noqa: E402
@@ -40,9 +41,22 @@ def test_swapped_fields():
 
 
 def test_list_wins_over_rules():
-    # POWER ROGERS is a law firm; the rules alone would call it energy.
-    assert classify("POWER ROGERS", "ATTORNEY")[0] == "energy"
-    assert industry("POWER ROGERS", "ATTORNEY") == ("law", "list")
+    # MEHLMAN CONSULTING is a lobbying firm; the rules alone would call it business services.
+    assert classify("MEHLMAN CONSULTING", "PARTNER")[0] == "business_services"
+    assert industry("MEHLMAN CONSULTING", "PARTNER") == ("lobbying", "list")
+
+
+def test_dev_audit_rule_fixes():
+    assert classify("POWER ROGERS AND SMITH", "ATTORNEY")[0] == "law"            # POWER only as a utility
+    assert classify("FLORIDA POWER & LIGHT", "")[0] == "energy"
+    assert classify("CITY OF HOPE", "PHYSICIAN")[0] == "health"
+    assert classify("LOUDOUN COUNTY PUBLIC SCHOOLS", "TEACHER")[0] == "education"
+    assert classify("COLLEGE PARK CAR WASH", "PRESIDENT")[0] != "education"
+    assert classify("CONSULTING", "GENERAL CONTRACTOR")[0] == "real_estate"      # generic employer falls through
+    assert industry("CO-FOUNDER", "ARES MANAGEMENT") == ("finance", "list")      # swapped fields
+    assert classify("IGNITE", "FINANCE DIRECTOR")[0] is None                    # a finance job, not a finance firm
+    assert status("N/A", "N/A") == "missing or requested"
+    assert status("UNIVERSITY OF TENNESSEE", "LAW STUDENT") == "not employed"
 
 
 def test_status_comes_before_industry():
@@ -63,11 +77,12 @@ def test_self_employed_uses_occupation_not_the_list():
     assert industry("SELF-EMPLOYED", "ATTORNEY")[0] == "law"
 
 
-def test_audit_files_line_up():
-    sample = pd.read_csv(ROOT / "data" / "audit_2024_sample.csv", dtype=str, keep_default_na=False)
-    labels = pd.read_csv(ROOT / "data" / "audit_2024_labels.csv", dtype=str, keep_default_na=False)
+@pytest.mark.parametrize("tag", ["2024", "2024_test"])
+def test_audit_files_line_up(tag):
+    sample = pd.read_csv(ROOT / "data" / f"audit_{tag}_sample.csv", dtype=str, keep_default_na=False)
+    labels = pd.read_csv(ROOT / "data" / f"audit_{tag}_labels.csv", dtype=str, keep_default_na=False)
     assert set(sample["id"]) == set(labels["id"])
-    allowed = set(INDUSTRIES) | {"retired", "not employed"}
+    allowed = set(INDUSTRIES) | {"retired", "not employed", "missing"}
     assert set(labels["label"]) <= allowed
     assert set(labels["confidence"]) <= {"high", "low"}
     assert {"employer", "occupation"} <= set(sample.columns) and "label" not in sample.columns

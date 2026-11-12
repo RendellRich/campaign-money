@@ -9,7 +9,8 @@ Every draw is one dollar picked at random, so the share of draws in each outcome
   wrong     the pipeline gave a different industry (or status)
   left      the pipeline said "unknown" but the label names an industry (work for the classifier)
 
-  python pipeline/audit.py --cycle 2024
+  python pipeline/audit.py --cycle 2024             # dev sample (used to find and fix rule errors)
+  python pipeline/audit.py --cycle 2024 --set test  # held-out test sample (never used for fixes)
 """
 from __future__ import annotations
 
@@ -81,17 +82,19 @@ def combined(s: pd.DataFrame) -> dict:
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     ap.add_argument("--cycle", type=int, default=2024)
-    cycle = ap.parse_args().cycle
-    sample = pd.read_csv(ROOT / "data" / f"audit_{cycle}_sample.csv", dtype={"employer": str, "occupation": str}, keep_default_na=False)
-    labels = pd.read_csv(ROOT / "data" / f"audit_{cycle}_labels.csv", dtype=str, keep_default_na=False)
+    ap.add_argument("--set", default="", help='"" for the dev sample, "test" for the held-out one')
+    a = ap.parse_args()
+    cycle, tag = a.cycle, f"{a.cycle}{'_' + a.set if a.set else ''}"
+    sample = pd.read_csv(ROOT / "data" / f"audit_{tag}_sample.csv", dtype={"employer": str, "occupation": str}, keep_default_na=False)
+    labels = pd.read_csv(ROOT / "data" / f"audit_{tag}_labels.csv", dtype=str, keep_default_na=False)
     s = score(sample, labels)
-    report = {"cycle": cycle, "pairs": len(s), "all": combined(s),
+    report = {"cycle": cycle, "set": a.set or "dev", "pairs": len(s), "all": combined(s),
               "by_stratum": {k: rates(t) for k, t in s.groupby("stratum")},
               "high_confidence_labels": {k: rates(t) for k, t in s[s["confidence"] == "high"].groupby("stratum")}}
     misses = s[s["outcome"] != "correct"].sort_values(["stratum", "outcome", "id"])
     misses[["id", "stratum", "employer", "occupation", "label", "confidence", "predicted", "how", "outcome", "draws"]].to_csv(
-        ROOT / "data" / f"audit_{cycle}_misses.csv", index=False)
-    (ROOT / "data" / f"audit_{cycle}.json").write_text(json.dumps(report, indent=1) + "\n")
+        ROOT / "data" / f"audit_{tag}_misses.csv", index=False)
+    (ROOT / "data" / f"audit_{tag}.json").write_text(json.dumps(report, indent=1) + "\n")
     print(json.dumps(report, indent=1))
 
 

@@ -1,21 +1,22 @@
 {
  "cycle": 2024,
+ "set": "dev",
  "pairs": 296,
  "all": {
-  "correct": 61.3,
+  "correct": 81.3,
   "correct_ci95": [
-   56.1,
-   66.6
+   77.0,
+   85.7
   ],
-  "wrong": 9.7,
+  "wrong": 3.3,
   "wrong_ci95": [
-   6.3,
-   13.0
+   1.3,
+   5.4
   ],
-  "left": 29.0,
+  "left": 15.3,
   "left_ci95": [
-   24.0,
-   33.9
+   11.4,
+   19.3
   ],
   "stratum_weights": {
    "list": 0.334,
@@ -25,81 +26,81 @@
  "by_stratum": {
   "list": {
    "draws": 100,
-   "correct": 81.0,
+   "correct": 92.0,
    "correct_ci95": [
-    72.2,
-    87.5
+    85.0,
+    95.9
    ],
-   "wrong": 7.0,
+   "wrong": 6.0,
    "wrong_ci95": [
-    3.4,
-    13.7
+    2.8,
+    12.5
    ],
-   "left": 12.0,
+   "left": 2.0,
    "left_ci95": [
-    7.0,
-    19.8
+    0.6,
+    7.0
    ],
-   "correct_when_placed": 92.0
+   "correct_when_placed": 93.9
   },
   "tail": {
    "draws": 200,
-   "correct": 51.5,
+   "correct": 76.0,
    "correct_ci95": [
-    44.6,
-    58.3
+    69.6,
+    81.4
    ],
-   "wrong": 11.0,
+   "wrong": 2.0,
    "wrong_ci95": [
-    7.4,
-    16.1
+    0.8,
+    5.0
    ],
-   "left": 37.5,
+   "left": 22.0,
    "left_ci95": [
-    31.1,
-    44.4
+    16.8,
+    28.2
    ],
-   "correct_when_placed": 82.4
+   "correct_when_placed": 97.4
   }
  },
  "high_confidence_labels": {
   "list": {
    "draws": 76,
-   "correct": 86.8,
+   "correct": 100.0,
    "correct_ci95": [
-    77.4,
-    92.7
+    95.2,
+    100.0
    ],
-   "wrong": 1.3,
+   "wrong": 0.0,
    "wrong_ci95": [
-    0.2,
-    7.1
+    0.0,
+    4.8
    ],
-   "left": 11.8,
+   "left": 0.0,
    "left_ci95": [
-    6.4,
-    21.0
+    0.0,
+    4.8
    ],
-   "correct_when_placed": 98.5
+   "correct_when_placed": 100.0
   },
   "tail": {
    "draws": 126,
-   "correct": 62.7,
+   "correct": 89.7,
    "correct_ci95": [
-    54.0,
-    70.6
+    83.1,
+    93.9
    ],
-   "wrong": 6.3,
+   "wrong": 0.0,
    "wrong_ci95": [
-    3.3,
-    12.0
+    0.0,
+    3.0
    ],
-   "left": 31.0,
+   "left": 10.3,
    "left_ci95": [
-    23.5,
-    39.5
+    6.1,
+    16.9
    ],
-   "correct_when_placed": 90.8
+   "correct_when_placed": 100.0
   }
  }
 }
