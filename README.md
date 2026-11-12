@@ -118,7 +118,7 @@ the test pairs while labeling them, so fixes were limited to words found in dev 
 
 ## The site (phase 3, first page)
 
-`site/app.py` is a Streamlit page: pick a member, see where their individual money came from. It reads two small files
+`site/app.py` is a two-page Streamlit app. Members (the default) lets you pick a member and see where their individual money came from. It reads two small files
 written by `pipeline/aggregate.py` (`site/data/`, about 300 KB), so it runs on a free host.
 
 - **Every dollar is shown.** The first chart splits each member's individual money into placed in an industry,
@@ -127,6 +127,9 @@ written by `pipeline/aggregate.py` (`site/data/`, about 300 KB), so it runs on a
 - **Same charts for everyone,** sorted by the data, with a tick for the median of the member's party in their chamber.
 - **Totals** come from the FEC all-candidates summary, which also covers senators not on the ballot that cycle.
 - **Links** to each committee's FEC page and to PartyCohesion for voting records. No vote appears on this site.
+- **Industries page** (`site/views/industries.py`): pick an industry and see its share of each party's money in each
+  chamber, and the 15 members for whom it made up the largest share (among members who raised at least $250K from
+  individuals, so a few small gifts can't top the list). A table lists every member with a link to their profile.
 
 ```bash
 pip install -r site/requirements.txt

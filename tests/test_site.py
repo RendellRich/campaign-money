@@ -47,3 +47,14 @@ def test_unknown_member_param_explains_itself():
     at.run()
     assert not at.exception
     assert at.info and "No 2024 campaign committee" in at.info[0].value
+
+
+def test_industry_page_renders_every_industry():
+    at = AppTest.from_file(APP, default_timeout=30).run()
+    at.switch_page("views/industries.py").run()
+    assert not at.exception
+    box = at.selectbox[0]
+    for option in box.options[:3] + box.options[-2:]:
+        box.select(option).run()
+        assert not at.exception
+        assert any("to current members from people who listed employers in" in m.value for m in at.markdown)
