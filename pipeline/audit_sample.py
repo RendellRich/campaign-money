@@ -35,7 +35,7 @@ def pairs() -> pd.DataFrame:
     con = duckdb.connect(str(DB), read_only=True)
     g = con.execute(f"""SELECT upper(trim(coalesce(employer, ''))) AS employer,
                                upper(trim(coalesce(occupation, ''))) AS occupation, sum(amt) AS dollars
-                        FROM contrib WHERE {INDIVIDUAL} GROUP BY 1, 2 HAVING sum(amt) > 0""").df()
+                        FROM contrib WHERE cycle = 2024 AND {INDIVIDUAL} GROUP BY 1, 2 HAVING sum(amt) > 0""").df()
     g = g[[status(e, o) in HAS_INDUSTRY_SIGNAL for e, o in zip(g["employer"], g["occupation"])]]
     listed = set(mapping())
     g["stratum"] = np.where(g["employer"].map(norm).isin(listed), "list", "tail")

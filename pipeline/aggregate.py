@@ -44,7 +44,7 @@ def build(cycle: int) -> tuple[pd.DataFrame, pd.DataFrame]:
     con = duckdb.connect(str(DB), read_only=True)
     g = con.execute(f"""SELECT cmte_id, upper(trim(coalesce(employer, ''))) AS employer,
                                upper(trim(coalesce(occupation, ''))) AS occupation, sum(amt) AS dollars
-                        FROM contrib WHERE {INDIVIDUAL} GROUP BY 1, 2, 3""").df()
+                        FROM contrib WHERE cycle = {cycle} AND {INDIVIDUAL} GROUP BY 1, 2, 3""").df()
     pairs = g[["employer", "occupation"]].drop_duplicates()
     pairs["category"] = [category(e, o) for e, o in zip(pairs["employer"], pairs["occupation"])]
     g = g.merge(pairs, on=["employer", "occupation"])

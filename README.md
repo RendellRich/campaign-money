@@ -151,6 +151,13 @@ written by `pipeline/aggregate.py` (`site/data/`, about 300 KB), so it runs on a
 - **Same charts for everyone,** sorted by the data, with a tick for the median of the member's party in their chamber.
 - **Totals** come from the FEC all-candidates summary, which also covers senators not on the ballot that cycle.
 - **Links** to each committee's FEC page and to PartyCohesion for voting records. No vote appears on this site.
+- **Two cycles, 2022 and 2024.** A switch at the top of both pages picks the cycle. Each member page ends with how
+  their money changed between cycles: a hollow dot for one, a filled dot for the other. On the Industries page a tick on
+  each bar shows the other cycle. The reviewed employer list was built from 2024 donors, so slightly more 2022 money is
+  "unclear" (11.9% against 10.1%).
+- **Color with a job.** Each kind of money has its own color (industry green, unclear blue, retired amber, not employed
+  purple, unitemized clay, missing gray), checked with a palette validator for color-blind readers and always labeled in
+  words. The green header panel carries the site's mark: one strip showing every dollar current members raised, by kind.
 - **Industries page** (`site/views/industries.py`): pick an industry and see its share of each party's money in each
   chamber, and the 15 members for whom it made up the largest share (among members who raised at least $250K from
   individuals, so a few small gifts can't top the list). A table lists every member with a link to their profile.
@@ -174,11 +181,12 @@ pip install -r requirements.txt
 cd pipeline
 python member_committees.py --cycle 2024   # members to campaign committees
 python load_fec.py --cycle 2024            # downloads the 4.2 GB contributions file, loads it in about 3 minutes
+python load_fec.py --cycle 2022            # the 2022 zip's itcont.txt is incomplete, so this reads its by_date/ files
 python feasibility.py --cycle 2024         # writes data/feasibility_2024.json
 python audit_sample.py --cycle 2024        # draws the audit sample (already drawn; rerun gives the same draws)
 python audit.py --cycle 2024               # scores the pipeline on the dev sample
 python audit.py --cycle 2024 --set test    # and on the held-out test sample
-python aggregate.py --cycle 2024           # per-member totals for the site
+python aggregate.py --cycle 2024           # per-member totals for the site (run for 2022 as well)
 cd .. && pytest -q
 ```
 

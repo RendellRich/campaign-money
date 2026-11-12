@@ -6,20 +6,25 @@ import altair as alt
 import pandas as pd
 import streamlit as st
 
-from common import CYCLE, INDUSTRY_NAMES, PARTY_COLORS, PARTY_LETTER, colors, load, money_fmt, theme
+from common import (CYCLES, INDUSTRY_NAMES, PARTY_COLORS, PARTY_LETTER, colors, hero, inject_css, load, money_fmt,
+                    pick_cycle, theme)
 
 # Members with less individual money than this are left out of the "largest share" chart, where a few small gifts
 # could otherwise top the list. They stay in the table.
 MIN_FOR_RANKING = 250_000
 TOP = 15
 
-members, money = load()
+inject_css()
 c = colors()
 party_colors = PARTY_COLORS[theme()]
 
-st.title("Industries")
-st.write(f"Where money from people who listed employers in one industry went in the {CYCLE - 1} to {CYCLE} cycle: "
-         "by party and chamber, and the members for whom it made up the largest share.")
+top_slot = st.container()
+cycle = pick_cycle()
+members, money = load(cycle)
+with top_slot:
+    hero("Where each industry's money went",
+         f"Money from people who listed employers in one industry, in the {cycle - 1} to {cycle} cycle: its share of each "
+         "party's money in each chamber, and the members for whom it made up the largest share.")
 
 names = {v: k for k, v in INDUSTRY_NAMES.items()}
 label = st.selectbox("Industry", sorted(names), index=sorted(names).index(INDUSTRY_NAMES["finance"]))
@@ -37,6 +42,7 @@ st.write(f"**{money_fmt(total)}** to current members from people who listed empl
 
 
 def bars(df: pd.DataFrame, order: list[str], tooltip: list) -> alt.Chart:
+    """Party-colored bars. If df has a "prev" column, a tick marks the other cycle's value on each bar."""
     x = alt.X("share:Q", title=None, scale=alt.Scale(domainMin=0),
               axis=alt.Axis(format="%", grid=True, gridOpacity=0.25, domain=False, ticks=False, labelFontSize=11))
     base = alt.Chart(df).encode(
@@ -45,9 +51,15 @@ def bars(df: pd.DataFrame, order: list[str], tooltip: list) -> alt.Chart:
         tooltip=tooltip)
     color = alt.Color("party:N", title=None, legend=alt.Legend(orient="top", labelFontSize=12),
                       scale=alt.Scale(domain=list(party_colors), range=list(party_colors.values())))
-    return (alt.layer(base.mark_bar(height=16, cornerRadiusEnd=4).encode(x=x, color=color),
-                      base.mark_text(align="left", dx=6, fontSize=12, color=c["text"]).encode(
-                          x=x, text=alt.Text("share:Q", format=".1%")))
+    layers = [base.mark_bar(height=16, cornerRadiusEnd=4).encode(x=x, color=color)]
+    label_x = x
+    if "prev" in df:
+        layers.append(base.mark_tick(thickness=2, size=24, color=c["tick"]).encode(x=alt.X("prev:Q")))
+        df["label_x"] = df[["share", "prev"]].max(axis=1)
+        label_x = alt.X("label_x:Q")
+    layers.append(base.mark_text(align="left", dx=7, fontSize=12, color=c["text"]).encode(
+        x=label_x, text=alt.Text("share:Q", format=".1%")))
+    return (alt.layer(*layers)
             .properties(height=alt.Step(28)).configure_view(stroke=None).configure(background="transparent"))
 
 
@@ -59,13 +71,23 @@ g["share"] = g["dollars"] / g["individual"]
 g["label"] = [f"{p}s in the {ch} ({n})" for p, ch, n in zip(g["party"], g["chamber"], g["n"])]
 g["dollars_fmt"] = g["dollars"].map(money_fmt)
 g = g.sort_values("share", ascending=False)
+# The other cycle, as a tick on each bar, for the same groups of current members.
+other = next((x for x in CYCLES if x != cycle), None)
+if other:
+    om, omoney = load(other)
+    od = om.merge(omoney[omoney["category"] == key][["bioguide_id", "dollars"]], on="bioguide_id", how="left")
+    og = od.fillna({"dollars": 0}).groupby(["chamber", "party"])[["dollars", "individual"]].sum()
+    g["prev"] = [og.loc[(ch, p), "dollars"] / og.loc[(ch, p), "individual"] if (ch, p) in og.index else None
+                 for ch, p in zip(g["chamber"], g["party"])]
 st.markdown("#### By party and chamber")
 st.caption(f"Money from people in {label.lower()} as a share of each group's total individual money. "
-           "Members in each group in brackets.")
+           "Members in each group in brackets, grouped by their current party."
+           + (f" The tick shows the same group in {other - 1} to {other}." if other else ""))
 st.altair_chart(bars(g, list(g["label"]), [alt.Tooltip("label:N", title="Group"),
                                            alt.Tooltip("dollars_fmt:N", title="From this industry"),
-                                           alt.Tooltip("share:Q", title="Share of individual money", format=".1%")]),
-                use_container_width=True)
+                                           alt.Tooltip("share:Q", title="Share of individual money", format=".1%")]
+                + ([alt.Tooltip("prev:Q", title=f"{other - 1} to {other}", format=".1%")] if other else [])),
+                width="stretch")
 
 # 2. Members for whom it made up the largest share.
 r = m[(m["individual"] >= MIN_FOR_RANKING) & (m["dollars"] > 0)].sort_values("share", ascending=False).head(TOP)
@@ -81,7 +103,7 @@ else:
     st.altair_chart(bars(r, list(r["label"]), [alt.Tooltip("label:N", title="Member"),
                                                alt.Tooltip("dollars_fmt:N", title="From this industry"),
                                                alt.Tooltip("share:Q", title="Share of individual money", format=".1%")]),
-                    use_container_width=True)
+                    width="stretch")
 
 with st.expander("All members"):
     t = m[m["dollars"] > 0].sort_values("dollars", ascending=False)
@@ -90,7 +112,7 @@ with st.expander("All members"):
         t[["name", "party", "chamber", "state", "dollars", "share", "profile"]].rename(columns={
             "name": "Member", "party": "Party", "chamber": "Chamber", "state": "State", "dollars": "From this industry",
             "share": "Share of individual money", "profile": "Profile"}),
-        hide_index=True, use_container_width=True,
+        hide_index=True, width="stretch",
         column_config={"From this industry": st.column_config.NumberColumn(format="$%d"),
                        "Share of individual money": st.column_config.NumberColumn(format="percent"),
                        "Profile": st.column_config.LinkColumn(display_text="Open")})
