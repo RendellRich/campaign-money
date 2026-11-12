@@ -105,3 +105,28 @@ def test_former_member_has_a_profile_and_totals_stay_current_only():
     assert not at.exception
     assert any("no longer serving" in m.value for m in at.markdown)
     assert any(f"that {members['current'].sum()} current members raised" in m.value for m in at.markdown)
+
+
+def test_filter_changes_the_numbers_not_just_the_list():
+    members = pd.read_csv(ROOT / "site" / "data" / "members_2024.csv")
+    at = AppTest.from_file(APP, default_timeout=30).run()
+    assert not at.exception
+    assert any(f"that {members['current'].sum()} current members raised" in m.value for m in at.markdown)
+    assert at.dataframe and len(at.dataframe[0].value) == members["current"].sum()
+    at.session_state["f_chamber"] = ["Senate"]
+    at.session_state["f_party"] = ["Republican"]
+    at.run()
+    assert not at.exception
+    n = (members["current"] & (members["chamber"] == "Senate") & (members["party"] == "Republican")).sum()
+    assert any(f"that {n} current Republican senators raised" in m.value for m in at.markdown)
+    assert len(at.dataframe[0].value) == n
+    assert any("The tick is all current members of Congress" in c.value for c in at.caption)
+
+
+def test_filter_with_no_matches_explains_itself():
+    at = AppTest.from_file(APP, default_timeout=30).run()
+    at.session_state["f_party"] = ["Independent"]
+    at.session_state["f_min"] = "$10M or more"
+    at.run()
+    assert not at.exception
+    assert any("No members match these filters" in m.value for m in at.markdown)

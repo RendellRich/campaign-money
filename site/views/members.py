@@ -12,24 +12,87 @@ from common import (AUDIT, CYCLES, INDUSTRY_NAMES, OTHER, PARTY_LETTER, bar_char
 inject_css()
 c = colors()
 
-top_slot = st.container()  # the hero goes first on the page, but needs the cycle chosen below it
+top_slot = st.container()  # the hero goes first on the page, but needs the cycle and filters chosen below it
 cycle = pick_cycle()
 members, money = load(cycle)
-cur_members, cur_money = current_only(members, money)
-comp = composition(cur_money)
-with top_slot:
-    hero('Where Congress gets its campaign money',
-         f"Money from individual donors to current members of Congress in the {cycle - 1} to {cycle} election cycle, "
-         "sorted by the industry each donor listed. From the Federal Election Commission's public filings.",
-         comp, f"Every dollar of the {money_fmt(sum(comp.values()))} that {len(cur_members)} current members raised from "
-               "individuals, by where it came from.")
-
 members["option"] = [f"{n} ({PARTY_LETTER.get(p, p[:1])}-{s}, {ch}{'' if cur else ', former'})"
                      for n, p, s, ch, cur in zip(members["name"], members["party"], members["state"],
                                                  members["chamber"], members["current"])]
 other_cycle = next((x for x in CYCLES if x != cycle), None)
 in_other = set(load(other_cycle)[0]["bioguide_id"]) if other_cycle else set()
-shown = member_filters(members, in_other, other_cycle)
+shown, group, filtered = member_filters(members, in_other, other_cycle)
+group_money = money[money["bioguide_id"].isin(shown["bioguide_id"])]
+comp = composition(group_money)
+with top_slot:
+    hero('Where Congress gets its campaign money',
+         f"Money from individual donors to members of Congress in the {cycle - 1} to {cycle} election cycle, "
+         "sorted by the industry each donor listed. From the Federal Election Commission's public filings.",
+         comp, (f"Every dollar of the {money_fmt(sum(comp.values()))} that {group} raised from individuals, by where "
+                "it came from.") if len(shown) else "No members match these filters. Clear a filter to see more.")
+
+def group_view() -> None:
+    """With no member chosen: the filtered group as a whole, then every member in it, so the filter sorts the data
+    and not just the list."""
+    if shown.empty:
+        st.write("No members match these filters.")
+        return
+    total = shown["individual"].sum()
+    by_cat = group_money.groupby("category")["dollars"].sum()
+    ind_cats = [k for k in INDUSTRY_NAMES if by_cat.get(k, 0) > 0]
+    top = max(ind_cats, key=lambda k: by_cat[k]) if ind_cats else None
+    st.markdown(f"#### {group[0].upper() + group[1:]}")
+    cards([
+        ("From individual donors", money_fmt(total), f"{len(shown):,} {'member' if len(shown) == 1 else 'members'}"),
+        ("Median member", money_fmt(shown["individual"].median()), "raised from individuals"),
+        ("Largest industry", INDUSTRY_NAMES[top] if top else "None",
+         f"{by_cat[top] / total:.1%} of their individual money" if top else "No itemized money placed"),
+    ])
+
+    # Each industry as a share of the group's money. When a filter is on, the tick is every current member, so the
+    # group can be read against Congress as a whole.
+    base_money = current_only(members, money)[1]
+    base_total = members.loc[members["current"], "individual"].sum()
+    base = base_money.groupby("category")["dollars"].sum() / base_total
+    ind = pd.DataFrame([{"key": "industry", "label": INDUSTRY_NAMES[k], "dollars": by_cat[k], "share": by_cat[k] / total,
+                         "median": base.get(k, 0.0)} for k in ind_cats]).sort_values("share", ascending=False)
+    ind["dollars_fmt"] = ind["dollars"].map(money_fmt)
+    placed = ind["dollars"].sum() / total
+    st.markdown("#### By industry")
+    st.caption("Received from people who listed employers in each industry, as a share of all individual money to "
+               f"these members. Together these are {placed:.0%}; the rest is in the bar at the top."
+               + (" The tick is all current members of Congress." if filtered else ""))
+    st.altair_chart(bar_chart(ind, c, list(ind["label"]), median=filtered, tick_title="All current members"),
+                    width="stretch")
+
+    # Every member in the group. Click a column to sort; Open goes to that member's page.
+    wide = money[money["bioguide_id"].isin(shown["bioguide_id"]) & money["category"].isin(INDUSTRY_NAMES)]
+    lead = wide.sort_values("dollars", ascending=False).drop_duplicates("bioguide_id").set_index("bioguide_id")
+    t = shown.set_index("bioguide_id")
+    suffix = "" if cycle == CYCLES[0] else f"&cycle={cycle}"
+    table = pd.DataFrame({
+        "Member": t["name"], "Page": [f"/?member={b}{suffix}" for b in t.index],
+        "Party": t["party"].map(PARTY_LETTER), "State": t["state"], "Chamber": t["chamber"],
+        "Serving": t["current"].map({True: "Yes", False: "No"}),
+        "Raised": t["individual"],
+        "Itemized": t["itemized"] / t["individual"],
+        "Largest industry": lead["category"].reindex(t.index).map(INDUSTRY_NAMES),
+        "Share": lead["dollars"].reindex(t.index) / t["individual"],
+    }).sort_values("Raised", ascending=False)
+    # A column that is the same on every row (all senators, all serving) says nothing; the heading already does.
+    table = table.drop(columns=[col for col in ["Party", "Chamber", "Serving"] if table[col].nunique() == 1])
+    st.markdown("#### Every member in this view")
+    st.caption("Raised is from individual donors. Itemized and Share are of each member's own individual money; the "
+               "rest of it was unitemized (donors who gave $200 or less). Click a column name to sort.")
+    st.dataframe(table, hide_index=True, width="stretch", height=min(38 + 35 * len(table), 520),
+                 column_config={"Raised": st.column_config.NumberColumn(format="dollar"),
+                                "Itemized": st.column_config.NumberColumn(format="percent"),
+                                "Share": st.column_config.NumberColumn(format="percent"),
+                                "Page": st.column_config.LinkColumn("Page", display_text="Open")})
+    st.download_button("Download this table (CSV)", table.drop(columns="Page").to_csv(index=False),
+                       file_name=f"campaign-money-{cycle}-members.csv", mime="text/csv",
+                       icon=":material/download:", type="tertiary")
+
+
 # ?member=<Bioguide ID> opens a member directly, so PartyCohesion and shared links can point at one profile. A linked
 # member stays in the list even when the filters would hide them.
 by_bioguide = dict(zip(members["bioguide_id"], members["option"]))
@@ -45,6 +108,7 @@ if pick is None:
         st.info(f"No {cycle} campaign committee was found for that member. Appointed senators and members who did "
                 "not raise money that cycle have no profile here for it.")
         del st.query_params["member"]
+    group_view()
     st.stop()
 
 m = members[members["option"] == pick].iloc[0]
