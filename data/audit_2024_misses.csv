@@ -1,0 +1,117 @@
+id,stratum,employer,occupation,label,confidence,predicted,how,outcome,draws
+A016,list,SELF EMPLOYED,SINGER,media,high,unknown,none,left,1
+A042,list,SELF-EMPLOYED,CAMERAMAN,media,high,unknown,none,left,1
+A070,list,SELF EMPLOYED,HOSPITALITY,consumer,low,unknown,none,left,1
+A075,list,SELF EMPLOYED,WRITER,media,high,unknown,none,left,1
+A076,list,SELF EMPLOYED,INDOOR AIR QUALITY INSPECTIONS,business_services,low,unknown,none,left,1
+A096,list,SELF-EMPLOYED,MANAGEMENT CONSULTANT,business_services,high,unknown,none,left,1
+A105,list,SELF EMPLOYED,RESTAURANT OWNER,consumer,high,unknown,none,left,1
+A145,list,SELF EMPLOYED,CONSTRUCTION,real_estate,high,unknown,none,left,1
+A221,list,SELF-EMPLOYED,WRITER,media,high,unknown,none,left,1
+A241,list,SELF EMPLOYED,CAREGIVER,health,high,unknown,none,left,1
+A252,list,SELF EMPLOYED,ART CONSULTANT,media,low,unknown,none,left,1
+A271,list,SELF EMPLOYED,FILM DIRECTOR,media,high,unknown,none,left,1
+A088,list,AGINS INTERIOR,OWNER - INTERIOR DESIGNER,real_estate,low,business_services,list,wrong,1
+A091,list,SELF-EMPLOYED,OIL & GAS INVESTOR,energy,high,finance,occupation:finance,wrong,1
+A190,list,BOOZ ALLEN HAMILTON,POLICY DIRECTOR,business_services,low,defense,list,wrong,1
+A255,list,LSN PARTNERS LLC,ATTORNEY,lobbying,low,law,list,wrong,1
+A258,list,EMPIRE CONSULTING GROUP,MANAGING PARTNER,lobbying,low,business_services,list,wrong,1
+A281,list,HONOR NYC,PRESIDENT,unknown,low,consumer,list,wrong,1
+A293,list,GENWORTH FINANCIAL,FINANCIAL ADVISOR,insurance,low,finance,list,wrong,1
+A002,tail,LENDEM SOLUTIONS,CEO,finance,low,unknown,none,left,1
+A007,tail,STEAMSHIP TRADE ASSOC.,PRESIDENT,transportation,low,unknown,none,left,1
+A008,tail,LAWRENCE BERKELEY NATIONAL LAB,CHEMIST,government,low,unknown,none,left,1
+A009,tail,BROWER INC,BAR MANAGER,consumer,low,unknown,none,left,1
+A018,tail,"AUTHZED, INC",CTO,tech,high,unknown,none,left,1
+A019,tail,COUNTSY,FOUNDER,business_services,low,unknown,none,left,1
+A023,tail,PERRY WHITE ROSS AND JACOBSON,PARTNER,lobbying,high,unknown,none,left,1
+A025,tail,N/A,HOME MANAGER,not employed,high,unknown,none,left,1
+A026,tail,PHASE TECHNOLOGIES,CEO,manufacturing,low,unknown,none,left,1
+A027,tail,MAXIMUS,PROJECT MANAGER,business_services,high,unknown,none,left,1
+A033,tail,CUMBERLAND DEV.,MANAGER,real_estate,low,unknown,none,left,1
+A035,tail,SELF,PHILANTHROPY,nonprofit,low,unknown,none,left,1
+A039,tail,OPFI,CEO,finance,high,unknown,none,left,1
+A045,tail,TIMBERLAND TRANSPORTAION,TRANSPORTATION,transportation,high,unknown,none,left,1
+A047,tail,STARZ,CEO,media,high,unknown,none,left,1
+A049,tail,TEMPLETOM CO,ACCOUNTANT,business_services,low,unknown,none,left,1
+A050,tail,HAMPTON ROADS TRANSPORTATION INC.,MANAGER,transportation,high,unknown,none,left,1
+A054,tail,"BRAINWAVE SCIENCE, INC.",PRESIDENT & CEO,tech,low,unknown,none,left,1
+A055,tail,CORTEX INNOVATION COMMUNITY,CEO,nonprofit,low,unknown,none,left,1
+A056,tail,RECONNECT RONDO,ECONOMIC & COMMUNITY DEVELOPMENT,nonprofit,high,unknown,none,left,1
+A064,tail,"RESOLUTION ECONOMICS GROUP, LLC",ECONOMIST,business_services,high,unknown,none,left,1
+A069,tail,MARCUS & POLLACK LLP,PARTNER,business_services,low,unknown,none,left,1
+A073,tail,BEST ONE TIRE,SALES,consumer,low,unknown,none,left,1
+A089,tail,PARKER AUTOMOTIVE GROUP,OWNER,consumer,low,unknown,none,left,1
+A094,tail,UNIFI,AIRCRAFT GROUND HANDLER,transportation,high,unknown,none,left,1
+A099,tail,OCEAN ATLANTIC MANAGEMENT LLC,PRESIDENT,real_estate,low,unknown,none,left,1
+A101,tail,MAJORCLARITY,CO-FOUNDER,tech,low,unknown,none,left,1
+A104,tail,COMMUNITY ELDERCARE SEVICES,MANAGING MEMBER,health,high,unknown,none,left,1
+A114,tail,GETAROUND,ACCOUNTANT,tech,low,unknown,none,left,1
+A115,tail,OFFICE OF NYC COMPTROLLER,SENIOR POLICY DIRECTOR,government,high,unknown,none,left,1
+A120,tail,WAREHOUSE SHOWROOMS,MANAGER,consumer,low,unknown,none,left,1
+A121,tail,CAMBRIDGE INFORMATION GROUP,CEO,media,low,unknown,none,left,1
+A122,tail,HEALTHCARE CORP.,EXECUTIVE,health,high,unknown,none,left,1
+A123,tail,ATLAS TOOL WORKS,PRESIDENT,manufacturing,high,unknown,none,left,1
+A127,tail,DELL TRANSPORTATION CORP,EXECUTIVE,transportation,high,unknown,none,left,1
+A129,tail,HOLLAND PUBLIC SCHOOLS EDUCATIONAL FOU,OPERATIONS DIRECTOR,education,low,unknown,none,left,1
+A131,tail,MEN ON THE MOVE,PRESIDENT,transportation,low,unknown,none,left,1
+A133,tail,ALLIED CONSULTANTS,CYBER PROFESSIONAL,tech,low,unknown,none,left,1
+A136,tail,STATE DEPARTMENT,SENIOR ADVISOR,government,high,unknown,none,left,1
+A137,tail,CRYSTAL MOUNTAIN,RESORT EXECUTIVE,consumer,low,unknown,none,left,1
+A143,tail,SELF,PSYCHOTHERAPIST,health,high,unknown,none,left,1
+A146,tail,JONES LANG LASALLE,SR. MANAGING DIRECTOR,real_estate,high,unknown,none,left,1
+A157,tail,DICKINSON READY MIX CO.,OWNER,real_estate,low,unknown,none,left,1
+A159,tail,"DRUMMOND CO., INC.",EXECUTIVE,energy,low,unknown,none,left,1
+A164,tail,GILDA'S CLUB GRAND RAPIDS,SOCIAL WORKER,nonprofit,high,unknown,none,left,1
+A165,tail,TITAN ROBOTICS INC,CEO,manufacturing,low,unknown,none,left,1
+A168,tail,NORTHEAST PRIVATE CLIENT GROUP,CEO,finance,high,unknown,none,left,1
+A178,tail,FIRSTPERSON NARRRATIVES,PRESIDENT,media,low,unknown,none,left,1
+A191,tail,SNAPCHAT,SENIOR VICE PRESIDENT,tech,high,unknown,none,left,1
+A197,tail,NATIONAL CONCESSION,FOOD DEALER,consumer,high,unknown,none,left,1
+A202,tail,ROBERT WATKINS & COMPANY,CPA,business_services,high,unknown,none,left,1
+A204,tail,STRESAU LABORATORY,PRESIDENT,defense,low,unknown,none,left,1
+A205,tail,THE GALLERY,OWNER,consumer,low,unknown,none,left,1
+A217,tail,SELF,ARTIST,media,high,unknown,none,left,1
+A218,tail,APEX COVANTAGE,CEO,business_services,low,unknown,none,left,1
+A227,tail,BYRNES & KIEFER COMPANY,PRESIDENT,consumer,low,unknown,none,left,1
+A229,tail,SMITH TRANSPORT WHS,ADVISOR,transportation,high,unknown,none,left,1
+A237,tail,INTERACTIVE BROKERS GROUP,CHAIRMAN,finance,high,unknown,none,left,1
+A238,tail,ENTRAVISION,MEDIA & TECHNOLOGY,media,high,unknown,none,left,1
+A239,tail,CARMINA WOOD MORRIS DPC,ARCHITECT,real_estate,high,unknown,none,left,1
+A242,tail,ARROW INTERNATIONAL,CEO,manufacturing,low,unknown,none,left,1
+A244,tail,LDG MULTIFAMILY LLC,OWNER,real_estate,high,unknown,none,left,1
+A245,tail,STERLING-RICE GROUP,MANAGEMENT CONSULTANT,business_services,high,unknown,none,left,1
+A249,tail,MONUMENT POLICY GROUP,CONSULTANT,lobbying,high,unknown,none,left,1
+A250,tail,SUSHI BROKERS,CO-OWNER,consumer,high,unknown,none,left,1
+A251,tail,AMBITIONS OF WASHINGTON,CAREGIVER,health,high,unknown,none,left,1
+A253,tail,PORTS AMERICA,PRESIDENT & CEO,transportation,high,unknown,none,left,1
+A254,tail,BAXTER AUTO GROUP,CAR DEALER,consumer,high,unknown,none,left,1
+A259,tail,UNUM,CEO,insurance,high,unknown,none,left,1
+A265,tail,THE THRASHER GROUP,DIRECTOR OF CONSTRUCTION SERVICES,real_estate,low,unknown,none,left,1
+A266,tail,YANCEY BROS. CO.,CHAIRMAN & CEO,manufacturing,low,unknown,none,left,1
+A274,tail,"A.J. DWOSKIN & ASSOC, INC.",PRESIDENT & CEO,real_estate,high,unknown,none,left,1
+A285,tail,MN COACHES,PROPERTY MANAGER,transportation,low,unknown,none,left,1
+A295,tail,"?ACT 3, LLC?",CONSULTANT,business_services,low,unknown,none,left,1
+A296,tail,CO-FOUNDER,ARES MANAGEMENT,finance,high,unknown,employer:unknown,left,1
+A005,tail,HARTZ MOUNTAIN INDUSTRIES INC,PRESIDENT AND CEO,real_estate,high,manufacturing,employer:manufacturing,wrong,1
+A006,tail,GATEWAY COMMUNITY INDUSTRIES INC.,PRESIDENT AND CEO,nonprofit,low,manufacturing,employer:manufacturing,wrong,1
+A029,tail,CITY OF HOPE,PHYSICIAN,health,high,government,employer:government,wrong,1
+A030,tail,ELECTROIMPACT,ENGINEER,manufacturing,low,tech,occupation:tech,wrong,1
+A078,tail,IGNITE,FINANCE DIRECTOR,unknown,low,finance,occupation:finance,wrong,1
+A079,tail,TRELLIS ART FUND,ARTS ADMINISTRATOR,nonprofit,high,finance,employer:finance,wrong,1
+A081,tail,DIGITAL CURRENCY GROUP,SVP COMMUNICATIONS & MARKETING,finance,high,tech,employer:tech,wrong,1
+A113,tail,SECURIAN FINANCIAL,SENIOR VICE PRESIDENT,insurance,low,finance,employer:finance,wrong,1
+A117,tail,SOLOMON AGENCY CORP.,CEO,unknown,low,media,employer:media,wrong,1
+A128,tail,FREEPOINT COMMODITIES,OIL TRADER,energy,low,finance,occupation:finance,wrong,1
+A149,tail,US ENVIRONMENTAL PROT AGE,ATTORNEY,government,high,law,occupation:law,wrong,1
+A152,tail,POWER ROGERS AND SMITH LLP,ATTORNEY,law,high,energy,employer:energy,wrong,1
+A195,tail,ENTERTAINMENT SOFTWARE ASSN.,GOVERNMENT RELATIONS,media,low,tech,employer:tech,wrong,1
+A199,tail,COLLEGE PARK CAR WASH INC,PRESIDENT,consumer,high,education,employer:education,wrong,1
+A200,tail,UNIVERSITY OF TENNESSEE,LAW STUDENT,not employed,low,education,employer:education,wrong,1
+A216,tail,LOUDOUN COUNTY PUBLIC SCHOOLS,TEACHER,education,high,government,employer:government,wrong,1
+A222,tail,"BROWN & WEINRAUB, PLLC",ATTORNEY,lobbying,low,law,occupation:law,wrong,1
+A223,tail,CB COMMUNICATIONS LLC,CONSULTANT,business_services,low,telecom,employer:telecom,wrong,1
+A228,tail,P2S INC.,ENGINEER,real_estate,low,tech,occupation:tech,wrong,1
+A230,tail,SPRAY SYSTEMS OF ARIZONA,EXECUTIVE,real_estate,low,tech,employer:tech,wrong,1
+A231,tail,HLI,FINANCE,unknown,low,finance,occupation:finance,wrong,1
+A234,tail,CONSULTING,GENERAL CONTRACTOR,real_estate,low,business_services,employer:business_services,wrong,1

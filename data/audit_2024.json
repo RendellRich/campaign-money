@@ -1,0 +1,105 @@
+{
+ "cycle": 2024,
+ "pairs": 296,
+ "all": {
+  "correct": 61.3,
+  "correct_ci95": [
+   56.1,
+   66.6
+  ],
+  "wrong": 9.7,
+  "wrong_ci95": [
+   6.3,
+   13.0
+  ],
+  "left": 29.0,
+  "left_ci95": [
+   24.0,
+   33.9
+  ],
+  "stratum_weights": {
+   "list": 0.334,
+   "tail": 0.666
+  }
+ },
+ "by_stratum": {
+  "list": {
+   "draws": 100,
+   "correct": 81.0,
+   "correct_ci95": [
+    72.2,
+    87.5
+   ],
+   "wrong": 7.0,
+   "wrong_ci95": [
+    3.4,
+    13.7
+   ],
+   "left": 12.0,
+   "left_ci95": [
+    7.0,
+    19.8
+   ],
+   "correct_when_placed": 92.0
+  },
+  "tail": {
+   "draws": 200,
+   "correct": 51.5,
+   "correct_ci95": [
+    44.6,
+    58.3
+   ],
+   "wrong": 11.0,
+   "wrong_ci95": [
+    7.4,
+    16.1
+   ],
+   "left": 37.5,
+   "left_ci95": [
+    31.1,
+    44.4
+   ],
+   "correct_when_placed": 82.4
+  }
+ },
+ "high_confidence_labels": {
+  "list": {
+   "draws": 76,
+   "correct": 86.8,
+   "correct_ci95": [
+    77.4,
+    92.7
+   ],
+   "wrong": 1.3,
+   "wrong_ci95": [
+    0.2,
+    7.1
+   ],
+   "left": 11.8,
+   "left_ci95": [
+    6.4,
+    21.0
+   ],
+   "correct_when_placed": 98.5
+  },
+  "tail": {
+   "draws": 126,
+   "correct": 62.7,
+   "correct_ci95": [
+    54.0,
+    70.6
+   ],
+   "wrong": 6.3,
+   "wrong_ci95": [
+    3.3,
+    12.0
+   ],
+   "left": 31.0,
+   "left_ci95": [
+    23.5,
+    39.5
+   ],
+   "correct_when_placed": 90.8
+  }
+ }
+}
