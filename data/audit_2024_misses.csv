@@ -14,12 +14,8 @@ A007,tail,STEAMSHIP TRADE ASSOC.,PRESIDENT,transportation,low,unknown,none,left,
 A009,tail,BROWER INC,BAR MANAGER,consumer,low,unknown,none,left,1
 A018,tail,"AUTHZED, INC",CTO,tech,high,unknown,none,left,1
 A019,tail,COUNTSY,FOUNDER,business_services,low,unknown,none,left,1
-A023,tail,PERRY WHITE ROSS AND JACOBSON,PARTNER,lobbying,high,unknown,none,left,1
 A026,tail,PHASE TECHNOLOGIES,CEO,manufacturing,low,unknown,none,left,1
 A027,tail,MAXIMUS,PROJECT MANAGER,business_services,high,unknown,none,left,1
-A030,tail,ELECTROIMPACT,ENGINEER,manufacturing,low,unknown,none,left,1
-A033,tail,CUMBERLAND DEV.,MANAGER,real_estate,low,unknown,none,left,1
-A039,tail,OPFI,CEO,finance,high,unknown,none,left,1
 A047,tail,STARZ,CEO,media,high,unknown,none,left,1
 A054,tail,"BRAINWAVE SCIENCE, INC.",PRESIDENT & CEO,tech,low,unknown,none,left,1
 A055,tail,CORTEX INNOVATION COMMUNITY,CEO,nonprofit,low,unknown,none,left,1
@@ -28,30 +24,20 @@ A063,tail,"ABRO INDUSTRIES, INC",SALESMAN,manufacturing,low,unknown,none,left,1
 A069,tail,MARCUS & POLLACK LLP,PARTNER,business_services,low,unknown,none,left,1
 A099,tail,OCEAN ATLANTIC MANAGEMENT LLC,PRESIDENT,real_estate,low,unknown,none,left,1
 A101,tail,MAJORCLARITY,CO-FOUNDER,tech,low,unknown,none,left,1
-A121,tail,CAMBRIDGE INFORMATION GROUP,CEO,media,low,unknown,none,left,1
 A131,tail,MEN ON THE MOVE,PRESIDENT,transportation,low,unknown,none,left,1
 A133,tail,ALLIED CONSULTANTS,CYBER PROFESSIONAL,tech,low,unknown,none,left,1
 A137,tail,CRYSTAL MOUNTAIN,RESORT EXECUTIVE,consumer,low,unknown,none,left,1
-A159,tail,"DRUMMOND CO., INC.",EXECUTIVE,energy,low,unknown,none,left,1
 A164,tail,GILDA'S CLUB GRAND RAPIDS,SOCIAL WORKER,nonprofit,high,unknown,none,left,1
 A178,tail,FIRSTPERSON NARRRATIVES,PRESIDENT,media,low,unknown,none,left,1
 A191,tail,SNAPCHAT,SENIOR VICE PRESIDENT,tech,high,unknown,none,left,1
 A199,tail,COLLEGE PARK CAR WASH INC,PRESIDENT,consumer,high,unknown,none,left,1
 A204,tail,STRESAU LABORATORY,PRESIDENT,defense,low,unknown,none,left,1
 A205,tail,THE GALLERY,OWNER,consumer,low,unknown,none,left,1
-A218,tail,APEX COVANTAGE,CEO,business_services,low,unknown,none,left,1
 A223,tail,CB COMMUNICATIONS LLC,CONSULTANT,business_services,low,unknown,none,left,1
 A227,tail,BYRNES & KIEFER COMPANY,PRESIDENT,consumer,low,unknown,none,left,1
-A228,tail,P2S INC.,ENGINEER,real_estate,low,unknown,none,left,1
 A230,tail,SPRAY SYSTEMS OF ARIZONA,EXECUTIVE,real_estate,low,unknown,none,left,1
-A238,tail,ENTRAVISION,MEDIA & TECHNOLOGY,media,high,unknown,none,left,1
-A242,tail,ARROW INTERNATIONAL,CEO,manufacturing,low,unknown,none,left,1
 A250,tail,SUSHI BROKERS,CO-OWNER,consumer,high,unknown,none,left,1
-A266,tail,YANCEY BROS. CO.,CHAIRMAN & CEO,manufacturing,low,unknown,none,left,1
-A274,tail,"A.J. DWOSKIN & ASSOC, INC.",PRESIDENT & CEO,real_estate,high,unknown,none,left,1
 A285,tail,MN COACHES,PROPERTY MANAGER,transportation,low,unknown,none,left,1
 A295,tail,"?ACT 3, LLC?",CONSULTANT,business_services,low,unknown,none,left,1
 A114,tail,GETAROUND,ACCOUNTANT,tech,low,business_services,occupation:business_services,wrong,1
-A165,tail,TITAN ROBOTICS INC,CEO,manufacturing,low,tech,employer:tech,wrong,1
 A195,tail,ENTERTAINMENT SOFTWARE ASSN.,GOVERNMENT RELATIONS,media,low,tech,employer:tech,wrong,1
-A222,tail,"BROWN & WEINRAUB, PLLC",ATTORNEY,lobbying,low,law,occupation:law,wrong,1
