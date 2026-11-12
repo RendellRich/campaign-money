@@ -223,6 +223,22 @@ PARTY_ADJ = {"Democrat": "Democratic", "Republican": "Republican", "Independent"
 def _clear_filters() -> None:
     for k in FILTER_KEYS:
         st.session_state.pop(k, None)
+        st.session_state.pop("keep_" + k, None)
+
+
+def _restore_filters(defaults: dict) -> None:
+    """Streamlit drops a widget's state when a page that doesn't draw it runs, so the filter would reset on every
+    page switch. Each run keeps a copy under keep_<key>; here the widgets start from that copy, or the default."""
+    ss = st.session_state
+    for k, default in defaults.items():
+        # Reassigning the value (even unchanged) hands it to this page's widget, which has a different ID.
+        ss[k] = ss[k] if k in ss else ss.get("keep_" + k, default)
+
+
+def _keep_filters() -> None:
+    for k in FILTER_KEYS:
+        if k in st.session_state:
+            st.session_state["keep_" + k] = st.session_state[k]
 
 
 def _and(words: list[str]) -> str:
@@ -263,6 +279,11 @@ def member_filters(members: pd.DataFrame, in_other_cycle: set[str],
     parties = [p for p in ["Democrat", "Republican", "Independent"] if p in set(members["party"])]
     states = sorted(members["state"].unique(), key=lambda s: STATE_NAMES.get(s, s))
     ss = st.session_state
+    _restore_filters({"f_status": list(DEFAULT_STATUS), "f_chamber": ["House", "Senate"], "f_party": parties,
+                      "f_state": [], "f_min": "Any amount", "f_both": False})
+    # A party missing from this cycle's data can't stay selected.
+    ss["f_party"] = [x for x in ss["f_party"] if x in parties]
+    ss["f_state"] = [x for x in ss["f_state"] if x in states]
     status = ss.get("f_status") or list(DEFAULT_STATUS)
     chambers = ss.get("f_chamber") or ["House", "Senate"]
     chosen_parties = ss.get("f_party") or parties
@@ -273,16 +294,17 @@ def member_filters(members: pd.DataFrame, in_other_cycle: set[str],
                   bool(chosen_states), min_label != "Any amount", both])
     label = ":material/filter_list: Filter members" + (f" ({active})" if active else "")
     with st.popover(label):
-        st.pills("Status", list(STATUS), selection_mode="multi", default=DEFAULT_STATUS, key="f_status")
-        st.pills("Chamber", ["House", "Senate"], selection_mode="multi", default=["House", "Senate"], key="f_chamber")
-        st.pills("Party", parties, selection_mode="multi", default=parties, key="f_party")
+        st.pills("Status", list(STATUS), selection_mode="multi", key="f_status")
+        st.pills("Chamber", ["House", "Senate"], selection_mode="multi", key="f_chamber")
+        st.pills("Party", parties, selection_mode="multi", key="f_party")
         st.multiselect("State", states, key="f_state", format_func=lambda s: STATE_NAMES.get(s, s),
                        placeholder="All states")
-        st.select_slider("Raised from individuals", list(MIN_RAISED), value="Any amount", key="f_min")
+        st.select_slider("Raised from individuals", list(MIN_RAISED), key="f_min")
         if other_cycle:
             st.toggle(f"Only members with a committee in both cycles (so the change since {min(other_cycle, CYCLE)} "
                       "shows)", key="f_both")
         st.button("Clear filters", on_click=_clear_filters, icon=":material/restart_alt:", type="tertiary")
+    _keep_filters()
 
     keep = (members["current"].isin([STATUS[s] for s in status])
             & members["chamber"].isin(chambers)

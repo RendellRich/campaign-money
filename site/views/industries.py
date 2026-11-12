@@ -6,8 +6,8 @@ import altair as alt
 import pandas as pd
 import streamlit as st
 
-from common import (CYCLES, current_only, INDUSTRY_NAMES, PARTY_COLORS, PARTY_LETTER, colors, hero, inject_css, load, money_fmt,
-                    pick_cycle, theme)
+from common import (CYCLES, INDUSTRY_NAMES, PARTY_COLORS, PARTY_LETTER, colors, hero, inject_css, load, member_filters,
+                    money_fmt, pick_cycle, theme)
 
 # Members with less individual money than this are left out of the "largest share" chart, where a few small gifts
 # could otherwise top the list. They stay in the table.
@@ -20,7 +20,12 @@ party_colors = PARTY_COLORS[theme()]
 
 top_slot = st.container()
 cycle = pick_cycle()
-members, money = current_only(*load(cycle))
+all_members, all_money = load(cycle)
+other = next((x for x in CYCLES if x != cycle), None)
+in_other = set(load(other)[0]["bioguide_id"]) if other else set()
+# The same filter as the Members page, and it carries over between the two: every chart below follows this group.
+members, group, filtered = member_filters(all_members, in_other, other)
+money = all_money[all_money["bioguide_id"].isin(members["bioguide_id"])]
 with top_slot:
     hero("Where each industry's money went",
          f"Money from people who listed employers in one industry, in the {cycle - 1} to {cycle} cycle: its share of each "
@@ -34,11 +39,15 @@ mine = money[money["category"] == key][["bioguide_id", "dollars"]]
 m = members.merge(mine, on="bioguide_id", how="left").fillna({"dollars": 0})
 m["share"] = m["dollars"] / m["individual"].where(m["individual"] > 0)
 total, everything = m["dollars"].sum(), m["individual"].sum()
-not_placed = money[~money["category"].isin(INDUSTRY_NAMES)]["dollars"].sum() / everything
+not_placed = (money[~money["category"].isin(INDUSTRY_NAMES)]["dollars"].sum() / everything
+              if everything else 0)
 
-st.write(f"**{money_fmt(total)}** to current members from people who listed employers in "
+if members.empty:
+    st.write("No members match these filters. Clear a filter to see more.")
+    st.stop()
+st.write(f"**{money_fmt(total)}** to {group} from people who listed employers in "
          f"{label.lower()}, {total / everything:.1%} of all their individual money. "
-         f"{(m['dollars'] > 0).sum()} of {len(m)} members received some.")
+         f"{(m['dollars'] > 0).sum()} of {len(m)} received some.")
 
 
 def bars(df: pd.DataFrame, order: list[str], tooltip: list) -> alt.Chart:
@@ -50,7 +59,8 @@ def bars(df: pd.DataFrame, order: list[str], tooltip: list) -> alt.Chart:
                 axis=alt.Axis(labelLimit=260, labelFontSize=13, ticks=False, domain=False)),
         tooltip=tooltip)
     color = alt.Color("party:N", title=None, legend=alt.Legend(orient="top", labelFontSize=12),
-                      scale=alt.Scale(domain=list(party_colors), range=list(party_colors.values())))
+                      scale=alt.Scale(domain=[p for p in party_colors if p in set(df["party"])],
+                                      range=[v for p, v in party_colors.items() if p in set(df["party"])]))
     layers = [base.mark_bar(height=16, cornerRadiusEnd=4).encode(x=x, color=color)]
     label_x = x
     if "prev" in df:
@@ -71,18 +81,19 @@ g["share"] = g["dollars"] / g["individual"]
 g["label"] = [f"{p}s in the {ch} ({n})" for p, ch, n in zip(g["party"], g["chamber"], g["n"])]
 g["dollars_fmt"] = g["dollars"].map(money_fmt)
 g = g.sort_values("share", ascending=False)
-# The other cycle, as a tick on each bar, for the same groups of current members.
-other = next((x for x in CYCLES if x != cycle), None)
+# The other cycle, as a tick on each bar, for the same members (those of them who had a committee then).
 if other:
-    om, omoney = current_only(*load(other))
+    om, omoney = load(other)
+    om = om[om["bioguide_id"].isin(members["bioguide_id"])]
+    omoney = omoney[omoney["bioguide_id"].isin(om["bioguide_id"])]
     od = om.merge(omoney[omoney["category"] == key][["bioguide_id", "dollars"]], on="bioguide_id", how="left")
     og = od.fillna({"dollars": 0}).groupby(["chamber", "party"])[["dollars", "individual"]].sum()
     g["prev"] = [og.loc[(ch, p), "dollars"] / og.loc[(ch, p), "individual"] if (ch, p) in og.index else None
                  for ch, p in zip(g["chamber"], g["party"])]
 st.markdown("#### By party and chamber")
 st.caption(f"Money from people in {label.lower()} as a share of each group's total individual money. "
-           "Members in each group in brackets, grouped by their current party."
-           + (f" The tick shows the same group in {other - 1} to {other}." if other else ""))
+           "Members in each group in brackets, grouped by their party."
+           + (f" The tick shows the same members in {other - 1} to {other}, those who had a committee then." if other else ""))
 st.altair_chart(bars(g, list(g["label"]), [alt.Tooltip("label:N", title="Group"),
                                            alt.Tooltip("dollars_fmt:N", title="From this industry"),
                                            alt.Tooltip("share:Q", title="Share of individual money", format=".1%")]
@@ -107,7 +118,7 @@ else:
 
 with st.expander("All members"):
     t = m[m["dollars"] > 0].sort_values("dollars", ascending=False)
-    t = t.assign(profile="/?member=" + t["bioguide_id"])
+    t = t.assign(profile="/?member=" + t["bioguide_id"] + ("" if cycle == CYCLES[0] else f"&cycle={cycle}"))
     st.dataframe(
         t[["name", "party", "chamber", "state", "dollars", "share", "profile"]].rename(columns={
             "name": "Member", "party": "Party", "chamber": "Chamber", "state": "State", "dollars": "From this industry",
@@ -121,7 +132,7 @@ st.divider()
 st.markdown(
     "- These are gifts from individual donors who listed an employer or job in this industry, not money from "
     "companies and not PAC money. Where donors work is not who they speak for.\n"
-    f"- {not_placed:.0%} of all individual money to current members can't be placed in any industry: it is "
+    f"- {not_placed:.0%} of all individual money to these members can't be placed in any industry: it is "
     "unitemized, from retired or not employed donors, or the donor's employer is unclear. Each member's page shows "
     "those shares.\n"
     "- This site never pairs a donation with a vote.")
