@@ -187,8 +187,8 @@ answer key.
 - `data/audit_2024_fresh_sample.csv`: 100 new draws (34 list, 66 tail, by dollar weight, seed 2026), none of them a
   pair already in the dev or test sample.
 - Three raters label the same records from the employer and occupation text alone, following the same written rules
-  (`data/audit_2024_fresh_prompt.txt`, which is also the exact prompt given to the outside AI): Ren, an outside AI,
-  and Claude. Claude's labels (`data/audit_2024_fresh_labels_claude.csv`) were committed before anyone else labeled.
+  (`data/audit_2024_fresh_prompt.txt`, which is also the exact prompt given to the outside AI): Ren, ChatGPT and
+  Claude. Claude's labels (`data/audit_2024_fresh_labels_claude.csv`) were committed before anyone else labeled.
 - `pipeline/audit_compare.py` scores the pipeline against each rater, reports how often each pair of raters agrees
   (with Cohen's kappa), and scores the pipeline on the records where Ren and the outside AI agree, the least disputed
   answer key. Records they disagree on go to `data/audit_2024_fresh_disputed.csv`.
