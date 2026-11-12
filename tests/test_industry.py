@@ -55,3 +55,19 @@ def test_mapping_file_is_valid():
     assert len(m) == 1000 and m["employer"].is_unique
     assert set(m["industry"]) <= set(INDUSTRIES) | {"not_employed"}
     assert set(m["source"]) <= {"rule", "review"}
+
+
+def test_self_employed_uses_occupation_not_the_list():
+    # "SELF EMPLOYED" is on the employer list as unknown; the occupation must still decide.
+    assert industry("SELF EMPLOYED", "DENTIST")[0] == "health"
+    assert industry("SELF-EMPLOYED", "ATTORNEY")[0] == "law"
+
+
+def test_audit_files_line_up():
+    sample = pd.read_csv(ROOT / "data" / "audit_2024_sample.csv", dtype=str, keep_default_na=False)
+    labels = pd.read_csv(ROOT / "data" / "audit_2024_labels.csv", dtype=str, keep_default_na=False)
+    assert set(sample["id"]) == set(labels["id"])
+    allowed = set(INDUSTRIES) | {"retired", "not employed"}
+    assert set(labels["label"]) <= allowed
+    assert set(labels["confidence"]) <= {"high", "low"}
+    assert {"employer", "occupation"} <= set(sample.columns) and "label" not in sample.columns

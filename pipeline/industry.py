@@ -28,7 +28,9 @@ def industry(employer, occupation) -> tuple[str, str]:
     st = status(employer, occupation)
     if st not in HAS_INDUSTRY_SIGNAL:
         return st.replace(" or requested", "").replace(", no occupation", ""), "status"
-    known = mapping().get(norm(employer))
+    # The list is for named employers. "SELF EMPLOYED" is on it (as unknown) only because it is a top-1,000 string;
+    # for the self-employed the occupation decides.
+    known = mapping().get(norm(employer)) if st == "named employer" else None
     if known:
         return known, "list"
     ind, how = classify(employer if st == "named employer" else "", occupation)
