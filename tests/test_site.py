@@ -28,3 +28,14 @@ def test_app_starts_and_shows_a_member():
     at.selectbox[0].select(option).run()
     assert not at.exception
     assert any("from individual donors" in m.value for m in at.markdown)
+
+
+def test_member_query_param_opens_that_member():
+    members = pd.read_csv(ROOT / "site" / "data" / "members_2024.csv")
+    bio = members["bioguide_id"].iloc[5]
+    at = AppTest.from_file(APP, default_timeout=30)
+    at.query_params["member"] = bio
+    at.run()
+    assert not at.exception
+    assert members["name"].iloc[5] in at.selectbox[0].value
+    assert any(f"Member_Explorer?member={bio}" in m.value for m in at.markdown)

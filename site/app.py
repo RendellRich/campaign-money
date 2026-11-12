@@ -88,12 +88,21 @@ st.write(f"Where members of Congress got money from individual donors in the {CY
 
 members["option"] = [f"{n} ({PARTY_LETTER.get(p, p[:1])}-{s}, {ch})"
                      for n, p, s, ch in zip(members["name"], members["party"], members["state"], members["chamber"])]
-pick = st.selectbox("Member", members["option"], index=None, placeholder="Search for a member of Congress")
+# ?member=<Bioguide ID> opens a member directly, so PartyCohesion and shared links can point at one profile.
+options = list(members["option"])
+by_bioguide = dict(zip(members["bioguide_id"], options))
+linked = by_bioguide.get(st.query_params.get("member", ""))
+pick = st.selectbox("Member", options, index=options.index(linked) if linked else None,
+                    placeholder="Search for a member of Congress")
 if pick is None:
+    if "member" in st.query_params:
+        del st.query_params["member"]
     st.caption(f"{len(members)} current members with a principal campaign committee in the {CYCLE} cycle.")
     st.stop()
 
 m = members[members["option"] == pick].iloc[0]
+st.query_params["member"] = m["bioguide_id"]
+voting_record = f"https://partycohesion.streamlit.app/Member_Explorer?member={m['bioguide_id']}"
 mine = money[money["bioguide_id"] == m["bioguide_id"]].set_index("category")
 
 # Peers: same party and same chamber. Medians of each member's own share, so a few large campaigns don't set them.
@@ -150,7 +159,8 @@ with st.expander("Table"):
 
 links = ", ".join(f"[{cm} on FEC.gov](https://www.fec.gov/data/committee/{cm}/?cycle={CYCLE})"
                    for cm in str(m["committees"]).split(";"))
-st.markdown(f"Filings behind these numbers: {links}")
+st.markdown(f"Filings behind these numbers: {links}. Voting record: "
+            f"[{m['name']} on PartyCohesion]({voting_record}), a separate site.")
 
 st.divider()
 st.markdown("#### How to read this")
