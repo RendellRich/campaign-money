@@ -4,11 +4,11 @@ from __future__ import annotations
 
 import re
 
-MISSING = re.compile(r"^(|N ?A|NONE PROVIDED|INFO(RMATION)? REQUESTED.*|REQUESTED.*|BEST EFFORTS?.*|UNKNOWN|"
+MISSING = re.compile(r"^(|N ?/? ?A|NONE PROVIDED|INFO(RMATION)? REQUESTED.*|REQUESTED.*|BEST EFFORTS?.*|UNKNOWN|"
                      r"NOT PROVIDED|REFUSED|-|\.|X+)$")
 RETIRED = re.compile(r"^RETIRED\b|^RET\.?$")
 NOT_EMPLOYED = re.compile(r"^(NOT ?EMPLOYED|NONE|UNEMPLOYED|HOMEMAKER|HOME ?MAKER|HOUSEWIFE|HOUSEHUSBAND|STUDENT|"
-                          r"DISABLED|NOT CURRENTLY EMPLOYED|NO EMPLOYER)$")
+                          r"DISABLED|NOT CURRENTLY EMPLOYED|NO EMPLOYER|HOME MANAGER|[A-Z ]*STUDENT)$")
 SELF = re.compile(r"^(SELF|SELF ?EMPLOYED|SELF EMPLOYED.*|OWNER|SELF/.*)$")
 
 STATUSES = ["named employer", "self-employed, occupation given", "occupation only", "retired", "not employed",

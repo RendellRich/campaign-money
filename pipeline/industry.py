@@ -12,7 +12,7 @@ from pathlib import Path
 import pandas as pd
 
 from employer_status import HAS_INDUSTRY_SIGNAL, status
-from industry_rules import classify, norm
+from industry_rules import GENERIC_TITLE, classify, norm
 
 MAPPING = Path(__file__).resolve().parents[1] / "data" / "employer_industry.csv"
 
@@ -31,6 +31,8 @@ def industry(employer, occupation) -> tuple[str, str]:
     # The list is for named employers. "SELF EMPLOYED" is on it (as unknown) only because it is a top-1,000 string;
     # for the self-employed the occupation decides.
     known = mapping().get(norm(employer)) if st == "named employer" else None
+    if not known and st == "named employer" and GENERIC_TITLE.match(norm(employer)):
+        known = mapping().get(norm(occupation))  # swapped fields: "CO-FOUNDER" / "ARES MANAGEMENT"
     if known:
         return known, "list"
     ind, how = classify(employer if st == "named employer" else "", occupation)
