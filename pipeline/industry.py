@@ -1,0 +1,35 @@
+"""Assign an industry to a contribution: the reviewed employer list first, then the rules, else "unknown".
+
+data/employer_industry.csv covers the 1,000 employers with the most itemized dollars to current members in the 2024
+cycle (25% of named-employer dollars). Its labels came from pipeline/industry_rules.py and were then reviewed one by
+one by an AI assistant (Claude), which changed or filled in 291 of them; the `source` column says which.
+"""
+from __future__ import annotations
+
+from functools import lru_cache
+from pathlib import Path
+
+import pandas as pd
+
+from employer_status import HAS_INDUSTRY_SIGNAL, status
+from industry_rules import classify, norm
+
+MAPPING = Path(__file__).resolve().parents[1] / "data" / "employer_industry.csv"
+
+
+@lru_cache(maxsize=1)
+def mapping() -> dict[str, str]:
+    m = pd.read_csv(MAPPING, dtype=str)
+    return dict(zip(m["employer"], m["industry"]))
+
+
+def industry(employer, occupation) -> tuple[str, str]:
+    """(industry, how it was decided). Retired, not employed and missing get their status, not an industry."""
+    st = status(employer, occupation)
+    if st not in HAS_INDUSTRY_SIGNAL:
+        return st.replace(" or requested", "").replace(", no occupation", ""), "status"
+    known = mapping().get(norm(employer))
+    if known:
+        return known, "list"
+    ind, how = classify(employer if st == "named employer" else "", occupation)
+    return (ind or "unknown"), how

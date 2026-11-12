@@ -1,0 +1,70 @@
+{
+ "cycle": 2024,
+ "itemized_dollars": 968854167.0,
+ "itemized_records": 6376108,
+ "by_status": [
+  {
+   "status": "named employer",
+   "dollars": 474657372.0,
+   "n": 1415043,
+   "share": 49.0
+  },
+  {
+   "status": "retired",
+   "dollars": 203836874.0,
+   "n": 2683322,
+   "share": 21.0
+  },
+  {
+   "status": "not employed",
+   "dollars": 183865845.0,
+   "n": 1815457,
+   "share": 19.0
+  },
+  {
+   "status": "self-employed, occupation given",
+   "dollars": 83005885.0,
+   "n": 398366,
+   "share": 8.6
+  },
+  {
+   "status": "missing or requested",
+   "dollars": 22516321.0,
+   "n": 60541,
+   "share": 2.3
+  },
+  {
+   "status": "occupation only",
+   "dollars": 711583.0,
+   "n": 2606,
+   "share": 0.1
+  },
+  {
+   "status": "self-employed, no occupation",
+   "dollars": 260287.0,
+   "n": 773,
+   "share": 0.0
+  }
+ ],
+ "usable_share": 97.6,
+ "industry_signal_share": 57.6,
+ "per_committee_industry_signal": {
+  "count": 520.0,
+  "mean": 67.7,
+  "std": 15.6,
+  "min": 22.4,
+  "25%": 57.8,
+  "50%": 69.8,
+  "75%": 79.9,
+  "max": 96.1
+ },
+ "distinct_employers": 178315,
+ "top_employer_coverage": {
+  "100": 8.7,
+  "1000": 25.4,
+  "5000": 44.9,
+  "20000": 69.2
+ },
+ "total_individual_dollars": 1427046464.86,
+ "itemized_share": 67.9
+}
