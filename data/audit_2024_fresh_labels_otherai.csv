@@ -1,0 +1,101 @@
+id,label,confidence,note
+C001,unknown,low,Ambiguous acronym
+C002,energy,high,Energy-focused diversified group
+C003,lobbying,high,Lobbying firm
+C004,education,high,
+C005,tech,high,Energy-monitoring software and hardware
+C006,unknown,low,Industry not established
+C007,tech,high,Shopping and donation browser extension
+C008,real_estate,high,
+C009,unknown,low,Multiple companies share this name
+C010,insurance,high,
+C011,finance,low,Healthcare investment and venture building
+C012,health,high,
+C013,tech,high,
+C014,real_estate,high,
+C015,consumer,high,
+C016,consumer,low,Nutraceutical and food ingredients
+C017,energy,high,
+C018,transportation,high,
+C019,finance,high,
+C020,education,high,
+C021,lobbying,high,
+C022,defense,high,
+C023,lobbying,high,
+C024,unknown,low,Type of coaching unspecified
+C025,consumer,high,
+C026,law,high,
+C027,real_estate,high,
+C028,real_estate,high,
+C029,media,high,
+C030,real_estate,high,
+C031,real_estate,low,Interior design closest to architecture
+C032,tech,low,Building energy compliance software
+C033,law,high,
+C034,real_estate,high,
+C035,health,high,
+C036,law,high,
+C037,real_estate,high,
+C038,unknown,high,No industry information
+C039,business_services,low,Marketing and PR plus public affairs
+C040,consumer,high,Tile retailer
+C041,unknown,low,Ambiguous acronym and consulting type
+C042,finance,high,Investment management firm
+C043,lobbying,high,
+C044,nonprofit,high,
+C045,finance,high,
+C046,finance,high,
+C047,media,high,
+C048,health,high,Behavioral health provider
+C049,unknown,high,No industry information
+C050,manufacturing,low,Steel business subtype unspecified
+C051,lobbying,low,Consulting firm also provides lobbying
+C052,defense,high,Aerospace components manufacturer
+C053,law,high,Law firm
+C054,unknown,low,Multiple companies share this name
+C055,media,low,Media business subtype unspecified
+C056,real_estate,high,
+C057,unknown,low,Multiple companies share this name
+C058,real_estate,low,Occupation supplies industry clue
+C059,unknown,low,Acronym has multiple industry meanings
+C060,finance,high,
+C061,transportation,high,
+C062,unknown,low,Investments role does not identify employer
+C063,agriculture,high,
+C064,unknown,low,Surname does not uniquely identify company
+C065,health,high,
+C066,finance,low,Wealth planning suggests financial services
+C067,agriculture,high,
+C068,unknown,low,Writer role does not identify employer
+C069,real_estate,high,
+C070,law,high,
+C071,consumer,low,Travel planning and leisure services
+C072,health,high,
+C073,real_estate,high,
+C074,finance,high,
+C075,finance,high,
+C076,consumer,high,
+C077,education,high,
+C078,education,low,Historian could also write or consult
+C079,consumer,high,
+C080,unknown,low,Industry not established
+C081,business_services,high,Private benefits claims consulting
+C082,finance,high,Mortgage lending group
+C083,health,high,
+C084,law,high,
+C085,health,high,
+C086,insurance,high,Health insurer
+C087,health,low,Pediatric therapy and special education
+C088,law,high,
+C089,real_estate,high,
+C090,manufacturing,high,
+C091,consumer,low,Vacation lodging overlaps property rentals
+C092,energy,high,
+C093,health,high,
+C094,consumer,low,Gas stations and convenience stores
+C095,education,low,Assuming university rather than hospital
+C096,manufacturing,low,Steel business subtype unspecified
+C097,insurance,low,Insurance-focused group also offers tech
+C098,unknown,high,No industry information
+C099,law,high,Law firm
+C100,unknown,low,Multiple organizations share this name
