@@ -129,7 +129,7 @@ def hero(title_html: str, intro: str, composition: dict[str, float] | None = Non
     """The green panel. With a composition (category -> dollars) it draws the ledger strip: every dollar, by kind."""
     c = colors()
     strip = ""
-    if composition:
+    if composition and sum(composition.values()) > 0:
         total = sum(composition.values())
         labels = dict(OTHER)
         segs = "".join(f'<span style="width:{v / total * 100:.2f}%;background:{c["cat"][k]}" title="{escape(labels[k])}"></span>'
@@ -156,14 +156,15 @@ def composition(money: pd.DataFrame) -> dict[str, float]:
     return out
 
 
-def bar_chart(df: pd.DataFrame, c: dict, order: list[str], median: bool) -> alt.Chart:
+def bar_chart(df: pd.DataFrame, c: dict, order: list[str], median: bool,
+              tick_title: str = "Median, same party and chamber") -> alt.Chart:
     """Horizontal bars of share of individual money. df has label, key (category), share, dollars_fmt, median."""
     df = df.assign(label_x=df[["share", "median"]].max(axis=1) if median else df["share"])
     base = alt.Chart(df).encode(
         y=alt.Y("label:N", sort=order, title=None, axis=alt.Axis(labelLimit=260, labelFontSize=13, ticks=False, domain=False)),
         tooltip=[alt.Tooltip("label:N", title="Category"), alt.Tooltip("dollars_fmt:N", title="Dollars"),
                  alt.Tooltip("share:Q", title="Share of individual money", format=".1%")]
-                + ([alt.Tooltip("median:Q", title="Median, same party and chamber", format=".1%")] if median else []),
+                + ([alt.Tooltip("median:Q", title=tick_title, format=".1%")] if median else []),
     )
     x = alt.X("share:Q", title=None, axis=alt.Axis(format="%", grid=True, gridOpacity=0.25, domain=False, ticks=False,
                                                    labelFontSize=11), scale=alt.Scale(domainMin=0))
@@ -212,9 +213,11 @@ STATE_NAMES = {
     "GU": "Guam", "VI": "U.S. Virgin Islands", "AS": "American Samoa", "MP": "Northern Mariana Islands",
 }
 STATUS = {"Serving now": True, "Former member": False}
+DEFAULT_STATUS = ["Serving now"]  # the site's headline numbers are for current members unless the reader asks
 MIN_RAISED = {"Any amount": 0, "$500K or more": 500_000, "$1M or more": 1_000_000, "$5M or more": 5_000_000,
               "$10M or more": 10_000_000}
 FILTER_KEYS = ["f_status", "f_chamber", "f_party", "f_state", "f_min", "f_both"]
+PARTY_ADJ = {"Democrat": "Democratic", "Republican": "Republican", "Independent": "Independent"}
 
 
 def _clear_filters() -> None:
@@ -222,22 +225,55 @@ def _clear_filters() -> None:
         st.session_state.pop(k, None)
 
 
-def member_filters(members: pd.DataFrame, in_other_cycle: set[str], other_cycle: int | None) -> pd.DataFrame:
-    """The filter button above the member list. Returns the members that match, and says how many that is."""
+def _and(words: list[str]) -> str:
+    return words[0] if len(words) == 1 else ", ".join(words[:-1]) + " and " + words[-1]
+
+
+def describe_group(n: int, status: list[str], chambers: list[str], parties: list[str], all_parties: list[str],
+                   states: list[str], min_label: str, both: bool) -> str:
+    """Plain words for the members a filter leaves, e.g. "49 current Republican senators"."""
+    words = [f"{n:,}"]
+    if len(status) == 1:
+        words.append("current" if status == ["Serving now"] else "former")
+    else:
+        words.append("current and former")
+    if len(parties) < len(all_parties):
+        words.append(_and([PARTY_ADJ.get(p, p) for p in parties]))
+    one = n == 1
+    if chambers == ["Senate"]:
+        words.append("senator" if one else "senators")
+    elif chambers == ["House"]:
+        words.append("House member" if one else "House members")
+    else:
+        words.append("member" if one else "members")
+    if states:
+        words.append("from " + (_and([STATE_NAMES.get(x, x) for x in states]) if len(states) <= 3
+                                else f"{len(states)} states"))
+    if min_label != "Any amount":
+        words.append(f"with {min_label.replace(' or more', '')} or more from individuals")
+    if both:
+        words.append("with a committee in both cycles")
+    return " ".join(words)
+
+
+def member_filters(members: pd.DataFrame, in_other_cycle: set[str],
+                   other_cycle: int | None) -> tuple[pd.DataFrame, str, bool]:
+    """The filter button above the member list. Returns the members that match, a plain description of them, and
+    whether any filter differs from the default. Everything on the page below the title follows these members."""
     parties = [p for p in ["Democrat", "Republican", "Independent"] if p in set(members["party"])]
     states = sorted(members["state"].unique(), key=lambda s: STATE_NAMES.get(s, s))
     ss = st.session_state
-    active = sum([
-        len(ss.get("f_status") or list(STATUS)) < len(STATUS),
-        len(ss.get("f_chamber") or ["House", "Senate"]) < 2,
-        len(ss.get("f_party") or parties) < len(parties),
-        bool(ss.get("f_state")),
-        ss.get("f_min", "Any amount") != "Any amount",
-        bool(ss.get("f_both")),
-    ])
+    status = ss.get("f_status") or list(DEFAULT_STATUS)
+    chambers = ss.get("f_chamber") or ["House", "Senate"]
+    chosen_parties = ss.get("f_party") or parties
+    chosen_states = ss.get("f_state") or []
+    min_label = ss.get("f_min", "Any amount")
+    both = bool(ss.get("f_both"))
+    active = sum([sorted(status) != sorted(DEFAULT_STATUS), len(chambers) < 2, len(chosen_parties) < len(parties),
+                  bool(chosen_states), min_label != "Any amount", both])
     label = ":material/filter_list: Filter members" + (f" ({active})" if active else "")
     with st.popover(label):
-        st.pills("Status", list(STATUS), selection_mode="multi", default=list(STATUS), key="f_status")
+        st.pills("Status", list(STATUS), selection_mode="multi", default=DEFAULT_STATUS, key="f_status")
         st.pills("Chamber", ["House", "Senate"], selection_mode="multi", default=["House", "Senate"], key="f_chamber")
         st.pills("Party", parties, selection_mode="multi", default=parties, key="f_party")
         st.multiselect("State", states, key="f_state", format_func=lambda s: STATE_NAMES.get(s, s),
@@ -248,17 +284,17 @@ def member_filters(members: pd.DataFrame, in_other_cycle: set[str], other_cycle:
                       "shows)", key="f_both")
         st.button("Clear filters", on_click=_clear_filters, icon=":material/restart_alt:", type="tertiary")
 
-    status = [STATUS[s] for s in (ss.get("f_status") or list(STATUS))]
-    keep = (members["current"].isin(status)
-            & members["chamber"].isin(ss.get("f_chamber") or ["House", "Senate"])
-            & members["party"].isin(ss.get("f_party") or parties)
-            & (members["individual"] >= MIN_RAISED[ss.get("f_min", "Any amount")]))
-    if ss.get("f_state"):
-        keep &= members["state"].isin(ss["f_state"])
-    if ss.get("f_both"):
+    keep = (members["current"].isin([STATUS[s] for s in status])
+            & members["chamber"].isin(chambers)
+            & members["party"].isin(chosen_parties)
+            & (members["individual"] >= MIN_RAISED[min_label]))
+    if chosen_states:
+        keep &= members["state"].isin(chosen_states)
+    if both:
         keep &= members["bioguide_id"].isin(in_other_cycle)
     shown = members[keep]
-    serving = int(shown["current"].sum())
-    st.caption(f"Showing {len(shown)} of {len(members)} members who raised money in this cycle: {serving} serving now, "
-               f"{len(shown) - serving} former.")
-    return shown
+    desc = describe_group(len(shown), status, chambers, chosen_parties, parties, chosen_states, min_label, both)
+    former = int((~members["current"]).sum())
+    st.caption(f"Showing {desc}." + ("" if "Former member" in status else
+                                     f" Add former members in the filter to see the {former} who have left."))
+    return shown, desc, bool(active)

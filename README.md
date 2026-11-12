@@ -162,10 +162,14 @@ written by `pipeline/aggregate.py` (`site/data/`, about 300 KB), so it runs on a
   words. The green header panel carries the site's mark: one strip showing every dollar current members raised, by kind.
 - **Former members and a filter.** Each cycle now includes everyone who served in the Congress that sat during it
   (from congress-legislators' historical file), not only today's members: 603 profiles for 2024 (85 former, such as
-  Jon Tester and Sherrod Brown) and 615 for 2022. A filter button above the member list narrows it by status (serving
-  now or former), chamber, party, state, money raised, and whether the member had a committee in both cycles. The
-  header strip and the Industries page still count current members only. Members whose committee only paid refunds
-  in a cycle (Mitt Romney in 2024) are left out.
+  Jon Tester and Sherrod Brown) and 615 for 2022. Members whose committee only paid refunds in a cycle (Mitt Romney
+  in 2024) are left out.
+- **The filter sorts the data, not just the list.** The filter button above the member list picks a group by status
+  (serving now by default, or former), chamber, party, state, money raised, and whether the member had a committee in
+  both cycles. Everything on the Members page follows that group: the header strip and its total, a summary of the
+  group (total, median member, largest industry), each industry's share of the group's money with a tick for all
+  current members, and a sortable table of every member in the group with a link to their page and a CSV download.
+  The Industries page still counts current members only.
 - **Industries page** (`site/views/industries.py`): pick an industry and see its share of each party's money in each
   chamber, and the 15 members for whom it made up the largest share (among members who raised at least $250K from
   individuals, so a few small gifts can't top the list). A table lists every member with a link to their profile.
