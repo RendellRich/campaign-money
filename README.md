@@ -194,6 +194,21 @@ answer key.
   answer key. Records they disagree on go to `data/audit_2024_fresh_disputed.csv`.
 - Nothing will be tuned against this sample.
 
+
+### Next: an LLM pass on the long tail (built, not yet run)
+
+`pipeline/llm_tail.py` sends every still-unclear employer and occupation pair (263,879 pairs, $395M across both
+cycles, in `data/llm/unclear_pairs.csv.gz`) to Claude Haiku 5.5 through the Message Batches API. It uses the same
+written rules every human and AI rater was given (`pipeline/labeling_rules.py`), at low effort, 100 pairs a request.
+- Estimated cost for all of it: about 6.4M input and 7.1M output tokens, roughly $4 at list price or $2 with the batch
+  discount (`python pipeline/llm_tail.py dry-run` prints the estimate and a sample request, and sends nothing).
+- It runs from a manual GitHub Action (`.github/workflows/llm-tail.yml`) that reads the `ANTHROPIC_API_KEY` repository
+  secret and uploads the labels as an artifact. Nothing is committed and the site is unchanged.
+- Only high-confidence industry answers are kept, and only for pairs the rules and lists leave unclear.
+- The labels stay off the site (`USE_LLM_TAIL = False` in `pipeline/industry.py`) until they are scored against a
+  person's labels on the fresh sample: `python pipeline/audit_compare.py --with-llm`. Haiku is a Claude model, so
+  Claude's own labels are not a fair test of it.
+
 ## The site (phase 3, first page)
 
 `site/app.py` is a two-page Streamlit app. Members (the default) lets you pick a member and see where their individual money came from. It reads two small files
