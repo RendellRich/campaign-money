@@ -1,0 +1,88 @@
+- VSC — Multiple businesses use this acronym; I can’t identify the employer from the name alone.
+- [HUNT CONSOLIDATED](https://www.huntconsolidated.com/) — Owns businesses in oil production, refining, electricity, property development, and technology.
+- [CROSSROADS STRATEGIES](https://lda.gov/filings/public/filing/c36716d2-1b63-4e47-bc64-347b9c21358e/print/) — Represents clients before the federal government through lobbying and policy advocacy.
+- NORTHWESTERN UNIVERSITY — Provides undergraduate and graduate education and conducts academic research.
+- [SENSE LABS INC.](https://sense.com/legal/) — Develops software and devices that monitor and analyze electricity use.
+- LKV MANAGEMENT — I found a company registration but couldn’t establish its main business reliably.
+- [GIVE FREELY, LLC](https://givefreely.com/terms-of-use) — Operates shopping software that generates charitable donations through participating retailers.
+- RUFF ROOFERS — Installs, repairs, and maintains roofs.
+- PIONEER GROUP — Several unrelated companies share this name; the specific business is unclear.
+- [SAGESURE](https://sagesure.com/about/) — Develops and underwrites property insurance products on behalf of insurance carriers.
+- [RUSSELL STREET VENTURES](https://static.politico.com/9f/0d/7968a2614c7e8f7c0807c8928512/russell-street-ventures-press-release.pdf) — Launches and grows companies that deliver healthcare services.
+- VCA ANIMAL HOSPITALS — Operates veterinary hospitals providing routine, specialty, and emergency animal care.
+- GREEN HILLS SOFTWARE LLC — Develops operating systems and software development tools for embedded computers.
+- COLDWELL BANKER RPM WLR — Appears to be a Coldwell Banker RPM office helping clients buy and sell properties.
+- GLENBROOK AUTOMOTIVE GROUP — Operates dealerships selling and servicing new and used vehicles.
+- [VDF FUTURECEUTICALS INC.](https://www.futureceuticals.com/) — Develops and supplies ingredients for supplements and functional food products.
+- NINE ENERGY — Likely Nine Energy Service, which supplies equipment and services for completing oil and gas wells.
+- DELTA AIR LINES, INC. — Operates passenger flights and transports air cargo.
+- JANE STREET ASIA LIMITED — Trades financial instruments and provides market liquidity.
+- [THE RHOADS GROUP](https://legilist.com/lda/firm/6644/the-rhoads-group/) — The government-relations firm represents clients in lobbying and public-policy matters.
+- [MASON CONSULTING](https://www.consultingwv.com/) — Multiple firms share this name; the lobbying-related match provides advocacy and government-relations consulting.
+- NORMANDIN CHRYSLER DODGE JEEP RAM FIAT — Sells and services new and used vehicles.
+- TAFT STETTINIUS & HOLLISTER, LLP — Provides legal advice, transaction assistance, and litigation representation.
+- DAVE PERRY MILLER REAL ESTATE — Helps clients buy and sell residential properties.
+- [WPI REAL ESTATE, INC.](https://www.linkedin.com/company/wpi-real-estate) — Provides property sales, investment assistance, and residential and commercial property management.
+- DBA: MARY LODE — The supplied occupation says artist; I can’t verify the specific artistic business.
+- COLDWELL BANKER ADVANTAGE — Helps clients buy and sell homes; several affiliated businesses use this name.
+- [AGINS INTERIOR](https://www.architecturaldigest.com/gallery/backen-slideshow-2008-10) — Likely Agins Interiors, which designs residential interiors.
+- [ENERCOMP INC.](https://www.resnet.us/wp-content/uploads/070220.pdf) — The California company develops software for building energy calculations and compliance.
+- LEHOTSKY KELLER LLP — Represents clients in litigation, appeals, and regulatory disputes.
+- [PREMIUM TITLE & ESCROW LLC](https://www.premiumtitlellc.com/about-us) — Provides title and settlement services for property transactions.
+- MALIBU DETOX LLC — Provides substance-use detoxification and addiction treatment.
+- [BELTRAME LAW FIRM, PLC](https://www.beltramelaw.com/) — Provides lobbying, estate planning, and transactional legal services.
+- MOODY RAMBIN — Provides commercial property brokerage, leasing, and management.
+- [THE PALLADIAN GROUP INC](https://thepalladiangroup.com/) — Provides marketing, public relations, digital advertising, production, and public-affairs services.
+- [TILEBAR](https://www.tilebar.com/about-tilebar/who-we-are) — Sells tile and related products for home and commercial projects.
+- RCS — Numerous unrelated companies use this acronym; the employer cannot be identified reliably.
+- LONE PINE CAPITAL — Manages investment funds and portfolios.
+- INVARIANT — Given the government-affairs occupation, likely the firm providing lobbying and strategic communications.
+- MURRAY FAMILY CHARITABLE FOUNDATION — Appears to support charitable causes; the exact foundation and funding focus are unclear.
+- FOUNDERS INVESTMENT BANKING — Advises businesses on acquisitions, sales, and raising capital.
+- INSIGHT PARTNERS — Invests in software companies and helps them expand.
+- MARTA KAUFFMAN PRODUCTIONS INC. — Develops and produces television and other screen entertainment.
+- [INTERDYNAMICS](https://interdynamicsinc.com/) — The matching behavioral-health company provides psychological assessments, counseling, and addiction services.
+- METRO STEEL — Several companies share this name; their activities include steel supply and fabrication.
+- [DUNLEER STRATEGIES](https://www.mlkch.org/about-the-foundation/rich-lieb) — Advises company executives on business strategy and also undertakes lobbying work.
+- TRANSDIGM GROUP — Designs and manufactures components for commercial and military aircraft.
+- [PARKER MILLIKIN](https://parkermilliken.com/) — Likely a misspelling of Parker Milliken, a Los Angeles firm providing legal services.
+- LEXINGTON MANAGEMENT — Several unrelated companies share this name; the specific business is unclear.
+- MERIDIAN MEDIA — Multiple businesses share this name; I can’t determine which media or advertising operation is intended.
+- INLAND R.E.BROKERAGE & AUCTION — Brokers property transactions and conducts real estate auctions.
+- THE WILLIAMS GROUP — Many unrelated firms share this name; the specific business is unclear.
+- [LESMIR](https://www.foundationsearch.com/990/ARCHIVE/9/RITA%20%26%20HERBERT%20ROSEN%20FAMILY%20FOUNDATION%202003%20911304542.PDF) — The Seattle-area company manages and leases commercial properties.
+- ACAP — Multiple organizations use this name, including investment firms, insurance businesses, and a health-plan association.
+- OLD DOMINION FREIGHT LINE — Transports freight by truck, specializing in shipments that share trailer space.
+- FLS, INC. — Multiple companies use this name; the supplied information does not establish its business.
+- [HERZOG](https://www.herzog.com/about-herzog/) — If the rail contractor is intended, it builds and maintains railways and provides transit services.
+- ARIZONA DIGESTIVE HEALTH — Provides gastroenterology care and diagnostic procedures for digestive conditions.
+- AGAA — The acronym is ambiguous; the wealth-planner occupation suggests an advisory firm but does not identify it.
+- [COOPER FARMS](https://cooperfarms.com/company/history) — Raises livestock and poultry and produces meat and egg products.
+- LINEAR SOLUTIONS — Multiple businesses use this name; the writer occupation does not identify the employer.
+- CENTURY 21 SGR INC — Helps clients buy, sell, and lease properties.
+- [PRIOR WORLD](https://bck.priorworld.com/) — Plans customized travel and group journeys and publishes travel content.
+- [TRUXTUN RADIOLOGY MEDICAL GROUP](https://portal.dignityhealthmso.org/MCSOnline/MCSO_Resources/Forms/DRMG/Authorization%20Forms/DMG%20Imaging%20Request.pdf) — Provides diagnostic medical imaging and radiology services.
+- [FAMILEE PROPERTIES](https://familee.com/) — Likely the company developing, investing in, and managing residential and commercial properties; similarly named entities exist.
+- NG INVESTMENTS — Multiple firms share this name; the investment-advisor occupation suggests investment services but not a specific entity.
+- MERRILL LYNCH — Provides investment advice, brokerage, and wealth-management services.
+- LAZY BEAR — Given the restaurant-owner occupation, likely a restaurant; the name alone does not establish which one.
+- MOBILE COUNTY PUBLIC SCHOOLS — Operates public schools serving students in Mobile County, Alabama.
+- BELLE'S CHICKEN DINNER HOUSE — Operates a restaurant serving chicken dinners and accompanying dishes.
+- [FLORO & ASSOCIATES](https://floroassociates.com.clearwebstats.com/) — A matching firm advertises business-alignment consulting, but I can’t confirm it is this employer.
+- [VETERANS GUARDIAN VA CLAIM CONSULTING](https://vetsguardian.com/about-us/) — Provides private consulting assistance to veterans seeking VA disability benefits.
+- ROCKET COMPANIES — Operates mortgage lending and related homeownership and financial-service businesses.
+- [REDMAN GELINAS EYECARE](https://www.redmangelinaseyecare.com/physicians/benjamin-k-redman-o-d/) — Provides eye examinations, vision correction, and treatment of eye conditions.
+- GIBSON DUNN — Provides legal advice and represents clients in litigation and business transactions.
+- TUFTSHEALTH PLAN — Offers and administers health-insurance plans.
+- [HAPPY HOUR 4 KIDS, INC.](https://thetitusschool.com/city/) — Provides specialized programs combining children’s therapies and education.
+- CLEARY GOTTLIEB STEEN & HAMILTON LLP — Provides legal advice on corporate transactions, disputes, and regulatory matters.
+- [TOPO](https://www.topo-dg.com/about-topo) — Given the supplied occupation, likely the Austin company developing, leasing, and managing commercial properties.
+- [OLSON ALUMINUM CASTINGS](https://www.olsonalum.com/about-us/) — Produces custom aluminum sand castings for industrial equipment and other products.
+- [MODMANSIONS](https://modmansions.com/about) — Owns and operates luxury vacation-rental homes in Palm Springs.
+- [FTC SOLAR](https://www.ftcsolar.com/company/) — Supplies solar-panel tracking systems, software, and engineering services.
+- [SHAY OIL CO. INC.](https://cstoreyuma.com/about-us/) — Operates gas stations and convenience stores selling fuel and merchandise.
+- UW — Could mean several universities or affiliated medical systems; the physician occupation does not resolve which employer.
+- [OMEGA STEEL CORP](https://www.omegasteel1459.com/) — A matching Bronx company fabricates and installs steel doors, fences, gates, railings, and canopies.
+- [INNER-CITY GROUP OF COMPANIES](https://inner-city.net/about/) — Includes businesses providing insurance underwriting and risk-management services.
+- FOLEY HOAG — Provides legal advice, litigation representation, and assistance with business and regulatory matters.
+- CLEAR PATH — Many unrelated companies and organizations use this name; the specific business is unclear.
