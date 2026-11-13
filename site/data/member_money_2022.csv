@@ -24,15 +24,15 @@ A000055,education,4264
 A000055,nonprofit,2756
 A000055,pharma,257
 A000148,finance,607805
-A000148,not employed,538127
-A000148,unknown,294771
+A000148,not employed,540627
+A000148,unknown,292046
 A000148,real_estate,189600
 A000148,health,127480
 A000148,law,119725
 A000148,pharma,80762
 A000148,education,80235
 A000148,unitemized,67574
-A000148,retired,51397
+A000148,retired,51622
 A000148,lobbying,50725
 A000148,media,41075
 A000148,tech,38925
@@ -56,7 +56,7 @@ A000369,not employed,37950
 A000369,media,37100
 A000369,finance,36200
 A000369,law,36100
-A000369,lobbying,30250
+A000369,lobbying,31250
 A000369,consumer,25450
 A000369,energy,18387
 A000369,agriculture,18000
@@ -66,8 +66,8 @@ A000369,defense,7800
 A000369,tech,7800
 A000369,transportation,7800
 A000369,nonprofit,7550
-A000369,business_services,5250
 A000369,insurance,5000
+A000369,business_services,4250
 A000369,government,3125
 A000369,telecom,2750
 A000369,education,1500
@@ -94,20 +94,20 @@ A000370,manufacturing,500
 A000370,telecom,250
 A000370,agriculture,150
 A000371,unitemized,465114
-A000371,not employed,218509
+A000371,not employed,217909
 A000371,real_estate,170596
 A000371,unknown,143403
 A000371,law,127598
 A000371,finance,93325
-A000371,lobbying,86050
+A000371,lobbying,90450
 A000371,health,66036
+A000371,retired,37986
 A000371,manufacturing,37950
-A000371,retired,37386
 A000371,education,32494
 A000371,nonprofit,28899
 A000371,tech,25888
-A000371,business_services,23725
 A000371,media,23000
+A000371,business_services,19325
 A000371,consumer,18665
 A000371,government,15406
 A000371,defense,9685
@@ -142,7 +142,7 @@ A000372,telecom,1250
 A000372,tech,500
 A000375,finance,78250
 A000375,lobbying,61625
-A000375,unknown,59640
+A000375,unknown,59390
 A000375,retired,51400
 A000375,energy,47861
 A000375,health,43198
@@ -150,7 +150,7 @@ A000375,real_estate,32500
 A000375,law,29937
 A000375,unitemized,25135
 A000375,agriculture,22350
-A000375,not employed,14700
+A000375,not employed,14950
 A000375,no information,8700
 A000375,media,7800
 A000375,manufacturing,7400
@@ -212,10 +212,10 @@ A000377,telecom,2250
 A000377,pharma,2000
 A000378,not employed,1122470
 A000378,unitemized,912504
-A000378,retired,616595
+A000378,retired,617145
 A000378,finance,479726
 A000378,unknown,370544
-A000378,law,268537
+A000378,law,268237
 A000378,real_estate,241198
 A000378,education,168815
 A000378,media,156780
@@ -223,8 +223,8 @@ A000378,health,139237
 A000378,tech,106425
 A000378,nonprofit,98577
 A000378,government,75862
-A000378,business_services,56503
 A000378,consumer,56447
+A000378,business_services,56253
 A000378,lobbying,54688
 A000378,agriculture,30851
 A000378,energy,29500
@@ -259,12 +259,12 @@ A000379,telecom,3190
 A000379,lobbying,3000
 A000379,nonprofit,2900
 A000379,pharma,500
-B000490,unknown,189732
+B000490,unknown,186982
 B000490,unitemized,136488
 B000490,finance,120641
 B000490,not employed,107170
 B000490,health,106755
-B000490,retired,85674
+B000490,retired,88424
 B000490,law,68414
 B000490,agriculture,63505
 B000490,no information,60100
@@ -285,15 +285,15 @@ B000490,pharma,3000
 B000490,telecom,2750
 B000490,transportation,1500
 B000574,unitemized,86107
+B000574,retired,40995
 B000574,unknown,40985
-B000574,retired,40745
-B000574,law,34145
 B000574,finance,34010
+B000574,law,33895
 B000574,real_estate,25006
-B000574,lobbying,22950
+B000574,lobbying,23950
 B000574,consumer,14800
 B000574,not employed,14102
-B000574,business_services,9150
+B000574,business_services,8150
 B000574,manufacturing,8100
 B000574,agriculture,7375
 B000574,tech,7105
@@ -356,10 +356,10 @@ B000740,real_estate,120075
 B000740,finance,97475
 B000740,health,59017
 B000740,energy,43454
+B000740,lobbying,39125
 B000740,law,39020
 B000740,consumer,36975
-B000740,lobbying,36225
-B000740,business_services,27858
+B000740,business_services,24958
 B000740,not employed,23010
 B000740,tech,15347
 B000740,government,15095
@@ -388,20 +388,20 @@ B000755,government,500
 B000755,insurance,500
 B000755,business_services,50
 B000825,unitemized,3557545
-B000825,retired,1542267
-B000825,unknown,376112
-B000825,no information,253386
+B000825,retired,1544987
+B000825,unknown,372282
+B000825,no information,253936
 B000825,real_estate,163056
 B000825,finance,138306
-B000825,not employed,99855
+B000825,not employed,100965
 B000825,agriculture,99462
 B000825,energy,76238
 B000825,health,62616
 B000825,law,52060
 B000825,manufacturing,42312
-B000825,consumer,38663
+B000825,consumer,38313
 B000825,transportation,34826
-B000825,government,31127
+B000825,government,30927
 B000825,business_services,30170
 B000825,insurance,28598
 B000825,nonprofit,26412
@@ -413,8 +413,8 @@ B000825,telecom,4219
 B000825,lobbying,4185
 B000825,pharma,2425
 B000944,unitemized,1306877
-B000944,not employed,762780
-B000944,retired,360369
+B000944,not employed,762740
+B000944,retired,360409
 B000944,unknown,277046
 B000944,law,189293
 B000944,health,125289
@@ -471,14 +471,14 @@ B001223,no information,1200
 B001223,defense,500
 B001223,manufacturing,235
 B001224,unitemized,1232030
-B001224,not employed,362197
-B001224,unknown,148005
+B001224,not employed,362747
+B001224,unknown,146680
 B001224,media,74262
 B001224,education,71070
 B001224,health,68307
 B001224,finance,44804
 B001224,law,43914
-B001224,retired,37032
+B001224,retired,37807
 B001224,tech,32179
 B001224,nonprofit,29391
 B001224,real_estate,22353
@@ -496,11 +496,11 @@ B001224,no information,1050
 B001224,manufacturing,941
 B001224,agriculture,651
 B001230,unitemized,1890397
-B001230,retired,871770
-B001230,not employed,563436
-B001230,no information,176451
-B001230,unknown,170920
-B001230,health,110340
+B001230,retired,873538
+B001230,not employed,564226
+B001230,no information,176551
+B001230,unknown,168559
+B001230,health,110245
 B001230,education,92128
 B001230,law,50995
 B001230,media,43014
@@ -508,13 +508,13 @@ B001230,real_estate,42592
 B001230,finance,36149
 B001230,telecom,27620
 B001230,government,23107
-B001230,lobbying,21149
+B001230,lobbying,21649
 B001230,nonprofit,21114
 B001230,consumer,20494
-B001230,tech,16799
+B001230,tech,16597
 B001230,pharma,14139
 B001230,manufacturing,13858
-B001230,business_services,12820
+B001230,business_services,12320
 B001230,agriculture,9672
 B001230,energy,9515
 B001230,transportation,4985
@@ -608,7 +608,7 @@ B001251,no information,500
 B001251,not employed,500
 B001251,retired,500
 B001251,tech,500
-B001257,unknown,175529
+B001257,unknown,173529
 B001257,unitemized,93329
 B001257,health,86958
 B001257,retired,85884
@@ -616,7 +616,7 @@ B001257,finance,59431
 B001257,law,51850
 B001257,lobbying,50100
 B001257,real_estate,49420
-B001257,not employed,30219
+B001257,not employed,32219
 B001257,consumer,29350
 B001257,nonprofit,24950
 B001257,no information,21850
@@ -632,14 +632,14 @@ B001257,media,5000
 B001257,agriculture,3350
 B001257,government,1750
 B001257,transportation,1000
-B001260,unknown,353678
+B001260,unknown,350678
 B001260,retired,317121
 B001260,real_estate,278509
 B001260,health,248443
 B001260,lobbying,183100
 B001260,finance,143600
 B001260,unitemized,133267
-B001260,not employed,129050
+B001260,not employed,132050
 B001260,law,93750
 B001260,energy,91450
 B001260,business_services,76650
@@ -655,7 +655,7 @@ B001260,transportation,6850
 B001260,pharma,4000
 B001260,media,500
 B001261,unitemized,492822
-B001261,retired,197133
+B001261,retired,197402
 B001261,unknown,69678
 B001261,finance,62200
 B001261,energy,42181
@@ -672,7 +672,7 @@ B001261,manufacturing,5832
 B001261,business_services,5530
 B001261,transportation,5210
 B001261,pharma,4250
-B001261,government,2964
+B001261,government,2695
 B001261,nonprofit,2250
 B001261,education,2095
 B001261,agriculture,1596
@@ -680,15 +680,15 @@ B001261,insurance,1395
 B001261,no information,1005
 B001261,defense,175
 B001267,unitemized,5006896
-B001267,not employed,3968485
+B001267,not employed,3968863
 B001267,finance,1429961
-B001267,unknown,1210747
-B001267,retired,1177383
-B001267,law,1065862
+B001267,unknown,1205285
+B001267,retired,1182817
+B001267,law,1065612
 B001267,media,504099
 B001267,real_estate,491286
 B001267,health,358873
-B001267,education,356998
+B001267,education,356898
 B001267,nonprofit,246224
 B001267,tech,179867
 B001267,business_services,142757
@@ -750,15 +750,15 @@ B001277,unitemized,330665
 B001277,unknown,307514
 B001277,media,189948
 B001277,real_estate,147300
-B001277,lobbying,113189
+B001277,lobbying,115189
 B001277,health,99922
 B001277,retired,79295
 B001277,telecom,73450
 B001277,education,69417
 B001277,nonprofit,62649
 B001277,tech,59323
-B001277,business_services,46145
 B001277,consumer,44295
+B001277,business_services,44145
 B001277,pharma,27450
 B001277,energy,22100
 B001277,manufacturing,19410
@@ -790,9 +790,9 @@ B001278,insurance,1000
 B001278,pharma,500
 B001278,energy,385
 B001281,finance,149850
-B001281,unknown,98081
+B001281,unknown,97581
 B001281,lobbying,79420
-B001281,not employed,72250
+B001281,not employed,72750
 B001281,law,55235
 B001281,unitemized,34988
 B001281,real_estate,25905
@@ -815,7 +815,7 @@ B001281,transportation,500
 B001281,agriculture,250
 B001282,finance,314530
 B001282,retired,258051
-B001282,unknown,238409
+B001282,unknown,237909
 B001282,unitemized,180447
 B001282,no information,168210
 B001282,law,99872
@@ -824,7 +824,7 @@ B001282,consumer,96930
 B001282,not employed,87225
 B001282,agriculture,75460
 B001282,health,74723
-B001282,lobbying,56405
+B001282,lobbying,56905
 B001282,insurance,23520
 B001282,business_services,18100
 B001282,energy,14100
@@ -837,20 +837,20 @@ B001282,pharma,3700
 B001282,tech,2250
 B001282,media,500
 B001282,telecom,500
-B001285,not employed,238460
+B001285,not employed,238485
 B001285,unitemized,227946
 B001285,retired,117717
 B001285,law,111315
-B001285,unknown,103942
+B001285,unknown,103917
 B001285,finance,72449
 B001285,media,70617
 B001285,real_estate,56850
 B001285,health,52078
 B001285,education,38593
 B001285,government,32965
-B001285,lobbying,26227
+B001285,lobbying,26977
 B001285,agriculture,21050
-B001285,business_services,20920
+B001285,business_services,20170
 B001285,consumer,17915
 B001285,tech,11380
 B001285,nonprofit,9825
@@ -864,13 +864,13 @@ B001286,unitemized,62356
 B001286,not employed,51577
 B001286,unknown,36963
 B001286,law,26050
-B001286,retired,22069
+B001286,retired,22259
 B001286,finance,11500
 B001286,real_estate,7400
 B001286,business_services,7146
 B001286,media,6571
 B001286,lobbying,4900
-B001286,education,4375
+B001286,education,4185
 B001286,health,4101
 B001286,nonprofit,3900
 B001286,government,2508
@@ -881,7 +881,7 @@ B001286,pharma,500
 B001286,energy,250
 B001287,unitemized,117144
 B001287,not employed,115192
-B001287,retired,94761
+B001287,retired,94811
 B001287,health,68633
 B001287,finance,65450
 B001287,unknown,48815
@@ -890,7 +890,7 @@ B001287,education,32937
 B001287,real_estate,31700
 B001287,lobbying,20400
 B001287,nonprofit,16490
-B001287,government,12430
+B001287,government,12380
 B001287,tech,11150
 B001287,consumer,9420
 B001287,business_services,8150
@@ -905,9 +905,9 @@ B001287,no information,145
 B001287,defense,75
 B001288,unitemized,2617093
 B001288,not employed,521552
-B001288,retired,243527
+B001288,retired,243572
 B001288,finance,188132
-B001288,unknown,183114
+B001288,unknown,183069
 B001288,no information,83351
 B001288,law,75320
 B001288,media,68846
@@ -930,7 +930,7 @@ B001288,telecom,2504
 B001288,defense,852
 B001291,health,116094
 B001291,unknown,113496
-B001291,retired,79860
+B001291,retired,80110
 B001291,real_estate,49604
 B001291,unitemized,45444
 B001291,energy,37100
@@ -947,7 +947,7 @@ B001291,transportation,5100
 B001291,insurance,4900
 B001291,business_services,4750
 B001291,nonprofit,4650
-B001291,agriculture,4250
+B001291,agriculture,4000
 B001291,tech,3000
 B001291,telecom,3000
 B001291,defense,2500
@@ -960,10 +960,10 @@ B001292,unknown,165273
 B001292,finance,116512
 B001292,real_estate,100560
 B001292,retired,93775
-B001292,lobbying,62100
+B001292,lobbying,63600
 B001292,consumer,43075
 B001292,nonprofit,35725
-B001292,business_services,35020
+B001292,business_services,33520
 B001292,education,32150
 B001292,government,24307
 B001292,media,19215
@@ -1073,18 +1073,18 @@ B001298,media,4000
 B001298,pharma,3200
 B001299,unitemized,730596
 B001299,retired,235717
-B001299,no information,234711
-B001299,unknown,130738
+B001299,no information,234761
+B001299,unknown,129883
 B001299,finance,72860
+B001299,lobbying,58955
 B001299,consumer,58740
-B001299,lobbying,58455
 B001299,law,37735
 B001299,real_estate,36648
 B001299,health,33355
-B001299,not employed,26433
+B001299,not employed,27238
 B001299,manufacturing,21800
 B001299,defense,21600
-B001299,business_services,18300
+B001299,business_services,17800
 B001299,nonprofit,17730
 B001299,energy,9311
 B001299,government,8705
@@ -1099,7 +1099,7 @@ B001299,media,1000
 B001300,law,111000
 B001300,finance,50500
 B001300,not employed,46812
-B001300,lobbying,41700
+B001300,lobbying,42700
 B001300,real_estate,36600
 B001300,unknown,33996
 B001300,health,24175
@@ -1109,14 +1109,14 @@ B001300,retired,15218
 B001300,media,12300
 B001300,tech,6300
 B001300,transportation,6100
-B001300,business_services,4582
+B001300,business_services,3582
 B001300,education,3312
 B001300,pharma,2900
 B001300,consumer,2750
 B001300,defense,1900
 B001300,energy,750
 B001301,unitemized,272351
-B001301,retired,113254
+B001301,retired,113654
 B001301,no information,72961
 B001301,unknown,66599
 B001301,consumer,42140
@@ -1138,10 +1138,9 @@ B001301,education,1075
 B001301,nonprofit,1000
 B001301,government,800
 B001301,defense,600
-B001301,telecom,400
 B001301,agriculture,250
 B001302,unitemized,1014487
-B001302,retired,544672
+B001302,retired,544793
 B001302,unknown,83150
 B001302,real_estate,57071
 B001302,consumer,44031
@@ -1159,9 +1158,9 @@ B001302,lobbying,6500
 B001302,manufacturing,6494
 B001302,transportation,6475
 B001302,tech,5350
-B001302,government,4340
+B001302,government,4265
 B001302,media,3576
-B001302,defense,3369
+B001302,defense,3323
 B001302,insurance,2700
 B001302,telecom,1800
 B001302,pharma,250
@@ -1172,14 +1171,14 @@ B001303,real_estate,150627
 B001303,unknown,139755
 B001303,finance,108275
 B001303,health,80817
-B001303,lobbying,76125
+B001303,lobbying,77125
 B001303,retired,45027
 B001303,nonprofit,37375
 B001303,government,35650
 B001303,education,33098
 B001303,consumer,18946
 B001303,media,16730
-B001303,business_services,14000
+B001303,business_services,13000
 B001303,pharma,12400
 B001303,energy,10100
 B001303,insurance,8400
@@ -1214,18 +1213,18 @@ B001304,telecom,1000
 B001304,government,745
 B001304,agriculture,500
 B001305,unitemized,13908779
-B001305,retired,2471639
-B001305,unknown,1178069
+B001305,retired,2473439
+B001305,unknown,1138679
 B001305,finance,778559
 B001305,real_estate,544434
-B001305,not employed,372540
+B001305,not employed,410380
 B001305,consumer,305035
 B001305,law,294967
 B001305,health,250192
-B001305,lobbying,171403
-B001305,agriculture,156393
+B001305,lobbying,173653
+B001305,agriculture,156143
 B001305,manufacturing,98768
-B001305,business_services,93064
+B001305,business_services,90814
 B001305,energy,84838
 B001305,insurance,74120
 B001305,nonprofit,54929
@@ -1248,12 +1247,12 @@ B001306,not employed,43700
 B001306,energy,39050
 B001306,law,29275
 B001306,health,28275
-B001306,lobbying,24400
+B001306,lobbying,24650
 B001306,manufacturing,24050
 B001306,insurance,22600
 B001306,government,17632
 B001306,agriculture,16700
-B001306,business_services,6900
+B001306,business_services,6650
 B001306,tech,4000
 B001306,media,2700
 B001306,education,2295
@@ -1280,14 +1279,14 @@ B001307,insurance,1000
 B001307,business_services,750
 B001307,telecom,450
 B001309,unitemized,340304
-B001309,unknown,204565
-B001309,retired,186342
-B001309,not employed,104105
-B001309,real_estate,82630
+B001309,unknown,199280
+B001309,retired,191742
+B001309,not employed,105090
+B001309,real_estate,81830
 B001309,health,60278
 B001309,consumer,42000
 B001309,finance,37795
-B001309,law,34680
+B001309,law,34380
 B001309,manufacturing,20670
 B001309,nonprofit,18610
 B001309,business_services,18445
@@ -1304,9 +1303,9 @@ B001309,tech,3600
 B001309,agriculture,3050
 B001309,lobbying,2000
 B001309,defense,962
-B001310,retired,137791
+B001310,retired,138041
 B001310,unitemized,136443
-B001310,unknown,130626
+B001310,unknown,130376
 B001310,consumer,26630
 B001310,real_estate,22200
 B001310,health,20343
@@ -1375,9 +1374,9 @@ B001312,transportation,6450
 B001312,telecom,5350
 B001312,defense,2500
 B001312,agriculture,1000
-B001313,not employed,766013
+B001313,not employed,766513
 B001313,unitemized,480072
-B001313,unknown,458086
+B001313,unknown,457586
 B001313,real_estate,385603
 B001313,finance,339576
 B001313,law,308451
@@ -1403,7 +1402,7 @@ B001314,unknown,127192
 B001314,retired,118355
 B001314,real_estate,90300
 B001314,health,56950
-B001314,lobbying,47550
+B001314,lobbying,49050
 B001314,law,38950
 B001314,finance,38700
 B001314,consumer,38000
@@ -1412,8 +1411,8 @@ B001314,nonprofit,19786
 B001314,unitemized,18912
 B001314,agriculture,18552
 B001314,energy,15630
-B001314,business_services,14400
 B001314,government,14100
+B001314,business_services,12900
 B001314,transportation,12480
 B001314,insurance,11330
 B001314,education,10800
@@ -1428,11 +1427,11 @@ B001315,law,373250
 B001315,unknown,284903
 B001315,finance,203129
 B001315,retired,199589
-B001315,lobbying,169587
+B001315,lobbying,170587
 B001315,government,136881
 B001315,nonprofit,123864
-B001315,business_services,77419
 B001315,health,76451
+B001315,business_services,76419
 B001315,real_estate,68072
 B001315,education,55104
 B001315,media,54950
@@ -1494,8 +1493,8 @@ B001317,no information,2750
 B001317,lobbying,2098
 B001317,pharma,1000
 B001318,unitemized,641248
-B001318,not employed,294792
-B001318,unknown,150580
+B001318,not employed,295102
+B001318,unknown,150270
 B001318,law,66587
 B001318,no information,51550
 B001318,nonprofit,44437
@@ -1519,20 +1518,20 @@ B001318,insurance,1450
 B001318,telecom,1000
 B001318,pharma,525
 B001319,no information,1908763
-B001319,unknown,1281027
+B001319,unknown,1279704
 B001319,unitemized,892983
 B001319,retired,765126
 B001319,real_estate,613089
 B001319,finance,588709
-B001319,not employed,498716
+B001319,not employed,500039
 B001319,law,422303
-B001319,lobbying,330427
+B001319,lobbying,332427
 B001319,health,319470
 B001319,consumer,262238
 B001319,manufacturing,187076
 B001319,energy,128298
 B001319,transportation,122242
-B001319,business_services,110413
+B001319,business_services,108413
 B001319,media,103911
 B001319,insurance,94050
 B001319,nonprofit,93725
@@ -1568,7 +1567,7 @@ B001321,telecom,3444
 B001321,defense,2800
 B001321,tech,1573
 B001321,no information,-16962
-B001323,unknown,222238
+B001323,unknown,221738
 B001323,retired,181800
 B001323,real_estate,104460
 B001323,unitemized,74495
@@ -1582,9 +1581,9 @@ B001323,consumer,14650
 B001323,government,10470
 B001323,manufacturing,9243
 B001323,agriculture,8805
+B001323,not employed,7800
 B001323,lobbying,7050
-B001323,not employed,7050
-B001323,law,6420
+B001323,law,6170
 B001323,telecom,5900
 B001323,business_services,5500
 B001323,tech,4250
@@ -1594,7 +1593,7 @@ B001323,pharma,2900
 B001323,insurance,2775
 C000059,unitemized,398011
 C000059,unknown,350143
-C000059,retired,249075
+C000059,retired,249145
 C000059,defense,210764
 C000059,lobbying,180950
 C000059,real_estate,164175
@@ -1610,7 +1609,7 @@ C000059,health,26680
 C000059,insurance,20475
 C000059,media,15700
 C000059,telecom,15600
-C000059,government,11545
+C000059,government,11475
 C000059,transportation,10400
 C000059,energy,10040
 C000059,pharma,6400
@@ -1619,11 +1618,11 @@ C000059,nonprofit,3600
 C000059,no information,125
 C000127,unitemized,284514
 C000127,not employed,173688
-C000127,retired,97553
+C000127,retired,97628
 C000127,unknown,37025
 C000127,finance,28193
 C000127,lobbying,22615
-C000127,real_estate,21516
+C000127,real_estate,21441
 C000127,media,17152
 C000127,law,14287
 C000127,health,11920
@@ -1656,7 +1655,7 @@ C000141,government,525
 C000141,lobbying,500
 C000141,media,250
 C000174,finance,62150
-C000174,lobbying,51197
+C000174,lobbying,52197
 C000174,unknown,47637
 C000174,not employed,28496
 C000174,unitemized,27956
@@ -1670,9 +1669,9 @@ C000174,transportation,6375
 C000174,retired,5450
 C000174,consumer,5300
 C000174,tech,5290
-C000174,business_services,3705
 C000174,education,3660
 C000174,energy,3400
+C000174,business_services,2705
 C000174,no information,2400
 C000174,government,1525
 C000174,nonprofit,1409
@@ -1708,10 +1707,10 @@ C000537,law,188061
 C000537,finance,151221
 C000537,retired,101047
 C000537,health,99344
-C000537,lobbying,92642
+C000537,lobbying,93142
 C000537,real_estate,62738
 C000537,not employed,50227
-C000537,business_services,47512
+C000537,business_services,47012
 C000537,no information,40130
 C000537,tech,31050
 C000537,education,23874
@@ -1728,8 +1727,8 @@ C000537,manufacturing,8843
 C000537,agriculture,3455
 C000537,defense,2200
 C000754,not employed,120353
-C000754,law,105240
-C000754,retired,103625
+C000754,law,104890
+C000754,retired,103975
 C000754,unknown,100490
 C000754,finance,68650
 C000754,unitemized,64692
@@ -1797,8 +1796,8 @@ C001035,education,950
 C001035,government,675
 C001035,transportation,250
 C001039,unitemized,447507
-C001039,retired,175211
-C001039,unknown,156645
+C001039,retired,175922
+C001039,unknown,156095
 C001039,no information,74923
 C001039,agriculture,57752
 C001039,real_estate,54408
@@ -1819,8 +1818,8 @@ C001039,telecom,2150
 C001039,manufacturing,1800
 C001039,pharma,1750
 C001039,insurance,620
-C001039,defense,411
 C001039,tech,400
+C001039,defense,250
 C001047,energy,55000
 C001047,retired,45799
 C001047,lobbying,45150
@@ -1935,18 +1934,18 @@ C001055,transportation,2000
 C001055,manufacturing,750
 C001055,government,500
 C001055,education,250
-C001056,retired,364328
+C001056,retired,364358
 C001056,unitemized,299542
 C001056,finance,205238
-C001056,unknown,120678
+C001056,unknown,119738
 C001056,real_estate,67879
 C001056,law,37500
 C001056,energy,35945
 C001056,insurance,34775
 C001056,health,34038
 C001056,lobbying,28500
+C001056,not employed,26120
 C001056,consumer,25346
-C001056,not employed,25210
 C001056,agriculture,16428
 C001056,nonprofit,15175
 C001056,transportation,14600
@@ -2027,19 +2026,19 @@ C001063,defense,17925
 C001063,government,17677
 C001063,pharma,4000
 C001063,telecom,2250
-C001066,not employed,147965
+C001066,not employed,147465
 C001066,law,131918
-C001066,unknown,131500
+C001066,unknown,130500
 C001066,unitemized,108981
-C001066,finance,67700
+C001066,finance,66700
+C001066,retired,59285
 C001066,health,57280
-C001066,retired,56785
 C001066,real_estate,36475
 C001066,consumer,34780
 C001066,media,31571
-C001066,lobbying,29450
+C001066,lobbying,29950
 C001066,education,26798
-C001066,business_services,17019
+C001066,business_services,16519
 C001066,government,13747
 C001066,nonprofit,13175
 C001066,energy,12550
@@ -2075,7 +2074,7 @@ C001067,pharma,250
 C001068,unknown,18050
 C001068,finance,12600
 C001068,health,12275
-C001068,lobbying,12000
+C001068,lobbying,12250
 C001068,not employed,10700
 C001068,law,9798
 C001068,agriculture,8300
@@ -2093,11 +2092,10 @@ C001068,media,1000
 C001068,energy,500
 C001068,retired,500
 C001068,government,450
-C001068,business_services,250
 C001068,education,250
 C001069,unitemized,211155
-C001069,retired,114153
-C001069,not employed,77078
+C001069,retired,114253
+C001069,not employed,76978
 C001069,unknown,75118
 C001069,finance,68685
 C001069,defense,56450
@@ -2227,10 +2225,10 @@ C001080,law,41767
 C001080,nonprofit,25230
 C001080,education,24175
 C001080,media,13760
-C001080,business_services,12875
 C001080,government,12125
+C001080,business_services,11525
 C001080,tech,10800
-C001080,lobbying,8950
+C001080,lobbying,10300
 C001080,manufacturing,8950
 C001080,energy,7675
 C001080,insurance,7300
@@ -2291,7 +2289,7 @@ C001088,finance,78924
 C001088,unitemized,76402
 C001088,law,74500
 C001088,real_estate,42100
-C001088,lobbying,32250
+C001088,lobbying,32750
 C001088,nonprofit,31592
 C001088,consumer,30600
 C001088,pharma,28500
@@ -2300,7 +2298,7 @@ C001088,media,18925
 C001088,education,15853
 C001088,health,12950
 C001088,agriculture,11600
-C001088,business_services,5950
+C001088,business_services,5450
 C001088,telecom,4500
 C001088,retired,3698
 C001088,government,1080
@@ -2312,7 +2310,7 @@ C001090,not employed,660888
 C001090,unitemized,496109
 C001090,unknown,239744
 C001090,finance,229197
-C001090,retired,146300
+C001090,retired,146436
 C001090,health,88424
 C001090,real_estate,87718
 C001090,media,85070
@@ -2320,7 +2318,7 @@ C001090,education,76487
 C001090,tech,68550
 C001090,business_services,63120
 C001090,no information,62205
-C001090,nonprofit,62011
+C001090,nonprofit,61875
 C001090,consumer,57964
 C001090,manufacturing,46256
 C001090,government,26391
@@ -2421,19 +2419,19 @@ C001097,business_services,1000
 C001097,defense,500
 C001097,manufacturing,500
 C001098,unitemized,9956431
-C001098,retired,4321092
-C001098,unknown,776190
+C001098,retired,4323177
+C001098,unknown,773613
 C001098,no information,605557
 C001098,real_estate,252767
-C001098,health,177529
+C001098,health,177479
 C001098,agriculture,157846
-C001098,not employed,152576
+C001098,not employed,153218
 C001098,finance,127793
 C001098,energy,117566
 C001098,consumer,93706
-C001098,business_services,73794
+C001098,business_services,73294
 C001098,manufacturing,65188
-C001098,transportation,60272
+C001098,transportation,60172
 C001098,law,58924
 C001098,government,55941
 C001098,tech,52656
@@ -2441,7 +2439,7 @@ C001098,education,51810
 C001098,insurance,47134
 C001098,media,24614
 C001098,defense,23945
-C001098,lobbying,18130
+C001098,lobbying,18630
 C001098,telecom,14958
 C001098,nonprofit,13600
 C001098,pharma,9669
@@ -2583,10 +2581,10 @@ C001112,telecom,1250
 C001112,manufacturing,1200
 C001112,no information,100
 C001113,unitemized,23278169
-C001113,not employed,11404926
-C001113,retired,4673278
+C001113,not employed,11405642
+C001113,retired,4673478
 C001113,law,2584074
-C001113,unknown,2547154
+C001113,unknown,2546238
 C001113,finance,1774595
 C001113,health,1505945
 C001113,education,1297815
@@ -2595,8 +2593,8 @@ C001113,real_estate,1049168
 C001113,tech,756385
 C001113,nonprofit,570015
 C001113,government,530417
-C001113,business_services,472147
-C001113,lobbying,450468
+C001113,business_services,466939
+C001113,lobbying,455676
 C001113,consumer,425478
 C001113,energy,254800
 C001113,insurance,139551
@@ -2607,11 +2605,11 @@ C001113,telecom,73865
 C001113,defense,68956
 C001113,transportation,64285
 C001113,no information,16030
-C001114,unknown,113225
+C001114,unknown,112975
 C001114,finance,102550
 C001114,lobbying,93000
 C001114,retired,59550
-C001114,not employed,43125
+C001114,not employed,43375
 C001114,unitemized,39043
 C001114,real_estate,34375
 C001114,health,22900
@@ -2631,8 +2629,8 @@ C001114,defense,1300
 C001114,manufacturing,1250
 C001114,transportation,250
 C001115,unitemized,174336
-C001115,retired,124761
-C001115,unknown,101003
+C001115,retired,125011
+C001115,unknown,100753
 C001115,no information,64628
 C001115,real_estate,62518
 C001115,health,50824
@@ -2678,7 +2676,7 @@ C001116,lobbying,1000
 C001116,pharma,700
 C001117,not employed,1315971
 C001117,unitemized,696407
-C001117,unknown,387737
+C001117,unknown,386737
 C001117,law,312673
 C001117,finance,298187
 C001117,retired,276634
@@ -2689,7 +2687,7 @@ C001117,no information,98523
 C001117,tech,85625
 C001117,real_estate,77342
 C001117,media,76863
-C001117,lobbying,67800
+C001117,lobbying,68800
 C001117,government,66342
 C001117,nonprofit,65261
 C001117,energy,55235
@@ -2701,8 +2699,8 @@ C001117,pharma,8808
 C001117,telecom,5270
 C001117,agriculture,3700
 C001117,defense,800
-C001118,retired,126806
-C001118,unknown,124180
+C001118,retired,128556
+C001118,unknown,122430
 C001118,unitemized,83508
 C001118,consumer,55269
 C001118,finance,37924
@@ -2725,15 +2723,15 @@ C001118,nonprofit,1102
 C001118,tech,1050
 C001118,defense,500
 C001118,pharma,500
-C001119,not employed,1373896
+C001119,not employed,1370896
 C001119,unitemized,1029140
-C001119,retired,450470
-C001119,unknown,417367
+C001119,retired,455005
+C001119,unknown,417357
 C001119,finance,338461
 C001119,law,283684
 C001119,health,236737
 C001119,real_estate,163584
-C001119,education,144516
+C001119,education,142991
 C001119,media,114415
 C001119,lobbying,96440
 C001119,tech,90653
@@ -2751,12 +2749,12 @@ C001119,no information,8359
 C001119,defense,1250
 C001119,telecom,1094
 C001120,unitemized,7506962
-C001120,retired,2991603
+C001120,retired,2991938
 C001120,no information,1222223
-C001120,unknown,408117
+C001120,unknown,406617
 C001120,real_estate,193095
 C001120,finance,167178
-C001120,not employed,159989
+C001120,not employed,161189
 C001120,health,155481
 C001120,energy,89507
 C001120,consumer,86070
@@ -2764,7 +2762,7 @@ C001120,law,79537
 C001120,agriculture,68100
 C001120,manufacturing,65797
 C001120,lobbying,39979
-C001120,government,36575
+C001120,government,36540
 C001120,education,35107
 C001120,business_services,31993
 C001120,transportation,30236
@@ -2778,12 +2776,12 @@ C001120,telecom,2030
 C001121,unitemized,608544
 C001121,not employed,577378
 C001121,law,238643
-C001121,unknown,172241
-C001121,retired,170619
+C001121,retired,171646
+C001121,unknown,171564
 C001121,finance,113056
 C001121,real_estate,62825
 C001121,media,46700
-C001121,education,43106
+C001121,education,42756
 C001121,health,40148
 C001121,tech,36420
 C001121,nonprofit,34497
@@ -2806,12 +2804,12 @@ C001125,unitemized,232138
 C001125,real_estate,131412
 C001125,health,122961
 C001125,not employed,118744
-C001125,lobbying,81400
+C001125,lobbying,82400
 C001125,no information,72907
 C001125,retired,52500
 C001125,finance,49240
 C001125,education,46400
-C001125,business_services,42350
+C001125,business_services,41350
 C001125,agriculture,36050
 C001125,transportation,33700
 C001125,government,31082
@@ -2831,14 +2829,14 @@ C001126,retired,172208
 C001126,real_estate,97150
 C001126,energy,75343
 C001126,not employed,71881
-C001126,lobbying,71188
+C001126,lobbying,71438
 C001126,finance,56157
 C001126,law,51081
 C001126,health,40225
 C001126,manufacturing,39265
 C001126,consumer,28455
 C001126,insurance,22400
-C001126,business_services,18708
+C001126,business_services,18458
 C001126,government,14425
 C001126,no information,9619
 C001126,agriculture,8900
@@ -2955,8 +2953,8 @@ C001131,transportation,1663
 C001131,defense,910
 C001131,insurance,250
 C001132,unitemized,1441060
-C001132,retired,711445
-C001132,unknown,237231
+C001132,retired,711845
+C001132,unknown,237031
 C001132,no information,203973
 C001132,real_estate,118257
 C001132,finance,72390
@@ -2977,16 +2975,16 @@ C001132,business_services,6692
 C001132,nonprofit,6053
 C001132,education,4576
 C001132,pharma,3395
-C001132,defense,3282
+C001132,defense,3082
 C001132,telecom,2498
 C001133,retired,605045
-C001133,unknown,410957
+C001133,unknown,393957
 C001133,real_estate,327890
 C001133,unitemized,237526
 C001133,finance,185129
 C001133,consumer,146660
 C001133,law,93590
-C001133,not employed,71334
+C001133,not employed,88334
 C001133,health,64260
 C001133,lobbying,45290
 C001133,insurance,40550
@@ -3005,15 +3003,15 @@ C001133,pharma,3000
 C001133,telecom,1400
 C001133,no information,-1114
 D000032,unitemized,2447386
-D000032,retired,1198576
-D000032,unknown,209349
+D000032,retired,1198761
+D000032,unknown,202413
 D000032,finance,167215
-D000032,no information,134525
+D000032,no information,141376
 D000032,real_estate,73770
 D000032,not employed,58720
 D000032,law,57471
 D000032,health,44151
-D000032,lobbying,38490
+D000032,lobbying,38740
 D000032,consumer,28802
 D000032,energy,28522
 D000032,agriculture,24712
@@ -3023,12 +3021,12 @@ D000032,government,12276
 D000032,media,11301
 D000032,insurance,10896
 D000032,tech,10427
-D000032,business_services,9657
+D000032,business_services,9407
 D000032,education,5269
 D000032,transportation,4767
 D000032,telecom,2700
 D000032,pharma,2550
-D000032,defense,1340
+D000032,defense,1240
 D000096,health,56236
 D000096,unknown,47502
 D000096,unitemized,31292
@@ -3070,17 +3068,17 @@ D000197,agriculture,2000
 D000197,business_services,1400
 D000197,tech,500
 D000197,government,300
-D000216,unknown,219681
+D000216,unknown,219431
 D000216,not employed,189968
 D000216,unitemized,117435
 D000216,real_estate,101791
 D000216,finance,89201
 D000216,education,81967
-D000216,lobbying,68615
+D000216,lobbying,68865
 D000216,defense,66465
 D000216,law,60652
 D000216,media,51370
-D000216,retired,48560
+D000216,retired,48840
 D000216,health,34418
 D000216,nonprofit,32006
 D000216,government,24786
@@ -3090,8 +3088,8 @@ D000216,energy,13550
 D000216,tech,11850
 D000216,manufacturing,8800
 D000216,consumer,7075
-D000216,agriculture,6780
 D000216,telecom,6650
+D000216,agriculture,6500
 D000216,transportation,3500
 D000216,no information,3250
 D000216,insurance,2270
@@ -3106,13 +3104,13 @@ D000230,health,68752
 D000230,education,32058
 D000230,media,27333
 D000230,nonprofit,27296
-D000230,lobbying,22025
+D000230,lobbying,22275
 D000230,government,20182
 D000230,manufacturing,14100
 D000230,agriculture,11800
 D000230,tech,11041
 D000230,consumer,10463
-D000230,business_services,8950
+D000230,business_services,8700
 D000230,energy,7400
 D000230,telecom,5800
 D000230,pharma,4875
@@ -3120,10 +3118,10 @@ D000230,insurance,4500
 D000230,defense,1250
 D000230,transportation,1050
 D000399,retired,142220
-D000399,unknown,122254
 D000399,law,121865
+D000399,unknown,119354
 D000399,unitemized,76377
-D000399,not employed,55255
+D000399,not employed,58155
 D000399,finance,54250
 D000399,real_estate,47450
 D000399,health,19955
@@ -3196,7 +3194,7 @@ D000563,no information,690
 D000563,transportation,420
 D000563,insurance,250
 D000594,unitemized,1355398
-D000594,retired,695685
+D000594,retired,696935
 D000594,unknown,342040
 D000594,real_estate,199004
 D000594,finance,171974
@@ -3205,11 +3203,11 @@ D000594,agriculture,90044
 D000594,health,81119
 D000594,not employed,70378
 D000594,energy,70132
-D000594,law,53570
+D000594,law,53320
 D000594,consumer,50013
 D000594,insurance,46172
 D000594,manufacturing,20949
-D000594,business_services,20048
+D000594,business_services,19048
 D000594,media,13235
 D000594,lobbying,9001
 D000594,tech,7618
@@ -3252,20 +3250,20 @@ D000610,unitemized,24348
 D000610,health,14250
 D000610,retired,12490
 D000610,education,6300
-D000610,lobbying,4000
-D000610,business_services,3900
+D000610,lobbying,4900
 D000610,insurance,3400
 D000610,consumer,3250
+D000610,business_services,3000
 D000610,agriculture,2500
 D000610,tech,1790
 D000610,nonprofit,1500
 D000610,government,1250
 D000610,manufacturing,1000
 D000615,unitemized,515823
-D000615,retired,173728
-D000615,unknown,101384
+D000615,retired,175753
+D000615,unknown,101059
 D000615,lobbying,43490
-D000615,real_estate,29478
+D000615,real_estate,29028
 D000615,finance,23832
 D000615,consumer,20251
 D000615,health,19092
@@ -3273,12 +3271,12 @@ D000615,law,18535
 D000615,no information,17932
 D000615,manufacturing,13966
 D000615,defense,13300
-D000615,not employed,11431
-D000615,agriculture,9482
+D000615,not employed,11581
+D000615,agriculture,8282
 D000615,nonprofit,6788
 D000615,pharma,5500
 D000615,business_services,3925
-D000615,education,3674
+D000615,education,3474
 D000615,tech,3352
 D000615,media,3000
 D000615,energy,2600
@@ -3328,7 +3326,7 @@ D000617,defense,1510
 D000617,transportation,1250
 D000618,unitemized,1332448
 D000618,retired,278347
-D000618,unknown,111855
+D000618,unknown,111780
 D000618,real_estate,53907
 D000618,finance,45600
 D000618,telecom,26698
@@ -3340,7 +3338,7 @@ D000618,tech,12680
 D000618,lobbying,11375
 D000618,government,9924
 D000618,manufacturing,9909
-D000618,not employed,7357
+D000618,not employed,7432
 D000618,agriculture,5810
 D000618,business_services,5521
 D000618,pharma,5500
@@ -3388,12 +3386,12 @@ D000622,education,136752
 D000622,media,120343
 D000622,nonprofit,102217
 D000622,government,73719
-D000622,lobbying,64987
+D000622,lobbying,65222
 D000622,transportation,57673
 D000622,no information,49632
 D000622,consumer,48449
-D000622,business_services,45520
 D000622,tech,45439
+D000622,business_services,45285
 D000622,agriculture,32955
 D000622,manufacturing,31225
 D000622,defense,30054
@@ -3426,7 +3424,7 @@ D000624,unitemized,113448
 D000624,not employed,78321
 D000624,unknown,73188
 D000624,retired,47724
-D000624,lobbying,44250
+D000624,lobbying,45250
 D000624,finance,36900
 D000624,law,36320
 D000624,consumer,26925
@@ -3435,8 +3433,8 @@ D000624,nonprofit,20569
 D000624,energy,20550
 D000624,health,19220
 D000624,media,18233
-D000624,business_services,14278
 D000624,government,13635
+D000624,business_services,13278
 D000624,agriculture,11600
 D000624,real_estate,9442
 D000624,manufacturing,7800
@@ -3470,7 +3468,7 @@ D000626,media,500
 D000626,nonprofit,500
 D000628,unitemized,207513
 D000628,health,184681
-D000628,retired,158455
+D000628,retired,158566
 D000628,unknown,151985
 D000628,real_estate,69031
 D000628,not employed,52450
@@ -3484,7 +3482,7 @@ D000628,agriculture,14100
 D000628,government,13970
 D000628,business_services,11401
 D000628,insurance,10300
-D000628,defense,10001
+D000628,defense,9890
 D000628,education,9250
 D000628,manufacturing,8850
 D000628,media,6530
@@ -3494,8 +3492,8 @@ D000628,pharma,4500
 D000628,no information,4150
 D000628,telecom,1250
 D000629,unitemized,1524883
-D000629,not employed,1390021
-D000629,retired,422629
+D000629,not employed,1389926
+D000629,retired,422869
 D000629,finance,395248
 D000629,unknown,358466
 D000629,law,357176
@@ -3505,11 +3503,11 @@ D000629,media,164591
 D000629,nonprofit,135529
 D000629,real_estate,132283
 D000629,tech,124060
-D000629,lobbying,96821
-D000629,business_services,79737
+D000629,lobbying,101221
 D000629,government,75833
+D000629,business_services,75337
 D000629,consumer,62674
-D000629,insurance,31196
+D000629,insurance,31051
 D000629,energy,29227
 D000629,agriculture,17212
 D000629,manufacturing,10625
@@ -3517,11 +3515,11 @@ D000629,pharma,10516
 D000629,transportation,9120
 D000629,telecom,8419
 D000629,defense,8270
-D000630,unknown,478971
-D000630,not employed,466280
+D000630,not employed,472230
+D000630,unknown,468121
 D000630,unitemized,402633
 D000630,finance,373528
-D000630,retired,367298
+D000630,retired,372198
 D000630,law,341443
 D000630,media,241752
 D000630,real_estate,130660
@@ -3547,11 +3545,11 @@ D000631,unitemized,175360
 D000631,real_estate,133115
 D000631,law,110110
 D000631,finance,83832
-D000631,unknown,73318
+D000631,unknown,70818
 D000631,health,36963
-D000631,business_services,35531
+D000631,lobbying,36150
 D000631,retired,35260
-D000631,lobbying,31200
+D000631,business_services,33081
 D000631,education,26872
 D000631,nonprofit,18475
 D000631,media,9400
@@ -3568,8 +3566,8 @@ D000631,telecom,550
 D000631,agriculture,348
 D000631,tech,250
 E000071,unitemized,3578727
-E000071,retired,1660673
-E000071,unknown,296290
+E000071,retired,1662041
+E000071,unknown,294472
 E000071,real_estate,136056
 E000071,finance,126724
 E000071,no information,114727
@@ -3581,7 +3579,7 @@ E000071,agriculture,42561
 E000071,lobbying,34200
 E000071,transportation,32547
 E000071,business_services,26667
-E000071,not employed,23212
+E000071,not employed,23662
 E000071,government,19415
 E000071,manufacturing,16508
 E000071,education,15425
@@ -3620,35 +3618,35 @@ E000235,real_estate,129395
 E000235,not employed,102150
 E000235,unitemized,85214
 E000235,health,69950
-E000235,retired,67224
-E000235,consumer,51411
+E000235,retired,68224
+E000235,consumer,50411
 E000235,law,36200
 E000235,finance,30800
 E000235,government,16132
 E000235,transportation,13100
+E000235,lobbying,11400
 E000235,media,10900
 E000235,energy,10750
-E000235,lobbying,10400
-E000235,business_services,10100
 E000235,agriculture,9460
+E000235,business_services,9100
 E000235,insurance,7000
 E000235,nonprofit,5400
 E000235,manufacturing,4600
 E000235,education,770
 E000235,defense,500
 E000246,retired,178991
-E000246,unknown,162354
+E000246,unknown,160354
 E000246,consumer,122771
 E000246,real_estate,84275
 E000246,law,64650
-E000246,lobbying,63650
+E000246,lobbying,64150
 E000246,finance,45920
 E000246,unitemized,41531
-E000246,not employed,29884
+E000246,not employed,31884
 E000246,agriculture,28998
 E000246,energy,16700
 E000246,health,13900
-E000246,business_services,13350
+E000246,business_services,12850
 E000246,tech,12450
 E000246,government,11650
 E000246,nonprofit,8500
@@ -3684,8 +3682,8 @@ E000294,government,2784
 E000294,nonprofit,1500
 E000294,pharma,1000
 E000295,unitemized,722340
-E000295,retired,397678
-E000295,unknown,65678
+E000295,retired,398589
+E000295,unknown,65603
 E000295,agriculture,38121
 E000295,health,26665
 E000295,no information,23728
@@ -3699,10 +3697,10 @@ E000295,government,9956
 E000295,consumer,9951
 E000295,insurance,6450
 E000295,not employed,6260
-E000295,business_services,5047
-E000295,energy,4528
 E000295,nonprofit,4465
 E000295,tech,4435
+E000295,business_services,4380
+E000295,energy,4359
 E000295,transportation,4249
 E000295,pharma,3000
 E000295,media,2045
@@ -3761,10 +3759,10 @@ E000298,real_estate,48803
 E000298,energy,34250
 E000298,manufacturing,33450
 E000298,transportation,33400
-E000298,lobbying,26750
+E000298,lobbying,30750
 E000298,law,20350
-E000298,business_services,15795
 E000298,no information,12832
+E000298,business_services,11795
 E000298,agriculture,11654
 E000298,defense,8300
 E000298,consumer,7845
@@ -3783,12 +3781,12 @@ E000299,finance,59050
 E000299,health,52626
 E000299,real_estate,52385
 E000299,education,35755
-E000299,lobbying,32950
+E000299,lobbying,33950
 E000299,nonprofit,32945
 E000299,retired,20208
 E000299,consumer,14840
 E000299,energy,14100
-E000299,business_services,8675
+E000299,business_services,7675
 E000299,government,6700
 E000299,media,5490
 E000299,tech,3751
@@ -3828,8 +3826,8 @@ F000246,transportation,1000
 F000246,tech,250
 F000446,unitemized,373850
 F000446,unknown,252542
-F000446,retired,196854
-F000446,agriculture,116654
+F000446,retired,196954
+F000446,agriculture,116554
 F000446,finance,97871
 F000446,real_estate,92927
 F000446,consumer,48570
@@ -3851,9 +3849,9 @@ F000446,government,2730
 F000446,education,2150
 F000446,defense,1005
 F000446,pharma,500
-F000449,unknown,63200
+F000449,unknown,62200
 F000449,unitemized,42026
-F000449,retired,39075
+F000449,retired,40075
 F000449,health,28500
 F000449,not employed,25100
 F000449,real_estate,23200
@@ -3942,18 +3940,18 @@ F000459,defense,5800
 F000459,unitemized,5317
 F000459,insurance,4250
 F000459,agriculture,2250
-F000462,not employed,252877
+F000462,not employed,252777
 F000462,unknown,77251
 F000462,real_estate,74670
 F000462,law,70400
 F000462,finance,50500
 F000462,unitemized,47607
-F000462,retired,35732
+F000462,retired,35832
 F000462,education,25390
 F000462,health,17633
 F000462,media,14900
 F000462,consumer,14631
-F000462,lobbying,10050
+F000462,lobbying,10550
 F000462,agriculture,8800
 F000462,tech,7500
 F000462,telecom,7300
@@ -3963,15 +3961,15 @@ F000462,pharma,4900
 F000462,government,4745
 F000462,manufacturing,4550
 F000462,nonprofit,4100
-F000462,business_services,3290
+F000462,business_services,2790
 F000462,energy,1000
 F000462,no information,1000
 F000463,unitemized,179092
-F000463,retired,81620
+F000463,retired,82620
 F000463,unknown,73265
 F000463,lobbying,63250
 F000463,law,31575
-F000463,agriculture,23359
+F000463,agriculture,22359
 F000463,transportation,19332
 F000463,defense,18550
 F000463,finance,17756
@@ -4043,13 +4041,13 @@ F000468,not employed,427867
 F000468,retired,311242
 F000468,law,301969
 F000468,unitemized,215108
-F000468,unknown,177925
+F000468,unknown,177425
 F000468,finance,166725
 F000468,health,109158
 F000468,energy,106424
 F000468,real_estate,104958
 F000468,education,75548
-F000468,lobbying,60251
+F000468,lobbying,60751
 F000468,nonprofit,59945
 F000468,business_services,57291
 F000468,media,52467
@@ -4108,9 +4106,9 @@ F000470,government,1707
 F000470,education,938
 F000470,nonprofit,709
 F000471,unitemized,160000
-F000471,retired,126685
-F000471,unknown,99716
-F000471,real_estate,49975
+F000471,retired,130585
+F000471,unknown,96816
+F000471,real_estate,48975
 F000471,lobbying,37750
 F000471,consumer,31850
 F000471,finance,26046
@@ -4157,8 +4155,8 @@ F000472,media,1500
 F000472,pharma,854
 F000472,energy,750
 F000473,unitemized,1592995
-F000473,retired,704978
-F000473,unknown,277071
+F000473,retired,705044
+F000473,unknown,277005
 F000473,no information,231114
 F000473,finance,169851
 F000473,real_estate,164842
@@ -4275,16 +4273,16 @@ F000477,tech,3325
 F000477,pharma,2425
 F000477,no information,1250
 F000477,agriculture,1150
-F000478,unknown,216767
+F000478,unknown,210467
 F000478,real_estate,177310
 F000478,retired,150309
 F000478,law,113396
+F000478,no information,79910
 F000478,consumer,79861
-F000478,no information,77010
 F000478,health,76213
 F000478,unitemized,68008
 F000478,finance,55264
-F000478,not employed,51819
+F000478,not employed,55219
 F000478,manufacturing,38214
 F000478,agriculture,17259
 F000478,media,14797
@@ -4301,17 +4299,17 @@ F000478,nonprofit,2029
 F000478,tech,1950
 F000478,telecom,1000
 F000479,unitemized,37292676
-F000479,not employed,12422854
-F000479,retired,3371619
-F000479,unknown,2696567
-F000479,law,1989132
-F000479,health,1605968
+F000479,not employed,12423539
+F000479,retired,3376232
+F000479,unknown,2692599
+F000479,law,1988632
+F000479,health,1605374
 F000479,education,1501198
-F000479,media,1006642
-F000479,finance,980658
+F000479,media,1006602
+F000479,finance,979912
 F000479,tech,920346
 F000479,real_estate,821022
-F000479,no information,790298
+F000479,no information,790848
 F000479,business_services,497437
 F000479,government,495809
 F000479,nonprofit,452427
@@ -4326,39 +4324,39 @@ F000479,transportation,102127
 F000479,defense,70393
 F000479,telecom,52530
 G000061,unitemized,2084793
-G000061,retired,1749590
-G000061,unknown,459000
+G000061,retired,1749813
+G000061,unknown,429083
 G000061,real_estate,205876
-G000061,finance,201138
-G000061,not employed,142250
+G000061,finance,200888
+G000061,not employed,142600
 G000061,consumer,89854
+G000061,no information,86956
 G000061,health,74327
 G000061,law,66981
 G000061,agriculture,57657
-G000061,no information,57262
 G000061,manufacturing,47897
 G000061,energy,43710
 G000061,media,41952
 G000061,defense,38512
-G000061,business_services,37285
+G000061,business_services,37035
 G000061,nonprofit,33308
 G000061,tech,30234
-G000061,government,29876
-G000061,lobbying,27327
+G000061,government,29776
+G000061,lobbying,27577
 G000061,insurance,15268
 G000061,education,15062
 G000061,transportation,11178
 G000061,telecom,3650
 G000061,pharma,3250
 G000359,unitemized,5119249
-G000359,retired,1466504
+G000359,retired,1471244
 G000359,no information,524549
-G000359,unknown,321931
+G000359,unknown,317491
 G000359,finance,180420
 G000359,real_estate,155451
 G000359,health,130610
 G000359,consumer,88941
-G000359,not employed,60513
+G000359,not employed,60578
 G000359,law,54152
 G000359,energy,47272
 G000359,agriculture,38511
@@ -4367,11 +4365,11 @@ G000359,manufacturing,26388
 G000359,education,21862
 G000359,lobbying,18500
 G000359,transportation,11808
-G000359,nonprofit,11579
 G000359,tech,11551
+G000359,nonprofit,11414
 G000359,business_services,10443
 G000359,insurance,9744
-G000359,government,9235
+G000359,government,9035
 G000359,defense,3969
 G000359,pharma,1300
 G000359,telecom,1172
@@ -4400,7 +4398,7 @@ G000377,agriculture,2000
 G000377,media,1000
 G000386,unitemized,2109764
 G000386,retired,1366682
-G000386,unknown,535376
+G000386,unknown,532376
 G000386,finance,245574
 G000386,real_estate,203508
 G000386,law,164094
@@ -4408,8 +4406,8 @@ G000386,lobbying,133089
 G000386,agriculture,125079
 G000386,consumer,103476
 G000386,health,100136
-G000386,no information,93643
-G000386,not employed,89938
+G000386,no information,94643
+G000386,not employed,91938
 G000386,insurance,51297
 G000386,manufacturing,47391
 G000386,energy,43839
@@ -4453,9 +4451,9 @@ G000551,unknown,19577
 G000551,law,11487
 G000551,education,10136
 G000551,health,9284
+G000551,lobbying,9200
 G000551,nonprofit,8818
-G000551,lobbying,8700
-G000551,business_services,8400
+G000551,business_services,7900
 G000551,real_estate,7375
 G000551,consumer,5800
 G000551,finance,4140
@@ -4599,7 +4597,7 @@ G000563,nonprofit,500
 G000563,education,250
 G000563,health,250
 G000568,unitemized,49428
-G000568,unknown,47478
+G000568,unknown,46978
 G000568,lobbying,27100
 G000568,retired,25633
 G000568,law,25600
@@ -4620,6 +4618,7 @@ G000568,government,1500
 G000568,transportation,1500
 G000568,insurance,1100
 G000568,agriculture,500
+G000568,no information,500
 G000568,media,175
 G000568,tech,75
 G000574,unitemized,1041021
@@ -4627,10 +4626,10 @@ G000574,not employed,249548
 G000574,unknown,134102
 G000574,finance,115563
 G000574,law,73844
-G000574,lobbying,65700
+G000574,lobbying,66200
 G000574,real_estate,49820
 G000574,health,44744
-G000574,business_services,44362
+G000574,business_services,43862
 G000574,nonprofit,36580
 G000574,retired,33257
 G000574,media,31696
@@ -4678,13 +4677,13 @@ G000577,real_estate,83400
 G000577,health,59800
 G000577,unitemized,52499
 G000577,finance,49800
-G000577,lobbying,47050
+G000577,lobbying,47550
 G000577,retired,45400
 G000577,law,44350
 G000577,not employed,43950
 G000577,energy,29450
 G000577,consumer,24450
-G000577,business_services,23250
+G000577,business_services,22750
 G000577,manufacturing,21200
 G000577,nonprofit,18950
 G000577,agriculture,14150
@@ -4697,14 +4696,14 @@ G000577,telecom,2500
 G000577,media,2000
 G000577,government,750
 G000578,unitemized,3997150
-G000578,retired,1363685
+G000578,retired,1363985
 G000578,no information,318258
-G000578,unknown,259164
+G000578,unknown,258024
 G000578,real_estate,111713
 G000578,health,84410
 G000578,finance,70247
 G000578,consumer,48334
-G000578,not employed,43940
+G000578,not employed,44780
 G000578,transportation,30118
 G000578,agriculture,28213
 G000578,government,27180
@@ -4770,17 +4769,17 @@ G000581,no information,2250
 G000581,pharma,2100
 G000581,defense,1500
 G000581,telecom,250
-G000582,unknown,244612
+G000582,unknown,236612
 G000582,unitemized,54282
 G000582,real_estate,52500
 G000582,law,40232
 G000582,health,38450
-G000582,not employed,29009
+G000582,not employed,32609
 G000582,insurance,23750
 G000582,business_services,22100
 G000582,consumer,21025
+G000582,retired,16125
 G000582,lobbying,13600
-G000582,retired,11725
 G000582,government,11442
 G000582,finance,8410
 G000582,media,6700
@@ -4859,17 +4858,17 @@ G000586,energy,2000
 G000586,manufacturing,1000
 G000586,pharma,500
 G000586,tech,500
-G000587,law,49760
-G000587,unknown,49699
+G000587,unknown,49324
+G000587,law,46960
 G000587,lobbying,27850
+G000587,retired,25845
 G000587,unitemized,24643
-G000587,retired,22420
 G000587,business_services,12250
 G000587,consumer,8500
 G000587,energy,7800
 G000587,not employed,7260
-G000587,health,6900
 G000587,finance,6750
+G000587,health,6650
 G000587,real_estate,6450
 G000587,manufacturing,6000
 G000587,education,5184
@@ -4887,14 +4886,14 @@ G000588,unitemized,67321
 G000588,not employed,52800
 G000588,law,47750
 G000588,manufacturing,28400
-G000588,lobbying,25150
+G000588,lobbying,25650
 G000588,nonprofit,23450
 G000588,consumer,15600
 G000588,health,10000
 G000588,education,8200
 G000588,media,7050
-G000588,business_services,5700
 G000588,no information,5250
+G000588,business_services,5200
 G000588,transportation,4900
 G000588,energy,4800
 G000588,tech,4700
@@ -4927,7 +4926,7 @@ G000589,government,2500
 G000589,insurance,500
 G000589,manufacturing,500
 G000589,business_services,250
-G000590,unknown,226115
+G000590,unknown,225865
 G000590,retired,192089
 G000590,unitemized,142127
 G000590,finance,127790
@@ -4940,7 +4939,7 @@ G000590,government,25865
 G000590,law,21990
 G000590,business_services,21800
 G000590,energy,20572
-G000590,no information,18142
+G000590,no information,18392
 G000590,transportation,16700
 G000590,agriculture,15950
 G000590,lobbying,13851
@@ -4953,13 +4952,13 @@ G000590,pharma,1500
 G000590,defense,500
 G000590,tech,500
 G000591,unitemized,107016
-G000591,unknown,89095
+G000591,unknown,88845
 G000591,lobbying,66700
 G000591,law,56270
 G000591,health,56150
 G000591,finance,37440
 G000591,real_estate,33650
-G000591,not employed,30500
+G000591,not employed,30750
 G000591,energy,25350
 G000591,retired,23800
 G000591,business_services,22750
@@ -4988,8 +4987,8 @@ G000592,education,111400
 G000592,consumer,90754
 G000592,tech,87193
 G000592,nonprofit,83065
-G000592,business_services,60419
-G000592,lobbying,58130
+G000592,business_services,59919
+G000592,lobbying,58630
 G000592,government,40568
 G000592,energy,32608
 G000592,manufacturing,21292
@@ -5034,8 +5033,8 @@ G000594,energy,46857
 G000594,real_estate,43383
 G000594,law,31757
 G000594,agriculture,31347
+G000594,lobbying,31303
 G000594,consumer,31267
-G000594,lobbying,31053
 G000594,health,30365
 G000594,not employed,23391
 G000594,nonprofit,12300
@@ -5044,8 +5043,8 @@ G000594,manufacturing,5860
 G000594,government,4284
 G000594,defense,4000
 G000594,telecom,2850
-G000594,business_services,2763
 G000594,insurance,2525
+G000594,business_services,2513
 G000594,pharma,2468
 G000594,education,2058
 G000594,transportation,700
@@ -5075,25 +5074,25 @@ G000595,education,4650
 G000595,no information,1450
 G000595,defense,725
 G000596,unitemized,8818389
-G000596,retired,2099935
-G000596,unknown,458096
-G000596,real_estate,157749
-G000596,health,104646
+G000596,retired,2103691
+G000596,unknown,448820
+G000596,real_estate,157349
+G000596,health,103921
 G000596,finance,86952
 G000596,consumer,67183
+G000596,not employed,55831
 G000596,agriculture,52462
 G000596,no information,51595
-G000596,not employed,48531
 G000596,manufacturing,47863
 G000596,transportation,40990
 G000596,business_services,40745
 G000596,law,36094
 G000596,energy,34442
 G000596,education,30911
-G000596,government,24846
+G000596,government,24641
 G000596,tech,20395
 G000596,media,19595
-G000596,defense,17390
+G000596,defense,16940
 G000596,insurance,13659
 G000596,telecom,11210
 G000596,nonprofit,9609
@@ -5102,10 +5101,10 @@ G000596,lobbying,6650
 G000597,finance,220036
 G000597,real_estate,180900
 G000597,unitemized,178892
-G000597,unknown,166382
+G000597,unknown,165132
 G000597,retired,113515
 G000597,no information,70390
-G000597,lobbying,51820
+G000597,lobbying,53070
 G000597,not employed,41351
 G000597,law,33375
 G000597,manufacturing,22650
@@ -5171,13 +5170,13 @@ G000599,transportation,3150
 G000599,energy,1250
 G000600,not employed,1222250
 G000600,unitemized,1082618
-G000600,unknown,196412
-G000600,retired,161993
+G000600,unknown,195912
+G000600,retired,162918
 G000600,law,146955
 G000600,health,145397
 G000600,finance,111035
 G000600,tech,102722
-G000600,education,77048
+G000600,education,76998
 G000600,real_estate,70695
 G000600,media,59783
 G000600,nonprofit,50246
@@ -5185,7 +5184,7 @@ G000600,consumer,35395
 G000600,business_services,31612
 G000600,government,30984
 G000600,manufacturing,18500
-G000600,lobbying,16851
+G000600,lobbying,16476
 G000600,agriculture,10975
 G000600,pharma,9300
 G000600,transportation,8206
@@ -5198,7 +5197,7 @@ G000602,not employed,317853
 G000602,finance,170393
 G000602,unitemized,130411
 G000602,law,127225
-G000602,unknown,124710
+G000602,unknown,124460
 G000602,real_estate,104725
 G000602,health,33435
 G000602,consumer,29900
@@ -5216,7 +5215,7 @@ G000602,lobbying,7250
 G000602,transportation,5750
 G000602,tech,2750
 G000602,telecom,2000
-G000602,no information,500
+G000602,no information,750
 G000605,unitemized,420045
 G000605,not employed,272909
 G000605,unknown,177016
@@ -5267,7 +5266,7 @@ H000273,pharma,350
 H000273,transportation,191
 H000273,manufacturing,48
 H000601,unitemized,908344
-H000601,retired,456551
+H000601,retired,458551
 H000601,finance,374120
 H000601,unknown,353354
 H000601,not employed,142132
@@ -5276,7 +5275,7 @@ H000601,law,109370
 H000601,lobbying,98550
 H000601,health,92987
 H000601,consumer,59615
-H000601,manufacturing,43037
+H000601,manufacturing,41037
 H000601,insurance,25530
 H000601,energy,24086
 H000601,transportation,23900
@@ -5293,7 +5292,7 @@ H000601,pharma,4050
 H000601,telecom,745
 H000874,finance,150985
 H000874,retired,145008
-H000874,unknown,142489
+H000874,unknown,142384
 H000874,health,74725
 H000874,law,69520
 H000874,consumer,59941
@@ -5302,7 +5301,7 @@ H000874,unitemized,56553
 H000874,insurance,35900
 H000874,lobbying,30755
 H000874,business_services,27305
-H000874,not employed,25400
+H000874,not employed,25505
 H000874,education,20710
 H000874,energy,18550
 H000874,tech,18413
@@ -5323,8 +5322,8 @@ H001038,finance,57650
 H001038,health,38660
 H001038,not employed,32230
 H001038,consumer,28250
-H001038,lobbying,25620
-H001038,retired,20665
+H001038,lobbying,27120
+H001038,retired,20975
 H001038,government,15555
 H001038,nonprofit,11520
 H001038,no information,11119
@@ -5334,9 +5333,8 @@ H001038,media,6500
 H001038,defense,5525
 H001038,tech,5075
 H001038,energy,4750
-H001038,business_services,4650
 H001038,manufacturing,3900
-H001038,transportation,310
+H001038,business_services,3150
 H001038,pharma,285
 H001042,unitemized,186968
 H001042,not employed,120548
@@ -5387,10 +5385,10 @@ H001046,pharma,2162
 H001046,telecom,1000
 H001046,transportation,750
 H001046,agriculture,500
-H001047,not employed,136031
+H001047,not employed,144731
 H001047,finance,134401
-H001047,unknown,93553
 H001047,unitemized,91127
+H001047,unknown,84853
 H001047,retired,78009
 H001047,real_estate,40220
 H001047,law,35925
@@ -5409,9 +5407,9 @@ H001047,consumer,2350
 H001047,government,350
 H001047,agriculture,275
 H001052,unitemized,314510
-H001052,retired,219111
-H001052,unknown,158695
-H001052,no information,114568
+H001052,retired,219361
+H001052,unknown,157695
+H001052,no information,115568
 H001052,real_estate,103335
 H001052,health,86207
 H001052,consumer,61500
@@ -5419,7 +5417,7 @@ H001052,finance,41003
 H001052,law,29800
 H001052,agriculture,27353
 H001052,lobbying,19150
-H001052,not employed,19135
+H001052,not employed,18885
 H001052,manufacturing,11764
 H001052,business_services,11500
 H001052,insurance,9525
@@ -5434,10 +5432,10 @@ H001052,defense,1240
 H001052,tech,850
 H001056,unitemized,426431
 H001056,retired,388170
-H001056,unknown,292464
+H001056,unknown,286414
 H001056,finance,228303
 H001056,real_estate,170918
-H001056,not employed,113395
+H001056,not employed,119445
 H001056,no information,98442
 H001056,lobbying,69450
 H001056,consumer,49193
@@ -5457,7 +5455,7 @@ H001056,government,5738
 H001056,transportation,3800
 H001056,pharma,3400
 H001056,telecom,500
-H001058,unknown,241579
+H001058,unknown,239829
 H001058,finance,175315
 H001058,retired,170444
 H001058,no information,142885
@@ -5466,7 +5464,7 @@ H001058,real_estate,59733
 H001058,manufacturing,58374
 H001058,unitemized,56714
 H001058,law,45415
-H001058,lobbying,43450
+H001058,lobbying,45200
 H001058,consumer,40350
 H001058,agriculture,24255
 H001058,business_services,22550
@@ -5481,7 +5479,7 @@ H001058,pharma,255
 H001058,tech,250
 H001061,unknown,203221
 H001061,finance,141066
-H001061,retired,99738
+H001061,retired,100238
 H001061,energy,88440
 H001061,unitemized,85093
 H001061,real_estate,69855
@@ -5489,7 +5487,7 @@ H001061,consumer,60430
 H001061,agriculture,57505
 H001061,not employed,51057
 H001061,lobbying,50090
-H001061,health,48385
+H001061,health,47885
 H001061,no information,43410
 H001061,law,42360
 H001061,manufacturing,20787
@@ -5510,16 +5508,16 @@ H001066,unitemized,301425
 H001066,unknown,271892
 H001066,law,205141
 H001066,health,132132
-H001066,lobbying,125093
+H001066,lobbying,130493
 H001066,real_estate,116514
 H001066,media,91217
 H001066,consumer,73956
 H001066,retired,67241
 H001066,education,64522
 H001066,nonprofit,55441
-H001066,business_services,37383
 H001066,energy,35540
 H001066,tech,35151
+H001066,business_services,31983
 H001066,government,30797
 H001066,insurance,7750
 H001066,pharma,7425
@@ -5582,14 +5580,14 @@ H001071,manufacturing,400
 H001071,consumer,250
 H001071,finance,250
 H001072,finance,299911
-H001072,unknown,245837
+H001072,unknown,245337
 H001072,retired,197564
 H001072,real_estate,178140
 H001072,not employed,130200
 H001072,health,96450
 H001072,law,87830
 H001072,unitemized,63661
-H001072,lobbying,54900
+H001072,lobbying,55400
 H001072,consumer,42601
 H001072,business_services,37450
 H001072,government,22050
@@ -5605,11 +5603,11 @@ H001072,telecom,5000
 H001072,education,2200
 H001072,no information,1875
 H001072,pharma,1000
-H001074,unknown,15250
+H001074,unknown,14750
 H001074,health,13850
 H001074,finance,13500
 H001074,unitemized,13490
-H001074,lobbying,6500
+H001074,lobbying,7000
 H001074,real_estate,6150
 H001074,law,3000
 H001074,business_services,2000
@@ -5623,10 +5621,10 @@ H001074,no information,750
 H001074,insurance,250
 H001074,tech,50
 H001076,unitemized,10179971
-H001076,not employed,7168894
+H001076,not employed,7169394
 H001076,retired,3918496
 H001076,law,1698297
-H001076,unknown,1661854
+H001076,unknown,1661354
 H001076,finance,1623932
 H001076,media,904606
 H001076,education,849769
@@ -5634,9 +5632,9 @@ H001076,health,745217
 H001076,real_estate,673009
 H001076,tech,441026
 H001076,nonprofit,399260
-H001076,lobbying,371000
+H001076,lobbying,373250
 H001076,government,280416
-H001076,business_services,275946
+H001076,business_services,273696
 H001076,consumer,216450
 H001076,manufacturing,99800
 H001076,energy,97692
@@ -5649,22 +5647,22 @@ H001076,telecom,28315
 H001076,transportation,11042
 H001077,unitemized,207701
 H001077,unknown,156394
-H001077,retired,67933
+H001077,retired,70833
 H001077,health,53026
 H001077,real_estate,45055
 H001077,consumer,42305
 H001077,not employed,30675
-H001077,agriculture,18900
 H001077,law,17412
 H001077,finance,16075
+H001077,agriculture,16000
 H001077,insurance,15500
 H001077,manufacturing,15450
+H001077,lobbying,14200
 H001077,energy,10925
-H001077,business_services,9242
-H001077,lobbying,8400
 H001077,pharma,5800
 H001077,no information,5074
 H001077,transportation,4093
+H001077,business_services,3442
 H001077,government,2000
 H001077,tech,1825
 H001077,telecom,300
@@ -5697,10 +5695,10 @@ H001079,tech,200
 H001080,unitemized,1141
 H001080,health,100
 H001080,not employed,100
-H001081,not employed,428453
+H001081,not employed,428703
 H001081,unitemized,373699
 H001081,finance,163342
-H001081,unknown,105694
+H001081,unknown,105444
 H001081,retired,96635
 H001081,media,83332
 H001081,health,62016
@@ -5745,12 +5743,12 @@ H001082,tech,500
 H001082,agriculture,250
 H001084,unitemized,1084622
 H001084,retired,735477
-H001084,unknown,371022
+H001084,unknown,370772
 H001084,energy,201905
 H001084,real_estate,179296
 H001084,agriculture,130806
 H001084,finance,125519
-H001084,not employed,107079
+H001084,not employed,107329
 H001084,consumer,80730
 H001084,manufacturing,61270
 H001084,health,45537
@@ -5794,12 +5792,12 @@ H001085,insurance,6145
 H001085,agriculture,5439
 H001085,transportation,1440
 H001086,unitemized,667779
-H001086,retired,209264
+H001086,retired,209939
 H001086,unknown,83124
 H001086,no information,82207
-H001086,health,58321
+H001086,health,58246
 H001086,lobbying,34717
-H001086,real_estate,27757
+H001086,real_estate,27157
 H001086,finance,20450
 H001086,consumer,19932
 H001086,law,19376
@@ -5841,48 +5839,48 @@ H001088,energy,750
 H001088,defense,500
 H001088,government,250
 H001089,unitemized,6119788
-H001089,retired,2857827
-H001089,unknown,587696
-H001089,real_estate,166216
-H001089,no information,149964
+H001089,retired,2861713
+H001089,unknown,581818
+H001089,real_estate,166066
+H001089,no information,150264
 H001089,health,149885
-H001089,not employed,139853
+H001089,not employed,142725
 H001089,finance,115219
 H001089,consumer,98737
 H001089,law,87909
-H001089,agriculture,85070
+H001089,agriculture,84730
 H001089,manufacturing,58496
 H001089,energy,42206
-H001089,nonprofit,36038
+H001089,nonprofit,36018
 H001089,education,34409
-H001089,media,33617
+H001089,media,33447
 H001089,business_services,24965
-H001089,government,22476
 H001089,tech,22295
+H001089,government,22026
 H001089,transportation,20249
-H001089,telecom,19260
+H001089,telecom,19210
 H001089,insurance,15621
 H001089,lobbying,8535
 H001089,pharma,6400
 H001089,defense,5988
 H001090,unitemized,1290114
-H001090,retired,905257
+H001090,retired,906403
 H001090,not employed,847072
 H001090,finance,560138
 H001090,law,375127
 H001090,unknown,341013
-H001090,education,262054
+H001090,education,261908
 H001090,tech,248870
 H001090,real_estate,243296
-H001090,health,165101
+H001090,health,164101
 H001090,media,152726
-H001090,business_services,120263
+H001090,business_services,115863
 H001090,nonprofit,104287
 H001090,consumer,74085
 H001090,agriculture,55719
 H001090,government,51689
 H001090,energy,45034
-H001090,lobbying,29025
+H001090,lobbying,33425
 H001090,insurance,18218
 H001090,pharma,17501
 H001090,manufacturing,13140
@@ -5890,31 +5888,31 @@ H001090,transportation,12755
 H001090,telecom,11991
 H001090,defense,1000
 H001091,unitemized,1730968
-H001091,retired,1061036
-H001091,unknown,545032
+H001091,retired,1073318
+H001091,unknown,543532
 H001091,no information,390999
-H001091,finance,236624
-H001091,real_estate,173386
-H001091,not employed,118508
-H001091,agriculture,117119
-H001091,lobbying,101025
+H001091,finance,233324
+H001091,real_estate,172411
+H001091,not employed,118608
+H001091,agriculture,114159
+H001091,lobbying,101275
 H001091,consumer,88762
-H001091,health,78120
+H001091,health,77385
 H001091,manufacturing,62843
-H001091,law,57785
+H001091,law,56785
 H001091,transportation,52209
 H001091,media,39036
 H001091,energy,34470
 H001091,insurance,33665
-H001091,business_services,28395
+H001091,business_services,28145
 H001091,nonprofit,21615
-H001091,government,17181
-H001091,defense,16544
+H001091,defense,16432
+H001091,government,15881
 H001091,tech,15525
 H001091,telecom,12000
-H001091,education,11618
+H001091,education,11118
 H001091,pharma,4016
-H001093,unknown,185937
+H001093,unknown,183037
 H001093,retired,84560
 H001093,real_estate,59140
 H001093,finance,52500
@@ -5925,8 +5923,8 @@ H001093,law,31891
 H001093,government,20050
 H001093,manufacturing,17550
 H001093,business_services,14950
+H001093,not employed,13636
 H001093,lobbying,12000
-H001093,not employed,10736
 H001093,agriculture,10500
 H001093,energy,8550
 H001093,nonprofit,8550
@@ -5944,7 +5942,7 @@ H001094,unknown,188506
 H001094,retired,84097
 H001094,health,79387
 H001094,law,64995
-H001094,lobbying,64733
+H001094,lobbying,64983
 H001094,government,60785
 H001094,finance,57591
 H001094,education,55109
@@ -5954,7 +5952,7 @@ H001094,tech,33096
 H001094,media,29807
 H001094,consumer,25188
 H001094,agriculture,24534
-H001094,business_services,15070
+H001094,business_services,14820
 H001094,transportation,12400
 H001094,no information,9984
 H001094,energy,9663
@@ -5963,17 +5961,17 @@ H001094,pharma,6300
 H001094,telecom,1500
 H001094,insurance,1275
 H001095,unitemized,1687366
-H001095,retired,1018221
-H001095,unknown,399782
+H001095,retired,1027117
+H001095,unknown,394442
 H001095,finance,281676
-H001095,real_estate,245050
+H001095,real_estate,241550
 H001095,energy,199543
 H001095,law,120023
-H001095,not employed,106098
+H001095,not employed,107142
 H001095,no information,91383
 H001095,consumer,84656
 H001095,health,73074
-H001095,manufacturing,47341
+H001095,manufacturing,46341
 H001095,business_services,42540
 H001095,agriculture,30477
 H001095,nonprofit,23282
@@ -5984,7 +5982,7 @@ H001095,transportation,12030
 H001095,government,11069
 H001095,media,9655
 H001095,defense,8370
-H001095,education,7810
+H001095,education,7710
 H001095,telecom,6300
 H001095,tech,6095
 H001096,unitemized,2438424
@@ -6013,14 +6011,14 @@ H001096,education,6218
 H001096,pharma,4100
 H001096,defense,2055
 H001101,retired,183668
-H001101,unknown,132091
+H001101,unknown,121336
 H001101,finance,82888
 H001101,unitemized,52634
 H001101,real_estate,51223
 H001101,health,36446
+H001101,not employed,32628
 H001101,manufacturing,28273
 H001101,business_services,25327
-H001101,not employed,21873
 H001101,law,16903
 H001101,government,12703
 H001101,media,8768
@@ -6052,15 +6050,16 @@ I000024,business_services,201
 I000024,transportation,100
 I000024,finance,50
 I000056,unitemized,703091
-I000056,retired,309355
-I000056,unknown,77387
+I000056,retired,310505
+I000056,unknown,66850
 I000056,real_estate,45168
-I000056,not employed,24732
 I000056,finance,24084
+I000056,not employed,23582
 I000056,law,19450
 I000056,consumer,19150
 I000056,lobbying,18680
 I000056,health,13350
+I000056,no information,12704
 I000056,tech,8941
 I000056,nonprofit,6100
 I000056,business_services,4770
@@ -6071,7 +6070,6 @@ I000056,media,3445
 I000056,manufacturing,2889
 I000056,education,2719
 I000056,government,2592
-I000056,no information,2167
 I000056,pharma,1300
 I000056,transportation,375
 I000056,defense,85
@@ -6141,24 +6139,24 @@ J000288,government,615
 J000288,nonprofit,250
 J000288,transportation,25
 J000289,unitemized,8122469
-J000289,retired,3195716
-J000289,unknown,563676
-J000289,finance,226259
+J000289,retired,3207669
+J000289,unknown,560154
+J000289,finance,225059
 J000289,real_estate,213268
-J000289,health,135296
+J000289,health,135245
 J000289,no information,122432
 J000289,consumer,112295
-J000289,manufacturing,100526
+J000289,manufacturing,100026
 J000289,energy,63082
-J000289,not employed,52522
-J000289,law,47713
-J000289,business_services,45776
+J000289,not employed,53844
+J000289,law,47563
 J000289,media,45713
-J000289,agriculture,43287
-J000289,government,35884
+J000289,business_services,45551
+J000289,agriculture,42830
 J000289,tech,31557
 J000289,transportation,28913
 J000289,education,28883
+J000289,government,28714
 J000289,insurance,26483
 J000289,pharma,14482
 J000289,lobbying,12310
@@ -6166,10 +6164,10 @@ J000289,nonprofit,10495
 J000289,defense,9425
 J000289,telecom,4412
 J000292,unknown,216824
-J000292,retired,83832
+J000292,retired,89632
 J000292,unitemized,68586
 J000292,no information,65650
-J000292,not employed,60900
+J000292,not employed,55100
 J000292,manufacturing,39300
 J000292,health,38414
 J000292,real_estate,37075
@@ -6191,13 +6189,13 @@ J000292,education,700
 J000292,media,500
 J000292,defense,200
 J000293,unitemized,11264037
-J000293,retired,9479901
-J000293,unknown,2004999
+J000293,retired,9480015
+J000293,unknown,2004739
 J000293,no information,1208017
 J000293,real_estate,758170
 J000293,finance,731262
 J000293,health,532303
-J000293,not employed,341353
+J000293,not employed,341613
 J000293,law,298832
 J000293,consumer,282471
 J000293,manufacturing,258217
@@ -6209,28 +6207,28 @@ J000293,transportation,105131
 J000293,insurance,103847
 J000293,education,90484
 J000293,media,86975
-J000293,government,72705
+J000293,government,72591
 J000293,nonprofit,48111
 J000293,lobbying,45066
 J000293,pharma,43109
 J000293,telecom,30012
 J000293,defense,16919
-J000294,not employed,422590
+J000294,not employed,422490
 J000294,unitemized,393376
 J000294,finance,373897
 J000294,real_estate,331115
-J000294,unknown,289740
+J000294,unknown,286340
 J000294,law,260406
-J000294,lobbying,216100
+J000294,lobbying,222250
 J000294,media,82505
 J000294,health,80950
-J000294,retired,58494
+J000294,retired,58594
 J000294,consumer,55890
 J000294,tech,37080
 J000294,education,35609
 J000294,telecom,35000
 J000294,nonprofit,34416
-J000294,business_services,29450
+J000294,business_services,26700
 J000294,energy,19350
 J000294,government,14532
 J000294,transportation,13300
@@ -6240,12 +6238,12 @@ J000294,pharma,9450
 J000294,agriculture,8800
 J000294,insurance,8475
 J000294,defense,1750
-J000295,unknown,270985
+J000295,unknown,268485
 J000295,real_estate,204735
 J000295,retired,136910
 J000295,finance,101055
+J000295,not employed,72530
 J000295,unitemized,72001
-J000295,not employed,70030
 J000295,manufacturing,56500
 J000295,law,54645
 J000295,lobbying,48501
@@ -6358,15 +6356,15 @@ J000302,defense,1000
 J000302,agriculture,750
 J000302,tech,250
 J000304,unitemized,2222058
-J000304,retired,961960
-J000304,unknown,322296
+J000304,retired,962035
+J000304,unknown,322221
 J000304,health,102881
 J000304,finance,91408
 J000304,real_estate,83100
-J000304,agriculture,63783
+J000304,agriculture,63633
 J000304,consumer,56849
 J000304,energy,52009
-J000304,not employed,51168
+J000304,not employed,51318
 J000304,lobbying,49750
 J000304,law,32693
 J000304,manufacturing,22962
@@ -6477,13 +6475,13 @@ J000309,pharma,1200
 J000309,telecom,1000
 K000009,unitemized,487666
 K000009,not employed,326493
-K000009,unknown,216284
+K000009,unknown,215284
 K000009,finance,148480
-K000009,retired,110930
+K000009,retired,112130
 K000009,law,89167
 K000009,real_estate,63668
 K000009,health,56205
-K000009,education,51611
+K000009,education,51411
 K000009,media,45307
 K000009,lobbying,41647
 K000009,manufacturing,40475
@@ -6521,7 +6519,7 @@ K000188,defense,1000
 K000188,real_estate,500
 K000367,unitemized,1181641
 K000367,not employed,704408
-K000367,retired,215691
+K000367,retired,216191
 K000367,unknown,151950
 K000367,law,123720
 K000367,finance,111659
@@ -6534,9 +6532,9 @@ K000367,consumer,31503
 K000367,nonprofit,27265
 K000367,business_services,20731
 K000367,lobbying,19100
-K000367,tech,15043
 K000367,no information,14950
 K000367,agriculture,14577
+K000367,tech,14543
 K000367,pharma,10367
 K000367,insurance,9788
 K000367,government,7530
@@ -6591,17 +6589,17 @@ K000376,agriculture,1000
 K000376,telecom,1000
 K000376,tech,750
 K000377,unitemized,38736174
-K000377,retired,16781643
-K000377,not employed,10536729
-K000377,unknown,3924094
+K000377,retired,16791372
+K000377,not employed,10534282
+K000377,unknown,3920249
 K000377,law,2527369
 K000377,finance,2122194
-K000377,health,1983301
+K000377,health,1982481
 K000377,education,1809591
-K000377,media,1499226
+K000377,media,1499209
 K000377,real_estate,1208314
 K000377,tech,1024444
-K000377,government,717508
+K000377,government,714908
 K000377,nonprofit,636649
 K000377,business_services,596478
 K000377,consumer,483985
@@ -6643,10 +6641,10 @@ K000378,transportation,500
 K000380,unitemized,538417
 K000380,not employed,505247
 K000380,health,245714
-K000380,law,224121
+K000380,law,223371
 K000380,unknown,223278
 K000380,finance,217563
-K000380,retired,181756
+K000380,retired,182506
 K000380,real_estate,177723
 K000380,education,91637
 K000380,nonprofit,83868
@@ -6750,16 +6748,16 @@ K000385,unknown,98128
 K000385,unitemized,81105
 K000385,law,69942
 K000385,health,63117
-K000385,retired,52299
+K000385,retired,52449
 K000385,finance,48775
-K000385,education,34153
+K000385,education,34003
 K000385,not employed,32725
 K000385,government,30438
+K000385,lobbying,26046
 K000385,nonprofit,25917
-K000385,lobbying,25546
 K000385,no information,24000
 K000385,real_estate,17220
-K000385,business_services,14252
+K000385,business_services,13752
 K000385,media,12815
 K000385,insurance,12766
 K000385,manufacturing,9780
@@ -6845,20 +6843,20 @@ K000389,defense,7170
 K000389,telecom,1350
 K000391,unknown,1478186
 K000391,health,995875
-K000391,not employed,992794
+K000391,not employed,992194
 K000391,law,861973
 K000391,unitemized,838243
 K000391,finance,513745
 K000391,tech,248530
 K000391,real_estate,213159
 K000391,education,197773
-K000391,retired,188340
-K000391,business_services,185684
+K000391,retired,188940
+K000391,business_services,184284
 K000391,consumer,124301
 K000391,media,85716
 K000391,manufacturing,73174
 K000391,nonprofit,70642
-K000391,lobbying,59050
+K000391,lobbying,60450
 K000391,insurance,50365
 K000391,energy,46842
 K000391,government,41035
@@ -6892,46 +6890,46 @@ K000392,education,6950
 K000392,tech,2750
 K000392,pharma,750
 K000393,unitemized,15990019
-K000393,retired,7654790
-K000393,no information,1929652
-K000393,unknown,1694812
+K000393,retired,7678718
+K000393,no information,1929702
+K000393,unknown,1681789
 K000393,finance,809227
-K000393,real_estate,744221
-K000393,not employed,559783
-K000393,health,478352
+K000393,real_estate,741171
+K000393,not employed,560038
+K000393,health,476552
 K000393,consumer,406220
-K000393,law,386660
-K000393,agriculture,257889
+K000393,law,385910
+K000393,agriculture,255789
 K000393,energy,207876
 K000393,manufacturing,182660
-K000393,lobbying,131429
+K000393,lobbying,132429
 K000393,transportation,110855
-K000393,business_services,104773
+K000393,business_services,103673
 K000393,insurance,97037
 K000393,media,95619
 K000393,nonprofit,64342
-K000393,education,62194
-K000393,government,59077
+K000393,education,61869
+K000393,government,56167
 K000393,tech,42371
 K000393,pharma,29272
-K000393,defense,21904
+K000393,defense,21729
 K000393,telecom,20696
-K000394,not employed,1236056
+K000394,not employed,1235560
 K000394,unitemized,930271
-K000394,unknown,607362
+K000394,unknown,606012
 K000394,finance,539788
 K000394,law,520165
-K000394,retired,501909
+K000394,retired,502655
 K000394,education,213202
 K000394,health,198405
 K000394,nonprofit,148914
 K000394,tech,130336
 K000394,media,121876
 K000394,real_estate,119465
-K000394,business_services,84398
+K000394,business_services,83898
 K000394,consumer,80656
-K000394,no information,77018
-K000394,lobbying,63391
+K000394,no information,78118
+K000394,lobbying,63891
 K000394,government,62875
 K000394,pharma,28122
 K000394,insurance,28074
@@ -6942,14 +6940,14 @@ K000394,agriculture,14142
 K000394,manufacturing,13662
 K000394,telecom,8150
 K000395,unitemized,210573
-K000395,retired,105440
-K000395,unknown,82585
+K000395,retired,106040
+K000395,unknown,82085
 K000395,education,31654
 K000395,consumer,28327
 K000395,real_estate,25272
 K000395,energy,12882
 K000395,agriculture,11125
-K000395,health,9650
+K000395,health,9550
 K000395,nonprofit,9510
 K000395,law,9050
 K000395,manufacturing,7192
@@ -6969,9 +6967,9 @@ K000396,unitemized,41254
 K000396,transportation,19150
 K000396,finance,14600
 K000396,law,12200
+K000396,lobbying,9250
 K000396,not employed,8883
 K000396,government,8805
-K000396,lobbying,8750
 K000396,retired,8476
 K000396,nonprofit,5900
 K000396,consumer,4900
@@ -6979,47 +6977,47 @@ K000396,education,4150
 K000396,agriculture,4000
 K000396,real_estate,3250
 K000396,health,2825
-K000396,business_services,2750
 K000396,defense,2750
+K000396,business_services,2250
 K000396,tech,2000
 K000396,energy,1750
 K000396,insurance,1000
 K000396,telecom,1000
 K000396,manufacturing,250
 K000397,unitemized,2925455
-K000397,retired,1807390
-K000397,unknown,550998
+K000397,retired,1812142
+K000397,unknown,546118
 K000397,real_estate,342002
 K000397,finance,239952
 K000397,consumer,138222
 K000397,health,135036
-K000397,not employed,122565
+K000397,not employed,123065
 K000397,law,77756
 K000397,no information,71479
 K000397,business_services,66311
 K000397,tech,57489
 K000397,manufacturing,42075
 K000397,transportation,37467
-K000397,education,37129
 K000397,lobbying,37100
+K000397,education,37029
 K000397,government,33670
 K000397,agriculture,29795
 K000397,nonprofit,29545
 K000397,media,23326
 K000397,energy,19598
-K000397,defense,15365
 K000397,insurance,15288
+K000397,defense,15093
 K000397,pharma,11683
 K000397,telecom,4015
 K000398,retired,693791
-K000398,unknown,405088
+K000398,unknown,399388
 K000398,finance,383395
 K000398,unitemized,352979
 K000398,real_estate,232383
 K000398,law,225440
 K000398,health,168868
+K000398,not employed,103145
 K000398,consumer,100715
-K000398,not employed,97445
 K000398,lobbying,74400
 K000398,nonprofit,51280
 K000398,pharma,48641
@@ -7046,8 +7044,8 @@ K000399,consumer,94150
 K000399,law,76035
 K000399,not employed,68698
 K000399,health,65363
-K000399,business_services,42469
-K000399,lobbying,29794
+K000399,business_services,42219
+K000399,lobbying,30044
 K000399,nonprofit,23239
 K000399,energy,22266
 K000399,manufacturing,20860
@@ -7086,10 +7084,10 @@ K000400,no information,500
 K000400,transportation,500
 K000400,agriculture,200
 K000401,unitemized,783485
-K000401,retired,701290
-K000401,unknown,403257
+K000401,retired,701690
+K000401,unknown,396037
 K000401,real_estate,222177
-K000401,not employed,128288
+K000401,not employed,136008
 K000401,finance,118491
 K000401,health,93148
 K000401,law,89911
@@ -7098,7 +7096,7 @@ K000401,manufacturing,42477
 K000401,consumer,41545
 K000401,tech,35170
 K000401,education,30134
-K000401,business_services,26114
+K000401,business_services,25214
 K000401,nonprofit,20100
 K000401,energy,18650
 K000401,media,17120
@@ -7132,22 +7130,22 @@ L000174,business_services,2500
 L000174,transportation,1500
 L000174,manufacturing,600
 L000174,agriculture,500
-L000266,unknown,252445
+L000266,unknown,250945
 L000266,finance,81230
 L000266,health,73810
 L000266,retired,70775
 L000266,energy,62305
 L000266,real_estate,60915
-L000266,not employed,52850
+L000266,not employed,54350
+L000266,lobbying,38685
 L000266,agriculture,37935
 L000266,consumer,30264
 L000266,unitemized,29657
-L000266,lobbying,29385
 L000266,manufacturing,24700
-L000266,business_services,15600
 L000266,media,15000
 L000266,law,12790
 L000266,government,11600
+L000266,business_services,6300
 L000266,defense,5800
 L000266,insurance,5150
 L000266,nonprofit,4250
@@ -7156,22 +7154,22 @@ L000266,education,1700
 L000266,tech,1250
 L000266,telecom,1250
 L000273,unitemized,656050
-L000273,not employed,650085
+L000273,not employed,650925
 L000273,law,213848
-L000273,unknown,187218
-L000273,retired,128350
+L000273,unknown,186118
+L000273,retired,128610
 L000273,finance,121075
 L000273,media,75568
 L000273,health,54043
 L000273,real_estate,49352
-L000273,lobbying,44703
+L000273,lobbying,45703
 L000273,no information,42928
 L000273,nonprofit,38020
 L000273,education,37740
 L000273,consumer,26721
 L000273,tech,22588
 L000273,government,20765
-L000273,business_services,16650
+L000273,business_services,15650
 L000273,agriculture,15010
 L000273,energy,9475
 L000273,insurance,6050
@@ -7229,13 +7227,13 @@ L000491,no information,2900
 L000491,pharma,1000
 L000551,unitemized,406309
 L000551,not employed,395933
-L000551,unknown,195062
+L000551,unknown,195012
 L000551,real_estate,106991
-L000551,finance,100405
+L000551,finance,99905
 L000551,law,84335
 L000551,health,62027
 L000551,education,59646
-L000551,retired,44984
+L000551,retired,45534
 L000551,media,42136
 L000551,nonprofit,40587
 L000551,lobbying,29947
@@ -7255,7 +7253,7 @@ L000551,telecom,250
 L000557,unknown,124203
 L000557,unitemized,88492
 L000557,not employed,57213
-L000557,lobbying,54400
+L000557,lobbying,55400
 L000557,law,37390
 L000557,finance,36965
 L000557,real_estate,33750
@@ -7267,8 +7265,8 @@ L000557,health,17050
 L000557,education,16675
 L000557,media,16100
 L000557,insurance,14650
-L000557,business_services,7944
 L000557,pharma,7500
+L000557,business_services,6944
 L000557,manufacturing,6000
 L000557,no information,6000
 L000557,government,5995
@@ -7302,14 +7300,14 @@ L000559,pharma,250
 L000560,unitemized,132868
 L000560,unknown,83977
 L000560,not employed,83588
-L000560,lobbying,59150
+L000560,lobbying,59650
 L000560,retired,54334
 L000560,law,29425
 L000560,transportation,23960
 L000560,manufacturing,21700
 L000560,real_estate,15565
 L000560,finance,15145
-L000560,business_services,15110
+L000560,business_services,14610
 L000560,consumer,11340
 L000560,government,10804
 L000560,nonprofit,9949
@@ -7392,12 +7390,12 @@ L000566,pharma,500
 L000569,unitemized,452538
 L000569,finance,174710
 L000569,real_estate,127995
-L000569,unknown,101524
-L000569,lobbying,91300
-L000569,retired,55351
+L000569,unknown,100024
+L000569,lobbying,97600
+L000569,retired,56351
 L000569,law,48062
-L000569,business_services,29982
 L000569,consumer,28672
+L000569,business_services,24182
 L000569,insurance,16650
 L000569,not employed,13395
 L000569,no information,7000
@@ -7413,7 +7411,7 @@ L000569,manufacturing,750
 L000569,agriculture,260
 L000570,unitemized,1428334
 L000570,not employed,212084
-L000570,lobbying,102000
+L000570,lobbying,103500
 L000570,unknown,72240
 L000570,law,58449
 L000570,health,45248
@@ -7422,7 +7420,7 @@ L000570,real_estate,29441
 L000570,telecom,25400
 L000570,retired,22296
 L000570,media,18803
-L000570,business_services,14300
+L000570,business_services,12800
 L000570,education,12259
 L000570,tech,9381
 L000570,consumer,8951
@@ -7457,8 +7455,8 @@ L000571,nonprofit,1000
 L000571,transportation,1000
 L000575,unitemized,3586856
 L000575,unknown,518728
-L000575,retired,469805
-L000575,finance,397693
+L000575,retired,472905
+L000575,finance,394593
 L000575,real_estate,318042
 L000575,energy,228705
 L000575,health,160206
@@ -7481,15 +7479,15 @@ L000575,tech,12900
 L000575,defense,12400
 L000575,pharma,500
 L000577,unitemized,2522469
-L000577,retired,1738060
-L000577,unknown,770001
+L000577,retired,1738560
+L000577,unknown,765263
 L000577,finance,509968
 L000577,real_estate,404858
 L000577,law,297575
 L000577,no information,177008
 L000577,lobbying,145946
 L000577,tech,141664
-L000577,not employed,132609
+L000577,not employed,137247
 L000577,health,114553
 L000577,energy,110948
 L000577,consumer,69700
@@ -7498,7 +7496,7 @@ L000577,business_services,62757
 L000577,agriculture,53403
 L000577,media,49871
 L000577,insurance,43153
-L000577,education,39731
+L000577,education,39331
 L000577,nonprofit,39016
 L000577,telecom,31210
 L000577,transportation,27772
@@ -7624,15 +7622,15 @@ L000585,education,3650
 L000585,nonprofit,1300
 L000586,unitemized,64822
 L000586,law,32051
+L000586,lobbying,26900
 L000586,retired,26636
 L000586,health,26567
 L000586,not employed,26300
-L000586,lobbying,24400
 L000586,unknown,23142
 L000586,real_estate,18467
 L000586,finance,15517
 L000586,education,14225
-L000586,business_services,9300
+L000586,business_services,6800
 L000586,tech,6400
 L000586,agriculture,6250
 L000586,government,5000
@@ -7644,12 +7642,12 @@ L000586,no information,1250
 L000586,transportation,1000
 L000589,unitemized,257175
 L000589,retired,182039
-L000589,unknown,50627
+L000589,unknown,48527
 L000589,real_estate,39400
 L000589,finance,35940
 L000589,lobbying,27500
+L000589,not employed,22900
 L000589,health,21070
-L000589,not employed,20800
 L000589,agriculture,11325
 L000589,law,9425
 L000589,nonprofit,7550
@@ -7665,11 +7663,11 @@ L000589,transportation,2000
 L000589,education,1380
 L000589,manufacturing,625
 L000589,pharma,500
-L000590,retired,972360
+L000590,retired,974860
 L000590,unitemized,589057
 L000590,unknown,448859
 L000590,finance,409983
-L000590,not employed,298274
+L000590,not employed,295774
 L000590,law,295510
 L000590,media,217421
 L000590,health,180273
@@ -7677,9 +7675,9 @@ L000590,real_estate,166619
 L000590,consumer,132920
 L000590,nonprofit,128692
 L000590,education,114035
-L000590,business_services,74912
+L000590,business_services,74412
 L000590,energy,71813
-L000590,lobbying,69990
+L000590,lobbying,70490
 L000590,tech,66966
 L000590,no information,31250
 L000590,government,30524
@@ -7690,22 +7688,22 @@ L000590,pharma,10503
 L000590,transportation,5515
 L000590,defense,2500
 L000590,telecom,2294
-L000591,not employed,2340173
+L000591,not employed,2339123
 L000591,unitemized,1790855
-L000591,unknown,583075
+L000591,unknown,582875
 L000591,finance,539058
 L000591,law,537656
-L000591,retired,527635
+L000591,retired,528885
 L000591,real_estate,335598
 L000591,health,279020
 L000591,media,206605
 L000591,education,196098
 L000591,nonprofit,142225
 L000591,government,134877
-L000591,business_services,129220
+L000591,business_services,128220
 L000591,consumer,100447
 L000591,tech,100114
-L000591,lobbying,85019
+L000591,lobbying,86019
 L000591,insurance,45596
 L000591,energy,42515
 L000591,manufacturing,34636
@@ -7725,10 +7723,10 @@ L000592,education,120622
 L000592,finance,107385
 L000592,real_estate,95035
 L000592,nonprofit,67433
-L000592,business_services,46375
+L000592,business_services,45875
 L000592,media,44738
 L000592,government,38054
-L000592,lobbying,31400
+L000592,lobbying,31900
 L000592,consumer,27043
 L000592,tech,16748
 L000592,manufacturing,14310
@@ -7750,8 +7748,8 @@ L000593,nonprofit,113258
 L000593,health,105144
 L000593,tech,97742
 L000593,education,97623
-L000593,business_services,70753
-L000593,lobbying,70209
+L000593,business_services,70682
+L000593,lobbying,70280
 L000593,energy,57010
 L000593,consumer,50179
 L000593,government,44966
@@ -7764,26 +7762,26 @@ L000593,telecom,4100
 L000593,no information,2150
 L000593,defense,1850
 L000594,unitemized,5616262
-L000594,retired,4621190
-L000594,unknown,890500
+L000594,retired,4621962
+L000594,unknown,889898
 L000594,no information,800096
 L000594,health,442638
 L000594,real_estate,306462
 L000594,finance,199878
 L000594,law,144940
-L000594,government,123652
+L000594,government,123547
 L000594,consumer,113341
-L000594,education,101610
+L000594,education,101866
 L000594,transportation,98392
 L000594,agriculture,90873
 L000594,manufacturing,79427
-L000594,business_services,77728
+L000594,business_services,77462
 L000594,energy,75134
-L000594,not employed,70422
+L000594,not employed,70497
 L000594,tech,67902
 L000594,insurance,50594
 L000594,defense,46498
-L000594,media,45621
+L000594,media,45491
 L000594,nonprofit,35487
 L000594,lobbying,28431
 L000594,telecom,15105
@@ -7813,8 +7811,8 @@ L000595,education,4800
 L000595,defense,3500
 L000595,pharma,2750
 L000596,unitemized,1120070
-L000596,retired,593279
-L000596,unknown,273081
+L000596,retired,593959
+L000596,unknown,272401
 L000596,real_estate,122611
 L000596,finance,100472
 L000596,health,96396
@@ -7884,18 +7882,18 @@ L000598,agriculture,2750
 L000598,energy,1250
 L000598,telecom,1000
 L000598,defense,750
-L000599,unknown,195938
+L000599,unknown,195438
 L000599,retired,152820
 L000599,unitemized,126231
 L000599,real_estate,117554
 L000599,law,64753
 L000599,finance,54340
-L000599,not employed,50494
+L000599,not employed,50994
 L000599,health,36553
 L000599,consumer,28913
 L000599,government,22154
-L000599,business_services,15834
-L000599,lobbying,14150
+L000599,business_services,15584
+L000599,lobbying,14400
 L000599,insurance,13500
 L000599,energy,12930
 L000599,manufacturing,12100
@@ -7956,15 +7954,15 @@ L000601,defense,2034
 L000601,agriculture,1225
 L000601,transportation,1050
 L000602,unitemized,592454
-L000602,not employed,260479
-L000602,unknown,112186
+L000602,not employed,261228
+L000602,unknown,111437
 L000602,health,65849
 L000602,education,65630
-L000602,retired,54352
+L000602,retired,57052
 L000602,law,50749
 L000602,nonprofit,50073
 L000602,media,39823
-L000602,tech,36385
+L000602,tech,33685
 L000602,no information,30850
 L000602,finance,29033
 L000602,government,23700
@@ -7981,18 +7979,18 @@ L000602,defense,496
 L000602,telecom,407
 L000602,agriculture,250
 L000603,unitemized,1971048
-L000603,retired,742840
+L000603,retired,743053
 L000603,no information,396575
-L000603,unknown,362725
+L000603,unknown,361112
 L000603,real_estate,175171
 L000603,finance,141180
-L000603,not employed,81828
+L000603,not employed,83428
 L000603,energy,81475
 L000603,health,74600
 L000603,consumer,61970
 L000603,law,34111
 L000603,manufacturing,34054
-L000603,agriculture,32585
+L000603,agriculture,32385
 L000603,insurance,31910
 L000603,media,25747
 L000603,government,23122
@@ -8005,22 +8003,22 @@ L000603,tech,7155
 L000603,pharma,6302
 L000603,telecom,5300
 L000603,defense,1573
-M000087,not employed,466764
+M000087,not employed,472564
 M000087,finance,376255
-M000087,unknown,315177
-M000087,law,181936
+M000087,unknown,308987
+M000087,law,179036
 M000087,unitemized,142530
 M000087,real_estate,138462
 M000087,health,87390
 M000087,no information,74100
-M000087,retired,56844
+M000087,retired,60134
 M000087,education,54338
 M000087,media,53635
 M000087,consumer,52110
-M000087,business_services,49745
 M000087,tech,49332
+M000087,business_services,47645
+M000087,lobbying,41300
 M000087,nonprofit,40350
-M000087,lobbying,39200
 M000087,government,21630
 M000087,manufacturing,12200
 M000087,insurance,11750
@@ -8055,7 +8053,7 @@ M000133,telecom,1060
 M000133,manufacturing,295
 M000133,agriculture,66
 M000194,unitemized,1427484
-M000194,retired,727910
+M000194,retired,727933
 M000194,no information,420508
 M000194,unknown,248214
 M000194,finance,168116
@@ -8075,16 +8073,16 @@ M000194,media,13098
 M000194,energy,12225
 M000194,government,10576
 M000194,insurance,8300
-M000194,defense,5691
+M000194,defense,5668
 M000194,education,5140
 M000194,pharma,4250
 M000194,telecom,3000
 M000312,unitemized,175659
 M000312,unknown,131632
-M000312,not employed,68983
+M000312,not employed,68583
 M000312,law,54550
 M000312,lobbying,52350
-M000312,retired,41414
+M000312,retired,41814
 M000312,real_estate,35997
 M000312,health,32036
 M000312,finance,31837
@@ -8103,16 +8101,16 @@ M000312,manufacturing,1500
 M000312,agriculture,1450
 M000312,pharma,1000
 M000312,defense,500
-M000317,unknown,519783
+M000317,unknown,516383
 M000317,unitemized,480406
-M000317,retired,447937
+M000317,retired,448237
 M000317,real_estate,364061
 M000317,finance,335682
 M000317,no information,202225
 M000317,law,147032
 M000317,consumer,88605
 M000317,health,82245
-M000317,not employed,53890
+M000317,not employed,57290
 M000317,energy,34095
 M000317,business_services,29920
 M000317,media,27120
@@ -8121,15 +8119,15 @@ M000317,lobbying,23750
 M000317,manufacturing,22600
 M000317,government,20940
 M000317,tech,18780
-M000317,education,16561
+M000317,education,16261
 M000317,nonprofit,14460
 M000317,agriculture,14100
 M000317,transportation,10240
 M000317,telecom,3400
 M000317,pharma,1500
-M000355,retired,2278162
+M000355,retired,2278997
 M000355,unitemized,1595441
-M000355,unknown,401580
+M000355,unknown,400361
 M000355,real_estate,176500
 M000355,health,174929
 M000355,finance,102446
@@ -8140,11 +8138,11 @@ M000355,insurance,48929
 M000355,manufacturing,44103
 M000355,transportation,36149
 M000355,education,36036
-M000355,business_services,35861
+M000355,business_services,35836
 M000355,lobbying,31735
-M000355,not employed,30311
+M000355,not employed,31390
 M000355,energy,29950
-M000355,government,29647
+M000355,government,28977
 M000355,tech,21721
 M000355,nonprofit,17841
 M000355,defense,13896
@@ -8158,13 +8156,13 @@ M000639,law,459621
 M000639,finance,451248
 M000639,not employed,439677
 M000639,real_estate,424095
-M000639,lobbying,202960
+M000639,lobbying,203460
 M000639,unitemized,199119
 M000639,consumer,192903
 M000639,education,80725
 M000639,tech,76750
 M000639,government,74965
-M000639,business_services,72550
+M000639,business_services,72050
 M000639,media,60968
 M000639,retired,59355
 M000639,pharma,59090
@@ -8203,7 +8201,7 @@ M000871,retired,47375
 M000871,not employed,44950
 M000871,energy,29700
 M000871,unitemized,22400
-M000871,lobbying,17550
+M000871,lobbying,18550
 M000871,government,12600
 M000871,manufacturing,10975
 M000871,health,10150
@@ -8211,7 +8209,7 @@ M000871,law,6900
 M000871,insurance,6750
 M000871,transportation,6500
 M000871,media,5700
-M000871,business_services,5000
+M000871,business_services,4000
 M000871,consumer,4000
 M000871,tech,3900
 M000871,nonprofit,1250
@@ -8225,35 +8223,35 @@ M000934,telecom,63250
 M000934,health,59710
 M000934,law,46850
 M000934,agriculture,41600
+M000934,lobbying,38204
 M000934,consumer,37200
 M000934,transportation,36800
-M000934,lobbying,34304
 M000934,tech,33100
 M000934,defense,31750
 M000934,manufacturing,29050
 M000934,not employed,26050
 M000934,energy,25750
-M000934,business_services,24305
+M000934,business_services,20405
 M000934,media,13800
 M000934,education,12950
 M000934,government,6980
 M000934,insurance,4400
 M000934,nonprofit,3200
 M000934,no information,2900
-M001111,not employed,2809392
+M001111,not employed,2809342
 M001111,unitemized,2180172
-M001111,retired,1791958
-M001111,unknown,894676
+M001111,retired,1793683
+M001111,unknown,893176
 M001111,law,555131
 M001111,finance,492002
-M001111,real_estate,455812
-M001111,lobbying,417071
+M001111,real_estate,455637
+M001111,lobbying,423621
 M001111,health,386753
 M001111,tech,364260
 M001111,media,284032
 M001111,education,247006
 M001111,nonprofit,245255
-M001111,business_services,154491
+M001111,business_services,147941
 M001111,pharma,143458
 M001111,government,130375
 M001111,consumer,127962
@@ -8314,16 +8312,16 @@ M001137,finance,236376
 M001137,not employed,98940
 M001137,unknown,69812
 M001137,law,69362
-M001137,lobbying,48444
+M001137,lobbying,49444
 M001137,unitemized,45051
 M001137,real_estate,44800
 M001137,health,22650
-M001137,business_services,22500
+M001137,business_services,21500
 M001137,consumer,17450
-M001137,retired,10232
+M001137,retired,10482
 M001137,government,9390
-M001137,education,8036
 M001137,media,7900
+M001137,education,7786
 M001137,tech,5500
 M001137,nonprofit,3400
 M001137,pharma,3000
@@ -8335,20 +8333,20 @@ M001137,no information,2000
 M001137,telecom,400
 M001143,unitemized,307460
 M001143,unknown,183131
-M001143,retired,164650
+M001143,retired,164750
 M001143,law,72747
+M001143,lobbying,63884
 M001143,defense,63825
-M001143,health,62074
+M001143,health,61974
 M001143,not employed,61354
-M001143,lobbying,58234
 M001143,education,49835
 M001143,real_estate,42530
 M001143,nonprofit,42225
 M001143,finance,41400
 M001143,tech,32150
 M001143,consumer,25400
-M001143,business_services,20395
 M001143,pharma,15400
+M001143,business_services,14745
 M001143,government,12675
 M001143,media,12475
 M001143,insurance,9875
@@ -8357,26 +8355,26 @@ M001143,energy,3850
 M001143,no information,2950
 M001143,transportation,2042
 M001143,telecom,500
-M001153,retired,998116
-M001153,unknown,994703
+M001153,retired,999441
+M001153,unknown,994403
 M001153,finance,945009
 M001153,unitemized,518296
 M001153,energy,323457
 M001153,law,280905
-M001153,real_estate,264705
-M001153,lobbying,195655
+M001153,real_estate,263705
+M001153,lobbying,198155
 M001153,not employed,193129
 M001153,consumer,168516
 M001153,health,165182
-M001153,nonprofit,125390
+M001153,nonprofit,125365
 M001153,transportation,94551
 M001153,media,76085
 M001153,government,68541
 M001153,tech,63612
 M001153,manufacturing,61550
 M001153,agriculture,56890
-M001153,business_services,53525
 M001153,education,52223
+M001153,business_services,51025
 M001153,telecom,33600
 M001153,no information,28250
 M001153,insurance,27000
@@ -8384,8 +8382,8 @@ M001153,defense,15850
 M001153,pharma,8360
 M001156,finance,428465
 M001156,real_estate,177300
-M001156,unknown,134000
-M001156,lobbying,91125
+M001156,unknown,133000
+M001156,lobbying,92125
 M001156,tech,79450
 M001156,insurance,67800
 M001156,retired,46450
@@ -8405,12 +8403,12 @@ M001156,government,3000
 M001156,education,2000
 M001156,agriculture,500
 M001157,unitemized,171054
-M001157,retired,130532
+M001157,retired,137287
 M001157,finance,118200
 M001157,no information,89400
-M001157,unknown,72545
-M001157,real_estate,56160
-M001157,law,41527
+M001157,unknown,71795
+M001157,real_estate,51160
+M001157,law,40522
 M001157,not employed,39000
 M001157,lobbying,25250
 M001157,health,18280
@@ -8430,9 +8428,9 @@ M001157,telecom,1400
 M001157,education,1250
 M001157,government,1125
 M001159,unitemized,506781
-M001159,retired,336095
+M001159,retired,336820
 M001159,health,292961
-M001159,unknown,231143
+M001159,unknown,230418
 M001159,real_estate,225127
 M001159,lobbying,220096
 M001159,finance,152605
@@ -8458,14 +8456,14 @@ M001160,unitemized,122243
 M001160,finance,38300
 M001160,retired,23745
 M001160,not employed,22052
-M001160,unknown,20170
+M001160,unknown,19170
 M001160,insurance,17004
 M001160,media,13975
 M001160,law,13844
+M001160,lobbying,10755
 M001160,nonprofit,10728
 M001160,education,9974
 M001160,health,9922
-M001160,lobbying,9755
 M001160,real_estate,6650
 M001160,government,5825
 M001160,tech,5400
@@ -8476,7 +8474,7 @@ M001160,consumer,1500
 M001163,retired,139718
 M001163,unitemized,118204
 M001163,unknown,69975
-M001163,lobbying,60505
+M001163,lobbying,60755
 M001163,law,46625
 M001163,real_estate,35050
 M001163,finance,23350
@@ -8490,37 +8488,37 @@ M001163,not employed,8700
 M001163,energy,8550
 M001163,tech,7750
 M001163,government,6010
-M001163,business_services,5900
+M001163,business_services,5650
 M001163,pharma,5650
 M001163,agriculture,500
 M001163,manufacturing,500
 M001165,unitemized,10343662
-M001165,retired,6794981
-M001165,unknown,990134
-M001165,real_estate,331341
+M001165,retired,6796697
+M001165,unknown,962196
+M001165,real_estate,331041
 M001165,health,324188
-M001165,finance,210794
+M001165,finance,207544
 M001165,consumer,187404
 M001165,agriculture,169869
-M001165,not employed,91850
-M001165,law,75907
+M001165,not employed,122662
+M001165,law,75407
 M001165,energy,74525
-M001165,business_services,69883
+M001165,business_services,69593
 M001165,manufacturing,63527
-M001165,government,52429
+M001165,government,52099
 M001165,transportation,47541
 M001165,tech,45460
 M001165,insurance,42391
 M001165,lobbying,37656
-M001165,education,37254
+M001165,education,37209
 M001165,media,32775
 M001165,nonprofit,21522
-M001165,no information,15593
+M001165,no information,15943
 M001165,pharma,15380
 M001165,defense,14686
-M001165,telecom,13134
-M001166,retired,140834
-M001166,unknown,57606
+M001165,telecom,12909
+M001166,retired,141084
+M001166,unknown,57356
 M001166,law,39175
 M001166,unitemized,37603
 M001166,real_estate,16100
@@ -8541,10 +8539,10 @@ M001166,manufacturing,1050
 M001166,consumer,1000
 M001166,no information,500
 M001169,unitemized,377988
-M001169,not employed,313605
+M001169,not employed,313405
 M001169,finance,94779
 M001169,unknown,68129
-M001169,retired,47173
+M001169,retired,47373
 M001169,health,38934
 M001169,media,35585
 M001169,education,34145
@@ -8588,11 +8586,11 @@ M001176,manufacturing,540
 M001176,pharma,400
 M001176,insurance,125
 M001176,telecom,30
-M001177,retired,367188
+M001177,retired,368163
 M001177,unitemized,361190
 M001177,unknown,109338
 M001177,real_estate,71650
-M001177,not employed,56049
+M001177,not employed,55074
 M001177,agriculture,30495
 M001177,finance,25164
 M001177,consumer,22725
@@ -8638,7 +8636,7 @@ M001180,tech,1500
 M001180,pharma,500
 M001180,defense,250
 M001183,finance,1304511
-M001183,unknown,1026225
+M001183,unknown,1025975
 M001183,energy,715493
 M001183,real_estate,635187
 M001183,retired,606057
@@ -8650,7 +8648,7 @@ M001183,business_services,171200
 M001183,lobbying,112250
 M001183,health,108940
 M001183,nonprofit,105100
-M001183,no information,103897
+M001183,no information,104147
 M001183,media,97190
 M001183,tech,87050
 M001183,education,78800
@@ -8663,8 +8661,8 @@ M001183,defense,22332
 M001183,transportation,6500
 M001183,government,5100
 M001184,unitemized,337578
-M001184,retired,244969
-M001184,unknown,97004
+M001184,retired,244994
+M001184,unknown,96979
 M001184,finance,44650
 M001184,not employed,36070
 M001184,consumer,23590
@@ -8689,13 +8687,13 @@ M001184,business_services,1250
 M001184,pharma,250
 M001185,unitemized,1094674
 M001185,finance,559553
-M001185,not employed,507878
-M001185,unknown,466588
-M001185,retired,350366
+M001185,not employed,507628
+M001185,unknown,466243
+M001185,retired,351054
 M001185,law,342506
 M001185,real_estate,303584
 M001185,media,181590
-M001185,health,142701
+M001185,health,142608
 M001185,lobbying,71550
 M001185,consumer,70924
 M001185,business_services,51726
@@ -8765,15 +8763,15 @@ M001190,real_estate,241194
 M001190,retired,229095
 M001190,finance,199570
 M001190,no information,190375
-M001190,lobbying,156700
+M001190,lobbying,161700
 M001190,health,149765
 M001190,energy,122090
 M001190,law,100290
 M001190,consumer,95338
 M001190,agriculture,68930
 M001190,telecom,65700
-M001190,business_services,65255
 M001190,not employed,61705
+M001190,business_services,60255
 M001190,transportation,49360
 M001190,manufacturing,44975
 M001190,insurance,39065
@@ -8809,11 +8807,11 @@ M001194,telecom,5800
 M001194,pharma,4400
 M001194,defense,1760
 M001195,unitemized,471938
-M001195,retired,289308
+M001195,retired,289688
 M001195,unknown,248624
 M001195,finance,116636
 M001195,real_estate,59750
-M001195,not employed,47690
+M001195,not employed,47310
 M001195,health,41600
 M001195,no information,36840
 M001195,law,35800
@@ -8861,7 +8859,7 @@ M001198,unknown,87408
 M001198,retired,43528
 M001198,consumer,38135
 M001198,energy,21675
-M001198,lobbying,19700
+M001198,lobbying,21075
 M001198,finance,18173
 M001198,agriculture,10757
 M001198,no information,10594
@@ -8870,21 +8868,21 @@ M001198,media,5000
 M001198,insurance,4257
 M001198,tech,3807
 M001198,real_estate,3500
-M001198,business_services,3375
 M001198,health,3011
 M001198,transportation,2514
 M001198,pharma,2507
 M001198,defense,2080
+M001198,business_services,2000
 M001198,manufacturing,1357
 M001198,education,75
 M001198,nonprofit,45
 M001199,unitemized,2619122
-M001199,retired,1521160
+M001199,retired,1521260
 M001199,no information,288185
 M001199,unknown,168903
 M001199,real_estate,92181
 M001199,finance,89087
-M001199,not employed,72451
+M001199,not employed,72351
 M001199,health,46469
 M001199,consumer,31225
 M001199,manufacturing,30244
@@ -9037,9 +9035,9 @@ M001206,pharma,1500
 M001206,telecom,1500
 M001206,transportation,1250
 M001208,unitemized,1111552
-M001208,not employed,898100
-M001208,unknown,389287
-M001208,retired,371588
+M001208,not employed,898349
+M001208,unknown,389012
+M001208,retired,371614
 M001208,law,360843
 M001208,finance,288769
 M001208,media,248219
@@ -9048,8 +9046,8 @@ M001208,real_estate,139664
 M001208,education,138205
 M001208,nonprofit,130600
 M001208,consumer,102003
-M001208,lobbying,88205
-M001208,business_services,81623
+M001208,lobbying,91105
+M001208,business_services,78723
 M001208,tech,66002
 M001208,government,61127
 M001208,insurance,26480
@@ -9062,12 +9060,12 @@ M001208,manufacturing,9155
 M001208,agriculture,5350
 M001210,retired,203633
 M001210,health,186151
-M001210,unknown,185275
+M001210,unknown,184975
 M001210,real_estate,153060
 M001210,unitemized,81201
 M001210,law,69875
 M001210,consumer,69800
-M001210,not employed,63775
+M001210,not employed,64075
 M001210,finance,51925
 M001210,agriculture,37325
 M001210,manufacturing,35125
@@ -9086,13 +9084,13 @@ M001210,tech,1750
 M001210,defense,750
 M001210,telecom,250
 M001211,unitemized,793813
-M001211,retired,330595
+M001211,retired,331355
 M001211,unknown,95979
 M001211,not employed,61270
 M001211,finance,50250
 M001211,real_estate,40615
 M001211,consumer,35980
-M001211,agriculture,35212
+M001211,agriculture,34452
 M001211,health,27910
 M001211,no information,27360
 M001211,manufacturing,24916
@@ -9135,14 +9133,14 @@ M001213,finance,103400
 M001213,retired,102250
 M001213,real_estate,94861
 M001213,not employed,94850
-M001213,lobbying,53621
+M001213,lobbying,59421
 M001213,unitemized,32760
 M001213,health,27200
 M001213,energy,22450
 M001213,law,18070
-M001213,business_services,16100
 M001213,consumer,15000
 M001213,tech,14700
+M001213,business_services,10300
 M001213,defense,9300
 M001213,education,6800
 M001213,insurance,6300
@@ -9177,14 +9175,14 @@ M001214,transportation,2800
 M001214,telecom,1300
 M001214,agriculture,1090
 M001215,unitemized,856769
-M001215,retired,745005
+M001215,retired,745105
 M001215,unknown,346855
 M001215,finance,174251
 M001215,real_estate,145503
 M001215,health,100383
 M001215,law,63050
 M001215,agriculture,56875
-M001215,not employed,54257
+M001215,not employed,54157
 M001215,consumer,50628
 M001215,manufacturing,39352
 M001215,education,35119
@@ -9204,12 +9202,12 @@ M001215,defense,475
 M001216,unitemized,235229
 M001216,no information,96547
 M001216,retired,51425
-M001216,unknown,45770
+M001216,unknown,43470
 M001216,finance,31975
 M001216,agriculture,15800
 M001216,real_estate,14250
 M001216,health,11400
-M001216,not employed,8350
+M001216,not employed,10650
 M001216,insurance,3900
 M001216,media,2750
 M001216,consumer,2700
@@ -9227,12 +9225,12 @@ M001217,unknown,257155
 M001217,not employed,211935
 M001217,law,178549
 M001217,real_estate,108710
-M001217,lobbying,63100
+M001217,lobbying,68900
 M001217,finance,42100
 M001217,consumer,37300
 M001217,health,35650
 M001217,unitemized,33972
-M001217,business_services,31750
+M001217,business_services,25950
 M001217,agriculture,25800
 M001217,media,22450
 M001217,insurance,17100
@@ -9250,14 +9248,14 @@ M001217,telecom,1500
 M001217,pharma,25
 M001218,retired,980579
 M001218,unitemized,830044
-M001218,unknown,510454
+M001218,unknown,510204
 M001218,real_estate,237945
 M001218,health,228098
 M001218,finance,196133
 M001218,not employed,123885
 M001218,law,95025
 M001218,consumer,78980
-M001218,no information,47387
+M001218,no information,47637
 M001218,manufacturing,46960
 M001218,media,28500
 M001218,energy,28425
@@ -9339,8 +9337,8 @@ M001222,government,3810
 M001222,education,2850
 M001222,insurance,1250
 M001222,defense,1000
-M001223,retired,533790
-M001223,unknown,478065
+M001223,retired,534540
+M001223,unknown,472265
 M001223,law,406453
 M001223,not employed,297626
 M001223,finance,250150
@@ -9351,8 +9349,8 @@ M001223,education,84541
 M001223,nonprofit,74052
 M001223,media,72615
 M001223,lobbying,70065
-M001223,business_services,68265
-M001223,no information,56200
+M001223,business_services,67515
+M001223,no information,62000
 M001223,tech,52982
 M001223,consumer,45900
 M001223,government,35303
@@ -9466,11 +9464,11 @@ M001239,media,1000
 M001239,law,750
 M001239,telecom,300
 M001243,finance,1463027
-M001243,unknown,892749
-M001243,retired,795358
+M001243,unknown,878649
+M001243,retired,796358
 M001243,no information,724899
 M001243,law,285250
-M001243,not employed,255250
+M001243,not employed,269350
 M001243,real_estate,216415
 M001243,tech,111075
 M001243,lobbying,102300
@@ -9486,7 +9484,7 @@ M001243,insurance,40600
 M001243,education,23650
 M001243,agriculture,17485
 M001243,defense,17000
-M001243,government,15806
+M001243,government,14806
 M001243,pharma,14700
 M001243,telecom,5375
 M001243,unitemized,0
@@ -9516,7 +9514,7 @@ N000002,agriculture,2900
 N000015,finance,219275
 N000015,unknown,198550
 N000015,insurance,145300
-N000015,lobbying,89507
+N000015,lobbying,90007
 N000015,law,61100
 N000015,health,60850
 N000015,not employed,52750
@@ -9524,15 +9522,15 @@ N000015,real_estate,44150
 N000015,unitemized,43475
 N000015,nonprofit,19850
 N000015,energy,18250
-N000015,retired,16150
-N000015,business_services,14250
+N000015,retired,16900
+N000015,business_services,13750
 N000015,consumer,12300
 N000015,media,12200
 N000015,tech,11600
 N000015,no information,5000
 N000015,manufacturing,4250
-N000015,education,3500
 N000015,transportation,3500
+N000015,education,2750
 N000015,pharma,2500
 N000015,government,2000
 N000015,agriculture,1000
@@ -9595,8 +9593,8 @@ N000179,real_estate,1000
 N000179,energy,500
 N000179,education,300
 N000181,unitemized,1033005
-N000181,retired,732006
-N000181,unknown,196235
+N000181,retired,732056
+N000181,unknown,195435
 N000181,health,68255
 N000181,lobbying,66020
 N000181,real_estate,63157
@@ -9613,8 +9611,8 @@ N000181,energy,10885
 N000181,education,9843
 N000181,insurance,8448
 N000181,government,7056
+N000181,not employed,7052
 N000181,no information,6580
-N000181,not employed,6302
 N000181,nonprofit,5293
 N000181,tech,4646
 N000181,defense,1465
@@ -9665,9 +9663,9 @@ N000189,insurance,4250
 N000189,education,2100
 N000189,telecom,1500
 N000189,pharma,250
-N000190,retired,142622
+N000190,retired,142722
 N000190,unitemized,108367
-N000190,unknown,77696
+N000190,unknown,77596
 N000190,real_estate,27790
 N000190,health,25750
 N000190,not employed,21900
@@ -9698,12 +9696,12 @@ N000191,real_estate,70166
 N000191,retired,59774
 N000191,media,50146
 N000191,health,35091
-N000191,lobbying,33350
+N000191,lobbying,34450
 N000191,education,29724
 N000191,nonprofit,28129
 N000191,consumer,24550
 N000191,tech,24512
-N000191,business_services,21168
+N000191,business_services,20068
 N000191,government,13984
 N000191,telecom,11918
 N000191,no information,10300
@@ -9714,8 +9712,8 @@ N000191,manufacturing,3700
 N000191,pharma,3100
 N000191,transportation,1000
 N000192,unitemized,239900
-N000192,unknown,214051
-N000192,not employed,169856
+N000192,unknown,213051
+N000192,not employed,170856
 N000192,health,116774
 N000192,law,93956
 N000192,retired,79929
@@ -9765,10 +9763,10 @@ N000193,telecom,2500
 N000193,media,1090
 O000019,unitemized,208955
 O000019,unknown,86797
-O000019,retired,72953
+O000019,retired,73453
 O000019,lobbying,48050
-O000019,real_estate,44750
-O000019,health,28175
+O000019,real_estate,44550
+O000019,health,27875
 O000019,consumer,23270
 O000019,tech,21550
 O000019,not employed,16035
@@ -9790,10 +9788,10 @@ O000019,telecom,2000
 O000086,unitemized,1139093
 O000086,retired,746012
 O000086,no information,399914
-O000086,unknown,166033
+O000086,unknown,165533
 O000086,finance,95410
 O000086,real_estate,67314
-O000086,not employed,48011
+O000086,not employed,48511
 O000086,health,39937
 O000086,law,33705
 O000086,education,30487
@@ -9812,9 +9810,9 @@ O000086,transportation,2489
 O000086,pharma,900
 O000086,telecom,264
 O000086,defense,75
-O000171,not employed,746309
+O000171,not employed,746159
 O000171,unitemized,526891
-O000171,retired,254451
+O000171,retired,254626
 O000171,unknown,212306
 O000171,finance,210103
 O000171,law,138869
@@ -9828,7 +9826,7 @@ O000171,insurance,37350
 O000171,nonprofit,33378
 O000171,tech,29814
 O000171,consumer,25398
-O000171,government,18369
+O000171,government,18344
 O000171,agriculture,17732
 O000171,energy,16315
 O000171,manufacturing,15783
@@ -9838,22 +9836,22 @@ O000171,telecom,2450
 O000171,pharma,2300
 O000171,no information,1450
 O000172,unitemized,8274833
-O000172,not employed,1484814
-O000172,unknown,537424
+O000172,not employed,1485484
+O000172,unknown,536051
 O000172,education,293093
 O000172,tech,261558
-O000172,health,260069
+O000172,health,259819
 O000172,media,190961
 O000172,real_estate,119364
 O000172,government,105374
+O000172,retired,99890
 O000172,law,98789
-O000172,retired,98700
 O000172,consumer,81046
 O000172,finance,74247
 O000172,business_services,66773
 O000172,nonprofit,60815
 O000172,manufacturing,31136
-O000172,transportation,28490
+O000172,transportation,28253
 O000172,pharma,28252
 O000172,energy,22332
 O000172,insurance,16142
@@ -9935,7 +9933,7 @@ O000175,defense,550
 O000175,transportation,500
 O000175,telecom,250
 P000034,unknown,161100
-P000034,lobbying,150300
+P000034,lobbying,156550
 P000034,health,137050
 P000034,law,92510
 P000034,unitemized,89735
@@ -9945,7 +9943,7 @@ P000034,retired,50900
 P000034,not employed,50805
 P000034,telecom,48600
 P000034,consumer,35200
-P000034,business_services,32050
+P000034,business_services,25800
 P000034,nonprofit,24600
 P000034,tech,18950
 P000034,media,13500
@@ -9960,11 +9958,11 @@ P000034,agriculture,3150
 P000034,no information,500
 P000048,unitemized,249872
 P000048,retired,186684
-P000048,unknown,166967
+P000048,unknown,163067
 P000048,energy,125470
 P000048,no information,78620
+P000048,not employed,54524
 P000048,finance,50981
-P000048,not employed,50624
 P000048,lobbying,48800
 P000048,agriculture,38900
 P000048,health,34334
@@ -9987,15 +9985,15 @@ P000096,unknown,95407
 P000096,law,84600
 P000096,retired,66369
 P000096,real_estate,65725
-P000096,lobbying,46700
+P000096,lobbying,48200
 P000096,consumer,30000
 P000096,health,23385
 P000096,finance,22700
 P000096,insurance,13500
 P000096,nonprofit,9800
-P000096,business_services,9500
 P000096,tech,9450
 P000096,government,8250
+P000096,business_services,8000
 P000096,not employed,7400
 P000096,transportation,7150
 P000096,education,5785
@@ -10013,13 +10011,13 @@ P000145,unitemized,816330
 P000145,real_estate,538313
 P000145,retired,507878
 P000145,media,507773
-P000145,lobbying,409550
+P000145,lobbying,411050
 P000145,health,338740
 P000145,tech,269968
 P000145,consumer,250660
 P000145,nonprofit,167094
 P000145,agriculture,156650
-P000145,business_services,151183
+P000145,business_services,149683
 P000145,energy,136666
 P000145,education,132482
 P000145,government,98189
@@ -10082,9 +10080,9 @@ P000523,consumer,250
 P000523,business_services,195
 P000593,unitemized,60348
 P000593,law,35200
-P000593,retired,23005
+P000593,retired,24205
 P000593,finance,20570
-P000593,unknown,18945
+P000593,unknown,17745
 P000593,no information,11725
 P000593,not employed,8140
 P000593,lobbying,8000
@@ -10192,26 +10190,26 @@ P000601,insurance,6179
 P000601,nonprofit,1000
 P000601,tech,250
 P000603,unitemized,13005237
-P000603,retired,4962354
-P000603,unknown,1090900
-P000603,no information,662785
-P000603,health,477723
-P000603,real_estate,387661
-P000603,finance,299266
-P000603,not employed,215426
-P000603,agriculture,184535
-P000603,consumer,175315
+P000603,retired,4997084
+P000603,unknown,1052976
+P000603,no information,662895
+P000603,health,477673
+P000603,real_estate,387571
+P000603,finance,299016
+P000603,not employed,221924
+P000603,agriculture,183135
+P000603,consumer,175297
 P000603,law,129725
-P000603,manufacturing,103208
+P000603,manufacturing,102908
 P000603,energy,90025
-P000603,government,80964
+P000603,government,80714
 P000603,tech,74369
 P000603,business_services,73501
 P000603,insurance,69396
 P000603,media,62028
-P000603,education,60162
+P000603,education,59457
 P000603,transportation,49990
-P000603,nonprofit,36239
+P000603,nonprofit,35888
 P000603,lobbying,30960
 P000603,defense,21684
 P000603,pharma,10535
@@ -10241,14 +10239,14 @@ P000604,manufacturing,2500
 P000604,agriculture,2000
 P000604,telecom,1000
 P000605,unitemized,1088891
-P000605,retired,810472
-P000605,unknown,199944
+P000605,retired,810972
+P000605,unknown,196444
 P000605,finance,88538
-P000605,not employed,74198
+P000605,not employed,77098
 P000605,real_estate,61736
 P000605,manufacturing,46125
+P000605,no information,42254
 P000605,consumer,41700
-P000605,no information,41654
 P000605,health,34630
 P000605,energy,25820
 P000605,agriculture,25200
@@ -10259,7 +10257,7 @@ P000605,lobbying,9350
 P000605,education,9309
 P000605,tech,8900
 P000605,media,7330
-P000605,government,7176
+P000605,government,6676
 P000605,transportation,6000
 P000605,business_services,4000
 P000605,pharma,3250
@@ -10294,7 +10292,7 @@ P000608,not employed,77084
 P000608,retired,76821
 P000608,unknown,75068
 P000608,pharma,73365
-P000608,lobbying,66600
+P000608,lobbying,67350
 P000608,unitemized,55526
 P000608,law,41805
 P000608,health,33818
@@ -10304,7 +10302,7 @@ P000608,tech,13965
 P000608,telecom,12450
 P000608,media,11950
 P000608,nonprofit,11850
-P000608,business_services,10731
+P000608,business_services,9981
 P000608,government,8095
 P000608,consumer,6690
 P000608,education,6625
@@ -10368,13 +10366,13 @@ P000613,consumer,67302
 P000613,real_estate,65906
 P000613,law,61450
 P000613,health,49557
-P000613,lobbying,46361
+P000613,lobbying,47361
 P000613,insurance,29700
 P000613,media,24300
 P000613,energy,22750
 P000613,tech,20312
 P000613,government,19611
-P000613,business_services,16904
+P000613,business_services,15904
 P000613,nonprofit,15358
 P000613,education,11187
 P000613,not employed,9150
@@ -10408,10 +10406,10 @@ P000614,agriculture,8350
 P000614,defense,5910
 P000614,telecom,3000
 P000615,unitemized,769386
-P000615,retired,262729
+P000615,retired,264154
 P000615,no information,80492
-P000615,unknown,38687
-P000615,law,28719
+P000615,unknown,37737
+P000615,law,28244
 P000615,finance,19252
 P000615,lobbying,18150
 P000615,real_estate,16019
@@ -10430,9 +10428,9 @@ P000615,government,2370
 P000615,transportation,1102
 P000615,education,250
 P000615,defense,25
-P000616,not employed,507159
-P000616,unknown,335940
+P000616,not employed,512959
 P000616,unitemized,334862
+P000616,unknown,330140
 P000616,retired,252513
 P000616,finance,163150
 P000616,law,121515
@@ -10492,7 +10490,7 @@ P000618,real_estate,221841
 P000618,tech,205713
 P000618,nonprofit,153431
 P000618,government,143891
-P000618,business_services,105235
+P000618,business_services,104985
 P000618,consumer,95702
 P000618,agriculture,43379
 P000618,pharma,36573
@@ -10501,13 +10499,13 @@ P000618,energy,32681
 P000618,no information,25830
 P000618,transportation,25401
 P000618,defense,17515
-P000618,lobbying,16693
+P000618,lobbying,16943
 P000618,insurance,14079
 P000618,telecom,8184
 P000619,unitemized,3455156
-P000619,not employed,971565
-P000619,retired,644815
-P000619,unknown,437457
+P000619,not employed,971816
+P000619,retired,649020
+P000619,unknown,432301
 P000619,law,245246
 P000619,health,197653
 P000619,finance,193114
@@ -10517,26 +10515,26 @@ P000619,media,137223
 P000619,nonprofit,105325
 P000619,tech,95085
 P000619,government,84657
-P000619,business_services,62724
+P000619,business_services,60374
 P000619,agriculture,46288
 P000619,consumer,43816
+P000619,lobbying,33844
 P000619,energy,32586
-P000619,lobbying,31494
 P000619,manufacturing,19375
 P000619,transportation,15684
 P000619,pharma,14011
-P000619,no information,12263
-P000619,defense,7453
+P000619,no information,13263
+P000619,defense,7153
 P000619,insurance,5620
 P000619,telecom,4029
 P000620,not employed,528414
 P000620,unitemized,353588
 P000620,law,203059
-P000620,retired,176049
+P000620,retired,176124
 P000620,unknown,174704
 P000620,finance,110150
 P000620,health,78538
-P000620,education,78301
+P000620,education,78226
 P000620,nonprofit,69549
 P000620,media,67800
 P000620,tech,52351
@@ -10635,10 +10633,10 @@ R000305,health,71788
 R000305,nonprofit,38845
 R000305,tech,29325
 R000305,government,24600
-R000305,business_services,20535
+R000305,business_services,20285
 R000305,media,19950
 R000305,consumer,19631
-R000305,lobbying,15210
+R000305,lobbying,15460
 R000305,insurance,9100
 R000305,energy,4470
 R000305,manufacturing,3150
@@ -10813,14 +10811,14 @@ R000584,nonprofit,1000
 R000584,insurance,500
 R000584,media,450
 R000595,unitemized,15219319
-R000595,retired,12900707
-R000595,unknown,2509850
+R000595,retired,12905422
+R000595,unknown,2506840
 R000595,no information,1611706
-R000595,real_estate,1353493
-R000595,finance,1101607
+R000595,real_estate,1352993
+R000595,finance,1097707
 R000595,health,746532
-R000595,not employed,539386
-R000595,law,516956
+R000595,not employed,542396
+R000595,law,516741
 R000595,consumer,353419
 R000595,manufacturing,239459
 R000595,business_services,202869
@@ -10833,7 +10831,7 @@ R000595,insurance,142863
 R000595,government,122067
 R000595,transportation,115045
 R000595,tech,103402
-R000595,defense,97827
+R000595,defense,97727
 R000595,nonprofit,94027
 R000595,telecom,51653
 R000595,pharma,42908
@@ -10913,7 +10911,7 @@ R000603,real_estate,94850
 R000603,retired,94077
 R000603,agriculture,42400
 R000603,law,41023
-R000603,lobbying,34350
+R000603,lobbying,34850
 R000603,not employed,33800
 R000603,unitemized,30559
 R000603,finance,30550
@@ -10924,8 +10922,8 @@ R000603,transportation,19020
 R000603,insurance,9650
 R000603,nonprofit,7300
 R000603,pharma,5900
-R000603,business_services,5800
 R000603,manufacturing,5650
+R000603,business_services,5300
 R000603,education,3750
 R000603,government,2750
 R000603,media,2000
@@ -10947,17 +10945,17 @@ R000605,nonprofit,250
 R000605,consumer,75
 R000605,manufacturing,75
 R000606,unitemized,1562437
-R000606,retired,779798
-R000606,unknown,358132
+R000606,retired,782048
+R000606,unknown,355632
 R000606,law,322027
-R000606,not employed,228531
+R000606,not employed,230781
 R000606,finance,174429
-R000606,education,158973
+R000606,education,158073
 R000606,media,148832
-R000606,health,136834
+R000606,health,135834
 R000606,no information,83547
 R000606,real_estate,69367
-R000606,government,58821
+R000606,government,58721
 R000606,nonprofit,53135
 R000606,tech,45084
 R000606,business_services,33701
@@ -10980,11 +10978,11 @@ R000608,law,90193
 R000608,health,75606
 R000608,media,70292
 R000608,real_estate,50388
-R000608,lobbying,36225
+R000608,lobbying,37225
 R000608,education,32271
 R000608,consumer,30439
-R000608,business_services,22293
 R000608,nonprofit,21553
+R000608,business_services,21293
 R000608,tech,17452
 R000608,government,14536
 R000608,defense,9756
@@ -11022,7 +11020,7 @@ R000610,retired,220986
 R000610,no information,125982
 R000610,unknown,78591
 R000610,finance,30250
-R000610,lobbying,23550
+R000610,lobbying,25050
 R000610,health,23027
 R000610,law,21000
 R000610,energy,20367
@@ -11032,8 +11030,8 @@ R000610,not employed,16155
 R000610,insurance,7050
 R000610,agriculture,6178
 R000610,telecom,5801
-R000610,business_services,5025
 R000610,consumer,4005
+R000610,business_services,3525
 R000610,education,2080
 R000610,defense,2000
 R000610,transportation,1772
@@ -11065,17 +11063,17 @@ R000612,nonprofit,4265
 R000612,no information,3400
 R000612,media,2515
 R000612,telecom,1425
-R000614,retired,411924
+R000614,retired,412424
 R000614,unitemized,379364
-R000614,unknown,273660
+R000614,unknown,272010
 R000614,finance,189791
 R000614,energy,85470
 R000614,law,82032
 R000614,real_estate,73454
-R000614,no information,65328
+R000614,no information,65428
 R000614,agriculture,34975
 R000614,consumer,32247
-R000614,not employed,28540
+R000614,not employed,29590
 R000614,health,27502
 R000614,lobbying,21142
 R000614,manufacturing,16525
@@ -11120,9 +11118,9 @@ R000617,retired,32242
 R000617,health,31750
 R000617,law,30747
 R000617,real_estate,25759
-R000617,business_services,15054
+R000617,business_services,14054
 R000617,finance,13850
-R000617,lobbying,7745
+R000617,lobbying,8745
 R000617,media,7100
 R000617,insurance,7014
 R000617,consumer,5350
@@ -11159,15 +11157,15 @@ R000622,defense,4040
 R000622,telecom,1000
 R000622,transportation,770
 S000033,unitemized,10576883
-S000033,not employed,1984543
-S000033,unknown,526560
-S000033,education,400231
-S000033,health,335947
+S000033,not employed,1981750
+S000033,unknown,526178
+S000033,education,399981
+S000033,health,335766
 S000033,tech,241656
 S000033,media,171373
-S000033,government,156231
+S000033,government,156204
 S000033,real_estate,130421
-S000033,retired,121317
+S000033,retired,124707
 S000033,consumer,97011
 S000033,law,77872
 S000033,finance,63249
@@ -11178,27 +11176,27 @@ S000033,manufacturing,31295
 S000033,pharma,23974
 S000033,energy,21971
 S000033,defense,19791
+S000033,no information,16103
 S000033,insurance,15860
-S000033,no information,15860
 S000033,agriculture,14397
 S000033,telecom,12699
 S000033,lobbying,3296
 S000148,finance,5739099
-S000148,unknown,4161874
-S000148,not employed,3909558
+S000148,unknown,4156074
+S000148,not employed,3915358
 S000148,unitemized,3882373
 S000148,law,3102690
-S000148,retired,2179147
+S000148,retired,2179192
 S000148,real_estate,2146821
 S000148,health,1654586
 S000148,media,1294353
 S000148,tech,1143792
 S000148,consumer,769214
-S000148,lobbying,683937
-S000148,business_services,662796
+S000148,lobbying,685937
+S000148,business_services,660796
 S000148,energy,522103
 S000148,nonprofit,507137
-S000148,education,409439
+S000148,education,409394
 S000148,transportation,360142
 S000148,defense,256467
 S000148,manufacturing,242590
@@ -11233,9 +11231,9 @@ S000168,defense,9783
 S000168,government,9726
 S000168,pharma,7850
 S000168,telecom,4050
-S000185,not employed,74865
-S000185,unknown,47550
+S000185,not employed,80665
 S000185,unitemized,43464
+S000185,unknown,41750
 S000185,law,31900
 S000185,finance,21990
 S000185,nonprofit,17325
@@ -11346,19 +11344,19 @@ S000522,business_services,1750
 S000522,no information,1000
 S000770,unitemized,1058342
 S000770,not employed,371125
-S000770,unknown,201591
-S000770,retired,177323
+S000770,unknown,199091
+S000770,retired,177473
 S000770,finance,144410
 S000770,health,138490
 S000770,law,84951
 S000770,real_estate,67067
 S000770,manufacturing,61884
-S000770,education,50392
 S000770,agriculture,50275
-S000770,lobbying,45650
+S000770,education,50242
+S000770,lobbying,49150
 S000770,consumer,29305
 S000770,nonprofit,29156
-S000770,business_services,24174
+S000770,business_services,23174
 S000770,media,20963
 S000770,no information,17150
 S000770,energy,15900
@@ -11369,15 +11367,15 @@ S000770,insurance,3125
 S000770,transportation,75
 S000770,telecom,50
 S000929,unitemized,1581491
-S000929,retired,716665
+S000929,retired,723270
 S000929,no information,186603
-S000929,unknown,129742
-S000929,health,61891
+S000929,unknown,128442
+S000929,health,61641
 S000929,real_estate,54292
-S000929,not employed,50739
 S000929,finance,49177
-S000929,law,37265
-S000929,agriculture,31564
+S000929,not employed,48242
+S000929,law,37215
+S000929,agriculture,30879
 S000929,manufacturing,19787
 S000929,consumer,17606
 S000929,energy,17410
@@ -11386,34 +11384,34 @@ S000929,business_services,11490
 S000929,education,10585
 S000929,media,10560
 S000929,pharma,9805
-S000929,government,8627
 S000929,nonprofit,7851
+S000929,government,7627
 S000929,transportation,5559
 S000929,insurance,4950
 S000929,tech,3651
 S000929,telecom,3350
-S000929,defense,1846
+S000929,defense,1023
 S001135,unitemized,1914505
-S001135,retired,1042749
-S001135,unknown,354818
-S001135,real_estate,147141
+S001135,retired,1048186
+S001135,unknown,342208
+S001135,real_estate,146841
 S001135,finance,139346
+S001135,not employed,67966
 S001135,law,67720
-S001135,not employed,66641
-S001135,health,59113
+S001135,health,58593
 S001135,consumer,50068
 S001135,tech,38391
-S001135,energy,31734
-S001135,agriculture,26258
+S001135,energy,30334
 S001135,business_services,24715
+S001135,agriculture,24228
 S001135,lobbying,22640
+S001135,no information,21553
 S001135,media,21211
 S001135,insurance,17248
 S001135,manufacturing,16417
-S001135,government,14931
+S001135,government,14709
 S001135,pharma,11577
 S001135,nonprofit,11530
-S001135,no information,11233
 S001135,education,10324
 S001135,transportation,6793
 S001135,defense,5793
@@ -11463,20 +11461,20 @@ S001148,manufacturing,6400
 S001148,education,2650
 S001148,no information,500
 S001150,unitemized,14265736
-S001150,not employed,3926657
-S001150,retired,1872404
-S001150,unknown,587989
+S001150,not employed,3926632
+S001150,retired,1873730
+S001150,unknown,587388
 S001150,law,492871
 S001150,media,309097
 S001150,health,285272
-S001150,finance,281307
+S001150,finance,280807
 S001150,real_estate,243514
 S001150,education,190822
 S001150,nonprofit,113960
 S001150,no information,108323
 S001150,business_services,89464
 S001150,tech,87274
-S001150,government,74075
+S001150,government,73875
 S001150,consumer,64102
 S001150,lobbying,42539
 S001150,agriculture,41760
@@ -11487,18 +11485,18 @@ S001150,defense,12302
 S001150,manufacturing,11920
 S001150,insurance,10395
 S001150,telecom,5641
-S001156,unknown,85025
+S001156,unknown,84025
+S001156,lobbying,68100
 S001156,law,64900
-S001156,lobbying,63100
 S001156,unitemized,45467
 S001156,retired,44390
 S001156,finance,36750
 S001156,real_estate,19850
 S001156,health,17151
 S001156,media,11550
-S001156,business_services,7750
 S001156,tech,4601
 S001156,nonprofit,4000
+S001156,business_services,3750
 S001156,education,3380
 S001156,consumer,3350
 S001156,insurance,3250
@@ -11531,7 +11529,7 @@ S001159,not employed,168960
 S001159,unitemized,147120
 S001159,unknown,143490
 S001159,retired,141130
-S001159,lobbying,84838
+S001159,lobbying,85088
 S001159,law,84292
 S001159,finance,61739
 S001159,real_estate,52387
@@ -11540,7 +11538,7 @@ S001159,nonprofit,42253
 S001159,health,36563
 S001159,education,36476
 S001159,government,32293
-S001159,business_services,22466
+S001159,business_services,22216
 S001159,media,17893
 S001159,consumer,14768
 S001159,manufacturing,10058
@@ -11624,16 +11622,16 @@ S001175,consumer,2625
 S001175,energy,350
 S001175,tech,350
 S001175,insurance,250
-S001176,retired,1382918
+S001176,retired,1383073
 S001176,unitemized,928098
-S001176,unknown,349833
+S001176,unknown,349683
 S001176,health,153669
 S001176,real_estate,121971
 S001176,finance,107215
 S001176,consumer,69789
 S001176,insurance,53373
 S001176,business_services,42602
-S001176,law,39945
+S001176,law,39940
 S001176,energy,34274
 S001176,government,33696
 S001176,lobbying,29520
@@ -11655,8 +11653,8 @@ S001177,finance,500
 S001177,retired,500
 S001180,not employed,254852
 S001180,finance,187015
-S001180,unknown,108097
-S001180,lobbying,71291
+S001180,unknown,106097
+S001180,lobbying,74291
 S001180,unitemized,64091
 S001180,real_estate,60050
 S001180,health,52805
@@ -11669,9 +11667,9 @@ S001180,telecom,12300
 S001180,media,11100
 S001180,manufacturing,11000
 S001180,energy,9400
-S001180,business_services,9050
 S001180,pharma,8800
 S001180,nonprofit,8100
+S001180,business_services,8050
 S001180,agriculture,7300
 S001180,education,5150
 S001180,no information,2500
@@ -11680,7 +11678,7 @@ S001180,transportation,2000
 S001181,unitemized,373273
 S001181,not employed,160263
 S001181,unknown,71209
-S001181,lobbying,57119
+S001181,lobbying,57619
 S001181,real_estate,42017
 S001181,retired,40191
 S001181,health,38725
@@ -11690,7 +11688,7 @@ S001181,finance,18969
 S001181,government,14210
 S001181,nonprofit,9275
 S001181,tech,9035
-S001181,business_services,8847
+S001181,business_services,8347
 S001181,energy,8178
 S001181,media,8106
 S001181,defense,7630
@@ -11701,14 +11699,14 @@ S001181,manufacturing,1850
 S001181,insurance,1460
 S001181,agriculture,1375
 S001181,consumer,447
-S001183,unknown,210050
+S001183,unknown,194100
 S001183,retired,184574
 S001183,real_estate,104350
 S001183,finance,87050
 S001183,no information,86200
 S001183,unitemized,81523
 S001183,health,73550
-S001183,not employed,42850
+S001183,not employed,58800
 S001183,lobbying,28650
 S001183,energy,25400
 S001183,consumer,25300
@@ -11727,36 +11725,36 @@ S001183,education,1750
 S001183,telecom,500
 S001183,defense,250
 S001184,unitemized,15842991
-S001184,retired,10566207
-S001184,unknown,2403226
-S001184,no information,2131584
-S001184,finance,1697839
-S001184,real_estate,1306813
-S001184,health,634897
-S001184,law,568017
-S001184,not employed,448562
+S001184,retired,10591479
+S001184,unknown,2302035
+S001184,no information,2137424
+S001184,finance,1697589
+S001184,real_estate,1294762
+S001184,health,634622
+S001184,law,567367
+S001184,not employed,537292
 S001184,consumer,433416
-S001184,lobbying,250025
+S001184,lobbying,250525
 S001184,insurance,219647
-S001184,business_services,206148
+S001184,business_services,205648
 S001184,manufacturing,203933
-S001184,agriculture,194993
+S001184,agriculture,193677
 S001184,energy,172499
-S001184,tech,138290
-S001184,nonprofit,134032
-S001184,education,131299
-S001184,media,121250
-S001184,government,110519
-S001184,transportation,100695
+S001184,tech,138190
+S001184,nonprofit,133632
+S001184,education,131099
+S001184,media,121141
+S001184,government,107769
+S001184,transportation,100445
 S001184,pharma,89088
-S001184,defense,42260
+S001184,defense,41960
 S001184,telecom,33125
 S001185,unitemized,130434
 S001185,health,115959
 S001185,not employed,70821
 S001185,unknown,46760
 S001185,finance,42950
-S001185,lobbying,37750
+S001185,lobbying,41670
 S001185,law,36975
 S001185,pharma,34650
 S001185,nonprofit,26325
@@ -11765,13 +11763,13 @@ S001185,insurance,17925
 S001185,education,15100
 S001185,tech,14475
 S001185,no information,10100
-S001185,business_services,7270
 S001185,real_estate,6698
 S001185,government,6010
 S001185,consumer,5250
 S001185,retired,4625
 S001185,manufacturing,4250
 S001185,transportation,3500
+S001185,business_services,3350
 S001185,telecom,3000
 S001185,media,2000
 S001187,not employed,185200
@@ -11803,10 +11801,10 @@ S001189,consumer,23000
 S001189,lobbying,17100
 S001189,real_estate,16050
 S001189,health,15650
-S001189,retired,14600
+S001189,retired,15600
 S001189,finance,13300
 S001189,unitemized,12750
-S001189,not employed,12450
+S001189,not employed,11450
 S001189,defense,10200
 S001189,law,5000
 S001189,education,4500
@@ -11817,19 +11815,19 @@ S001189,government,1800
 S001189,insurance,1000
 S001189,manufacturing,1000
 S001189,transportation,1000
-S001190,retired,654406
+S001190,retired,654466
 S001190,finance,323210
 S001190,unitemized,272238
 S001190,law,248299
-S001190,unknown,196875
+S001190,unknown,196815
 S001190,real_estate,159613
 S001190,health,96449
 S001190,consumer,63823
-S001190,lobbying,56260
+S001190,lobbying,60260
 S001190,nonprofit,52202
 S001190,education,49475
-S001190,business_services,35560
 S001190,insurance,33600
+S001190,business_services,31560
 S001190,not employed,24420
 S001190,media,24069
 S001190,manufacturing,22499
@@ -11845,14 +11843,14 @@ S001190,defense,108
 S001191,unitemized,6392260
 S001191,finance,1810744
 S001191,not employed,918515
-S001191,unknown,752543
+S001191,unknown,750043
 S001191,real_estate,436406
 S001191,law,255252
 S001191,consumer,216820
 S001191,energy,205760
 S001191,retired,184260
 S001191,health,152704
-S001191,lobbying,130395
+S001191,lobbying,132895
 S001191,business_services,105508
 S001191,insurance,104212
 S001191,education,100382
@@ -11867,21 +11865,21 @@ S001191,agriculture,22850
 S001191,government,16493
 S001191,telecom,15365
 S001191,no information,8800
-S001192,lobbying,97300
-S001192,unknown,68712
+S001192,lobbying,101200
+S001192,unknown,68662
 S001192,unitemized,66763
 S001192,finance,64710
 S001192,retired,42437
 S001192,law,29770
 S001192,health,25050
 S001192,defense,20425
-S001192,business_services,18086
 S001192,real_estate,17350
 S001192,nonprofit,15400
 S001192,tech,14700
+S001192,business_services,14186
 S001192,consumer,9275
 S001192,energy,8800
-S001192,not employed,3350
+S001192,not employed,3400
 S001192,no information,3150
 S001192,insurance,2900
 S001192,education,2500
@@ -11919,14 +11917,14 @@ S001194,unitemized,327903
 S001194,real_estate,150277
 S001194,unknown,116984
 S001194,not employed,115904
-S001194,lobbying,91300
+S001194,lobbying,91800
 S001194,law,82525
 S001194,finance,69406
 S001194,health,50975
 S001194,nonprofit,32950
 S001194,retired,30397
 S001194,media,28042
-S001194,business_services,17370
+S001194,business_services,16870
 S001194,telecom,15700
 S001194,consumer,15150
 S001194,government,12795
@@ -11963,23 +11961,23 @@ S001195,tech,3500
 S001195,no information,1660
 S001195,education,1600
 S001196,unitemized,3774577
-S001196,retired,2058446
-S001196,unknown,509773
-S001196,real_estate,193623
+S001196,retired,2061479
+S001196,unknown,505284
+S001196,real_estate,191623
 S001196,finance,167184
 S001196,health,98025
-S001196,no information,93419
+S001196,no information,93529
 S001196,consumer,66324
 S001196,law,63608
 S001196,agriculture,43855
 S001196,manufacturing,40768
 S001196,government,39960
-S001196,education,39575
-S001196,not employed,34888
+S001196,education,39223
+S001196,not employed,38767
 S001196,energy,33140
 S001196,lobbying,32350
 S001196,nonprofit,32182
-S001196,business_services,30198
+S001196,business_services,30017
 S001196,transportation,24177
 S001196,insurance,24072
 S001196,media,18982
@@ -12060,7 +12058,7 @@ S001200,law,74961
 S001200,finance,68167
 S001200,unknown,45139
 S001200,unitemized,41712
-S001200,lobbying,33498
+S001200,lobbying,33748
 S001200,not employed,31924
 S001200,education,15500
 S001200,health,13903
@@ -12072,14 +12070,14 @@ S001200,agriculture,6000
 S001200,media,4900
 S001200,nonprofit,3000
 S001200,government,1750
-S001200,business_services,1500
+S001200,business_services,1250
 S001200,telecom,1250
 S001200,tech,500
 S001200,insurance,250
 S001201,real_estate,265215
-S001201,unknown,212345
+S001201,unknown,206545
 S001201,finance,148350
-S001201,not employed,118133
+S001201,not employed,123933
 S001201,law,104450
 S001201,unitemized,86964
 S001201,health,63510
@@ -12130,7 +12128,7 @@ S001205,law,281245
 S001205,not employed,190408
 S001205,unitemized,157281
 S001205,unknown,59310
-S001205,retired,39782
+S001205,retired,40257
 S001205,finance,37300
 S001205,education,28447
 S001205,no information,22500
@@ -12143,7 +12141,7 @@ S001205,pharma,6325
 S001205,consumer,5800
 S001205,nonprofit,5750
 S001205,telecom,5275
-S001205,government,4825
+S001205,government,4350
 S001205,business_services,4125
 S001205,transportation,3750
 S001205,manufacturing,3250
@@ -12161,8 +12159,8 @@ S001207,real_estate,181163
 S001207,health,136176
 S001207,media,132078
 S001207,tech,121196
-S001207,lobbying,113319
-S001207,business_services,108313
+S001207,lobbying,115319
+S001207,business_services,106313
 S001207,nonprofit,97154
 S001207,education,83406
 S001207,insurance,78787
@@ -12176,22 +12174,22 @@ S001207,agriculture,6850
 S001207,defense,6100
 S001207,transportation,4829
 S001207,no information,250
-S001208,not employed,2192909
+S001208,not employed,2195909
 S001208,unitemized,1513158
 S001208,finance,737758
-S001208,unknown,692428
-S001208,retired,637839
+S001208,unknown,687066
+S001208,retired,640451
 S001208,law,412346
-S001208,media,318608
+S001208,media,318358
 S001208,education,316031
 S001208,health,222531
 S001208,real_estate,210373
 S001208,nonprofit,176367
 S001208,tech,139108
-S001208,business_services,126504
+S001208,business_services,125504
 S001208,government,109501
 S001208,consumer,88942
-S001208,lobbying,68983
+S001208,lobbying,69983
 S001208,manufacturing,49203
 S001208,energy,36194
 S001208,defense,32635
@@ -12213,10 +12211,10 @@ S001209,education,169689
 S001209,real_estate,166683
 S001209,nonprofit,164344
 S001209,tech,124340
-S001209,business_services,112477
 S001209,government,112395
+S001209,business_services,111977
 S001209,consumer,100546
-S001209,lobbying,83033
+S001209,lobbying,83533
 S001209,energy,43369
 S001209,pharma,29724
 S001209,insurance,28059
@@ -12230,12 +12228,12 @@ S001211,unknown,453371
 S001211,finance,350337
 S001211,law,336187
 S001211,unitemized,321767
-S001211,not employed,284956
+S001211,not employed,279656
 S001211,health,241931
-S001211,retired,222476
+S001211,retired,228026
 S001211,real_estate,221422
 S001211,business_services,75374
-S001211,education,74939
+S001211,education,74689
 S001211,nonprofit,73249
 S001211,media,57229
 S001211,consumer,56152
@@ -12251,7 +12249,7 @@ S001211,manufacturing,13916
 S001211,pharma,5300
 S001211,telecom,3972
 S001211,defense,1250
-S001212,retired,287897
+S001212,retired,290397
 S001212,unknown,236511
 S001212,unitemized,236489
 S001212,real_estate,174900
@@ -12261,7 +12259,7 @@ S001212,no information,40825
 S001212,business_services,30145
 S001212,energy,29950
 S001212,law,29122
-S001212,not employed,27070
+S001212,not employed,24570
 S001212,health,24559
 S001212,media,20985
 S001212,transportation,19880
@@ -12276,11 +12274,11 @@ S001212,nonprofit,4500
 S001212,government,3587
 S001212,tech,3000
 S001213,retired,523582
-S001213,unknown,313775
+S001213,unknown,307298
 S001213,unitemized,224707
 S001213,finance,186233
+S001213,not employed,168177
 S001213,real_estate,163400
-S001213,not employed,161700
 S001213,law,92610
 S001213,health,48833
 S001213,consumer,46750
@@ -12333,9 +12331,9 @@ S001215,real_estate,221052
 S001215,health,176783
 S001215,retired,163168
 S001215,media,121957
-S001215,lobbying,107962
+S001215,lobbying,109462
 S001215,nonprofit,97204
-S001215,business_services,93996
+S001215,business_services,92496
 S001215,education,86907
 S001215,tech,86502
 S001215,consumer,69101
@@ -12348,24 +12346,24 @@ S001215,telecom,8400
 S001215,agriculture,6310
 S001215,transportation,4635
 S001215,defense,2550
-S001216,retired,1801993
+S001216,retired,1804893
 S001216,unitemized,1267580
-S001216,not employed,1184728
-S001216,unknown,585694
+S001216,not employed,1184978
+S001216,unknown,584444
 S001216,health,482126
 S001216,law,406453
 S001216,finance,393197
 S001216,tech,354899
-S001216,education,253888
+S001216,education,250988
 S001216,nonprofit,162578
 S001216,media,141666
 S001216,real_estate,129864
-S001216,business_services,109434
-S001216,lobbying,80342
+S001216,business_services,108434
+S001216,lobbying,81342
 S001216,government,80113
 S001216,consumer,60679
 S001216,pharma,53647
-S001216,no information,42057
+S001216,no information,43057
 S001216,energy,31700
 S001216,telecom,18769
 S001216,agriculture,18575
@@ -12374,8 +12372,8 @@ S001216,defense,13651
 S001216,transportation,6895
 S001216,insurance,6882
 S001217,unitemized,1466739
-S001217,retired,719662
-S001217,unknown,102453
+S001217,retired,720578
+S001217,unknown,101537
 S001217,finance,92823
 S001217,real_estate,57702
 S001217,health,42285
@@ -12405,7 +12403,7 @@ S001218,unknown,186613
 S001218,retired,128350
 S001218,health,87063
 S001218,finance,80992
-S001218,lobbying,77036
+S001218,lobbying,77286
 S001218,education,65033
 S001218,government,58481
 S001218,nonprofit,43645
@@ -12414,8 +12412,8 @@ S001218,real_estate,37620
 S001218,tech,22500
 S001218,energy,17025
 S001218,consumer,16590
-S001218,business_services,10875
 S001218,defense,10800
+S001218,business_services,10625
 S001218,agriculture,7800
 S001218,insurance,6800
 S001218,pharma,3150
@@ -12467,8 +12465,8 @@ S001220,nonprofit,6000
 S001220,insurance,4850
 S001220,no information,250
 S001221,unitemized,730763
-S001221,not employed,709377
-S001221,retired,228469
+S001221,not employed,709277
+S001221,retired,228569
 S001221,law,223542
 S001221,finance,196843
 S001221,unknown,166149
@@ -12479,9 +12477,9 @@ S001221,tech,62687
 S001221,real_estate,58359
 S001221,nonprofit,56869
 S001221,government,42110
-S001221,lobbying,29600
+S001221,lobbying,30100
 S001221,manufacturing,25131
-S001221,business_services,22906
+S001221,business_services,22406
 S001221,consumer,15828
 S001221,energy,10935
 S001221,pharma,9900
@@ -12492,12 +12490,12 @@ S001221,transportation,1616
 S001221,telecom,1163
 S001223,unitemized,526218
 S001223,not employed,414920
-S001223,retired,156712
+S001223,retired,156962
 S001223,unknown,139485
 S001223,law,126627
 S001223,finance,98305
 S001223,nonprofit,62563
-S001223,health,62551
+S001223,health,62301
 S001223,media,61128
 S001223,education,58126
 S001223,real_estate,41931
@@ -12547,14 +12545,14 @@ S001226,law,168464
 S001226,health,122653
 S001226,finance,113691
 S001226,government,104082
-S001226,lobbying,96828
+S001226,lobbying,98328
 S001226,education,82200
 S001226,tech,72431
 S001226,nonprofit,67493
 S001226,real_estate,61909
 S001226,media,61483
 S001226,consumer,57723
-S001226,business_services,35251
+S001226,business_services,33751
 S001226,agriculture,20121
 S001226,manufacturing,12350
 S001226,insurance,11825
@@ -12563,20 +12561,20 @@ S001226,pharma,6650
 S001226,transportation,6532
 S001226,telecom,2000
 S001226,defense,492
-S001227,retired,988786
+S001227,retired,997090
 S001227,unitemized,867622
-S001227,unknown,819031
+S001227,unknown,817711
 S001227,no information,604043
 S001227,real_estate,403581
 S001227,finance,320125
-S001227,not employed,255081
+S001227,not employed,255331
 S001227,law,222957
 S001227,consumer,157200
-S001227,health,138045
+S001227,health,134195
 S001227,manufacturing,70010
 S001227,energy,62250
 S001227,lobbying,55650
-S001227,agriculture,52081
+S001227,agriculture,48697
 S001227,transportation,42175
 S001227,media,33100
 S001227,education,28420
@@ -12634,12 +12632,12 @@ T000193,consumer,3300
 T000193,nonprofit,2840
 T000193,defense,480
 T000193,pharma,240
-T000250,retired,614512
+T000250,retired,614612
 T000250,finance,523574
 T000250,unitemized,400666
 T000250,real_estate,348510
-T000250,unknown,332936
-T000250,lobbying,209325
+T000250,unknown,332836
+T000250,lobbying,210325
 T000250,health,209252
 T000250,law,173159
 T000250,not employed,138610
@@ -12651,7 +12649,7 @@ T000250,telecom,80300
 T000250,media,76061
 T000250,tech,41575
 T000250,nonprofit,39575
-T000250,business_services,34097
+T000250,business_services,33097
 T000250,insurance,31285
 T000250,pharma,31050
 T000250,defense,27550
@@ -12731,13 +12729,13 @@ T000463,education,1500
 T000463,media,1500
 T000463,transportation,300
 T000464,unitemized,598061
-T000464,not employed,332893
-T000464,unknown,188496
+T000464,not employed,332593
+T000464,unknown,187201
 T000464,finance,168582
 T000464,law,145944
 T000464,lobbying,96498
 T000464,defense,84985
-T000464,retired,76067
+T000464,retired,77662
 T000464,no information,59110
 T000464,media,56650
 T000464,health,36196
@@ -12807,7 +12805,7 @@ T000469,retired,185023
 T000469,unitemized,182489
 T000469,unknown,80613
 T000469,law,58518
-T000469,lobbying,49860
+T000469,lobbying,53924
 T000469,energy,34998
 T000469,finance,20109
 T000469,health,18294
@@ -12816,8 +12814,8 @@ T000469,government,17295
 T000469,media,16982
 T000469,nonprofit,16935
 T000469,consumer,9918
-T000469,business_services,9714
 T000469,education,9504
+T000469,business_services,5650
 T000469,not employed,4215
 T000469,manufacturing,4151
 T000469,agriculture,3547
@@ -12892,13 +12890,13 @@ T000476,insurance,250
 T000478,unitemized,507636
 T000478,retired,394244
 T000478,no information,194082
-T000478,unknown,193618
+T000478,unknown,192118
 T000478,finance,174726
 T000478,real_estate,61670
 T000478,consumer,61306
 T000478,law,53375
 T000478,energy,39969
-T000478,not employed,35296
+T000478,not employed,36796
 T000478,manufacturing,28200
 T000478,health,28138
 T000478,media,16450
@@ -12986,10 +12984,10 @@ T000481,transportation,10377
 T000481,defense,3666
 T000481,lobbying,970
 T000481,agriculture,680
-T000482,unknown,276639
+T000482,unknown,274439
 T000482,real_estate,164226
-T000482,not employed,159780
-T000482,lobbying,115425
+T000482,not employed,161980
+T000482,lobbying,115925
 T000482,law,115215
 T000482,health,113644
 T000482,finance,103750
@@ -12998,7 +12996,7 @@ T000482,unitemized,57203
 T000482,consumer,35560
 T000482,tech,35370
 T000482,nonprofit,32650
-T000482,business_services,29769
+T000482,business_services,29269
 T000482,education,24450
 T000482,pharma,22650
 T000482,media,19053
@@ -13037,8 +13035,8 @@ T000483,energy,1000
 T000483,telecom,290
 T000483,pharma,250
 T000486,finance,740160
-T000486,not employed,625189
-T000486,unknown,454710
+T000486,not employed,625439
+T000486,unknown,454460
 T000486,real_estate,334320
 T000486,law,210584
 T000486,unitemized,195320
@@ -13048,9 +13046,9 @@ T000486,media,97835
 T000486,consumer,77483
 T000486,tech,66315
 T000486,nonprofit,63306
-T000486,lobbying,55434
+T000486,lobbying,55934
 T000486,education,54011
-T000486,business_services,31319
+T000486,business_services,30819
 T000486,manufacturing,20621
 T000486,retired,20245
 T000486,government,13963
@@ -13101,14 +13099,14 @@ U000031,finance,215580
 U000031,not employed,121625
 U000031,unknown,100970
 U000031,unitemized,76481
-U000031,retired,40091
+U000031,retired,45691
 U000031,lobbying,34905
 U000031,real_estate,32900
 U000031,consumer,23150
 U000031,nonprofit,22955
 U000031,law,21655
-U000031,energy,15900
 U000031,health,10455
+U000031,energy,10300
 U000031,government,8950
 U000031,insurance,8700
 U000031,business_services,6450
@@ -13131,9 +13129,9 @@ U000040,media,179036
 U000040,nonprofit,154521
 U000040,real_estate,102564
 U000040,tech,102284
-U000040,business_services,98139
+U000040,business_services,95889
 U000040,government,94975
-U000040,lobbying,72876
+U000040,lobbying,75126
 U000040,consumer,46319
 U000040,manufacturing,24147
 U000040,insurance,19639
@@ -13162,17 +13160,17 @@ V000081,government,4800
 V000081,nonprofit,3550
 V000081,transportation,2944
 V000081,agriculture,2000
-V000128,unknown,590997
+V000128,unknown,590912
 V000128,law,429427
 V000128,finance,365900
-V000128,retired,349265
+V000128,retired,356065
 V000128,unitemized,347638
 V000128,real_estate,341234
-V000128,not employed,325453
-V000128,health,271888
+V000128,not employed,325538
+V000128,health,270888
 V000128,lobbying,181400
 V000128,nonprofit,130409
-V000128,media,123841
+V000128,media,118041
 V000128,education,103749
 V000128,business_services,101915
 V000128,consumer,83495
@@ -13230,12 +13228,12 @@ V000130,education,1500
 V000130,insurance,1500
 V000130,nonprofit,1000
 V000130,pharma,500
-V000131,not employed,108044
+V000131,not employed,107941
 V000131,law,94816
 V000131,unknown,81425
 V000131,finance,59500
 V000131,health,39416
-V000131,lobbying,34450
+V000131,lobbying,34950
 V000131,real_estate,27725
 V000131,consumer,26700
 V000131,unitemized,25930
@@ -13244,9 +13242,9 @@ V000131,manufacturing,10300
 V000131,insurance,9400
 V000131,nonprofit,8700
 V000131,no information,8400
-V000131,retired,6387
+V000131,retired,6490
 V000131,defense,6350
-V000131,business_services,6000
+V000131,business_services,5500
 V000131,government,5350
 V000131,transportation,5000
 V000131,education,4750
@@ -13281,14 +13279,14 @@ V000133,media,3975
 V000133,telecom,3000
 V000133,defense,600
 V000134,unitemized,254698
-V000134,retired,236931
-V000134,unknown,209133
+V000134,retired,237431
+V000134,unknown,203083
 V000134,finance,140714
 V000134,no information,101366
 V000134,real_estate,65084
 V000134,lobbying,62200
 V000134,health,55454
-V000134,not employed,47086
+V000134,not employed,53136
 V000134,law,45244
 V000134,business_services,43225
 V000134,energy,30908
@@ -13297,7 +13295,7 @@ V000134,insurance,24500
 V000134,tech,14517
 V000134,agriculture,11706
 V000134,manufacturing,10008
-V000134,media,9782
+V000134,media,9282
 V000134,transportation,7478
 V000134,pharma,6020
 V000134,government,4186
@@ -13306,13 +13304,13 @@ V000134,telecom,2884
 V000134,defense,1562
 V000134,nonprofit,330
 V000135,unitemized,2177947
-V000135,retired,1504255
-V000135,unknown,664852
+V000135,retired,1504785
+V000135,unknown,664197
 V000135,real_estate,285558
 V000135,finance,208593
 V000135,consumer,134958
 V000135,health,120792
-V000135,not employed,94271
+V000135,not employed,94596
 V000135,manufacturing,65537
 V000135,agriculture,44884
 V000135,law,41520
@@ -13322,7 +13320,7 @@ V000135,nonprofit,30358
 V000135,energy,27307
 V000135,transportation,24515
 V000135,government,19916
-V000135,business_services,19017
+V000135,business_services,18817
 V000135,lobbying,17650
 V000135,tech,17104
 V000135,no information,16750
@@ -13341,9 +13339,9 @@ V000136,education,100832
 V000136,media,76699
 V000136,nonprofit,74733
 V000136,tech,65430
-V000136,lobbying,44643
+V000136,lobbying,44893
 V000136,real_estate,44343
-V000136,business_services,43022
+V000136,business_services,42772
 V000136,government,40254
 V000136,agriculture,13306
 V000136,energy,11225
@@ -13358,7 +13356,7 @@ W000187,consumer,94540
 W000187,finance,79000
 W000187,unknown,76490
 W000187,not employed,51100
-W000187,lobbying,38600
+W000187,lobbying,39100
 W000187,unitemized,34709
 W000187,retired,34200
 W000187,law,33185
@@ -13366,7 +13364,7 @@ W000187,health,20850
 W000187,energy,10000
 W000187,real_estate,9650
 W000187,media,8049
-W000187,business_services,6300
+W000187,business_services,5800
 W000187,pharma,5800
 W000187,manufacturing,5000
 W000187,insurance,4000
@@ -13376,7 +13374,7 @@ W000187,no information,1000
 W000187,defense,700
 W000187,education,250
 W000437,unitemized,213246
-W000437,unknown,191403
+W000437,unknown,190403
 W000437,retired,102431
 W000437,defense,93950
 W000437,not employed,71650
@@ -13385,7 +13383,7 @@ W000437,real_estate,69005
 W000437,manufacturing,55955
 W000437,health,44105
 W000437,agriculture,38500
-W000437,lobbying,32805
+W000437,lobbying,33805
 W000437,law,30950
 W000437,transportation,27960
 W000437,energy,27105
@@ -13402,13 +13400,13 @@ W000437,no information,250
 W000437,pharma,250
 W000779,finance,1207277
 W000779,unknown,983223
-W000779,retired,881018
+W000779,retired,881168
 W000779,unitemized,708061
 W000779,not employed,612325
 W000779,law,480985
 W000779,health,427168
 W000779,real_estate,274559
-W000779,lobbying,233504
+W000779,lobbying,234004
 W000779,consumer,156756
 W000779,energy,143985
 W000779,media,135883
@@ -13416,8 +13414,8 @@ W000779,tech,118192
 W000779,nonprofit,107310
 W000779,manufacturing,104889
 W000779,agriculture,81915
-W000779,business_services,81207
-W000779,education,73841
+W000779,business_services,80707
+W000779,education,73691
 W000779,pharma,62200
 W000779,insurance,55486
 W000779,no information,48003
@@ -13448,24 +13446,24 @@ W000788,transportation,500
 W000788,agriculture,250
 W000788,defense,250
 W000790,unitemized,92755392
-W000790,not employed,43954086
-W000790,retired,8934815
-W000790,unknown,7820789
-W000790,law,6246984
-W000790,education,5319811
-W000790,health,5069636
+W000790,not employed,43984920
+W000790,retired,8938394
+W000790,unknown,7786393
+W000790,law,6246678
+W000790,education,5319577
+W000790,health,5069319
 W000790,media,3357917
 W000790,finance,3335962
 W000790,tech,3189246
 W000790,real_estate,2255213
 W000790,government,1868405
-W000790,business_services,1487460
+W000790,business_services,1486460
 W000790,nonprofit,1413752
 W000790,consumer,951615
-W000790,no information,507756
+W000790,no information,508596
 W000790,pharma,466179
 W000790,energy,449276
-W000790,lobbying,398076
+W000790,lobbying,399076
 W000790,manufacturing,379824
 W000790,insurance,319643
 W000790,defense,272421
@@ -13501,7 +13499,7 @@ W000797,not employed,228015
 W000797,unitemized,186943
 W000797,law,180080
 W000797,unknown,172290
-W000797,retired,129942
+W000797,retired,130057
 W000797,finance,113910
 W000797,real_estate,66865
 W000797,health,52710
@@ -13509,7 +13507,7 @@ W000797,lobbying,45600
 W000797,media,45440
 W000797,agriculture,40950
 W000797,consumer,36150
-W000797,education,24080
+W000797,education,23965
 W000797,business_services,22015
 W000797,nonprofit,15100
 W000797,transportation,10400
@@ -13579,11 +13577,11 @@ W000802,unknown,117571
 W000802,retired,102375
 W000802,nonprofit,64947
 W000802,media,58225
-W000802,lobbying,51520
+W000802,lobbying,52020
 W000802,health,47892
 W000802,real_estate,40012
 W000802,education,39932
-W000802,business_services,27385
+W000802,business_services,26885
 W000802,consumer,21057
 W000802,government,12646
 W000802,tech,9275
@@ -13691,11 +13689,11 @@ W000809,unknown,106025
 W000809,real_estate,78150
 W000809,unitemized,75593
 W000809,consumer,72750
-W000809,retired,71370
+W000809,retired,72375
 W000809,finance,69250
-W000809,not employed,44675
 W000809,lobbying,44587
 W000809,health,44450
+W000809,not employed,43670
 W000809,energy,19800
 W000809,nonprofit,15750
 W000809,defense,13150
@@ -13710,15 +13708,15 @@ W000809,business_services,6525
 W000809,insurance,3733
 W000809,no information,3200
 W000809,media,2700
-W000812,retired,873605
+W000812,retired,877282
 W000812,unitemized,853249
-W000812,unknown,278555
+W000812,unknown,277295
 W000812,finance,177224
-W000812,real_estate,93321
-W000812,law,88540
-W000812,manufacturing,71216
-W000812,consumer,54724
-W000812,lobbying,49550
+W000812,real_estate,92621
+W000812,law,87890
+W000812,manufacturing,71116
+W000812,consumer,54624
+W000812,lobbying,50050
 W000812,health,48191
 W000812,transportation,37341
 W000812,not employed,34176
@@ -13726,8 +13724,8 @@ W000812,insurance,26027
 W000812,tech,22899
 W000812,no information,22338
 W000812,energy,20574
-W000812,education,18687
-W000812,agriculture,14562
+W000812,education,18287
+W000812,agriculture,13595
 W000812,media,12350
 W000812,business_services,9375
 W000812,government,3978
@@ -13736,9 +13734,9 @@ W000812,telecom,3078
 W000812,nonprofit,1650
 W000812,defense,614
 W000813,unitemized,175762
-W000813,unknown,144765
-W000813,retired,69460
-W000813,not employed,51275
+W000813,unknown,138965
+W000813,retired,69710
+W000813,not employed,57075
 W000813,no information,46500
 W000813,finance,34225
 W000813,agriculture,26890
@@ -13756,14 +13754,14 @@ W000813,nonprofit,4900
 W000813,tech,4900
 W000813,energy,3325
 W000813,education,3102
-W000813,government,3000
+W000813,government,2750
 W000813,defense,750
 W000813,pharma,200
-W000814,unknown,165773
-W000814,retired,91053
+W000814,unknown,164773
+W000814,retired,95853
 W000814,no information,44650
-W000814,real_estate,37960
 W000814,unitemized,34691
+W000814,real_estate,34160
 W000814,consumer,31350
 W000814,finance,31300
 W000814,law,24100
@@ -13782,13 +13780,13 @@ W000814,telecom,2550
 W000814,tech,2500
 W000814,defense,2250
 W000815,unitemized,177251
-W000815,unknown,120496
+W000815,unknown,120096
 W000815,no information,102938
 W000815,retired,101121
 W000815,health,47775
 W000815,law,31575
+W000815,not employed,30428
 W000815,consumer,30223
-W000815,not employed,30028
 W000815,real_estate,26975
 W000815,lobbying,23900
 W000815,insurance,18050
@@ -13830,18 +13828,18 @@ W000816,education,1700
 W000816,nonprofit,1250
 W000816,tech,10
 W000817,unitemized,2762160
-W000817,not employed,1063325
-W000817,retired,371322
+W000817,not employed,1063555
+W000817,retired,371415
 W000817,education,207618
-W000817,unknown,199889
+W000817,unknown,199222
 W000817,health,123925
 W000817,tech,95008
 W000817,media,78628
 W000817,law,71341
-W000817,government,58268
+W000817,government,58253
 W000817,finance,46566
 W000817,real_estate,45390
-W000817,nonprofit,38490
+W000817,nonprofit,38412
 W000817,business_services,29821
 W000817,consumer,15452
 W000817,pharma,12981
@@ -13853,7 +13851,7 @@ W000817,transportation,7473
 W000817,agriculture,4394
 W000817,telecom,3014
 W000817,lobbying,1939
-W000817,no information,430
+W000817,no information,867
 W000821,unitemized,199812
 W000821,unknown,176684
 W000821,retired,134040
@@ -13900,13 +13898,13 @@ W000822,tech,1500
 W000822,energy,500
 W000822,no information,250
 W000823,unitemized,991189
-W000823,retired,549915
+W000823,retired,550740
 W000823,unknown,209765
 W000823,finance,138784
 W000823,real_estate,79710
 W000823,health,59802
 W000823,law,52628
-W000823,not employed,43579
+W000823,not employed,42754
 W000823,defense,30950
 W000823,lobbying,30010
 W000823,no information,21425
@@ -13925,9 +13923,9 @@ W000823,education,5049
 W000823,transportation,4223
 W000823,telecom,2900
 W000825,unitemized,505454
-W000825,not employed,495653
-W000825,retired,430942
-W000825,unknown,282154
+W000825,not employed,495803
+W000825,retired,431042
+W000825,unknown,281904
 W000825,law,244578
 W000825,finance,153170
 W000825,real_estate,73064
@@ -13962,8 +13960,8 @@ W000826,real_estate,159292
 W000826,tech,132778
 W000826,nonprofit,108169
 W000826,consumer,91775
-W000826,business_services,75124
-W000826,lobbying,55967
+W000826,business_services,74624
+W000826,lobbying,56467
 W000826,pharma,39829
 W000826,government,39197
 W000826,manufacturing,30758
@@ -14008,12 +14006,12 @@ Y000062,nonprofit,1500
 Y000064,unitemized,6582103
 Y000064,retired,880032
 Y000064,finance,827810
-Y000064,unknown,736804
+Y000064,unknown,731004
 Y000064,real_estate,339751
 Y000064,health,242524
 Y000064,law,213340
 Y000064,consumer,199008
-Y000064,not employed,171895
+Y000064,not employed,177695
 Y000064,manufacturing,130615
 Y000064,lobbying,125422
 Y000064,insurance,96709
@@ -14077,13 +14075,13 @@ Z000017,education,350
 Z000017,transportation,250
 Z000017,tech,120
 Z000018,unitemized,2293932
-Z000018,retired,1289082
+Z000018,retired,1289732
 Z000018,unknown,451817
 Z000018,no information,217568
 Z000018,real_estate,202028
 Z000018,finance,190367
 Z000018,energy,128346
-Z000018,not employed,116474
+Z000018,not employed,115824
 Z000018,consumer,112451
 Z000018,law,87022
 Z000018,agriculture,74763

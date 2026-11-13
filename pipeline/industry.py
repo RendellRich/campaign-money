@@ -7,6 +7,7 @@ one by an AI assistant (Claude), which changed or filled in 291 of them; the `so
 """
 from __future__ import annotations
 
+import re
 from functools import lru_cache
 from pathlib import Path
 
@@ -48,8 +49,27 @@ def llm_tail() -> dict[tuple[str, str], str]:
     return dict(zip(zip(m["employer"], m["occupation"]), m["label"]))
 
 
+# A lobbyist at a consulting firm is in lobbying: the firm lobbies for clients. An in-house lobbyist at a company keeps
+# the company's industry (government relations at an oil company is energy), so this applies only where the employer
+# came out as consulting or unknown. Big firms with their own government relations staff are left as they are.
+LOBBY_TITLE = re.compile(r"\b(LOBBYIST|LOBBYING|GOVERNMENT RELATIONS|GOVT RELATIONS|GOVERNMENT AFFAIRS|GOVT AFFAIRS)\b")
+LOBBYIST = re.compile(r"\bLOBBY(IST|ING)\b")
+IN_HOUSE = re.compile(r"\b(ACCENTURE|DELOITTE|PWC|PRICEWATERHOUSECOOPERS|KPMG|ERNST|MCKINSEY|BOOZ ALLEN|BAIN|"
+                      r"BOSTON CONSULTING)\b")
+
+
 def industry(employer, occupation) -> tuple[str, str]:
     """(industry, how it was decided). Retired, not employed and missing get their status, not an industry."""
+    ind, how = _industry(employer, occupation)
+    if how != "status" and ind in ("business_services", "unknown"):
+        job, firm = norm(occupation), norm(employer)
+        title = LOBBY_TITLE if ind == "business_services" else LOBBYIST  # an unknown employer needs the plain word
+        if title.search(job) and not IN_HOUSE.search(firm):
+            return "lobbying", "lobbyist at a consultancy"
+    return ind, how
+
+
+def _industry(employer, occupation) -> tuple[str, str]:
     st = status(employer, occupation)
     if st not in HAS_INDUSTRY_SIGNAL:
         return st.replace(" or requested", "").replace(", no occupation", ""), "status"
