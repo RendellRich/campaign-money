@@ -190,9 +190,10 @@ the answer key.
   (`data/audit_2024_fresh_prompt.txt`, also the exact prompt ChatGPT was given):
   - Claude, all 100 (`data/audit_2024_fresh_labels_claude.csv`), committed before anyone else labeled.
   - ChatGPT, all 100 (`..._labels_chatgpt.csv`).
-  - Ren, the first 44 (`..._labels_ren.csv`), with ChatGPT's one-line company descriptions beside him
-    (`data/audit_2024_fresh_lookup_chatgpt.md`) but not its labels. Two of his calls depart from the written codes on
-    purpose: PR agencies as media, and "N/A, coach" as not employed.
+  - Ren, the first 44 (`..._labels_ren.csv`). He had seen ChatGPT's labels earlier (they first landed in his sheet by
+    mistake) and had its one-line company descriptions beside him while labeling
+    (`data/audit_2024_fresh_lookup_chatgpt.md`), so his labels are not fully independent of ChatGPT's. Two of his calls
+    depart from the written codes: PR agencies as media, and "N/A, coach" as not employed.
 - `pipeline/audit_compare.py` scores the pipeline against each rater and measures agreement between raters.
   Results: `data/audit_2024_fresh.json` (pipeline as it stood) and `data/audit_2024_fresh_llm.json` (with the LLM
   long-tail labels below).
