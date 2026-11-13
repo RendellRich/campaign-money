@@ -1,0 +1,45 @@
+id,label,confidence,note
+C001,unknown,low,
+C002,energy,high,
+C003,lobbying,high,
+C004,education,high,
+C005,tech,high,
+C006,unknown,low,
+C007,nonprofit,medium,core activity is generating donations
+C008,real_estate,medium,construction and repair of buildings
+C009,unknown,low,
+C010,insurance,high,
+C011,health,high,
+C012,health,high,
+C013,tech,high,
+C014,real_estate,high,
+C015,consumer,high,
+C016,pharma,high,ingredient supplier for supplements and functional foods
+C017,energy,high,
+C018,transportation,high,
+C019,finance,high,
+C020,education,medium,
+C021,lobbying,high,
+C022,defense,high,clear from company name and government-relations role
+C023,lobbying,high,
+C024,not employed,medium,no employer listed
+C025,consumer,high,
+C026,law,high,
+C027,real_estate,high,
+C028,real_estate,high,
+C029,unknown,low,
+C030,real_estate,high,
+C031,consumer,medium,home decor and services
+C032,tech,high,
+C033,law,high,
+C034,real_estate,high,
+C035,health,high,
+C036,law,high,
+C037,real_estate,high,
+C038,unknown,low,
+C039,media,medium,"PR, public affairs and advertising"
+C040,consumer,high,
+C041,unknown,low,
+C042,finance,high,
+C043,lobbying,high,
+C044,nonprofit,medium,
