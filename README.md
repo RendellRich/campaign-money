@@ -18,12 +18,13 @@ are kept on separate sites on purpose: this one never pairs a donation with a vo
 - **How the industry is decided**, in order: status rules (retired, not employed, missing), a reviewed list of 4,447
   employers, keyword rules, a reviewed list of 799 occupations, and for the long tail, Claude Haiku labels on 263,879
   employer and occupation pairs, run twice and kept only where both runs agreed with high confidence (about $6 total).
-- **How accurate it is.** On a held-out sample of 297 pairs that no rule was tuned on, 83% of dollars are placed in
+- **How accurate it is.** On a held-out sample of 297 pairs, drawn and labeled before any rule fixes, 83% of dollars are placed in
   the right industry and 6% in the wrong one (93% right when an industry is given). Those labels came from Claude, so a
   fresh sample was also labeled by Ren and by ChatGPT: against Ren's labels the pipeline was 77% right, and 92% where
-  Ren and ChatGPT agreed.
-- **What it taught.** A broader occupation rule scored better on the test sample but added wrong answers on dev, and the dev choice was
-  kept: picking whatever scores best on the test set would have made the test number meaningless. The AI raters
+  Ren and ChatGPT agreed. (Misses on the held-out sample were read along the way, so the fresh sample is the cleaner
+  test.)
+- **What it taught.** A broader occupation rule scored better on the test sample but added wrong answers on dev, and
+  the dev choice was kept: picking whatever scores best on the test set would have made the test number meaningless. The AI raters
   agreed with each other more than either agreed with a person, which is why the answer key needed a human.
 
 The rounds below are the full record, in the order they happened.
