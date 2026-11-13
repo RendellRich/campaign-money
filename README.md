@@ -204,7 +204,18 @@ written rules every human and AI rater was given (`pipeline/labeling_rules.py`),
   discount (`python pipeline/llm_tail.py dry-run` prints the estimate and a sample request, and sends nothing).
 - It runs from a manual GitHub Action (`.github/workflows/llm-tail.yml`) that reads the `ANTHROPIC_API_KEY` repository
   secret and uploads the labels as an artifact. Nothing is committed and the site is unchanged.
-- Only high-confidence industry answers are kept, and only for pairs the rules and lists leave unclear.
+- Only high-confidence industry answers are kept, and only for pairs the rules and lists leave unclear. Two test
+  runs of the same 500 pairs gave the same label 83% of the time but flipped confidence often; where both said
+  high confidence they agreed on the label 60 times out of 60. So the full set is run twice and `llm_tail.py
+  combine` keeps only the answers both runs gave with high confidence.
+- **Ran 2026-11-12** (`data/llm/tail_run_1.json`, `tail_run_2.json`): each run labeled about 263,200 of the 263,879
+  pairs, with no failed requests, at about $3.05 a run by the batch prices. The two runs gave the same label to 88.8% of
+  pairs. `data/llm/tail_labels.csv.gz` keeps the 92,928 pairs both runs placed in the same industry with high
+  confidence: $109M, 27.5% of the unclear dollars.
+- Early check on the fresh sample against ChatGPT's labels: share right 76.3% without the LLM labels and 83.7% with
+  them (95% CI 76.2 to 91.2), wrong unchanged at 10.5%, unknown down from 13.2% to 5.8%. Against Claude's labels,
+  80.6% to 88.0%, which counts for less since Haiku is a Claude model. The switch stays off until a person's labels
+  are in.
 - The labels stay off the site (`USE_LLM_TAIL = False` in `pipeline/industry.py`) until they are scored against a
   person's labels on the fresh sample: `python pipeline/audit_compare.py --with-llm`. Haiku is a Claude model, so
   Claude's own labels are not a fair test of it.
