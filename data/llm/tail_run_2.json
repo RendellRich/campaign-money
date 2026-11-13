@@ -1,0 +1,14 @@
+{
+ "batch": "msgbatch_01XRgx7gWhXppZBYmosnmmYF",
+ "pairs_sent": 263879,
+ "labeled": 263294,
+ "failed_requests": [],
+ "high_confidence": 106626,
+ "placed_high": 105471,
+ "placed_high_dollars": 134194530,
+ "usage_tokens": {
+  "input": 7975379,
+  "output": 10558785,
+  "cache_read": 3003543
+ }
+}
