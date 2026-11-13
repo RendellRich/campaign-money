@@ -1,0 +1,116 @@
+{
+ "cycle": 2024,
+ "records": 100,
+ "raters": [
+  "chatgpt",
+  "claude",
+  "ren"
+ ],
+ "pipeline": {
+  "chatgpt": {
+   "records": 100,
+   "correct": 76.3,
+   "correct_ci95": [
+    68.0,
+    84.6
+   ],
+   "wrong": 10.5,
+   "wrong_ci95": [
+    4.1,
+    17.0
+   ],
+   "left": 13.2,
+   "left_ci95": [
+    7.6,
+    18.8
+   ],
+   "stratum_weights": {
+    "list": 0.456,
+    "tail": 0.544
+   }
+  },
+  "claude": {
+   "records": 100,
+   "correct": 80.6,
+   "correct_ci95": [
+    73.0,
+    88.2
+   ],
+   "wrong": 7.0,
+   "wrong_ci95": [
+    1.6,
+    12.4
+   ],
+   "left": 12.4,
+   "left_ci95": [
+    6.9,
+    17.9
+   ],
+   "stratum_weights": {
+    "list": 0.456,
+    "tail": 0.544
+   }
+  },
+  "ren": {
+   "records": 44,
+   "correct": 68.4,
+   "correct_ci95": [
+    54.4,
+    82.4
+   ],
+   "wrong": 15.8,
+   "wrong_ci95": [
+    3.9,
+    27.7
+   ],
+   "left": 15.8,
+   "left_ci95": [
+    7.1,
+    24.5
+   ],
+   "stratum_weights": {
+    "list": 0.456,
+    "tail": 0.544
+   }
+  },
+  "agreed by chatgpt and ren": {
+   "records": 37,
+   "correct": 81.2,
+   "correct_ci95": [
+    69.1,
+    93.3
+   ],
+   "wrong": 4.1,
+   "wrong_ci95": [
+    0,
+    11.9
+   ],
+   "left": 14.7,
+   "left_ci95": [
+    5.4,
+    23.9
+   ],
+   "stratum_weights": {
+    "list": 0.456,
+    "tail": 0.544
+   }
+  }
+ },
+ "agreement": {
+  "chatgpt vs claude": {
+   "records": 100,
+   "same_label": 92.0,
+   "kappa": 0.912
+  },
+  "chatgpt vs ren": {
+   "records": 44,
+   "same_label": 84.1,
+   "kappa": 0.825
+  },
+  "claude vs ren": {
+   "records": 44,
+   "same_label": 81.8,
+   "kappa": 0.801
+  }
+ }
+}

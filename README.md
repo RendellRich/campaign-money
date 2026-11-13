@@ -180,20 +180,38 @@ Haiku 5.5 over every pair, keeping only confident answers, is estimated at about
 it, since the current labels also come from Claude.
 
 
-### Round 5 (in progress): a fresh sample, labeled by a person and another AI
+### Round 5: a fresh sample, labeled by Ren, ChatGPT and Claude
 
-Every label so far came from Claude, which also wrote the rules and reviewed the lists. Round 5 takes that out of the
-answer key.
+Every label before this came from Claude, which also wrote the rules and reviewed the lists. Round 5 takes that out of
+the answer key.
 - `data/audit_2024_fresh_sample.csv`: 100 new draws (34 list, 66 tail, by dollar weight, seed 2026), none of them a
   pair already in the dev or test sample.
-- Three raters label the same records from the employer and occupation text alone, following the same written rules
-  (`data/audit_2024_fresh_prompt.txt`, which is also the exact prompt given to the outside AI): Ren, ChatGPT and
-  Claude. Claude's labels (`data/audit_2024_fresh_labels_claude.csv`) were committed before anyone else labeled.
-- `pipeline/audit_compare.py` scores the pipeline against each rater, reports how often each pair of raters agrees
-  (with Cohen's kappa), and scores the pipeline on the records where Ren and the outside AI agree, the least disputed
-  answer key. Records they disagree on go to `data/audit_2024_fresh_disputed.csv`.
-- Nothing will be tuned against this sample.
+- Raters labeled the records from the employer and occupation text alone, under the same written rules
+  (`data/audit_2024_fresh_prompt.txt`, also the exact prompt ChatGPT was given):
+  - Claude, all 100 (`data/audit_2024_fresh_labels_claude.csv`), committed before anyone else labeled.
+  - ChatGPT, all 100 (`..._labels_chatgpt.csv`).
+  - Ren, the first 44 (`..._labels_ren.csv`), with ChatGPT's one-line company descriptions beside him
+    (`data/audit_2024_fresh_lookup_chatgpt.md`) but not its labels. Two of his calls depart from the written codes on
+    purpose: PR agencies as media, and "N/A, coach" as not employed.
+- `pipeline/audit_compare.py` scores the pipeline against each rater and measures agreement between raters.
+  Results: `data/audit_2024_fresh.json` (pipeline as it stood) and `data/audit_2024_fresh_llm.json` (with the LLM
+  long-tail labels below).
 
+| Answer key | Records | Right | Wrong | Unknown | Right with LLM labels |
+|---|---|---|---|---|---|
+| Ren | 44 | 68.4% (95% CI 54 to 82) | 15.8% | 15.8% | 77.2% (64 to 90), wrong unchanged |
+| Ren and ChatGPT agree | 37 | 81.2% (69 to 93) | 4.1% | 14.7% | 91.7% (82 to 100), wrong unchanged |
+| ChatGPT | 100 | 76.3% (68 to 85) | 10.5% | 13.2% | 83.7% (76 to 91), wrong unchanged |
+| Claude | 100 | 80.6% (73 to 88) | 7.0% | 12.4% | 88.0% (82 to 95), wrong unchanged |
+
+Agreement between raters on the same records: ChatGPT and Claude 92% (kappa 0.91), Ren and ChatGPT 84% (0.83), Ren
+and Claude 82% (0.80). The two AIs agree with each other more than either agrees with Ren, and Claude's labels flatter
+the pipeline by about 4 points against ChatGPT's, which is why a non-Claude answer key matters.
+
+Of the six records where the pipeline disagreed with Ren, one is a clear miss (a lobbyist at "Mason Consulting" placed
+as consulting from the company name), three are records where ChatGPT sided with the pipeline, and two split all three
+raters. In every answer key, the LLM labels turned unknowns into right answers and added no wrong ones. Nothing was
+tuned against this sample.
 
 ### Next: an LLM pass on the long tail (built, not yet run)
 
