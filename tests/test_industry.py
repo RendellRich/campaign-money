@@ -59,6 +59,35 @@ def test_dev_audit_rule_fixes():
     assert status("UNIVERSITY OF TENNESSEE", "LAW STUDENT") == "not employed"
 
 
+def test_status_catches_other_wordings():
+    # Found by listing what the LLM pass called retired, not employed or missing but the rules did not.
+    assert status("NOT IN WORKFORCE", "NOT IN WORKFORCE") == "not employed"
+    assert status("SELF EMPLOYED - HOMEMAKER", "SELF EMPLOYED - HOMEMAKER") == "not employed"
+    assert status("N/A", "STAY AT HOME MOM") == "not employed"
+    assert status("NOT", "EMPLOYED") == "not employed"          # one answer split across the two fields
+    assert status("SELF", "MOTHER") == "not employed"
+    assert status("HOME", "HOME") == "not employed"
+    assert status("RETIRD", "RETIRD") == "retired"
+    assert status("UNITED AIRLINES", "AIRLINE PILOT-RETIRED") == "retired"
+    assert status("INFO REQ", "INFO REQ") == "missing or requested"
+    assert status("2ND REQUEST MADE", "") == "missing or requested"
+    assert status("SEFL", "PHYSICIAN") == "self-employed, occupation given"
+    # ...without catching real employers or jobs
+    assert status("ACME CORP", "MOTHER") == "named employer"     # MOTHER next to a real employer is left alone
+    assert status("HOME", "NURSE") == "named employer"
+    assert status("INFORMATION REQUIREMENTS CLEARINGHOUSE", "ACCOUNT MANAGER") == "named employer"
+    assert status("RETIREMENT SYSTEMS OF ALABAMA", "ANALYST") == "named employer"
+
+
+def test_lobbyist_at_a_consultancy_is_lobbying():
+    assert industry("MASON CONSULTING", "LOBBYIST")[0] == "lobbying"          # the round 5 miss
+    assert industry("FTI CONSULTING", "GOVERNMENT AFFAIRS")[0] == "lobbying"
+    assert industry("MASON CONSULTING", "CONSULTANT")[0] == "business_services"
+    assert industry("EXXON MOBIL", "GOVERNMENT RELATIONS")[0] == "energy"     # in-house keeps the company's industry
+    assert industry("ACCENTURE", "GOVERNMENT RELATIONS")[0] == "business_services"
+    assert industry("GAINWELL", "GOVT RELATIONS")[0] == "unknown"             # unknown employer needs the word lobbyist
+
+
 def test_status_comes_before_industry():
     assert industry("RETIRED", "RETIRED")[0] == "retired"
     assert industry("", "")[0] == "missing"

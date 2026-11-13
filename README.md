@@ -243,6 +243,31 @@ written rules every human and AI rater was given (`pipeline/labeling_rules.py`),
   pipeline as it was before them. Haiku is a Claude model, so
   Claude's own labels are not a fair test of it.
 
+### Round 7: cleanup (status wordings and lobbyists at consulting firms)
+
+Two fixes, both found by looking at results rather than at a fresh answer key.
+- **Status wordings.** The LLM pass called 533 pairs retired, not employed or missing that the status rules sent on
+  to be placed in an industry. Listing them showed wordings the rules did not know: "NOT IN WORKFORCE", "SELF
+  EMPLOYED - HOMEMAKER", "STAY AT HOME MOM", "SAHM", "NOT" and "EMPLOYED" split across the two fields, misspellings
+  ("RETIRD", "REIRED", "INFO REQAUESTED"), "RETIRED" at the end ("AIRLINE PILOT-RETIRED"), and phrases like "2ND
+  REQUEST MADE" and "DECLINED TO PROVIDE". `pipeline/employer_status.py` now catches them. "HOME", "MOTHER" and "MOM"
+  count as not employed only next to a blank, self or each other, so "HOME" with "NURSE" stays a named employer. The
+  full before-and-after list was checked by eye, which caught one false hit (Information Requirements Clearinghouse,
+  a real company) before it shipped.
+- **Lobbyists at consulting firms.** Round 5's one clear miss was a lobbyist at "Mason Consulting" placed as
+  consulting from the company name. A donor whose job is lobbyist, government relations or government affairs now
+  goes to lobbying when the employer came out as consulting, or (for the plain word lobbyist) unknown. An in-house
+  lobbyist keeps the company's industry (government relations at Exxon Mobil stays energy), and large firms with their
+  own government relations staff (Accenture, Deloitte, the Big Four, McKinsey) are left as they are.
+- **Size:** across both cycles about $1.3M moves from an industry or unclear into retired, not employed or missing,
+  and about $490K from consulting or unknown into lobbying. On the site, unclear 2024 money drops by about $437K and
+  the headline shares change by less than a tenth of a point.
+- **Scores:** dev and held-out test are unchanged (no record in either sample is affected). On the fresh sample only
+  C023, the Mason Consulting record, changes: against Ren's labels, right goes from 68.4% to 71.9% and wrong from
+  15.8% to 12.3%, and with the LLM labels from 77.2% to 80.7%. That gain is not independent evidence, since the fix
+  was written after seeing that record. `data/audit_2024_fresh.json` and `_llm.json` now hold these scores; the
+  round 5 table above keeps the numbers from before.
+
 ## The site (phase 3, first page)
 
 `site/app.py` is a two-page Streamlit app. Members (the default) lets you pick a member and see where their individual money came from. It reads two small files

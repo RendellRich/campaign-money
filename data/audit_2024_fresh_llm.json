@@ -9,15 +9,15 @@
  "pipeline": {
   "chatgpt": {
    "records": 100,
-   "correct": 83.7,
+   "correct": 85.1,
    "correct_ci95": [
-    76.2,
-    91.2
+    77.9,
+    92.2
    ],
-   "wrong": 10.5,
+   "wrong": 9.2,
    "wrong_ci95": [
-    4.1,
-    17.0
+    3.1,
+    15.3
    ],
    "left": 5.8,
    "left_ci95": [
@@ -31,15 +31,15 @@
   },
   "claude": {
    "records": 100,
-   "correct": 88.0,
+   "correct": 89.4,
    "correct_ci95": [
-    81.5,
-    94.6
+    83.3,
+    95.5
    ],
-   "wrong": 7.0,
+   "wrong": 5.7,
    "wrong_ci95": [
-    1.6,
-    12.4
+    0.8,
+    10.6
    ],
    "left": 4.9,
    "left_ci95": [
@@ -53,15 +53,15 @@
   },
   "ren": {
    "records": 44,
-   "correct": 77.2,
+   "correct": 80.7,
    "correct_ci95": [
-    64.0,
-    90.4
+    68.7,
+    92.7
    ],
-   "wrong": 15.8,
+   "wrong": 12.3,
    "wrong_ci95": [
-    3.9,
-    27.7
+    1.7,
+    22.9
    ],
    "left": 7.0,
    "left_ci95": [
@@ -75,15 +75,15 @@
   },
   "agreed by chatgpt and ren": {
    "records": 37,
-   "correct": 91.7,
+   "correct": 95.8,
    "correct_ci95": [
-    82.1,
+    90.2,
     100
    ],
-   "wrong": 4.1,
+   "wrong": 0.0,
    "wrong_ci95": [
     0,
-    11.9
+    0.0
    ],
    "left": 4.2,
    "left_ci95": [
