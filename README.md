@@ -5,6 +5,8 @@ Commission's public filings. The aim is an open method with measured accuracy, n
 
 **Live site:** [campaign-money.streamlit.app](https://campaign-money.streamlit.app)
 
+<img src="docs/images/home-phone.png" width="30%" alt="The site's opening summary: where every dollar 518 current members raised from individuals came from">
+
 A companion to [PartyCohesion](https://github.com/RendellRich/partycohesion), which covers how members vote. The two
 are kept on separate sites on purpose: this one never pairs a donation with a vote.
 
