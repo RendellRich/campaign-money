@@ -213,7 +213,7 @@ as consulting from the company name), three are records where ChatGPT sided with
 raters. In every answer key, the LLM labels turned unknowns into right answers and added no wrong ones. Nothing was
 tuned against this sample.
 
-### Next: an LLM pass on the long tail (built, not yet run)
+### Round 6: LLM labels for the long tail (on)
 
 `pipeline/llm_tail.py` sends every still-unclear employer and occupation pair (263,879 pairs, $395M across both
 cycles, in `data/llm/unclear_pairs.csv.gz`) to Claude Haiku 5.5 through the Message Batches API. It uses the same
@@ -232,10 +232,14 @@ written rules every human and AI rater was given (`pipeline/labeling_rules.py`),
   confidence: $109M, 27.5% of the unclear dollars.
 - Early check on the fresh sample against ChatGPT's labels: share right 76.3% without the LLM labels and 83.7% with
   them (95% CI 76.2 to 91.2), wrong unchanged at 10.5%, unknown down from 13.2% to 5.8%. Against Claude's labels,
-  80.6% to 88.0%, which counts for less since Haiku is a Claude model. The switch stays off until a person's labels
-  are in.
-- The labels stay off the site (`USE_LLM_TAIL = False` in `pipeline/industry.py`) until they are scored against a
-  person's labels on the fresh sample: `python pipeline/audit_compare.py --with-llm`. Haiku is a Claude model, so
+  80.6% to 88.0%, which counts for less since Haiku is a Claude model.
+- **Switched on after round 5** (`USE_LLM_TAIL = True`), since against Ren's labels too they turned unknowns into right
+  answers and added no wrong ones. With them on, the held-out test sample goes from 71.7% to 83.3% right with
+  wrong unchanged at 6.3% (93.0% right when an industry is given), and the dev
+  sample from 86.0% to 87.7% with wrong up from 2.7% to 3.3%. On the site, 2024 money placed in an industry
+  goes from 25.1% to 27.5% and unclear from 9.4% to 6.9%; for 2022, from 25.7% to 28.8% and 11.1% to 7.9%.
+- `python pipeline/audit_compare.py --with-llm` scores the fresh sample with them; without the flag it scores the
+  pipeline as it was before them. Haiku is a Claude model, so
   Claude's own labels are not a fair test of it.
 
 ## The site (phase 3, first page)

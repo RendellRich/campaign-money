@@ -3,20 +3,20 @@
  "set": "dev",
  "pairs": 296,
  "all": {
-  "correct": 86.0,
+  "correct": 87.7,
   "correct_ci95": [
-   82.1,
-   89.9
+   84.0,
+   91.4
   ],
-  "wrong": 2.7,
+  "wrong": 3.3,
   "wrong_ci95": [
-   0.9,
-   4.5
+   1.3,
+   5.4
   ],
-  "left": 11.3,
+  "left": 9.0,
   "left_ci95": [
-   7.8,
-   14.8
+   5.8,
+   12.2
   ],
   "stratum_weights": {
    "list": 0.334,
@@ -45,22 +45,22 @@
   },
   "tail": {
    "draws": 200,
-   "correct": 83.0,
+   "correct": 85.5,
    "correct_ci95": [
-    77.2,
-    87.6
+    80.0,
+    89.7
    ],
-   "wrong": 1.0,
+   "wrong": 2.0,
    "wrong_ci95": [
-    0.3,
-    3.6
+    0.8,
+    5.0
    ],
-   "left": 16.0,
+   "left": 12.5,
    "left_ci95": [
-    11.6,
-    21.7
+    8.6,
+    17.8
    ],
-   "correct_when_placed": 98.8
+   "correct_when_placed": 97.7
   }
  },
  "high_confidence_labels": {
@@ -85,20 +85,20 @@
   },
   "tail": {
    "draws": 126,
-   "correct": 92.9,
+   "correct": 96.0,
    "correct_ci95": [
-    87.0,
-    96.2
+    91.0,
+    98.3
    ],
    "wrong": 0.0,
    "wrong_ci95": [
     0.0,
     3.0
    ],
-   "left": 7.1,
+   "left": 4.0,
    "left_ci95": [
-    3.8,
-    13.0
+    1.7,
+    9.0
    ],
    "correct_when_placed": 100.0
   }
