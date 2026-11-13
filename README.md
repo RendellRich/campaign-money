@@ -8,10 +8,25 @@ Commission's public filings. The aim is an open method with measured accuracy, n
 A companion to [PartyCohesion](https://github.com/RendellRich/partycohesion), which covers how members vote. The two
 are kept on separate sites on purpose: this one never pairs a donation with a vote.
 
-## Status
+## Results
 
-Phase 1 (feasibility) is done, and the answer is to go ahead with two changes. Phase 2 (classifier and audit) has
-started: the 1,000 largest employers are labeled, the rules are in place, and a blind audit on a held-out sample measures them.
+**Done** (November 2026). The site covers the 2024 and 2022 cycles for current and former members of Congress.
+
+- **What it shows.** Of the $1.62B the 518 current members raised from individuals in 2023 to 2024, 28% is placed in
+  an industry, 7% points to an industry but is unclear, 13% is from retirees, 11% from people not employed, 1% gives
+  no employer or occupation, and 40% is unitemized ($200 or less, so the FEC has no employer for it).
+- **How the industry is decided**, in order: status rules (retired, not employed, missing), a reviewed list of 4,447
+  employers, keyword rules, a reviewed list of 799 occupations, and for the long tail, Claude Haiku labels on 263,879
+  employer and occupation pairs, run twice and kept only where both runs agreed with high confidence (about $6 total).
+- **How accurate it is.** On a held-out sample of 297 pairs that no rule was tuned on, 83% of dollars are placed in
+  the right industry and 6% in the wrong one (93% right when an industry is given). Those labels came from Claude, so a
+  fresh sample was also labeled by Ren and by ChatGPT: against Ren's labels the pipeline was 77% right, and 92% where
+  Ren and ChatGPT agreed.
+- **What it taught.** A broader occupation rule scored better on the test sample but added wrong answers on dev, and the dev choice was
+  kept: picking whatever scores best on the test set would have made the test number meaningless. The AI raters
+  agreed with each other more than either agreed with a person, which is why the answer key needed a human.
+
+The rounds below are the full record, in the order they happened.
 
 ## Phase 1: can donors be placed in an industry?
 
