@@ -56,7 +56,8 @@ def test_collect_writes_labels_and_the_switch_uses_only_confident_industries(tmp
 
     monkeypatch.setattr(industry_module, "LLM_TAIL", tmp_path / "tail_labels.csv.gz")
     industry_module.llm_tail.cache_clear()
-    assert industry_module.industry("DELTA CONSTRUCTORS", "CEO")[0] == "unknown"  # off by default
+    monkeypatch.setattr(industry_module, "USE_LLM_TAIL", False)
+    assert industry_module.industry("DELTA CONSTRUCTORS", "CEO")[0] == "unknown"  # the switch turns them off
     monkeypatch.setattr(industry_module, "USE_LLM_TAIL", True)
     assert industry_module.industry("DELTA CONSTRUCTORS", "CEO") == ("real_estate", "llm")
     assert industry_module.industry("ZAROS FAMILY BAKERY", "OWNER")[0] == "unknown"  # low confidence is not used
@@ -80,3 +81,8 @@ def test_combine_keeps_only_what_both_runs_agree_on_confidently(tmp_path):
     two.to_csv(tmp_path / "2.csv.gz", index=False, compression="gzip")
     keep = llm_tail.combine(tmp_path / "1.csv.gz", tmp_path / "2.csv.gz", tmp_path / "out.csv.gz")
     assert list(keep["pair_id"]) == [a]  # b dropped for low confidence once, c for a different label
+
+
+def test_llm_labels_are_on_for_the_site():
+    assert industry_module.USE_LLM_TAIL is True
+    assert len(industry_module.llm_tail()) > 90_000

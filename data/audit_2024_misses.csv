@@ -8,15 +8,10 @@ A258,list,EMPIRE CONSULTING GROUP,MANAGING PARTNER,lobbying,low,business_service
 A281,list,HONOR NYC,PRESIDENT,unknown,low,consumer,list,wrong,1
 A293,list,GENWORTH FINANCIAL,FINANCIAL ADVISOR,insurance,low,finance,list,wrong,1
 A002,tail,LENDEM SOLUTIONS,CEO,finance,low,unknown,none,left,1
-A005,tail,HARTZ MOUNTAIN INDUSTRIES INC,PRESIDENT AND CEO,real_estate,high,unknown,none,left,1
 A006,tail,GATEWAY COMMUNITY INDUSTRIES INC.,PRESIDENT AND CEO,nonprofit,low,unknown,none,left,1
-A007,tail,STEAMSHIP TRADE ASSOC.,PRESIDENT,transportation,low,unknown,none,left,1
-A009,tail,BROWER INC,BAR MANAGER,consumer,low,unknown,none,left,1
-A018,tail,"AUTHZED, INC",CTO,tech,high,unknown,none,left,1
 A019,tail,COUNTSY,FOUNDER,business_services,low,unknown,none,left,1
 A026,tail,PHASE TECHNOLOGIES,CEO,manufacturing,low,unknown,none,left,1
 A027,tail,MAXIMUS,PROJECT MANAGER,business_services,high,unknown,none,left,1
-A047,tail,STARZ,CEO,media,high,unknown,none,left,1
 A054,tail,"BRAINWAVE SCIENCE, INC.",PRESIDENT & CEO,tech,low,unknown,none,left,1
 A055,tail,CORTEX INNOVATION COMMUNITY,CEO,nonprofit,low,unknown,none,left,1
 A056,tail,RECONNECT RONDO,ECONOMIC & COMMUNITY DEVELOPMENT,nonprofit,high,unknown,none,left,1
@@ -26,10 +21,8 @@ A099,tail,OCEAN ATLANTIC MANAGEMENT LLC,PRESIDENT,real_estate,low,unknown,none,l
 A101,tail,MAJORCLARITY,CO-FOUNDER,tech,low,unknown,none,left,1
 A131,tail,MEN ON THE MOVE,PRESIDENT,transportation,low,unknown,none,left,1
 A133,tail,ALLIED CONSULTANTS,CYBER PROFESSIONAL,tech,low,unknown,none,left,1
-A137,tail,CRYSTAL MOUNTAIN,RESORT EXECUTIVE,consumer,low,unknown,none,left,1
 A164,tail,GILDA'S CLUB GRAND RAPIDS,SOCIAL WORKER,nonprofit,high,unknown,none,left,1
 A178,tail,FIRSTPERSON NARRRATIVES,PRESIDENT,media,low,unknown,none,left,1
-A191,tail,SNAPCHAT,SENIOR VICE PRESIDENT,tech,high,unknown,none,left,1
 A199,tail,COLLEGE PARK CAR WASH INC,PRESIDENT,consumer,high,unknown,none,left,1
 A204,tail,STRESAU LABORATORY,PRESIDENT,defense,low,unknown,none,left,1
 A205,tail,THE GALLERY,OWNER,consumer,low,unknown,none,left,1
@@ -39,5 +32,7 @@ A230,tail,SPRAY SYSTEMS OF ARIZONA,EXECUTIVE,real_estate,low,unknown,none,left,1
 A250,tail,SUSHI BROKERS,CO-OWNER,consumer,high,unknown,none,left,1
 A285,tail,MN COACHES,PROPERTY MANAGER,transportation,low,unknown,none,left,1
 A295,tail,"?ACT 3, LLC?",CONSULTANT,business_services,low,unknown,none,left,1
+A007,tail,STEAMSHIP TRADE ASSOC.,PRESIDENT,transportation,low,lobbying,llm,wrong,1
 A114,tail,GETAROUND,ACCOUNTANT,tech,low,business_services,occupation:business_services,wrong,1
 A195,tail,ENTERTAINMENT SOFTWARE ASSN.,GOVERNMENT RELATIONS,media,low,tech,employer:tech,wrong,1
+A219,tail,ARIZONA EARTHWORKS,GEOPHYSICIST,unknown,low,energy,llm,wrong,1

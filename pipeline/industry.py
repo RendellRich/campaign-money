@@ -19,10 +19,11 @@ MAPPING = Path(__file__).resolve().parents[1] / "data" / "employer_industry.csv"
 # The 800 occupations with the most still-unclear dollars in 2024, reviewed by Claude. An occupation names an industry
 # only when the job alone implies one (attorney, optometrist, landman); titles like CEO or engineer stay unknown.
 OCCUPATIONS = Path(__file__).resolve().parents[1] / "data" / "occupation_industry.csv"
-# Labels from the LLM pass on the long tail (llm_tail.py). Off until they have been scored against a person's labels;
-# audit_compare.py --with-llm switches them on for scoring only.
+# Labels from the LLM pass on the long tail (llm_tail.py): pairs two runs placed in the same industry with high
+# confidence. On since round 5, where they turned unknowns into right answers and added no wrong ones in every answer
+# key. audit_compare.py scores with and without them (--with-llm).
 LLM_TAIL = Path(__file__).resolve().parents[1] / "data" / "llm" / "tail_labels.csv.gz"
-USE_LLM_TAIL = False
+USE_LLM_TAIL = True
 
 
 @lru_cache(maxsize=1)

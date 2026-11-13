@@ -220,6 +220,8 @@ st.markdown(
     "- \"Points to an industry, but which is unclear\" means the donor named an employer or job the method couldn't "
     f"place. It is kept as its own bar instead of being guessed.{accuracy} The reviewed employer list was built from "
     "2024 donors, so slightly more 2022 money is unclear.\n"
+    "- Small employers past the reviewed list were labeled by an AI model (Claude Haiku), kept only where two separate "
+    "runs gave the same industry with high confidence, and checked against hand labels.\n"
     "- This site never pairs a donation with a vote. For voting records, see "
     "[PartyCohesion](https://partycohesion.streamlit.app).\n"
     "- Method, code and the full audit: [github.com/RendellRich/campaign-money](https://github.com/RendellRich/campaign-money)."
