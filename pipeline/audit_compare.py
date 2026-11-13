@@ -19,6 +19,7 @@ import json
 
 import pandas as pd
 
+import industry as industry_module
 from audit import combined, score
 from industry_rules import INDUSTRIES
 from load_fec import ROOT
@@ -47,8 +48,11 @@ def kappa(a: pd.Series, b: pd.Series) -> float:
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     ap.add_argument("--cycle", type=int, default=2024)
+    ap.add_argument("--with-llm", action="store_true", help="also use the LLM long-tail labels (scoring only)")
     a = ap.parse_args()
+    industry_module.USE_LLM_TAIL = a.with_llm
     tag = f"{a.cycle}_fresh"
+    suffix = "_llm" if a.with_llm else ""
     sample = pd.read_csv(ROOT / "data" / f"audit_{tag}_sample.csv", dtype={"employer": str, "occupation": str},
                          keep_default_na=False)
     files = sorted((ROOT / "data").glob(f"audit_{tag}_labels_*.csv"))
@@ -80,7 +84,7 @@ def main() -> None:
             wide[~wide["id"].isin(agreed["id"])].merge(sample[["id", "employer", "occupation"]], on="id")
             .to_csv(index=False))
 
-    (ROOT / "data" / f"audit_{tag}.json").write_text(json.dumps(report, indent=1) + "\n")
+    (ROOT / "data" / f"audit_{tag}{suffix}.json").write_text(json.dumps(report, indent=1) + "\n")
     print(json.dumps(report, indent=1))
 
 
